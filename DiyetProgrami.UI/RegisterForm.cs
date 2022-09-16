@@ -1,9 +1,9 @@
-﻿using DiyetProgrami.UI.Helpers;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using WeightGain.UI.Helpers;
 
-namespace DiyetProgrami.UI
+namespace WeightGain.UI
 {
     public partial class RegisterForm : Form
     {

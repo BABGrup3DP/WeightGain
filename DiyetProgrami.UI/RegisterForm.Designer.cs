@@ -1,4 +1,4 @@
-﻿namespace DiyetProgrami.UI
+﻿namespace WeightGain.UI
 {
     partial class RegisterForm
     {

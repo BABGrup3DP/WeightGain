@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{85F164BC-D81C-497B-883A-F3D0874B23FE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DiyetProgrami.UI</RootNamespace>
-    <AssemblyName>DiyetProgrami.UI</AssemblyName>
+    <RootNamespace>WeightGain.UI</RootNamespace>
+    <AssemblyName>WeightGain.UI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

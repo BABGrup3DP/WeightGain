@@ -1,9 +1,9 @@
-﻿using DiyetProgrami.UI.Helpers;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using WeightGain.UI.Helpers;
 
-namespace DiyetProgrami.UI
+namespace WeightGain.UI
 {
     public partial class LoginForm : Form
     {
@@ -13,29 +13,27 @@ namespace DiyetProgrami.UI
         }
 
         #region Helper Functions
-        private bool dragging = false;
-        private Point dragCursorPoint;
-        private Point dragFormPoint;
+        private bool _dragging = false;
+        private Point _dragCursorPoint;
+        private Point _dragFormPoint;
 
         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
         {
-            dragging = true;
-            dragCursorPoint = Cursor.Position;
-            dragFormPoint = Location;
+            _dragging = true;
+            _dragCursorPoint = Cursor.Position;
+            _dragFormPoint = Location;
         }
 
         private void LoginForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if (dragging)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
-                Location = Point.Add(dragFormPoint, new Size(dif));
-            }
+            if (!_dragging) return;
+            var dif = Point.Subtract(Cursor.Position, new Size(_dragCursorPoint));
+            Location = Point.Add(_dragFormPoint, new Size(dif));
         }
 
         private void LoginForm_MouseUp(object sender, MouseEventArgs e)
         {
-            dragging = false;
+            _dragging = false;
         }
         #endregion
 
@@ -56,6 +54,8 @@ namespace DiyetProgrami.UI
                 MessageBox.Show("Lütfen boş alan bırakmayın !", Properties.Resources.ProgramTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            MessageBox.Show("ok");    
         }
     }
 }

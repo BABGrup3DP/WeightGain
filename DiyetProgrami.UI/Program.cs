@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace DiyetProgrami.UI
+namespace WeightGain.UI
 {
     internal static class Program
     {

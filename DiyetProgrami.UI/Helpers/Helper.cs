@@ -1,8 +1,8 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
-namespace DiyetProgrami.UI.Helpers
+namespace WeightGain.UI.Helpers
 {
     public class Helper
     {
@@ -18,20 +18,17 @@ namespace DiyetProgrami.UI.Helpers
                 var ctrlName = ctrl.GetType().Name;
                 if (ctrlName.Contains("TextBox"))
                 {
-                    var textBox = ctrl as Guna2TextBox;
-                    if (string.IsNullOrEmpty(textBox.Text.Trim()))
+                    if (ctrl is Guna2TextBox textBox && string.IsNullOrEmpty(textBox.Text.Trim()))
                         return false;
                 }
                 else if (ctrlName.Contains("DateTimePicker"))
                 {
-                    var dateTimePicker = ctrl as Guna2DateTimePicker;
-                    if (dateTimePicker.Value >= DateTime.Today)
+                    if (ctrl is Guna2DateTimePicker dateTimePicker && dateTimePicker.Value >= DateTime.Today)
                         return false;
                 }
                 else if (ctrlName.Contains("NumericUpDown"))
                 {
-                    var numericUpDown = ctrl as Guna2NumericUpDown;
-                    if (numericUpDown.Value < 0)
+                    if (ctrl is Guna2NumericUpDown numericUpDown && numericUpDown.Value < 0)
                         return false;
                 }
             }
