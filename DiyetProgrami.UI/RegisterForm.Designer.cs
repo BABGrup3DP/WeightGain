@@ -1,6 +1,6 @@
 ﻿namespace DiyetProgrami.UI
 {
-    partial class MainForm
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.mainFormElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.mainFormShadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.mainFormRightPanel = new Guna.UI2.WinForms.Guna2Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
+            this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.formRightPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTerms = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.cbFemale = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbMale = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -53,45 +53,53 @@
             this.lblAlready = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.mainFormRightPanel.SuspendLayout();
+            this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // mainFormElipse
+            // formElipse
             // 
-            this.mainFormElipse.TargetControl = this;
+            this.formElipse.TargetControl = this;
             // 
-            // mainFormShadow
+            // formRightPanel
             // 
-            this.mainFormShadow.BorderRadius = 6;
-            this.mainFormShadow.TargetForm = this;
+            this.formRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.formRightPanel.BorderRadius = 15;
+            this.formRightPanel.Controls.Add(this.lblTerms);
+            this.formRightPanel.Controls.Add(this.lblGender);
+            this.formRightPanel.Controls.Add(this.cbFemale);
+            this.formRightPanel.Controls.Add(this.cbMale);
+            this.formRightPanel.Controls.Add(this.btnSignUp);
+            this.formRightPanel.Controls.Add(this.txtPassword);
+            this.formRightPanel.Controls.Add(this.lblHeight);
+            this.formRightPanel.Controls.Add(this.lblWeight);
+            this.formRightPanel.Controls.Add(this.nupHeight);
+            this.formRightPanel.Controls.Add(this.nupWeight);
+            this.formRightPanel.Controls.Add(this.txtTelephoneNumber);
+            this.formRightPanel.Controls.Add(this.txtEmail);
+            this.formRightPanel.Controls.Add(this.dtpBirthDate);
+            this.formRightPanel.Controls.Add(this.txtSurname);
+            this.formRightPanel.Controls.Add(this.lblSignUp);
+            this.formRightPanel.Controls.Add(this.txtName);
+            this.formRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.formRightPanel.Location = new System.Drawing.Point(518, 13);
+            this.formRightPanel.Name = "formRightPanel";
+            this.formRightPanel.Size = new System.Drawing.Size(311, 504);
+            this.formRightPanel.TabIndex = 0;
             // 
-            // mainFormRightPanel
+            // lblTerms
             // 
-            this.mainFormRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.mainFormRightPanel.BorderRadius = 15;
-            this.mainFormRightPanel.Controls.Add(this.lblGender);
-            this.mainFormRightPanel.Controls.Add(this.cbFemale);
-            this.mainFormRightPanel.Controls.Add(this.cbMale);
-            this.mainFormRightPanel.Controls.Add(this.btnSignUp);
-            this.mainFormRightPanel.Controls.Add(this.txtPassword);
-            this.mainFormRightPanel.Controls.Add(this.lblHeight);
-            this.mainFormRightPanel.Controls.Add(this.lblWeight);
-            this.mainFormRightPanel.Controls.Add(this.nupHeight);
-            this.mainFormRightPanel.Controls.Add(this.nupWeight);
-            this.mainFormRightPanel.Controls.Add(this.txtTelephoneNumber);
-            this.mainFormRightPanel.Controls.Add(this.txtEmail);
-            this.mainFormRightPanel.Controls.Add(this.dtpBirthDate);
-            this.mainFormRightPanel.Controls.Add(this.txtSurname);
-            this.mainFormRightPanel.Controls.Add(this.lblSignUp);
-            this.mainFormRightPanel.Controls.Add(this.txtName);
-            this.mainFormRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.mainFormRightPanel.Location = new System.Drawing.Point(518, 13);
-            this.mainFormRightPanel.Name = "mainFormRightPanel";
-            this.mainFormRightPanel.Size = new System.Drawing.Size(311, 504);
-            this.mainFormRightPanel.TabIndex = 0;
+            this.lblTerms.AutoSize = true;
+            this.lblTerms.BackColor = System.Drawing.Color.Transparent;
+            this.lblTerms.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTerms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.lblTerms.Location = new System.Drawing.Point(24, 479);
+            this.lblTerms.Name = "lblTerms";
+            this.lblTerms.Size = new System.Drawing.Size(264, 24);
+            this.lblTerms.TabIndex = 13;
+            this.lblTerms.Text = "Üye olduğunuz zaman kullanım koşullarını kabul etmiş \r\nsayılırsınız.";
             // 
             // lblGender
             // 
@@ -163,9 +171,10 @@
             this.btnSignUp.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSignUp.Location = new System.Drawing.Point(26, 431);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(257, 45);
+            this.btnSignUp.Size = new System.Drawing.Size(262, 45);
             this.btnSignUp.TabIndex = 10;
             this.btnSignUp.Text = "Kayıt Ol";
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // txtPassword
             // 
@@ -409,7 +418,8 @@
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(95, 21);
             this.lblLogin.TabIndex = 4;
-            this.lblLogin.Text = "Giriş Yapın.";
+            this.lblLogin.Text = "Giriş yapın.";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // btnClose
             // 
@@ -424,7 +434,7 @@
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // MainForm
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -435,17 +445,22 @@
             this.Controls.Add(this.lblAlready);
             this.Controls.Add(this.lblSlogan);
             this.Controls.Add(this.mainFormLogo);
-            this.Controls.Add(this.mainFormRightPanel);
+            this.Controls.Add(this.formRightPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximumSize = new System.Drawing.Size(3200, 1680);
-            this.Name = "MainForm";
+            this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diyet Programı";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
-            this.mainFormRightPanel.ResumeLayout(false);
-            this.mainFormRightPanel.PerformLayout();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseUp);
+            this.formRightPanel.ResumeLayout(false);
+            this.formRightPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).EndInit();
@@ -456,9 +471,8 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Elipse mainFormElipse;
-        private Guna.UI2.WinForms.Guna2ShadowForm mainFormShadow;
-        private Guna.UI2.WinForms.Guna2Panel mainFormRightPanel;
+        private Guna.UI2.WinForms.Guna2Elipse formElipse;
+        private Guna.UI2.WinForms.Guna2Panel formRightPanel;
         private Guna.UI2.WinForms.Guna2PictureBox mainFormLogo;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblAlready;
@@ -479,6 +493,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox cbMale;
         private System.Windows.Forms.Label lblGender;
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
+        private System.Windows.Forms.Label lblTerms;
     }
 }
 
