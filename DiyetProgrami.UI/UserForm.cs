@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeightGain.UI.Helpers;
 
 namespace WeightGain.UI
 {
@@ -53,39 +49,44 @@ namespace WeightGain.UI
             }
         }
 
-        private void lblMenuLunchs_Click(object sender, EventArgs e)
+        private void btnLunchs_Click(object sender, EventArgs e)
         {
-
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
         }
 
-        private void lblMenuExercises_Click(object sender, EventArgs e)
+        private void btnExercies_Click(object sender, EventArgs e)
         {
-
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
         }
 
-        private void lblMenuReports_Click(object sender, EventArgs e)
+        private void btnReports_Click(object sender, EventArgs e)
         {
-
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
         }
 
-        private void lblMenuArchives_Click(object sender, EventArgs e)
+        private void btnArchives_Click(object sender, EventArgs e)
         {
-
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
         }
 
-        private void lblMenuProfile_Click(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
         }
 
-        private void lblMenuHelp_Click(object sender, EventArgs e)
+        private void btnHelp_Click(object sender, EventArgs e)
         {
-
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
         }
 
-        private void lblMenuLogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+        }
 
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+            btnLunchs.Enabled = false;
         }
     }
 }

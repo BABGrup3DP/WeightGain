@@ -2,7 +2,7 @@
 
 namespace WeightGain.DATA
 {
-    public class User : Base
+    public class User : BaseModel
     {
         public RepastEnum Repast { get; set; }
 

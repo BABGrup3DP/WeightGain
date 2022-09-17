@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 
 namespace WeightGain.UI.Helpers
 {
@@ -33,6 +33,20 @@ namespace WeightGain.UI.Helpers
                 }
             }
             return true;
+        }
+
+        public static void ChangeButtonEnableMenu(Panel pnl, Guna2Button selectedBtn)
+        {
+            foreach (var ctrl in pnl.Controls)
+            {
+                if (ctrl is Guna2Button)
+                {
+                    if (ctrl == selectedBtn)
+                        selectedBtn.Enabled = false;
+                    else
+                        selectedBtn.Enabled = true;
+                }
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using WeightGain.UI.Helpers;
@@ -51,7 +52,12 @@ namespace WeightGain.UI
         {
             if (!Helper.CheckPanelEmptyValues(formRightPanel))
             {
-                MessageBox.Show("Lütfen boş alan bırakmayın !", Properties.Resources.ProgramTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Lütfen boş alan bırakmayın.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
                 return;
             }
             var userForm = new UserForm()

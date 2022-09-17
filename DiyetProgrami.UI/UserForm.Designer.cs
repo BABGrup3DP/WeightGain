@@ -32,34 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.leftMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLunchs = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExercies = new Guna.UI2.WinForms.Guna2Button();
+            this.btnArchives = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.leftMenuLunchImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.leftMenuExerciseImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.leftMenuReportImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.leftMenuArchiveImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.leftMenuProfileImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.leftMenuHelpImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.leftMenuLogoutImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblMenuLunchs = new System.Windows.Forms.Label();
-            this.lblMenuExercises = new System.Windows.Forms.Label();
-            this.lblMenuReports = new System.Windows.Forms.Label();
-            this.lblMenuArchives = new System.Windows.Forms.Label();
-            this.lblMenuProfile = new System.Windows.Forms.Label();
-            this.lblMenuHelp = new System.Windows.Forms.Label();
-            this.lblMenuLogout = new System.Windows.Forms.Label();
             this.leftMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuLunchImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuExerciseImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuReportImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuArchiveImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuProfileImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuHelpImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuLogoutImage)).BeginInit();
             this.SuspendLayout();
             // 
             // formElipse
@@ -69,42 +55,212 @@
             // leftMenuPanel
             // 
             this.leftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.leftMenuPanel.Controls.Add(this.lblMenuLogout);
-            this.leftMenuPanel.Controls.Add(this.lblMenuHelp);
-            this.leftMenuPanel.Controls.Add(this.lblMenuProfile);
-            this.leftMenuPanel.Controls.Add(this.lblMenuArchives);
-            this.leftMenuPanel.Controls.Add(this.lblMenuReports);
-            this.leftMenuPanel.Controls.Add(this.lblMenuExercises);
-            this.leftMenuPanel.Controls.Add(this.lblMenuLunchs);
-            this.leftMenuPanel.Controls.Add(this.leftMenuLogoutImage);
-            this.leftMenuPanel.Controls.Add(this.leftMenuHelpImage);
-            this.leftMenuPanel.Controls.Add(this.leftMenuProfileImage);
-            this.leftMenuPanel.Controls.Add(this.leftMenuArchiveImage);
-            this.leftMenuPanel.Controls.Add(this.leftMenuReportImage);
-            this.leftMenuPanel.Controls.Add(this.leftMenuExerciseImage);
-            this.leftMenuPanel.Controls.Add(this.leftMenuLunchImage);
+            this.leftMenuPanel.Controls.Add(this.btnLogout);
+            this.leftMenuPanel.Controls.Add(this.btnHelp);
+            this.leftMenuPanel.Controls.Add(this.btnLunchs);
+            this.leftMenuPanel.Controls.Add(this.btnProfile);
+            this.leftMenuPanel.Controls.Add(this.btnExercies);
+            this.leftMenuPanel.Controls.Add(this.btnArchives);
+            this.leftMenuPanel.Controls.Add(this.btnReports);
             this.leftMenuPanel.Controls.Add(this.leftPanelMenuLogo);
             this.leftMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMenuPanel.Name = "leftMenuPanel";
-            this.leftMenuPanel.Size = new System.Drawing.Size(233, 727);
+            this.leftMenuPanel.Size = new System.Drawing.Size(239, 754);
             this.leftMenuPanel.TabIndex = 0;
             this.leftMenuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.leftMenuPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
             this.leftMenuPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Animated = true;
+            this.btnLogout.AnimatedGIF = true;
+            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnLogout.BorderRadius = 5;
+            this.btnLogout.BorderThickness = 1;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLogout.Image = global::WeightGain.UI.Properties.Resources.logout;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.Location = new System.Drawing.Point(6, 591);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(227, 70);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Çıkış";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // leftPanelMenuLogo
             // 
             this.leftPanelMenuLogo.BackColor = System.Drawing.Color.Transparent;
             this.leftPanelMenuLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
             this.leftPanelMenuLogo.ImageRotate = 0F;
-            this.leftPanelMenuLogo.Location = new System.Drawing.Point(3, 3);
+            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-33, -87);
             this.leftPanelMenuLogo.Name = "leftPanelMenuLogo";
-            this.leftPanelMenuLogo.Size = new System.Drawing.Size(230, 231);
+            this.leftPanelMenuLogo.Size = new System.Drawing.Size(309, 339);
             this.leftPanelMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.leftPanelMenuLogo.TabIndex = 0;
             this.leftPanelMenuLogo.TabStop = false;
             this.leftPanelMenuLogo.UseTransparentBackground = true;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Animated = true;
+            this.btnHelp.AnimatedGIF = true;
+            this.btnHelp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnHelp.BorderRadius = 5;
+            this.btnHelp.BorderThickness = 1;
+            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnHelp.Image = global::WeightGain.UI.Properties.Resources.help;
+            this.btnHelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHelp.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnHelp.Location = new System.Drawing.Point(6, 520);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(227, 70);
+            this.btnHelp.TabIndex = 5;
+            this.btnHelp.Text = "Yardım";
+            this.btnHelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
+            // btnLunchs
+            // 
+            this.btnLunchs.Animated = true;
+            this.btnLunchs.AnimatedGIF = true;
+            this.btnLunchs.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnLunchs.BorderRadius = 5;
+            this.btnLunchs.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnLunchs.BorderThickness = 1;
+            this.btnLunchs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLunchs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLunchs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLunchs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLunchs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnLunchs.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnLunchs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnLunchs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLunchs.Image = global::WeightGain.UI.Properties.Resources.lunch;
+            this.btnLunchs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLunchs.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLunchs.Location = new System.Drawing.Point(6, 165);
+            this.btnLunchs.Name = "btnLunchs";
+            this.btnLunchs.PressedColor = System.Drawing.Color.Transparent;
+            this.btnLunchs.Size = new System.Drawing.Size(227, 70);
+            this.btnLunchs.TabIndex = 0;
+            this.btnLunchs.Text = "Öğünler";
+            this.btnLunchs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLunchs.Click += new System.EventHandler(this.btnLunchs_Click);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Animated = true;
+            this.btnProfile.AnimatedGIF = true;
+            this.btnProfile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnProfile.BorderRadius = 5;
+            this.btnProfile.BorderThickness = 1;
+            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnProfile.Image = global::WeightGain.UI.Properties.Resources.profile;
+            this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProfile.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnProfile.Location = new System.Drawing.Point(6, 449);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(227, 70);
+            this.btnProfile.TabIndex = 4;
+            this.btnProfile.Text = "Profil Bilgileri";
+            this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // btnExercies
+            // 
+            this.btnExercies.Animated = true;
+            this.btnExercies.AnimatedGIF = true;
+            this.btnExercies.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnExercies.BorderThickness = 1;
+            this.btnExercies.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExercies.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExercies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExercies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExercies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnExercies.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnExercies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnExercies.Image = global::WeightGain.UI.Properties.Resources.exercise;
+            this.btnExercies.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnExercies.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExercies.Location = new System.Drawing.Point(6, 236);
+            this.btnExercies.Name = "btnExercies";
+            this.btnExercies.Size = new System.Drawing.Size(227, 70);
+            this.btnExercies.TabIndex = 1;
+            this.btnExercies.Text = "Antremanlar";
+            this.btnExercies.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnExercies.Click += new System.EventHandler(this.btnExercies_Click);
+            // 
+            // btnArchives
+            // 
+            this.btnArchives.Animated = true;
+            this.btnArchives.AnimatedGIF = true;
+            this.btnArchives.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnArchives.BorderRadius = 5;
+            this.btnArchives.BorderThickness = 1;
+            this.btnArchives.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnArchives.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnArchives.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnArchives.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnArchives.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnArchives.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnArchives.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnArchives.Image = global::WeightGain.UI.Properties.Resources.archive;
+            this.btnArchives.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnArchives.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnArchives.Location = new System.Drawing.Point(6, 378);
+            this.btnArchives.Name = "btnArchives";
+            this.btnArchives.Size = new System.Drawing.Size(227, 70);
+            this.btnArchives.TabIndex = 3;
+            this.btnArchives.Text = "Arşiv";
+            this.btnArchives.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnArchives.Click += new System.EventHandler(this.btnArchives_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Animated = true;
+            this.btnReports.AnimatedGIF = true;
+            this.btnReports.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnReports.BorderRadius = 5;
+            this.btnReports.BorderThickness = 1;
+            this.btnReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnReports.Image = global::WeightGain.UI.Properties.Resources.reports;
+            this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReports.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnReports.Location = new System.Drawing.Point(6, 307);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(227, 70);
+            this.btnReports.TabIndex = 2;
+            this.btnReports.Text = "Raporlar";
+            this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnClose
             // 
@@ -113,7 +269,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnClose.ForeColor = System.Drawing.Color.FloralWhite;
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(137)))));
-            this.btnClose.Location = new System.Drawing.Point(1055, 0);
+            this.btnClose.Location = new System.Drawing.Point(1049, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 32);
             this.btnClose.TabIndex = 6;
@@ -123,9 +279,9 @@
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.topPanel.Controls.Add(this.btnClose);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(233, 0);
+            this.topPanel.Location = new System.Drawing.Point(239, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1100, 32);
+            this.topPanel.Size = new System.Drawing.Size(1094, 32);
             this.topPanel.TabIndex = 7;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
@@ -135,188 +291,20 @@
             // 
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(233, 32);
+            this.mainPanel.Location = new System.Drawing.Point(239, 32);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1100, 695);
+            this.mainPanel.Size = new System.Drawing.Size(1094, 722);
             this.mainPanel.TabIndex = 8;
             this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
             this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
-            // 
-            // leftMenuLunchImage
-            // 
-            this.leftMenuLunchImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuLunchImage.Image = global::WeightGain.UI.Properties.Resources.lunch;
-            this.leftMenuLunchImage.ImageRotate = 0F;
-            this.leftMenuLunchImage.Location = new System.Drawing.Point(3, 240);
-            this.leftMenuLunchImage.Name = "leftMenuLunchImage";
-            this.leftMenuLunchImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuLunchImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuLunchImage.TabIndex = 1;
-            this.leftMenuLunchImage.TabStop = false;
-            this.leftMenuLunchImage.UseTransparentBackground = true;
-            // 
-            // leftMenuExerciseImage
-            // 
-            this.leftMenuExerciseImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuExerciseImage.Image = global::WeightGain.UI.Properties.Resources.exercise;
-            this.leftMenuExerciseImage.ImageRotate = 0F;
-            this.leftMenuExerciseImage.Location = new System.Drawing.Point(3, 310);
-            this.leftMenuExerciseImage.Name = "leftMenuExerciseImage";
-            this.leftMenuExerciseImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuExerciseImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuExerciseImage.TabIndex = 2;
-            this.leftMenuExerciseImage.TabStop = false;
-            this.leftMenuExerciseImage.UseTransparentBackground = true;
-            // 
-            // leftMenuReportImage
-            // 
-            this.leftMenuReportImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuReportImage.Image = global::WeightGain.UI.Properties.Resources.reports;
-            this.leftMenuReportImage.ImageRotate = 0F;
-            this.leftMenuReportImage.Location = new System.Drawing.Point(3, 380);
-            this.leftMenuReportImage.Name = "leftMenuReportImage";
-            this.leftMenuReportImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuReportImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuReportImage.TabIndex = 3;
-            this.leftMenuReportImage.TabStop = false;
-            this.leftMenuReportImage.UseTransparentBackground = true;
-            // 
-            // leftMenuArchiveImage
-            // 
-            this.leftMenuArchiveImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuArchiveImage.Image = global::WeightGain.UI.Properties.Resources.archive;
-            this.leftMenuArchiveImage.ImageRotate = 0F;
-            this.leftMenuArchiveImage.Location = new System.Drawing.Point(3, 450);
-            this.leftMenuArchiveImage.Name = "leftMenuArchiveImage";
-            this.leftMenuArchiveImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuArchiveImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuArchiveImage.TabIndex = 4;
-            this.leftMenuArchiveImage.TabStop = false;
-            this.leftMenuArchiveImage.UseTransparentBackground = true;
-            // 
-            // leftMenuProfileImage
-            // 
-            this.leftMenuProfileImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuProfileImage.Image = global::WeightGain.UI.Properties.Resources.profile;
-            this.leftMenuProfileImage.ImageRotate = 0F;
-            this.leftMenuProfileImage.Location = new System.Drawing.Point(3, 520);
-            this.leftMenuProfileImage.Name = "leftMenuProfileImage";
-            this.leftMenuProfileImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuProfileImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuProfileImage.TabIndex = 5;
-            this.leftMenuProfileImage.TabStop = false;
-            this.leftMenuProfileImage.UseTransparentBackground = true;
-            // 
-            // leftMenuHelpImage
-            // 
-            this.leftMenuHelpImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuHelpImage.Image = global::WeightGain.UI.Properties.Resources.help;
-            this.leftMenuHelpImage.ImageRotate = 0F;
-            this.leftMenuHelpImage.Location = new System.Drawing.Point(3, 590);
-            this.leftMenuHelpImage.Name = "leftMenuHelpImage";
-            this.leftMenuHelpImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuHelpImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuHelpImage.TabIndex = 6;
-            this.leftMenuHelpImage.TabStop = false;
-            this.leftMenuHelpImage.UseTransparentBackground = true;
-            // 
-            // leftMenuLogoutImage
-            // 
-            this.leftMenuLogoutImage.BackColor = System.Drawing.Color.Transparent;
-            this.leftMenuLogoutImage.Image = global::WeightGain.UI.Properties.Resources.logout;
-            this.leftMenuLogoutImage.ImageRotate = 0F;
-            this.leftMenuLogoutImage.Location = new System.Drawing.Point(3, 660);
-            this.leftMenuLogoutImage.Name = "leftMenuLogoutImage";
-            this.leftMenuLogoutImage.Size = new System.Drawing.Size(64, 64);
-            this.leftMenuLogoutImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.leftMenuLogoutImage.TabIndex = 7;
-            this.leftMenuLogoutImage.TabStop = false;
-            this.leftMenuLogoutImage.UseTransparentBackground = true;
-            // 
-            // lblMenuLunchs
-            // 
-            this.lblMenuLunchs.AutoSize = true;
-            this.lblMenuLunchs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuLunchs.Location = new System.Drawing.Point(73, 260);
-            this.lblMenuLunchs.Name = "lblMenuLunchs";
-            this.lblMenuLunchs.Size = new System.Drawing.Size(93, 30);
-            this.lblMenuLunchs.TabIndex = 8;
-            this.lblMenuLunchs.Text = "Öğünler";
-            this.lblMenuLunchs.Click += new System.EventHandler(this.lblMenuLunchs_Click);
-            // 
-            // lblMenuExercises
-            // 
-            this.lblMenuExercises.AutoSize = true;
-            this.lblMenuExercises.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuExercises.Location = new System.Drawing.Point(73, 328);
-            this.lblMenuExercises.Name = "lblMenuExercises";
-            this.lblMenuExercises.Size = new System.Drawing.Size(136, 30);
-            this.lblMenuExercises.TabIndex = 9;
-            this.lblMenuExercises.Text = "Antremanlar";
-            this.lblMenuExercises.Click += new System.EventHandler(this.lblMenuExercises_Click);
-            // 
-            // lblMenuReports
-            // 
-            this.lblMenuReports.AutoSize = true;
-            this.lblMenuReports.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuReports.Location = new System.Drawing.Point(73, 398);
-            this.lblMenuReports.Name = "lblMenuReports";
-            this.lblMenuReports.Size = new System.Drawing.Size(97, 30);
-            this.lblMenuReports.TabIndex = 10;
-            this.lblMenuReports.Text = "Raporlar";
-            this.lblMenuReports.Click += new System.EventHandler(this.lblMenuReports_Click);
-            // 
-            // lblMenuArchives
-            // 
-            this.lblMenuArchives.AutoSize = true;
-            this.lblMenuArchives.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuArchives.Location = new System.Drawing.Point(73, 470);
-            this.lblMenuArchives.Name = "lblMenuArchives";
-            this.lblMenuArchives.Size = new System.Drawing.Size(87, 30);
-            this.lblMenuArchives.TabIndex = 11;
-            this.lblMenuArchives.Text = "Arşivler";
-            this.lblMenuArchives.Click += new System.EventHandler(this.lblMenuArchives_Click);
-            // 
-            // lblMenuProfile
-            // 
-            this.lblMenuProfile.AutoSize = true;
-            this.lblMenuProfile.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuProfile.Location = new System.Drawing.Point(73, 534);
-            this.lblMenuProfile.Name = "lblMenuProfile";
-            this.lblMenuProfile.Size = new System.Drawing.Size(148, 30);
-            this.lblMenuProfile.TabIndex = 12;
-            this.lblMenuProfile.Text = "Profil Bilgileri";
-            this.lblMenuProfile.Click += new System.EventHandler(this.lblMenuProfile_Click);
-            // 
-            // lblMenuHelp
-            // 
-            this.lblMenuHelp.AutoSize = true;
-            this.lblMenuHelp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuHelp.Location = new System.Drawing.Point(73, 603);
-            this.lblMenuHelp.Name = "lblMenuHelp";
-            this.lblMenuHelp.Size = new System.Drawing.Size(81, 30);
-            this.lblMenuHelp.TabIndex = 13;
-            this.lblMenuHelp.Text = "Yardım";
-            this.lblMenuHelp.Click += new System.EventHandler(this.lblMenuHelp_Click);
-            // 
-            // lblMenuLogout
-            // 
-            this.lblMenuLogout.AutoSize = true;
-            this.lblMenuLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMenuLogout.Location = new System.Drawing.Point(73, 673);
-            this.lblMenuLogout.Name = "lblMenuLogout";
-            this.lblMenuLogout.Size = new System.Drawing.Size(59, 30);
-            this.lblMenuLogout.TabIndex = 14;
-            this.lblMenuLogout.Text = "Çıkış";
-            this.lblMenuLogout.Click += new System.EventHandler(this.lblMenuLogout_Click);
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1333, 727);
+            this.ClientSize = new System.Drawing.Size(1333, 754);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftMenuPanel);
@@ -326,22 +314,15 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserForm";
+            this.Text = " ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
             this.leftMenuPanel.ResumeLayout(false);
-            this.leftMenuPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.topPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuLunchImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuExerciseImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuReportImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuArchiveImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuProfileImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuHelpImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftMenuLogoutImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,19 +335,12 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2Panel topPanel;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuLunchImage;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuLogoutImage;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuHelpImage;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuProfileImage;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuArchiveImage;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuReportImage;
-        private Guna.UI2.WinForms.Guna2PictureBox leftMenuExerciseImage;
-        private System.Windows.Forms.Label lblMenuLunchs;
-        private System.Windows.Forms.Label lblMenuLogout;
-        private System.Windows.Forms.Label lblMenuHelp;
-        private System.Windows.Forms.Label lblMenuProfile;
-        private System.Windows.Forms.Label lblMenuArchives;
-        private System.Windows.Forms.Label lblMenuReports;
-        private System.Windows.Forms.Label lblMenuExercises;
+        private Guna.UI2.WinForms.Guna2Button btnProfile;
+        private Guna.UI2.WinForms.Guna2Button btnArchives;
+        private Guna.UI2.WinForms.Guna2Button btnReports;
+        private Guna.UI2.WinForms.Guna2Button btnExercies;
+        private Guna.UI2.WinForms.Guna2Button btnLunchs;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnHelp;
     }
 }
