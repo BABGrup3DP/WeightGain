@@ -55,7 +55,7 @@ namespace WeightGain.UI
                 return;
             }
 
-            MessageBox.Show("ok");    
+            //MessageBox.Show("ok");    
         }
     }
 }
