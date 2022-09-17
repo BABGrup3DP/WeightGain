@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace WeightGain.UI.Helpers
 {
@@ -35,18 +36,26 @@ namespace WeightGain.UI.Helpers
             return true;
         }
 
-        public static void ChangeButtonEnableMenu(Panel pnl, Guna2Button selectedBtn)
+        /// <summary>
+        /// Panel içerisindeki butonların bulunduğu menüye göre akif ve pasif durumunu ayarlar
+        /// </summary>
+        /// <param name="pnl">Butonların bulunduğu panel</param>
+        /// <param name="pressedBtn">Tıklanan buton</param>
+        public static void ChangeButtonEnableMenu(Panel pnl, Guna2Button pressedBtn)
         {
             foreach (var ctrl in pnl.Controls)
             {
-                if (ctrl is Guna2Button)
-                {
-                    if (ctrl == selectedBtn)
-                        selectedBtn.Enabled = false;
-                    else
-                        selectedBtn.Enabled = true;
-                }
+                if (!(ctrl is Guna2Button button)) continue;
+                button.Enabled = button != pressedBtn;
+                button.ImageAlign = (button.Enabled ? HorizontalAlignment.Left : HorizontalAlignment.Right);
             }
+        }
+
+        public static void OpenChildForm(Panel pnl, Form childForm)
+        {
+            if (pnl.Controls.Count > 0)
+                pnl.Controls.RemoveAt(0);
+            pnl.Controls.Add(childForm);
         }
     }
 }

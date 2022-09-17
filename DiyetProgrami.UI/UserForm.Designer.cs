@@ -33,13 +33,13 @@
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.leftMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.btnLunchs = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnExercies = new Guna.UI2.WinForms.Guna2Button();
             this.btnArchives = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
+            this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -79,10 +79,9 @@
             this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnLogout.BorderRadius = 5;
             this.btnLogout.BorderThickness = 1;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -97,19 +96,6 @@
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // leftPanelMenuLogo
-            // 
-            this.leftPanelMenuLogo.BackColor = System.Drawing.Color.Transparent;
-            this.leftPanelMenuLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
-            this.leftPanelMenuLogo.ImageRotate = 0F;
-            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-33, -87);
-            this.leftPanelMenuLogo.Name = "leftPanelMenuLogo";
-            this.leftPanelMenuLogo.Size = new System.Drawing.Size(309, 339);
-            this.leftPanelMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.leftPanelMenuLogo.TabIndex = 0;
-            this.leftPanelMenuLogo.TabStop = false;
-            this.leftPanelMenuLogo.UseTransparentBackground = true;
-            // 
             // btnHelp
             // 
             this.btnHelp.Animated = true;
@@ -117,10 +103,9 @@
             this.btnHelp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnHelp.BorderRadius = 5;
             this.btnHelp.BorderThickness = 1;
-            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnHelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -143,10 +128,9 @@
             this.btnLunchs.BorderRadius = 5;
             this.btnLunchs.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnLunchs.BorderThickness = 1;
-            this.btnLunchs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLunchs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLunchs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLunchs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLunchs.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnLunchs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnLunchs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnLunchs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnLunchs.FocusedColor = System.Drawing.Color.Transparent;
             this.btnLunchs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
@@ -170,10 +154,9 @@
             this.btnProfile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnProfile.BorderRadius = 5;
             this.btnProfile.BorderThickness = 1;
-            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -194,10 +177,9 @@
             this.btnExercies.AnimatedGIF = true;
             this.btnExercies.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnExercies.BorderThickness = 1;
-            this.btnExercies.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExercies.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExercies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExercies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExercies.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnExercies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnExercies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnExercies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnExercies.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnExercies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -219,10 +201,9 @@
             this.btnArchives.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnArchives.BorderRadius = 5;
             this.btnArchives.BorderThickness = 1;
-            this.btnArchives.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnArchives.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnArchives.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnArchives.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnArchives.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnArchives.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnArchives.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnArchives.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnArchives.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnArchives.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -244,10 +225,9 @@
             this.btnReports.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnReports.BorderRadius = 5;
             this.btnReports.BorderThickness = 1;
-            this.btnReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReports.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -261,6 +241,22 @@
             this.btnReports.Text = "Raporlar";
             this.btnReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // leftPanelMenuLogo
+            // 
+            this.leftPanelMenuLogo.BackColor = System.Drawing.Color.Transparent;
+            this.leftPanelMenuLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
+            this.leftPanelMenuLogo.ImageRotate = 0F;
+            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-33, -87);
+            this.leftPanelMenuLogo.Name = "leftPanelMenuLogo";
+            this.leftPanelMenuLogo.Size = new System.Drawing.Size(309, 339);
+            this.leftPanelMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.leftPanelMenuLogo.TabIndex = 0;
+            this.leftPanelMenuLogo.TabStop = false;
+            this.leftPanelMenuLogo.UseTransparentBackground = true;
+            this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
+            this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
+            this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
             // 
             // btnClose
             // 

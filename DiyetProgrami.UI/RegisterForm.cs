@@ -14,29 +14,27 @@ namespace WeightGain.UI
         }
 
         #region Helper Functions
-        private bool dragging = false;
-        private Point dragCursorPoint;
-        private Point dragFormPoint;
+        private bool _dragging;
+        private Point _dragCursorPoint;
+        private Point _dragFormPoint;
 
         private void LoginForm_MouseDown(object sender, MouseEventArgs e)
         {
-            dragging = true;
-            dragCursorPoint = Cursor.Position;
-            dragFormPoint = Location;
+            _dragging = true;
+            _dragCursorPoint = Cursor.Position;
+            _dragFormPoint = Location;
         }
 
         private void LoginForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if (dragging)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
-                Location = Point.Add(dragFormPoint, new Size(dif));
-            }
+            if (!_dragging) return;
+            var dif = Point.Subtract(Cursor.Position, new Size(_dragCursorPoint));
+            Location = Point.Add(_dragFormPoint, new Size(dif));
         }
 
         private void LoginForm_MouseUp(object sender, MouseEventArgs e)
         {
-            dragging = false;
+            _dragging = false;
         }
         #endregion
 
@@ -90,12 +88,10 @@ namespace WeightGain.UI
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Owner != null)
-            {
-                Owner.Show();
-                if (e.CloseReason != CloseReason.FormOwnerClosing)
-                    this.Owner.Close();
-            }
+            if (Owner == null) return;
+            Owner.Show();
+            if (e.CloseReason != CloseReason.FormOwnerClosing)
+                Owner.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)

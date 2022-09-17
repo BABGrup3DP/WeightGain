@@ -14,7 +14,7 @@ namespace WeightGain.UI
         }
 
         #region Helper Functions
-        private bool _dragging = false;
+        private bool _dragging;
         private Point _dragCursorPoint;
         private Point _dragFormPoint;
 
