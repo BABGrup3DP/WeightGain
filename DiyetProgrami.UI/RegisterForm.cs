@@ -99,11 +99,12 @@ namespace WeightGain.UI
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (!Helper.CheckPanelEmptyValues(formRightPanel))
-            {
-                MessageBox.Show("Lütfen boş alan bırakmayın !", Properties.Resources.ProgramTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            MessageBox.Show("Deneme");
+            //if (!Helper.CheckPanelEmptyValues(formRightPanel))
+            //{
+            //    MessageBox.Show("Lütfen boş alan bırakmayın !", Properties.Resources.ProgramTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
         }
     }
 }
