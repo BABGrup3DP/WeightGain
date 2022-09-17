@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WeightGain.DATA
 {
-    public class User:Base
+    public class User : Base
     {
         public RepastEnum Repast { get; set; }
 

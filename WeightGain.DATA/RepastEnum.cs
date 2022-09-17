@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeightGain.DATA
+﻿namespace WeightGain.DATA
 {
     public enum RepastEnum
     {
@@ -14,6 +8,5 @@ namespace WeightGain.DATA
         SecondSnack,
         Evening,
         ThirdSnack
-
     }
 }

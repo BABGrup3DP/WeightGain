@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WeightGain.DATA
 {
-    public class Base
+    public class BaseModel
     {
         public int ID { get; set; }
 
@@ -16,16 +12,14 @@ namespace WeightGain.DATA
 
         public DateTime BirthDay { get; set; }
 
-        public string email { get; set; }
+        public string Email { get; set; }
 
         public string PhoneNumber { get; set; }
 
         public bool Gender { get; set; }
+        public UserTypeEnum UserType { get; set; }
 
-        public string Fullname { get { return FirstName + " " + LastName; } }
-
-  
-
+        public string FullName => $"{FirstName} {LastName}";
 
     }
 }

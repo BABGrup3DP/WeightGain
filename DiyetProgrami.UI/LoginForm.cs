@@ -47,15 +47,24 @@ namespace WeightGain.UI
             registerForm.Show();
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             if (!Helper.CheckPanelEmptyValues(formRightPanel))
             {
                 MessageBox.Show("Lütfen boş alan bırakmayın !", Properties.Resources.ProgramTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            var userForm = new UserForm()
+            {
+                Owner = this
+            };
+            Hide();
+            userForm.Show();
+        }
 
-            //MessageBox.Show("ok");    
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            txtEmailTelephone.Focus();
         }
     }
 }

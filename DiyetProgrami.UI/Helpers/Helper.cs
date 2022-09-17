@@ -32,8 +32,7 @@ namespace WeightGain.UI.Helpers
                         return false;
                 }
             }
-            return false;
+            return true;
         }
-
     }
 }

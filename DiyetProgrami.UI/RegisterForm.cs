@@ -106,5 +106,10 @@ namespace WeightGain.UI
                 return;
             }
         }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+            txtName.Focus();
+        }
     }
 }

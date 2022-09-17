@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WeightGain.DATA
 {
@@ -11,7 +7,7 @@ namespace WeightGain.DATA
         public int CategoryID { get; set; }
         public string Name { get; set; }
 
-        public string kind { get; set; }  //name ve king aynı şey olabilir bunu birlikte konuşalım
+        public string Kind { get; set; }  //name ve king aynı şey olabilir bunu birlikte konuşalım
 
         public string Description { get; set; }
 
@@ -22,7 +18,7 @@ namespace WeightGain.DATA
 
         public Category()
         {
-            Products=new List<Product>();
+            Products = new List<Product>();
         }
     }
 }

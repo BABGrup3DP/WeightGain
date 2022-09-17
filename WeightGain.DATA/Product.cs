@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WeightGain.DATA
 {
@@ -18,7 +14,7 @@ namespace WeightGain.DATA
         //Her ürünün kesinlikle bir kategorisi var.
 
         public int CategoryID { get; set; }
-        public Category category { get; set; }
+        public Category Category { get; set; }
 
 
         //Bir ürünü birden fazla kullanıcı seçebilir

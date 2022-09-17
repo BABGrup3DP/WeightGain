@@ -65,7 +65,9 @@
             // 
             // mainFormLogo
             // 
-            this.mainFormLogo.Image = ((System.Drawing.Image)(resources.GetObject("mainFormLogo.Image")));
+            this.mainFormLogo.BackColor = System.Drawing.Color.Transparent;
+            this.mainFormLogo.FillColor = System.Drawing.Color.Transparent;
+            this.mainFormLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
             this.mainFormLogo.ImageRotate = 0F;
             this.mainFormLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("mainFormLogo.InitialImage")));
             this.mainFormLogo.Location = new System.Drawing.Point(40, 62);
@@ -74,6 +76,7 @@
             this.mainFormLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.mainFormLogo.TabIndex = 10;
             this.mainFormLogo.TabStop = false;
+            this.mainFormLogo.UseTransparentBackground = true;
             // 
             // lblRegister
             // 
@@ -154,14 +157,14 @@
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogin.Location = new System.Drawing.Point(26, 167);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(262, 45);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Giriş Yap";
-            this.btnLogin.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -255,6 +258,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseUp);
