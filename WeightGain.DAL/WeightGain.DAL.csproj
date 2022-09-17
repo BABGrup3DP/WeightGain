@@ -53,15 +53,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryMapping.cs" />
     <Compile Include="Context\WeightGainContext.cs" />
+    <Compile Include="ExerciseMapping.cs" />
+    <Compile Include="ProductMapping.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserMapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WeightGain.DATA\WeightGain.DATA.csproj">
+      <Project>{341e98f6-fbfd-4e6c-aec6-986c9e869ddb}</Project>
+      <Name>WeightGain.DATA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

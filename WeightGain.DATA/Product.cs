@@ -7,7 +7,7 @@ namespace WeightGain.DATA
         public int ProductID { get; set; }
         public string ProductName { get; set; }
 
-        public string King { get; set; }
+        public string Kind { get; set; }
 
         public decimal Calory { get; set; }
 
