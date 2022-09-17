@@ -4,7 +4,7 @@ namespace WeightGain.DATA
 {
     public class User : BaseModel
     {
-        public RepastEnum Repast { get; set; }
+        public MealTimeEnum Repast { get; set; }
 
         //User ve ürün ilişkisi
         public List<Product> Products { get; set; }
@@ -14,8 +14,10 @@ namespace WeightGain.DATA
             Products = new List<Product>();
         }
 
-        //antreman ve user ilişkisi
+        // antreman ve user ilişkisi
         public List<Exercise> Exercises { get; set; }
+
+        public List<MealTime> MealTimes { get; set; }
 
     }
 }

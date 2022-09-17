@@ -1,6 +1,6 @@
 ﻿namespace WeightGain.UI
 {
-    partial class HelpForm
+    partial class MealTimeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // label1
+            // checkBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(358, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Yardım sayfası";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(287, 234);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(72, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "lunchform";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // HelpForm
+            // LunchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Name = "HelpForm";
-            this.Text = "HelpForm";
+            this.Controls.Add(this.checkBox1);
+            this.Name = "LunchForm";
+            this.Text = "LunchForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

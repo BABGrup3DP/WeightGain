@@ -7,7 +7,7 @@ namespace WeightGain.DATA
         public int ProductID { get; set; }
         public string ProductName { get; set; }
 
-        public string Kind { get; set; }
+        public string Scale { get; set; }
 
         public decimal Calory { get; set; }
 
@@ -20,6 +20,7 @@ namespace WeightGain.DATA
         //Bir ürünü birden fazla kullanıcı seçebilir
         public List<User> Users { get; set; }
 
+        public List<MealTime> MealTimes { get; set; }
 
     }
 }

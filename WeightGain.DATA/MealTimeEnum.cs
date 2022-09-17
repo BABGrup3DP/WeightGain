@@ -1,6 +1,6 @@
 ﻿namespace WeightGain.DATA
 {
-    public enum RepastEnum
+    public enum MealTimeEnum
     {
         Morning,
         FirstSnack,

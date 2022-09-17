@@ -8,11 +8,11 @@ namespace WeightGain.DAL
     {
         public ExerciseMapping()
         {
-            this.ToTable("Egzersiz");
+            //this.ToTable("Egzersiz");
             this.HasKey(x => x.ExerciseID);
             this.Property(x => x.ExerciseID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(x => x.Duration).IsRequired();
-
+            //this.HasMany(x => x.Users).WithMany(x => x.Exercises);
         }
     }
 }

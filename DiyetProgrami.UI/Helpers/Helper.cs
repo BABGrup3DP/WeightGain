@@ -55,7 +55,11 @@ namespace WeightGain.UI.Helpers
         {
             if (pnl.Controls.Count > 0)
                 pnl.Controls.RemoveAt(0);
+            childForm.TopLevel = false;
+            childForm.AutoScroll = true;
+            childForm.FormBorderStyle = FormBorderStyle.None;
             pnl.Controls.Add(childForm);
+            childForm.Show();
         }
     }
 }

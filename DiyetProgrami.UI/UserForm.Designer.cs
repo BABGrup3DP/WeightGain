@@ -34,7 +34,7 @@
             this.leftMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLunchs = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMealTimes = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnExercies = new Guna.UI2.WinForms.Guna2Button();
             this.btnArchives = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +57,7 @@
             this.leftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.leftMenuPanel.Controls.Add(this.btnLogout);
             this.leftMenuPanel.Controls.Add(this.btnHelp);
-            this.leftMenuPanel.Controls.Add(this.btnLunchs);
+            this.leftMenuPanel.Controls.Add(this.btnMealTimes);
             this.leftMenuPanel.Controls.Add(this.btnProfile);
             this.leftMenuPanel.Controls.Add(this.btnExercies);
             this.leftMenuPanel.Controls.Add(this.btnArchives);
@@ -120,32 +120,32 @@
             this.btnHelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
-            // btnLunchs
+            // btnMealTimes
             // 
-            this.btnLunchs.Animated = true;
-            this.btnLunchs.AnimatedGIF = true;
-            this.btnLunchs.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnLunchs.BorderRadius = 5;
-            this.btnLunchs.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnLunchs.BorderThickness = 1;
-            this.btnLunchs.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnLunchs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnLunchs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnLunchs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnLunchs.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnLunchs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnLunchs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnLunchs.Image = global::WeightGain.UI.Properties.Resources.lunch;
-            this.btnLunchs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLunchs.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLunchs.Location = new System.Drawing.Point(6, 165);
-            this.btnLunchs.Name = "btnLunchs";
-            this.btnLunchs.PressedColor = System.Drawing.Color.Transparent;
-            this.btnLunchs.Size = new System.Drawing.Size(227, 70);
-            this.btnLunchs.TabIndex = 0;
-            this.btnLunchs.Text = "Öğünler";
-            this.btnLunchs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLunchs.Click += new System.EventHandler(this.btnLunchs_Click);
+            this.btnMealTimes.Animated = true;
+            this.btnMealTimes.AnimatedGIF = true;
+            this.btnMealTimes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnMealTimes.BorderRadius = 5;
+            this.btnMealTimes.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnMealTimes.BorderThickness = 1;
+            this.btnMealTimes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnMealTimes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnMealTimes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnMealTimes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnMealTimes.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnMealTimes.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMealTimes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnMealTimes.Image = global::WeightGain.UI.Properties.Resources.lunch;
+            this.btnMealTimes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMealTimes.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMealTimes.Location = new System.Drawing.Point(6, 165);
+            this.btnMealTimes.Name = "btnMealTimes";
+            this.btnMealTimes.PressedColor = System.Drawing.Color.Transparent;
+            this.btnMealTimes.Size = new System.Drawing.Size(227, 70);
+            this.btnMealTimes.TabIndex = 0;
+            this.btnMealTimes.Text = "Öğünler";
+            this.btnMealTimes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMealTimes.Click += new System.EventHandler(this.btnMealTimes_Click);
             // 
             // btnProfile
             // 
@@ -335,7 +335,7 @@
         private Guna.UI2.WinForms.Guna2Button btnArchives;
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnExercies;
-        private Guna.UI2.WinForms.Guna2Button btnLunchs;
+        private Guna.UI2.WinForms.Guna2Button btnMealTimes;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnHelp;
     }

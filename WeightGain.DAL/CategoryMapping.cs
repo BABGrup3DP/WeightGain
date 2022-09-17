@@ -8,13 +8,13 @@ namespace WeightGain.DAL
     {
         public CategoryMapping()
         {
-            this.ToTable("Kategori");
+            //this.ToTable("Kategori");
             this.HasKey(x => x.CategoryID);
             this.Property(x => x.CategoryID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(x => x.Name).HasMaxLength(30).IsRequired();
             this.Property(x => x.Description).HasMaxLength(100);
-            this.Property(x => x.Kind).HasMaxLength(30);
             this.Property(x => x.Picture);
+            this.HasMany(x => x.Products).WithRequired(x => x.Category).HasForeignKey(x => x.CategoryID);
         }
     }
 }

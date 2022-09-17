@@ -45,36 +45,40 @@ namespace WeightGain.UI
                 Owner.Close();
         }
 
-        private void btnLunchs_Click(object sender, EventArgs e)
+        private void btnMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new MealTimeForm());
         }
 
         private void btnExercies_Click(object sender, EventArgs e)
         {
-
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            //Helper.OpenChildForm(mainPanel);
+            Helper.OpenChildForm(mainPanel, new ExerciseForm());
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new ReportForm());
         }
 
         private void btnArchives_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new ArchiveForm());
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new ProfileForm());
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new HelpForm());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -85,7 +89,7 @@ namespace WeightGain.UI
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            Helper.ChangeButtonEnableMenu(leftMenuPanel, btnLunchs);
+            btnMealTimes.PerformClick();
         }
     }
 }

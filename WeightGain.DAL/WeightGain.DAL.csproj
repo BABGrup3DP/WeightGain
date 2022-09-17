@@ -56,6 +56,7 @@
     <Compile Include="CategoryMapping.cs" />
     <Compile Include="Context\WeightGainContext.cs" />
     <Compile Include="ExerciseMapping.cs" />
+    <Compile Include="MealTimeMapping.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductMapping.cs" />
     <Compile Include="Program.cs" />

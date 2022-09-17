@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="Exercise.cs" />
+    <Compile Include="ExerciseEnum.cs" />
+    <Compile Include="MealTime.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseModel.cs" />
-    <Compile Include="RepastEnum.cs" />
+    <Compile Include="MealTimeEnum.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserTypeEnum.cs" />
   </ItemGroup>

@@ -8,12 +8,13 @@ namespace WeightGain.DAL
     {
         public ProductMapping()
         {
-            this.ToTable("Ürünler");
+            //this.ToTable("Ürünler");
             this.HasKey(x => x.ProductID);
             this.Property(x => x.ProductID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(x => x.ProductName).HasMaxLength(30).IsRequired();  //Max. boyutlar değişebilir.
-            this.Property(x => x.Kind).IsRequired();
+            this.Property(x => x.Scale).IsRequired();
             this.Property(x => x.Calory).IsRequired();
+            //this.HasOptional(x => x.Category).WithMany(x => x.Products);
         }
     }
 }
