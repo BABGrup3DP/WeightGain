@@ -61,6 +61,11 @@
     <Compile Include="ProductMapping.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdminRepository.cs" />
+    <Compile Include="Repositories\BaseModelRepository.cs" />
+    <Compile Include="Repositories\DietitianRepository.cs" />
+    <Compile Include="Repositories\ProjectManagerRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="UserMapping.cs" />
   </ItemGroup>
   <ItemGroup>
