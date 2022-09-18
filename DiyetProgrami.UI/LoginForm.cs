@@ -60,7 +60,7 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
-            var userForm = new UserForm()
+            var userForm = new AdminForm()
             {
                 Owner = this
             };

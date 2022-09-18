@@ -72,7 +72,8 @@ namespace WeightGain.UI
 
         private void txtTelephoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
+                e.Handled = true;
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -96,8 +97,16 @@ namespace WeightGain.UI
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            var firstName = txtName.Text.Trim();
+            var lastName = txtLastname.Text.Trim();
+            var email = txtEmail.Text.Trim();
+            var telephone = txtTelephoneNumber.Text.Trim();
+            var password = txtPassword.Text.Trim();
+            var birthDate = dtpBirthDate.Value;
+            var weight = nudWeight.Value;
+            var height = nudHeight.Value;
 
-            if (!Helper.CheckPanelEmptyValues(formRightPanel))
+            if (!Helper.CheckPanelEmptyValues(formRightPanel, new object[] { txtTelephoneNumber, txtEmail }))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -107,6 +116,32 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
+
+            if (!string.IsNullOrEmpty(email))
+            {
+                if (!Helper.CheckEmail(email))
+                {
+                    var messageDialogError = new Guna2MessageDialog
+                    {
+                        Text = "Lütfen mail adresinizi kontrol edin.",
+                        Caption = Properties.Resources.ProgramTitle
+                    };
+                    messageDialogError.Show();
+                    return;
+                }
+            }
+
+            if (Helper.CheckPasswordStrenght(password) < 3)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Girdiğiniz şifre güvenlik açısından çok zayıf. Lütfen özel karakter, büyük harf girmeyi ve şifre uzunluğunu fazla tutmayı deneyin.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+                return;
+            }
+
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
