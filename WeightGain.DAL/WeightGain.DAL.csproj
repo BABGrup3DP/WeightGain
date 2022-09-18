@@ -73,6 +73,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DiyetProgrami.UI\WeightGain.UI.csproj">
+      <Project>{85F164BC-D81C-497B-883A-F3D0874B23FE}</Project>
+      <Name>WeightGain.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeightGain.DATA\WeightGain.DATA.csproj">
       <Project>{341e98f6-fbfd-4e6c-aec6-986c9e869ddb}</Project>
       <Name>WeightGain.DATA</Name>

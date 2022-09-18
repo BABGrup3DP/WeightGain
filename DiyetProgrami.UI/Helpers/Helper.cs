@@ -114,7 +114,7 @@ namespace WeightGain.UI.Helpers
         /// </summary>
         /// <param name="value">MD5 ile şifrelenecek değer</param>
         /// <returns>MD5 hash değeri</returns>
-        public string GenerateMd5(string value)
+        public static string GenerateMd5(string value)
         {
             var md5Hasher = MD5.Create();
             var data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(value));
