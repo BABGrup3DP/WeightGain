@@ -40,12 +40,12 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblHeight = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
-            this.nupHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.nupWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.txtTelephoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtSurname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.mainFormLogo = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -54,8 +54,8 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.formRightPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,12 +75,12 @@
             this.formRightPanel.Controls.Add(this.txtPassword);
             this.formRightPanel.Controls.Add(this.lblHeight);
             this.formRightPanel.Controls.Add(this.lblWeight);
-            this.formRightPanel.Controls.Add(this.nupHeight);
-            this.formRightPanel.Controls.Add(this.nupWeight);
+            this.formRightPanel.Controls.Add(this.nudHeight);
+            this.formRightPanel.Controls.Add(this.nudWeight);
             this.formRightPanel.Controls.Add(this.txtTelephoneNumber);
             this.formRightPanel.Controls.Add(this.txtEmail);
             this.formRightPanel.Controls.Add(this.dtpBirthDate);
-            this.formRightPanel.Controls.Add(this.txtSurname);
+            this.formRightPanel.Controls.Add(this.txtLastname);
             this.formRightPanel.Controls.Add(this.lblSignUp);
             this.formRightPanel.Controls.Add(this.txtName);
             this.formRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
@@ -223,41 +223,41 @@
             this.lblWeight.TabIndex = 6;
             this.lblWeight.Text = "Kilonuz";
             // 
-            // nupHeight
+            // nudHeight
             // 
-            this.nupHeight.BackColor = System.Drawing.Color.Transparent;
-            this.nupHeight.BorderRadius = 6;
-            this.nupHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nupHeight.DecimalPlaces = 1;
-            this.nupHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nupHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nupHeight.Location = new System.Drawing.Point(127, 389);
-            this.nupHeight.Maximum = new decimal(new int[] {
+            this.nudHeight.BackColor = System.Drawing.Color.Transparent;
+            this.nudHeight.BorderRadius = 6;
+            this.nudHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudHeight.DecimalPlaces = 1;
+            this.nudHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.nudHeight.Location = new System.Drawing.Point(127, 389);
+            this.nudHeight.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nupHeight.Name = "nupHeight";
-            this.nupHeight.Size = new System.Drawing.Size(156, 36);
-            this.nupHeight.TabIndex = 9;
+            this.nudHeight.Name = "nudHeight";
+            this.nudHeight.Size = new System.Drawing.Size(156, 36);
+            this.nudHeight.TabIndex = 9;
             // 
-            // nupWeight
+            // nudWeight
             // 
-            this.nupWeight.BackColor = System.Drawing.Color.Transparent;
-            this.nupWeight.BorderRadius = 6;
-            this.nupWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nupWeight.DecimalPlaces = 2;
-            this.nupWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nupWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nupWeight.Location = new System.Drawing.Point(127, 347);
-            this.nupWeight.Maximum = new decimal(new int[] {
+            this.nudWeight.BackColor = System.Drawing.Color.Transparent;
+            this.nudWeight.BorderRadius = 6;
+            this.nudWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudWeight.DecimalPlaces = 2;
+            this.nudWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.nudWeight.Location = new System.Drawing.Point(127, 347);
+            this.nudWeight.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nupWeight.Name = "nupWeight";
-            this.nupWeight.Size = new System.Drawing.Size(156, 36);
-            this.nupWeight.TabIndex = 8;
+            this.nudWeight.Name = "nudWeight";
+            this.nudWeight.Size = new System.Drawing.Size(156, 36);
+            this.nudWeight.TabIndex = 8;
             // 
             // txtTelephoneNumber
             // 
@@ -326,30 +326,30 @@
             this.dtpBirthDate.TabIndex = 5;
             this.dtpBirthDate.Value = new System.DateTime(2022, 9, 15, 11, 44, 50, 634);
             // 
-            // txtSurname
+            // txtLastname
             // 
-            this.txtSurname.Animated = true;
-            this.txtSurname.BackColor = System.Drawing.Color.Transparent;
-            this.txtSurname.BorderRadius = 6;
-            this.txtSurname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSurname.DefaultText = "";
-            this.txtSurname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSurname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSurname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSurname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSurname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSurname.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.txtSurname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSurname.Location = new System.Drawing.Point(26, 95);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.PasswordChar = '\0';
-            this.txtSurname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtSurname.PlaceholderText = "Soyadınız";
-            this.txtSurname.SelectedText = "";
-            this.txtSurname.Size = new System.Drawing.Size(262, 36);
-            this.txtSurname.TabIndex = 1;
-            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
+            this.txtLastname.Animated = true;
+            this.txtLastname.BackColor = System.Drawing.Color.Transparent;
+            this.txtLastname.BorderRadius = 6;
+            this.txtLastname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastname.DefaultText = "";
+            this.txtLastname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastname.Location = new System.Drawing.Point(26, 95);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.PasswordChar = '\0';
+            this.txtLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.txtLastname.PlaceholderText = "Soyadınız";
+            this.txtLastname.SelectedText = "";
+            this.txtLastname.Size = new System.Drawing.Size(262, 36);
+            this.txtLastname.TabIndex = 1;
+            this.txtLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // lblSignUp
             // 
@@ -472,8 +472,8 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseUp);
             this.formRightPanel.ResumeLayout(false);
             this.formRightPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupWeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -490,12 +490,12 @@
         private System.Windows.Forms.Label lblSlogan;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label lblSignUp;
-        private Guna.UI2.WinForms.Guna2TextBox txtSurname;
+        private Guna.UI2.WinForms.Guna2TextBox txtLastname;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtTelephoneNumber;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nupHeight;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nupWeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
         private System.Windows.Forms.Label lblHeight;
         private System.Windows.Forms.Label lblWeight;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;

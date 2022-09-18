@@ -1,6 +1,6 @@
 ﻿namespace WeightGain.UI
 {
-    partial class UserForm
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.leftMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -68,9 +68,9 @@
             this.leftMenuPanel.Name = "leftMenuPanel";
             this.leftMenuPanel.Size = new System.Drawing.Size(239, 754);
             this.leftMenuPanel.TabIndex = 0;
-            this.leftMenuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.leftMenuPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.leftMenuPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.leftMenuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.leftMenuPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.leftMenuPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
             // btnLogout
             // 
@@ -254,9 +254,9 @@
             this.leftPanelMenuLogo.TabIndex = 0;
             this.leftPanelMenuLogo.TabStop = false;
             this.leftPanelMenuLogo.UseTransparentBackground = true;
-            this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
             // btnClose
             // 
@@ -279,9 +279,9 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1094, 32);
             this.topPanel.TabIndex = 7;
-            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
             // mainPanel
             // 
@@ -294,11 +294,11 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1094, 722);
             this.mainPanel.TabIndex = 8;
-            this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
-            // UserForm
+            // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,14 +311,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "UserForm";
+            this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
-            this.Load += new System.EventHandler(this.UserForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
+            this.Load += new System.EventHandler(this.AdminForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             this.leftMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.topPanel.ResumeLayout(false);
