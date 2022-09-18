@@ -1,12 +1,12 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
-namespace WeightGain.UI.Helpers
+namespace WeightGain.DATA.Helpers
 {
     public class Helper
     {
@@ -20,7 +20,7 @@ namespace WeightGain.UI.Helpers
         {
             foreach (var ctrl in pnl.Controls)
             {
-                if (dissmissObj == null || !dissmissObj.Contains(ctrl)) continue;
+                if (dissmissObj != null && dissmissObj.Contains(ctrl)) continue;
                 var ctrlName = ctrl.GetType().Name;
                 if (ctrlName.Contains("TextBox"))
                 {
@@ -110,15 +110,17 @@ namespace WeightGain.UI.Helpers
         }
 
         /// <summary>
-        /// Girilen değerin MD5 ile şifrelenmiş değerini döndürür.
+        /// Girilen değerin SHA512 ile şifrelenmiş değerini döndürür.
         /// </summary>
-        /// <param name="value">MD5 ile şifrelenecek değer</param>
-        /// <returns>MD5 hash değeri</returns>
-        public static string GenerateMd5(string value)
+        /// <param name="value">SHA512 ile şifrelenecek değer</param>
+        /// <returns>SHA512 base64 ile şifrelenmiş değeri</returns>
+        public static string GeneratePasswordHash(string value)
         {
-            var md5Hasher = MD5.Create();
-            var data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(value));
-            return BitConverter.ToString(data);
+            var uEncode = new UnicodeEncoding();
+            var bytVa = uEncode.GetBytes(value);
+            var sha = new SHA512Managed();
+            var hash = sha.ComputeHash(bytVa);
+            return Convert.ToBase64String(hash);
         }
     }
 }

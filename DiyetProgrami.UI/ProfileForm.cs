@@ -1,19 +1,26 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Windows.Forms;
-using WeightGain.UI.Helpers;
+using WeightGain.DAL.Repositories;
+using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI
 {
     public partial class ProfileForm : Form
     {
-        public ProfileForm()
+        private readonly UserRepository _userRepository;
+        private readonly User _logginedUser;
+        public ProfileForm(UserRepository userRepository, User logginedUser)
         {
             InitializeComponent();
+            _userRepository = userRepository;
+            _logginedUser = logginedUser;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            var updatingUser = _logginedUser;
             if (!Helper.CheckPanelEmptyValues(pnlProfile, new object[] { txtPassword, txtPassword2 }))
             {
                 var messageDialogError = new Guna2MessageDialog
@@ -24,8 +31,10 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
-
-            if (!string.IsNullOrEmpty(txtPassword.Text.Trim()) || !string.IsNullOrEmpty(txtPassword2.Text))
+            updatingUser.FirstName = txtFirstName.Text.Trim();
+            updatingUser.LastName = txtLastName.Text.Trim();
+            
+            if (!string.IsNullOrEmpty(txtPassword.Text.Trim()) && !string.IsNullOrEmpty(txtPassword2.Text))
             {
                 if (txtPassword.Text.Trim() != txtPassword2.Text.Trim())
                 {
@@ -47,16 +56,7 @@ namespace WeightGain.UI
                     messageDialogError.Show();
                     return;
                 }
-            }
-            if (string.IsNullOrEmpty(txtEmail.Text.Trim()) || string.IsNullOrEmpty(txtTelephone.Text.Trim()))
-            {
-                var messageDialogError = new Guna2MessageDialog
-                {
-                    Text = "Email veya telefon numarası girmek zorunludur.",
-                    Caption = Properties.Resources.ProgramTitle
-                };
-                messageDialogError.Show();
-                return;
+                updatingUser.Password = Helper.GeneratePasswordHash(txtPassword.Text.Trim());
             }
 
             if (!string.IsNullOrEmpty(txtEmail.Text.Trim()) && !Helper.CheckEmail(txtEmail.Text.Trim()))
@@ -67,8 +67,20 @@ namespace WeightGain.UI
                     Caption = Properties.Resources.ProgramTitle
                 };
                 messageDialogError.Show();
+                return;
             }
-
+            updatingUser.Email = txtEmail.Text.Trim();
+            updatingUser.PhoneNumber = txtPhone.Text.Trim();
+            updatingUser.BirthDate = dtpBirthDate.Value;
+            updatingUser.Weight = nudWeight.Value;
+            updatingUser.Height = nudHeight.Value;
+            _userRepository.Update(updatingUser);
+            var messageDialog = new Guna2MessageDialog
+            {
+                Text = "Bilgileriniz başarıyla güncellendi.",
+                Caption = Properties.Resources.ProgramTitle
+            };
+            messageDialog.Show();
         }
 
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
@@ -87,6 +99,17 @@ namespace WeightGain.UI
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
                 e.Handled = true;
+        }
+
+        private void ProfileForm_Load(object sender, EventArgs e)
+        {
+            txtFirstName.Text = _logginedUser.FirstName;
+            txtLastName.Text = _logginedUser.LastName;
+            txtEmail.Text = _logginedUser.Email;
+            txtPhone.Text = _logginedUser.PhoneNumber;
+            dtpBirthDate.Value = _logginedUser.BirthDate;
+            nudWeight.Value = _logginedUser.Weight;
+            nudHeight.Value = _logginedUser.Height;
         }
     }
 }

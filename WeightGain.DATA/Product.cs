@@ -12,7 +12,7 @@ namespace WeightGain.DATA
         //Her ürünün kesinlikle bir kategorisi var.
 
         public int CategoryID { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
 
         //Bir ürünü birden fazla kullanıcı seçebilir

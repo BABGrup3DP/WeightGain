@@ -12,8 +12,7 @@ namespace WeightGain.DATA
         public byte Age => (byte)(DateTime.Now.Year - BirthDate.Year);
         public decimal Weight { get; set; }
         public decimal Height { get; set; }
-        public byte Endex => (byte)(Weight / (Height * Height));
-        public MealTimeEnum Repast { get; set; }
+        public byte Bmi => (byte)(Weight / (Height * Height)); // Body mass index => vücut kitle endeksi
 
         //User ve ürün ilişkisi
         public List<Product> Products { get; set; }
@@ -23,6 +22,7 @@ namespace WeightGain.DATA
             Products = new List<Product>();
             Exercises = new List<Exercise>();
             MealTimes = new List<MealTime>();
+            UserType = UserTypeEnum.User;
         }
 
         // antreman ve user ilişkisi

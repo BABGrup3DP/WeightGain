@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using WeightGain.UI.Helpers;
+using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI
 {
@@ -100,13 +100,13 @@ namespace WeightGain.UI
             var firstName = txtName.Text.Trim();
             var lastName = txtLastname.Text.Trim();
             var email = txtEmail.Text.Trim();
-            var telephone = txtTelephoneNumber.Text.Trim();
+            var telephone = txtPhoneNumber.Text.Trim();
             var password = txtPassword.Text.Trim();
             var birthDate = dtpBirthDate.Value;
             var weight = nudWeight.Value;
             var height = nudHeight.Value;
 
-            if (!Helper.CheckPanelEmptyValues(formRightPanel, new object[] { txtTelephoneNumber, txtEmail }))
+            if (!Helper.CheckPanelEmptyValues(formRightPanel, new object[] { txtPhoneNumber, txtEmail }))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {

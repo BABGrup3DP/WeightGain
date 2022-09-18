@@ -42,7 +42,7 @@
             this.lblWeight = new System.Windows.Forms.Label();
             this.nudHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.nudWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.txtTelephoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -77,7 +77,7 @@
             this.formRightPanel.Controls.Add(this.lblWeight);
             this.formRightPanel.Controls.Add(this.nudHeight);
             this.formRightPanel.Controls.Add(this.nudWeight);
-            this.formRightPanel.Controls.Add(this.txtTelephoneNumber);
+            this.formRightPanel.Controls.Add(this.txtPhoneNumber);
             this.formRightPanel.Controls.Add(this.txtEmail);
             this.formRightPanel.Controls.Add(this.dtpBirthDate);
             this.formRightPanel.Controls.Add(this.txtLastname);
@@ -259,30 +259,30 @@
             this.nudWeight.Size = new System.Drawing.Size(156, 36);
             this.nudWeight.TabIndex = 8;
             // 
-            // txtTelephoneNumber
+            // txtPhoneNumber
             // 
-            this.txtTelephoneNumber.Animated = true;
-            this.txtTelephoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.txtTelephoneNumber.BorderRadius = 6;
-            this.txtTelephoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelephoneNumber.DefaultText = "";
-            this.txtTelephoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTelephoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTelephoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelephoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelephoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelephoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTelephoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.txtTelephoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelephoneNumber.Location = new System.Drawing.Point(26, 179);
-            this.txtTelephoneNumber.Name = "txtTelephoneNumber";
-            this.txtTelephoneNumber.PasswordChar = '\0';
-            this.txtTelephoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtTelephoneNumber.PlaceholderText = "Telefon Numaranız";
-            this.txtTelephoneNumber.SelectedText = "";
-            this.txtTelephoneNumber.Size = new System.Drawing.Size(262, 36);
-            this.txtTelephoneNumber.TabIndex = 3;
-            this.txtTelephoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephoneNumber_KeyPress);
+            this.txtPhoneNumber.Animated = true;
+            this.txtPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.txtPhoneNumber.BorderRadius = 6;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(26, 179);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PasswordChar = '\0';
+            this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.txtPhoneNumber.PlaceholderText = "Telefon Numaranız";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(262, 36);
+            this.txtPhoneNumber.TabIndex = 3;
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephoneNumber_KeyPress);
             // 
             // txtEmail
             // 
@@ -493,7 +493,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtLastname;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtTelephoneNumber;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
         private System.Windows.Forms.Label lblHeight;

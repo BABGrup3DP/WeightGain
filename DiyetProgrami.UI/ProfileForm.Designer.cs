@@ -39,10 +39,10 @@
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTelephone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.nupHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.nupWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -50,8 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             this.pnlProfile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,27 +197,27 @@
             this.txtEmail.Size = new System.Drawing.Size(412, 30);
             this.txtEmail.TabIndex = 2;
             // 
-            // txtTelephone
+            // txtPhone
             // 
-            this.txtTelephone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelephone.DefaultText = "";
-            this.txtTelephone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTelephone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTelephone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelephone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelephone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelephone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
-            this.txtTelephone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelephone.Location = new System.Drawing.Point(235, 152);
-            this.txtTelephone.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.PasswordChar = '\0';
-            this.txtTelephone.PlaceholderText = "";
-            this.txtTelephone.SelectedText = "";
-            this.txtTelephone.Size = new System.Drawing.Size(412, 30);
-            this.txtTelephone.TabIndex = 3;
-            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
+            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhone.Location = new System.Drawing.Point(235, 152);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PasswordChar = '\0';
+            this.txtPhone.PlaceholderText = "";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(412, 30);
+            this.txtPhone.TabIndex = 3;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             // 
             // dtpBirthDate
             // 
@@ -236,41 +236,41 @@
             this.dtpBirthDate.TabIndex = 4;
             this.dtpBirthDate.Value = new System.DateTime(2022, 9, 15, 11, 44, 50, 634);
             // 
-            // nupHeight
+            // nudHeight
             // 
-            this.nupHeight.BackColor = System.Drawing.Color.Transparent;
-            this.nupHeight.BorderRadius = 6;
-            this.nupHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nupHeight.DecimalPlaces = 1;
-            this.nupHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nupHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nupHeight.Location = new System.Drawing.Point(235, 290);
-            this.nupHeight.Maximum = new decimal(new int[] {
+            this.nudHeight.BackColor = System.Drawing.Color.Transparent;
+            this.nudHeight.BorderRadius = 6;
+            this.nudHeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudHeight.DecimalPlaces = 1;
+            this.nudHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.nudHeight.Location = new System.Drawing.Point(235, 290);
+            this.nudHeight.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nupHeight.Name = "nupHeight";
-            this.nupHeight.Size = new System.Drawing.Size(156, 36);
-            this.nupHeight.TabIndex = 6;
+            this.nudHeight.Name = "nudHeight";
+            this.nudHeight.Size = new System.Drawing.Size(156, 36);
+            this.nudHeight.TabIndex = 6;
             // 
-            // nupWeight
+            // nudWeight
             // 
-            this.nupWeight.BackColor = System.Drawing.Color.Transparent;
-            this.nupWeight.BorderRadius = 6;
-            this.nupWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nupWeight.DecimalPlaces = 2;
-            this.nupWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nupWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nupWeight.Location = new System.Drawing.Point(235, 244);
-            this.nupWeight.Maximum = new decimal(new int[] {
+            this.nudWeight.BackColor = System.Drawing.Color.Transparent;
+            this.nudWeight.BorderRadius = 6;
+            this.nudWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudWeight.DecimalPlaces = 2;
+            this.nudWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.nudWeight.Location = new System.Drawing.Point(235, 244);
+            this.nudWeight.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nupWeight.Name = "nupWeight";
-            this.nupWeight.Size = new System.Drawing.Size(156, 36);
-            this.nupWeight.TabIndex = 5;
+            this.nudWeight.Name = "nudWeight";
+            this.nudWeight.Size = new System.Drawing.Size(156, 36);
+            this.nudWeight.TabIndex = 5;
             // 
             // btnSave
             // 
@@ -364,13 +364,13 @@
             this.pnlProfile.Controls.Add(this.lblPassword);
             this.pnlProfile.Controls.Add(this.lblTelephone);
             this.pnlProfile.Controls.Add(this.lblWeight);
-            this.pnlProfile.Controls.Add(this.nupHeight);
+            this.pnlProfile.Controls.Add(this.nudHeight);
             this.pnlProfile.Controls.Add(this.lblHeight);
-            this.pnlProfile.Controls.Add(this.nupWeight);
+            this.pnlProfile.Controls.Add(this.nudWeight);
             this.pnlProfile.Controls.Add(this.txtFirstName);
             this.pnlProfile.Controls.Add(this.dtpBirthDate);
             this.pnlProfile.Controls.Add(this.txtLastName);
-            this.pnlProfile.Controls.Add(this.txtTelephone);
+            this.pnlProfile.Controls.Add(this.txtPhone);
             this.pnlProfile.Controls.Add(this.txtEmail);
             this.pnlProfile.Location = new System.Drawing.Point(12, 12);
             this.pnlProfile.Name = "pnlProfile";
@@ -393,8 +393,9 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";
-            ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupWeight)).EndInit();
+            this.Load += new System.EventHandler(this.ProfileForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
             this.pnlProfile.ResumeLayout(false);
             this.pnlProfile.PerformLayout();
             this.ResumeLayout(false);
@@ -412,10 +413,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtLastName;
-        private Guna.UI2.WinForms.Guna2TextBox txtTelephone;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nupHeight;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nupWeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword2;
         private System.Windows.Forms.Label label2;

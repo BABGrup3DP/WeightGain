@@ -19,7 +19,6 @@ namespace WeightGain.DAL.Context
         public DbSet<Dietitian> Dietitians { get; set; }
         public DbSet<ProjectManager> ProjectManagers { get; set; }
 
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserMapping());

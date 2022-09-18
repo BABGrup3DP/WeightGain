@@ -2,15 +2,19 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using WeightGain.UI.Helpers;
+using WeightGain.DAL.Repositories;
+using WeightGain.DATA.Helpers;
+using WeightGain.UI.Properties;
 
 namespace WeightGain.UI
 {
     public partial class LoginForm : Form
     {
+        private readonly UserRepository _userRepository;
         public LoginForm()
         {
             InitializeComponent();
+            _userRepository = new UserRepository();
         }
 
         #region Helper Functions
@@ -60,17 +64,85 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
-            var userForm = new AdminForm()
+
+            var emailOrPhone = txtEmailPhone.Text.Trim();
+            var password = txtPassword.Text.Trim();
+            var findUser = _userRepository.CheckLogin(emailOrPhone, Helper.GeneratePasswordHash(password));
+            if (findUser != null)
             {
-                Owner = this
-            };
-            Hide();
-            userForm.Show();
+                if (cbRememberMe.Checked)
+                {
+                    Settings.Default.emailphone = emailOrPhone;
+                    Settings.Default.password = password;
+                    Settings.Default.Save();
+                }
+                else
+                {
+                    Settings.Default.emailphone = string.Empty;
+                    Settings.Default.password = string.Empty;
+                    Settings.Default.Save();
+                }
+                switch (findUser.UserType)
+                {
+                    case DATA.UserTypeEnum.Admin:
+                        var adminForm = new AdminForm(_userRepository, findUser)
+                        {
+                            Owner = this
+                        };
+                        Hide();
+                        adminForm.Show();
+                        return;
+                    case DATA.UserTypeEnum.ProjectManager:
+                        MessageBox.Show("Proje yöneticisi girişi yapıldı.");
+                        return;
+                    case DATA.UserTypeEnum.Dietitian:
+                        MessageBox.Show("Diyetisyen girişi yapıldı.");
+                        return;
+                    case DATA.UserTypeEnum.User:
+                        var userForm = new UserForm(_userRepository, findUser)
+                        {
+                            Owner = this
+                        };
+                        Hide();
+                        userForm.Show();
+                        break;
+                    default:
+                        var messageDialogError = new Guna2MessageDialog
+                        {
+                            Text = "Bir hata oluştu. ",
+                            Caption = Properties.Resources.ProgramTitle
+                        };
+                        messageDialogError.Show();
+                        break;
+                }
+            }
+            else
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Girilen bilgilere göre bir kullanıcı bulunamadı. Şimdi üye olmak ister misin?",
+                    Caption = Properties.Resources.ProgramTitle,
+                    Buttons = MessageDialogButtons.YesNo,
+                };
+                if (messageDialogError.Show() == DialogResult.No) return;
+                var registerForm = new RegisterForm()
+                {
+                    Owner = this
+                };
+                registerForm.Show();
+                Hide();
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            txtEmailTelephone.Focus();
+            txtEmailPhone.Focus();
+            if (!string.IsNullOrEmpty(Settings.Default.emailphone) && !string.IsNullOrEmpty(Settings.Default.password))
+            {
+                txtEmailPhone.Text = Settings.Default.emailphone;
+                txtPassword.Text = Settings.Default.password;
+                cbRememberMe.Checked = true;
+            }
         }
     }
 }

@@ -40,7 +40,7 @@
             this.cbRememberMe = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmailTelephone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmailPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).BeginInit();
@@ -116,7 +116,7 @@
             this.formRightPanel.Controls.Add(this.cbRememberMe);
             this.formRightPanel.Controls.Add(this.btnLogin);
             this.formRightPanel.Controls.Add(this.txtPassword);
-            this.formRightPanel.Controls.Add(this.txtEmailTelephone);
+            this.formRightPanel.Controls.Add(this.txtEmailPhone);
             this.formRightPanel.Controls.Add(this.lblLogin);
             this.formRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.formRightPanel.Location = new System.Drawing.Point(566, 13);
@@ -190,29 +190,29 @@
             this.txtPassword.Size = new System.Drawing.Size(262, 36);
             this.txtPassword.TabIndex = 4;
             // 
-            // txtEmailTelephone
+            // txtEmailPhone
             // 
-            this.txtEmailTelephone.Animated = true;
-            this.txtEmailTelephone.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmailTelephone.BorderRadius = 6;
-            this.txtEmailTelephone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmailTelephone.DefaultText = "";
-            this.txtEmailTelephone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmailTelephone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmailTelephone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmailTelephone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmailTelephone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailTelephone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEmailTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.txtEmailTelephone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailTelephone.Location = new System.Drawing.Point(26, 52);
-            this.txtEmailTelephone.Name = "txtEmailTelephone";
-            this.txtEmailTelephone.PasswordChar = '\0';
-            this.txtEmailTelephone.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtEmailTelephone.PlaceholderText = "Email ya da Telefon Numaranız";
-            this.txtEmailTelephone.SelectedText = "";
-            this.txtEmailTelephone.Size = new System.Drawing.Size(262, 36);
-            this.txtEmailTelephone.TabIndex = 3;
+            this.txtEmailPhone.Animated = true;
+            this.txtEmailPhone.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmailPhone.BorderRadius = 6;
+            this.txtEmailPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmailPhone.DefaultText = "";
+            this.txtEmailPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmailPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmailPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmailPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmailPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.txtEmailPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmailPhone.Location = new System.Drawing.Point(26, 52);
+            this.txtEmailPhone.Name = "txtEmailPhone";
+            this.txtEmailPhone.PasswordChar = '\0';
+            this.txtEmailPhone.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.txtEmailPhone.PlaceholderText = "Email ya da Telefon Numaranız";
+            this.txtEmailPhone.SelectedText = "";
+            this.txtEmailPhone.Size = new System.Drawing.Size(262, 36);
+            this.txtEmailPhone.TabIndex = 3;
             // 
             // lblLogin
             // 
@@ -281,7 +281,7 @@
         private Guna.UI2.WinForms.Guna2Panel formRightPanel;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmailTelephone;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmailPhone;
         private System.Windows.Forms.Label lblLogin;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2CheckBox cbRememberMe;
