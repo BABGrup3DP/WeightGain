@@ -61,10 +61,6 @@
     <Compile Include="ProductMapping.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\AdminRepository.cs" />
-    <Compile Include="Repositories\BaseModelRepository.cs" />
-    <Compile Include="Repositories\DietitianRepository.cs" />
-    <Compile Include="Repositories\ProjectManagerRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="UserMapping.cs" />
   </ItemGroup>
@@ -81,6 +77,9 @@
       <Project>{341e98f6-fbfd-4e6c-aec6-986c9e869ddb}</Project>
       <Name>WeightGain.DATA</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

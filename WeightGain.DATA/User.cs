@@ -12,7 +12,7 @@ namespace WeightGain.DATA
         public byte Age => (byte)(DateTime.Now.Year - BirthDate.Year);
         public decimal Weight { get; set; }
         public decimal Height { get; set; }
-
+        public byte Endex => (byte)(Weight / (Height * Height));
         public MealTimeEnum Repast { get; set; }
 
         //User ve ürün ilişkisi
