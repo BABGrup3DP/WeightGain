@@ -41,13 +41,13 @@
             this.checkBox1.Text = "lunchform";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // LunchForm
+            // MealTimeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkBox1);
-            this.Name = "LunchForm";
+            this.Name = "MealTimeForm";
             this.Text = "LunchForm";
             this.ResumeLayout(false);
             this.PerformLayout();

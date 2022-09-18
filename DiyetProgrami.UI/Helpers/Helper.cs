@@ -47,19 +47,23 @@ namespace WeightGain.UI.Helpers
             {
                 if (!(ctrl is Guna2Button button)) continue;
                 button.Enabled = button != pressedBtn;
-                button.ImageAlign = (button.Enabled ? HorizontalAlignment.Left : HorizontalAlignment.Right);
+                button.ImageAlign = button.Enabled ? HorizontalAlignment.Left : HorizontalAlignment.Right;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pnl"></param>
+        /// <param name="childForm"></param>
         public static void OpenChildForm(Panel pnl, Form childForm)
         {
-            if (pnl.Controls.Count > 0)
-                pnl.Controls.RemoveAt(0);
+            if (pnl.Controls.Count > 0) // Eğer önceden form eklendiyse
+                pnl.Controls.RemoveAt(0); // formu içerisinden kaldır
             childForm.TopLevel = false;
-            childForm.AutoScroll = true;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            pnl.Controls.Add(childForm);
-            childForm.Show();
+            childForm.AutoScroll = true; // Formun içerisindeki kontrolleri otomatik olarak kaydırma özelliğini aktif eder.
+            childForm.FormBorderStyle = FormBorderStyle.None; // Formun kenarlıklarını kaldırır.
+            pnl.Controls.Add(childForm); // Formu panel içerisine ekle
+            childForm.Show(); // Formu göster
         }
     }
 }

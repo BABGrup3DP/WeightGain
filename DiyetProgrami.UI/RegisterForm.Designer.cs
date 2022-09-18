@@ -232,6 +232,11 @@
             this.nupHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nupHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.nupHeight.Location = new System.Drawing.Point(127, 389);
+            this.nupHeight.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nupHeight.Name = "nupHeight";
             this.nupHeight.Size = new System.Drawing.Size(156, 36);
             this.nupHeight.TabIndex = 9;
@@ -245,6 +250,11 @@
             this.nupWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nupWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.nupWeight.Location = new System.Drawing.Point(127, 347);
+            this.nupWeight.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nupWeight.Name = "nupWeight";
             this.nupWeight.Size = new System.Drawing.Size(156, 36);
             this.nupWeight.TabIndex = 8;

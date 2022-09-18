@@ -6,9 +6,7 @@ namespace WeightGain.DATA
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
-
         public string Scale { get; set; }
-
         public decimal Calory { get; set; }
 
         //Her ürünün kesinlikle bir kategorisi var.

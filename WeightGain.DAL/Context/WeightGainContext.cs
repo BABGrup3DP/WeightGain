@@ -15,7 +15,10 @@ namespace WeightGain.DAL.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<MealTime> MealTimes { get; set; }
-        
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Dietitian> Dietitians { get; set; }
+        public DbSet<ProjectManager> ProjectManagers { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -24,7 +27,7 @@ namespace WeightGain.DAL.Context
             modelBuilder.Configurations.Add(new ExerciseMapping());
             modelBuilder.Configurations.Add(new ProductMapping());
             modelBuilder.Configurations.Add(new MealTimeMapping());
-            
+
 
             base.OnModelCreating(modelBuilder);
         }
