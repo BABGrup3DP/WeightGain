@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using WeightGain.DAL.Context;
@@ -8,13 +9,13 @@ namespace WeightGain.DAL.Repositories
 {
     public class MealTimeRepository
     {
-        WeightGainContext DbContext;
-        DbSet<MealTime> _mealTimes;
+        private readonly WeightGainContext _dbContext;
+        private readonly DbSet<MealTime> _mealTimes;
 
         public MealTimeRepository()
         {
-            DbContext = new WeightGainContext();
-            _mealTimes = DbContext.Set<MealTime>();
+            _dbContext = new WeightGainContext();
+            _mealTimes = _dbContext.Set<MealTime>();
         }
 
         public List<MealTime> GetAll() => _mealTimes.ToList();
@@ -27,24 +28,41 @@ namespace WeightGain.DAL.Repositories
         public bool Insert(MealTime mealTime)
         {
             _mealTimes.Add(mealTime);
-            return DbContext.SaveChanges() > 0;
+            return _dbContext.SaveChanges() > 0;
         }
 
         //güncelleme
         public bool Update(MealTime mealTime)
         {
-            MealTime updateMealTime = _mealTimes.Find(mealTime.MealTimeId);
-            updateMealTime.MealTimeType = mealTime.MealTimeType;
-            updateMealTime.MealTimeDescription = mealTime.MealTimeDescription;
-            updateMealTime.Products = mealTime.Products;
-            return DbContext.SaveChanges() > 0;
+            try
+            {
+                var updateMealTime = _mealTimes.Find(mealTime.MealTimeId);
+                if (updateMealTime != null)
+                {
+                    updateMealTime.MealTimeType = mealTime.MealTimeType;
+                    updateMealTime.MealTimeDescription = mealTime.MealTimeDescription;
+                    updateMealTime.Products = mealTime.Products;
+                }
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //silme
-        public bool Delete(MealTime mealTime)
+        public bool Delete(int mealTimeId)
         {
-            _mealTimes.Remove(mealTime);
-            return DbContext.SaveChanges() > 0;
+            var deleteMealTime = _mealTimes.Find(mealTimeId);
+            if (deleteMealTime != null)
+                _mealTimes.Remove(deleteMealTime);
+            return _dbContext.SaveChanges() > 0;
+        }
+
+        public List<MealTimeEnum> GetMealTimes()
+        {
+            return Enum.GetValues(typeof(MealTimeEnum)).Cast<MealTimeEnum>().ToList();
         }
     }
 }

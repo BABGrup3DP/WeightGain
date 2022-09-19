@@ -54,13 +54,13 @@ namespace WeightGain.UI
         private void btnMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimeForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new MealTimesAdminForm(_logginedUser));
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new UsersForm(_userRepository));
+            Helper.OpenChildForm(mainPanel, new UsersFormAdmin(_userRepository));
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -96,6 +96,18 @@ namespace WeightGain.UI
         private void AdminForm_Load(object sender, EventArgs e)
         {
             btnMealTimes.PerformClick();
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new CategoriesAdminForm());
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new ProductsFormAdmin());
         }
     }
 }

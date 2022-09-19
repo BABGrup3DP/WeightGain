@@ -66,22 +66,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArchiveForm.cs">
+    <Compile Include="UserForm\ArchiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArchiveForm.Designer.cs">
+    <Compile Include="UserForm\ArchiveForm.Designer.cs">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExerciseForm.cs">
+    <Compile Include="AdminForm\CategoriesAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExerciseForm.Designer.cs">
+    <Compile Include="AdminForm\CategoriesAdminForm.Designer.cs">
+      <DependentUpon>CategoriesAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\ExerciseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\ExerciseForm.Designer.cs">
       <DependentUpon>ExerciseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelpForm.cs">
+    <Compile Include="UserForm\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HelpForm.Designer.cs">
+    <Compile Include="UserForm\HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
@@ -90,16 +96,22 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MealTimeForm.cs">
+    <Compile Include="UserForm\MealTimeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MealTimeForm.Designer.cs">
+    <Compile Include="UserForm\MealTimeForm.Designer.cs">
       <DependentUpon>MealTimeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProfileForm.cs">
+    <Compile Include="AdminForm\MealTimesAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProfileForm.Designer.cs">
+    <Compile Include="AdminForm\MealTimesAdminForm.Designer.cs">
+      <DependentUpon>MealTimesAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\ProfileForm.Designer.cs">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
@@ -110,46 +122,58 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportForm.cs">
+    <Compile Include="UserForm\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportForm.Designer.cs">
+    <Compile Include="UserForm\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="AdminForm\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="AdminForm\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm.cs">
+    <Compile Include="UserForm\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm.Designer.cs">
+    <Compile Include="UserForm\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersForm.cs">
+    <Compile Include="AdminForm\ProductsFormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersForm.Designer.cs">
-      <DependentUpon>UsersForm.cs</DependentUpon>
+    <Compile Include="AdminForm\ProductsFormAdmin.Designer.cs">
+      <DependentUpon>ProductsFormAdmin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ArchiveForm.resx">
+    <Compile Include="AdminForm\UsersFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\UsersFormAdmin.Designer.cs">
+      <DependentUpon>UsersFormAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserForm\ArchiveForm.resx">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExerciseForm.resx">
+    <EmbeddedResource Include="AdminForm\CategoriesAdminForm.resx">
+      <DependentUpon>CategoriesAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\ExerciseForm.resx">
       <DependentUpon>ExerciseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HelpForm.resx">
+    <EmbeddedResource Include="UserForm\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MealTimeForm.resx">
+    <EmbeddedResource Include="UserForm\MealTimeForm.resx">
       <DependentUpon>MealTimeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProfileForm.resx">
+    <EmbeddedResource Include="AdminForm\MealTimesAdminForm.resx">
+      <DependentUpon>MealTimesAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
@@ -165,17 +189,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReportForm.resx">
+    <EmbeddedResource Include="UserForm\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="AdminForm\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm.resx">
+    <EmbeddedResource Include="UserForm\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersForm.resx">
-      <DependentUpon>UsersForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForm\ProductsFormAdmin.resx">
+      <DependentUpon>ProductsFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\UsersFormAdmin.resx">
+      <DependentUpon>UsersFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -228,6 +255,7 @@
       <Name>WeightGain.DATA</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

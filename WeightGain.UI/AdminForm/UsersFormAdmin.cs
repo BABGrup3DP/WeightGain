@@ -5,10 +5,10 @@ using WeightGain.DAL.Repositories;
 
 namespace WeightGain.UI
 {
-    public partial class UsersForm : Form
+    public partial class UsersFormAdmin : Form
     {
         public readonly UserRepository _userRepository;
-        public UsersForm(UserRepository userRepository)
+        public UsersFormAdmin(UserRepository userRepository)
         {
             InitializeComponent();
             _userRepository = userRepository;

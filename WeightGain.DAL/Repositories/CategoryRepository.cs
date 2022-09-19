@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
@@ -6,38 +8,40 @@ namespace WeightGain.DAL.Repositories
 {
     public class CategoryRepository
     {
-        WeightGainContext DbContext;
-        DbSet<Category> _categories;
+        private readonly WeightGainContext _dbContext;
+        private readonly DbSet<Category> Categories;
 
         public CategoryRepository()
         {
-            DbContext = new WeightGainContext();
-            _categories = DbContext.Set<Category>();
+            _dbContext = new WeightGainContext();
+            Categories = _dbContext.Set<Category>();
         }
 
         //kategori ekleme
         public bool Insert(Category category)
         {
-            _categories.Add(category);
-            return DbContext.SaveChanges() > 0;
+            Categories.Add(category);
+            return _dbContext.SaveChanges() > 0;
         }
 
         //kategori güncellem
         public bool Update(Category category)
         {
-            Category updateCategory = _categories.Find(category.CategoryID);
+            Category updateCategory = Categories.Find(category.CategoryID);
             updateCategory.Description = category.Description;
             updateCategory.Name = category.Name;
-            updateCategory.Picture = category.Picture;
+            //updateCategory.Picture = category.Picture;
             updateCategory.Products = category.Products;
-            return DbContext.SaveChanges() > 0;
+            return _dbContext.SaveChanges() > 0;
         }
 
         //kategori silme
         public bool Delete(Category category)
         {
-            _categories.Remove(category);
-            return DbContext.SaveChanges() > 0;
+            Categories.Remove(category);
+            return _dbContext.SaveChanges() > 0;
         }
+
+        public List<Category> GetAll() => Categories.ToList();
     }
 }

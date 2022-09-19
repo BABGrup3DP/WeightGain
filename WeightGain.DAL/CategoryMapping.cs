@@ -13,7 +13,7 @@ namespace WeightGain.DAL
             this.Property(x => x.CategoryID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(x => x.Name).HasMaxLength(30).IsRequired();
             this.Property(x => x.Description).HasMaxLength(100);
-            this.Property(x => x.Picture);
+            //this.Property(x => x.Picture);
             this.HasMany(x => x.Products).WithRequired(x => x.Category).HasForeignKey(x => x.CategoryID);
         }
     }
