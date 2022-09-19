@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
@@ -16,7 +11,7 @@ namespace WeightGain.DAL.Repositories
 
         public ProductRepository()
         {
-           DbContext = new WeightGainContext();
+            DbContext = new WeightGainContext();
             _products = DbContext.Set<Product>();
         }
 
@@ -24,17 +19,17 @@ namespace WeightGain.DAL.Repositories
 
         public bool Insert(Product product)
         {
-            DbContext.Products.Add(product);
-            return DbContext.SaveChanges()>0;
+            _products.Add(product);
+            return DbContext.SaveChanges() > 0;
         }
 
         //ürün güncelleme
         public bool Update(Product product)
         {
-            Product updateProduct = DbContext.Products.Find(product.ProductID);
+            Product updateProduct = _products.Find(product.ProductID);
             updateProduct.ProductName = product.ProductName;
             updateProduct.Scale = product.Scale;
-            updateProduct.Calory=product.Calory;
+            updateProduct.Calory = product.Calory;
             updateProduct.Category = product.Category;
             return DbContext.SaveChanges() > 0;
         }
@@ -42,8 +37,8 @@ namespace WeightGain.DAL.Repositories
         //ürün silme
         public bool Delete(Product product)
         {
-            DbContext.Products.Remove(product);
-            return DbContext.SaveChanges()>0;
+            _products.Remove(product);
+            return DbContext.SaveChanges() > 0;
         }
     }
 }

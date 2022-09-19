@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
@@ -23,26 +18,25 @@ namespace WeightGain.DAL.Repositories
         //kategori ekleme
         public bool Insert(Category category)
         {
-            DbContext.Categories.Add(category);
-            return DbContext.SaveChanges()>0;
+            _categories.Add(category);
+            return DbContext.SaveChanges() > 0;
         }
 
         //kategori güncellem
         public bool Update(Category category)
         {
-            Category updateCategory=DbContext.Categories.Find(category.CategoryID);
+            Category updateCategory = _categories.Find(category.CategoryID);
             updateCategory.Description = category.Description;
             updateCategory.Name = category.Name;
-            updateCategory.Picture=category.Picture;
+            updateCategory.Picture = category.Picture;
             updateCategory.Products = category.Products;
-            
             return DbContext.SaveChanges() > 0;
         }
 
         //kategori silme
         public bool Delete(Category category)
         {
-            DbContext.Categories.Remove(category);
+            _categories.Remove(category);
             return DbContext.SaveChanges() > 0;
         }
     }

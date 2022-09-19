@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
@@ -21,29 +16,28 @@ namespace WeightGain.DAL.Repositories
         }
 
         //egzersiz ekleme
-
         public bool Insert(Exercise exercise)
         {
-            DbContext.Exercises.Add(exercise);
-            return DbContext.SaveChanges() >0 ;
+            _exercises.Add(exercise);
+            return DbContext.SaveChanges() > 0;
         }
 
         //güncelleme
-        public bool Update(Exercise exercise,ExerciseEnum exerciseEnum)
+        public bool Update(Exercise exercise, ExerciseEnum exerciseEnum)
         {
             //exercise tipini değiştirecek mi? exerciseEnum bu yüzden var!
 
-            Exercise updateExercise = DbContext.Exercises.Find(exercise.ExerciseID);
+            Exercise updateExercise = _exercises.Find(exercise.ExerciseID);
             updateExercise.Duration = exercise.Duration;
-            return DbContext.SaveChanges() >0 ;
+            return DbContext.SaveChanges() > 0;
 
         }
 
         //silme
         public bool Delete(Exercise exercise)
         {
-            DbContext.Exercises.Remove(exercise);
-            return DbContext.SaveChanges() >0 ;
+            _exercises.Remove(exercise);
+            return DbContext.SaveChanges() > 0;
         }
 
     }
