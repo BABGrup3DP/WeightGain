@@ -20,35 +20,59 @@ namespace WeightGain.DAL.Migrations
             //{
             //    #region Admin kullanıcıları ekliyoruz.
 
-            //    context.Admins.AddOrUpdate(x => x.ID,
-            //        new Admin
+            //    context.Users.AddOrUpdate(x => x.ID,
+            //        new User
             //        {
+            //            FirstName = "Yüksel",
+            //            LastName = "Güzel",
             //            Email = "yuksel.guzel@bilgeadamboost.com",
             //            Password = Helper.GeneratePasswordHash("123456"),
-            //            PhoneNumber = "51111111111"
+            //            BirthDate = DateTime.Now.AddYears(-19),
+            //            Weight = 45,
+            //            Height = 160,
+            //            PhoneNumber = "51111111111",
+            //            UserType = UserTypeEnum.Admin
             //        },
-            //        new Admin
+            //        new User
             //        {
+            //            FirstName = "Fatma",
+            //            LastName = "Çiftçi",
             //            Email = "fatma.ciftci@bilgeadamboost.com",
             //            Password = Helper.GeneratePasswordHash("123456"),
-            //            PhoneNumber = "52222222222"
+            //            BirthDate = DateTime.Now.AddYears(-19),
+            //            Weight = 45,
+            //            Height = 160,
+            //            PhoneNumber = "52222222222",
+            //            UserType = UserTypeEnum.Admin
             //        },
-            //        new Admin
+            //        new User
             //        {
+            //            FirstName = "Çağatay",
+            //            LastName = "Korkut",
             //            Email = "cagatay.korkut@bilgeadamboost.com",
             //            Password = Helper.GeneratePasswordHash("123456"),
-            //            PhoneNumber = "53333333333"
+            //            BirthDate = DateTime.Now.AddYears(-19),
+            //            Weight = 45,
+            //            Height = 160,
+            //            PhoneNumber = "53333333333",
+            //            UserType = UserTypeEnum.Admin
             //        });
 
             //    #endregion Admin kullanıcıları ekliyoruz.
 
             //    #region Diyetisyen kullanıcıları ekliyoruz.
 
-            //    context.Dietitians.AddOrUpdate(x => x.ID,
-            //        new Dietitian
+            //    context.Users.AddOrUpdate(x => x.ID,
+            //        new User
             //        {
+            //            FirstName = "Diyetisyen",
+            //            LastName = "Deneme",
             //            Email = "deneme@bilgeadamboost.com",
             //            Password = Helper.GeneratePasswordHash("123456"),
+            //            BirthDate = DateTime.Now.AddYears(-19),
+            //            Weight = 45,
+            //            Height = 160,
+            //            UserType = UserTypeEnum.Dietitian
             //        });
 
             //    #endregion Diyetisyen kullanıcıları ekliyoruz.
@@ -65,7 +89,8 @@ namespace WeightGain.DAL.Migrations
             //            BirthDate = DateTime.Now.AddYears(-19),
             //            Weight = 45,
             //            Height = 160,
-            //            PhoneNumber = "11111111111"
+            //            PhoneNumber = "11111111111",
+            //            UserType = UserTypeEnum.User
             //        },
             //        new User
             //        {
@@ -76,7 +101,8 @@ namespace WeightGain.DAL.Migrations
             //            BirthDate = DateTime.Now.AddYears(-21),
             //            Weight = 55,
             //            Height = 180,
-            //            PhoneNumber = "22222222222"
+            //            PhoneNumber = "22222222222",
+            //            UserType = UserTypeEnum.User
             //        }
             //    );
 

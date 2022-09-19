@@ -10,7 +10,7 @@ namespace WeightGain.UI
 {
     public partial class AdminForm : Form
     {
-        private readonly UserRepository _userRepository;
+        public readonly UserRepository _userRepository;
         private readonly User _logginedUser;
         public AdminForm(UserRepository userRepository, User logginedUser)
         {
@@ -54,13 +54,13 @@ namespace WeightGain.UI
         private void btnMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimeForm());
+            Helper.OpenChildForm(mainPanel, new MealTimeForm(_logginedUser));
         }
 
-        private void btnExercies_Click(object sender, EventArgs e)
+        private void btnUsers_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ExerciseForm());
+            Helper.OpenChildForm(mainPanel, new UsersForm(_userRepository));
         }
 
         private void btnReports_Click(object sender, EventArgs e)

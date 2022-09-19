@@ -54,7 +54,7 @@ namespace WeightGain.UI
         private void btnMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimeForm());
+            Helper.OpenChildForm(mainPanel, new MealTimeForm(_logginedUser));
         }
 
         private void btnExercies_Click(object sender, EventArgs e)

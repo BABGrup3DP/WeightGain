@@ -36,13 +36,14 @@
             this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.btnMealTimes = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExercies = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnArchives = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTopTitle = new System.Windows.Forms.Label();
             this.leftMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
             this.topPanel.SuspendLayout();
@@ -59,7 +60,7 @@
             this.leftMenuPanel.Controls.Add(this.btnHelp);
             this.leftMenuPanel.Controls.Add(this.btnMealTimes);
             this.leftMenuPanel.Controls.Add(this.btnProfile);
-            this.leftMenuPanel.Controls.Add(this.btnExercies);
+            this.leftMenuPanel.Controls.Add(this.btnUsers);
             this.leftMenuPanel.Controls.Add(this.btnArchives);
             this.leftMenuPanel.Controls.Add(this.btnReports);
             this.leftMenuPanel.Controls.Add(this.leftPanelMenuLogo);
@@ -171,28 +172,28 @@
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnExercies
+            // btnUsers
             // 
-            this.btnExercies.Animated = true;
-            this.btnExercies.AnimatedGIF = true;
-            this.btnExercies.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnExercies.BorderThickness = 1;
-            this.btnExercies.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnExercies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnExercies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnExercies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnExercies.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnExercies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnExercies.Image = global::WeightGain.UI.Properties.Resources.exercise;
-            this.btnExercies.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExercies.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExercies.Location = new System.Drawing.Point(6, 236);
-            this.btnExercies.Name = "btnExercies";
-            this.btnExercies.Size = new System.Drawing.Size(227, 70);
-            this.btnExercies.TabIndex = 1;
-            this.btnExercies.Text = "Antremanlar";
-            this.btnExercies.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExercies.Click += new System.EventHandler(this.btnExercies_Click);
+            this.btnUsers.Animated = true;
+            this.btnUsers.AnimatedGIF = true;
+            this.btnUsers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnUsers.BorderThickness = 1;
+            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUsers.Image = global::WeightGain.UI.Properties.Resources.exercise;
+            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnUsers.Location = new System.Drawing.Point(6, 236);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(227, 70);
+            this.btnUsers.TabIndex = 1;
+            this.btnUsers.Text = "Kullanıcılar";
+            this.btnUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnArchives
             // 
@@ -273,6 +274,7 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.topPanel.Controls.Add(this.lblTopTitle);
             this.topPanel.Controls.Add(this.btnClose);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(239, 0);
@@ -298,6 +300,15 @@
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
             this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
+            // lblTopTitle
+            // 
+            this.lblTopTitle.AutoSize = true;
+            this.lblTopTitle.Location = new System.Drawing.Point(6, 8);
+            this.lblTopTitle.Name = "lblTopTitle";
+            this.lblTopTitle.Size = new System.Drawing.Size(219, 21);
+            this.lblTopTitle.TabIndex = 7;
+            this.lblTopTitle.Text = "WeightGain Yönetici Paneli";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -322,6 +333,7 @@
             this.leftMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,9 +349,10 @@
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Button btnArchives;
         private Guna.UI2.WinForms.Guna2Button btnReports;
-        private Guna.UI2.WinForms.Guna2Button btnExercies;
+        private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnMealTimes;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnHelp;
+        private System.Windows.Forms.Label lblTopTitle;
     }
 }

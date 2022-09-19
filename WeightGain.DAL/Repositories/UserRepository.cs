@@ -37,6 +37,8 @@ namespace WeightGain.DAL.Repositories
             return _users.Find(id);
         }
 
+        public List<User> GetAll() => _users.ToList();
+
         //kullanıcı giriş kontrol
         public User CheckLogin(string emailOrPhone, string password)
         {

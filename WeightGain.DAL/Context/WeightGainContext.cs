@@ -15,9 +15,9 @@ namespace WeightGain.DAL.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<MealTime> MealTimes { get; set; }
-        public DbSet<Admin> Admins { get; set; }
-        public DbSet<Dietitian> Dietitians { get; set; }
-        public DbSet<ProjectManager> ProjectManagers { get; set; }
+        //public DbSet<Admin> Admins { get; set; }
+        //public DbSet<Dietitian> Dietitians { get; set; }
+        //public DbSet<ProjectManager> ProjectManagers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

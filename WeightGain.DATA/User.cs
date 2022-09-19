@@ -22,7 +22,7 @@ namespace WeightGain.DATA
             Products = new List<Product>();
             Exercises = new List<Exercise>();
             MealTimes = new List<MealTime>();
-            UserType = UserTypeEnum.User;
+            //UserType = UserTypeEnum.User;
         }
 
         // antreman ve user ilişkisi
