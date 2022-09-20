@@ -43,9 +43,40 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.PanelMain = new System.Windows.Forms.Panel();
+            this.ımageList = new System.Windows.Forms.ImageList(this.components);
+            this.btnogun = new System.Windows.Forms.Button();
+            this.btncategory = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlogun = new System.Windows.Forms.Panel();
+            this.pnlkategori = new System.Windows.Forms.Panel();
+            this.pnlögün = new System.Windows.Forms.Panel();
+            this.cmbogun = new System.Windows.Forms.ComboBox();
+            this.lblogun = new System.Windows.Forms.Label();
+            this.lblkategori = new System.Windows.Forms.Label();
+            this.cmbkategori = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listurun = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnkategoriekle = new System.Windows.Forms.Button();
+            this.btnkategorisil = new System.Windows.Forms.Button();
+            this.btnogunsil = new System.Windows.Forms.Button();
+            this.btnogunekle = new System.Windows.Forms.Button();
+            this.btnurunsil = new System.Windows.Forms.Button();
+            this.btnurunekle = new System.Windows.Forms.Button();
             this.leftMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
             this.topPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
+            this.PanelMain.SuspendLayout();
+            this.pnlogun.SuspendLayout();
+            this.pnlkategori.SuspendLayout();
+            this.pnlögün.SuspendLayout();
             this.SuspendLayout();
             // 
             // formElipse
@@ -138,7 +169,7 @@
             this.btnMealTimes.Image = global::WeightGain.UI.Properties.Resources.lunch;
             this.btnMealTimes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMealTimes.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMealTimes.Location = new System.Drawing.Point(6, 165);
+            this.btnMealTimes.Location = new System.Drawing.Point(6, 160);
             this.btnMealTimes.Name = "btnMealTimes";
             this.btnMealTimes.PressedColor = System.Drawing.Color.Transparent;
             this.btnMealTimes.Size = new System.Drawing.Size(227, 70);
@@ -247,13 +278,14 @@
             this.leftPanelMenuLogo.BackColor = System.Drawing.Color.Transparent;
             this.leftPanelMenuLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
             this.leftPanelMenuLogo.ImageRotate = 0F;
-            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-33, -87);
+            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-44, -71);
             this.leftPanelMenuLogo.Name = "leftPanelMenuLogo";
             this.leftPanelMenuLogo.Size = new System.Drawing.Size(309, 339);
             this.leftPanelMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.leftPanelMenuLogo.TabIndex = 0;
             this.leftPanelMenuLogo.TabStop = false;
             this.leftPanelMenuLogo.UseTransparentBackground = true;
+            this.leftPanelMenuLogo.Click += new System.EventHandler(this.leftPanelMenuLogo_Click);
             this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
             this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
@@ -287,6 +319,10 @@
             // 
             this.mainPanel.AutoScroll = true;
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.Controls.Add(this.pnlögün);
+            this.mainPanel.Controls.Add(this.pnlkategori);
+            this.mainPanel.Controls.Add(this.pnlogun);
+            this.mainPanel.Controls.Add(this.PanelMain);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(239, 32);
             this.mainPanel.MaximumSize = new System.Drawing.Size(1094, 722);
@@ -298,9 +334,310 @@
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
             this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // PanelMain
+            // 
+            this.PanelMain.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelMain.Controls.Add(this.label3);
+            this.PanelMain.Controls.Add(this.label2);
+            this.PanelMain.Controls.Add(this.label1);
+            this.PanelMain.Controls.Add(this.btnsave);
+            this.PanelMain.Controls.Add(this.btnProduct);
+            this.PanelMain.Controls.Add(this.btnogun);
+            this.PanelMain.Controls.Add(this.btncategory);
+            this.PanelMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelMain.Location = new System.Drawing.Point(0, 0);
+            this.PanelMain.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelMain.Name = "PanelMain";
+            this.PanelMain.Size = new System.Drawing.Size(1094, 100);
+            this.PanelMain.TabIndex = 0;
+            // 
+            // ımageList
+            // 
+            this.ımageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList.ImageStream")));
+            this.ımageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList.Images.SetKeyName(0, "ok1.png");
+            this.ımageList.Images.SetKeyName(1, "ok2.png");
+            this.ımageList.Images.SetKeyName(2, "ok3.png");
+            // 
+            // btnogun
+            // 
+            this.btnogun.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnogun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnogun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnogun.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnogun.ForeColor = System.Drawing.Color.Gray;
+            this.btnogun.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnogun.ImageKey = "ok1.png";
+            this.btnogun.ImageList = this.ımageList;
+            this.btnogun.Location = new System.Drawing.Point(69, 10);
+            this.btnogun.Name = "btnogun";
+            this.btnogun.Size = new System.Drawing.Size(112, 87);
+            this.btnogun.TabIndex = 1;
+            this.btnogun.Text = "Öğünler";
+            this.btnogun.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnogun.UseVisualStyleBackColor = true;
+            this.btnogun.Click += new System.EventHandler(this.btnogun_Click);
+            // 
+            // btncategory
+            // 
+            this.btncategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btncategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btncategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btncategory.ForeColor = System.Drawing.Color.Gray;
+            this.btncategory.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btncategory.ImageKey = "ok1.png";
+            this.btncategory.ImageList = this.ımageList;
+            this.btncategory.Location = new System.Drawing.Point(332, 10);
+            this.btncategory.Name = "btncategory";
+            this.btncategory.Size = new System.Drawing.Size(111, 87);
+            this.btncategory.TabIndex = 2;
+            this.btncategory.Text = "Kategoriler";
+            this.btncategory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btncategory.UseVisualStyleBackColor = true;
+            this.btncategory.Click += new System.EventHandler(this.btncategory_Click);
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnProduct.ForeColor = System.Drawing.Color.Gray;
+            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProduct.ImageKey = "ok1.png";
+            this.btnProduct.ImageList = this.ımageList;
+            this.btnProduct.Location = new System.Drawing.Point(596, 10);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(106, 87);
+            this.btnProduct.TabIndex = 3;
+            this.btnProduct.Text = "Ürünler";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // btnsave
+            // 
+            this.btnsave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnsave.ForeColor = System.Drawing.Color.Gray;
+            this.btnsave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsave.ImageKey = "ok1.png";
+            this.btnsave.ImageList = this.ımageList;
+            this.btnsave.Location = new System.Drawing.Point(856, 10);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(106, 87);
+            this.btnsave.TabIndex = 4;
+            this.btnsave.Text = "Kaydet";
+            this.btnsave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnsave.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.SlateBlue;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(179, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 13);
+            this.label1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.SlateBlue;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(441, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 13);
+            this.label2.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.SlateBlue;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(701, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 13);
+            this.label3.TabIndex = 6;
+            // 
+            // pnlogun
+            // 
+            this.pnlogun.Controls.Add(this.btnurunsil);
+            this.pnlogun.Controls.Add(this.btnurunekle);
+            this.pnlogun.Controls.Add(this.textBox1);
+            this.pnlogun.Controls.Add(this.listurun);
+            this.pnlogun.Controls.Add(this.label4);
+            this.pnlogun.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlogun.Location = new System.Drawing.Point(3, 100);
+            this.pnlogun.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlogun.Name = "pnlogun";
+            this.pnlogun.Size = new System.Drawing.Size(1091, 622);
+            this.pnlogun.TabIndex = 1;
+            this.pnlogun.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlogun_Paint);
+            // 
+            // pnlkategori
+            // 
+            this.pnlkategori.Controls.Add(this.btnkategorisil);
+            this.pnlkategori.Controls.Add(this.btnkategoriekle);
+            this.pnlkategori.Controls.Add(this.lblkategori);
+            this.pnlkategori.Controls.Add(this.cmbkategori);
+            this.pnlkategori.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlkategori.Location = new System.Drawing.Point(-7, 100);
+            this.pnlkategori.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlkategori.Name = "pnlkategori";
+            this.pnlkategori.Size = new System.Drawing.Size(10, 622);
+            this.pnlkategori.TabIndex = 3;
+            // 
+            // pnlögün
+            // 
+            this.pnlögün.Controls.Add(this.btnogunsil);
+            this.pnlögün.Controls.Add(this.btnogunekle);
+            this.pnlögün.Controls.Add(this.lblogun);
+            this.pnlögün.Controls.Add(this.cmbogun);
+            this.pnlögün.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlögün.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.pnlögün.Location = new System.Drawing.Point(-1081, 100);
+            this.pnlögün.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlögün.Name = "pnlögün";
+            this.pnlögün.Size = new System.Drawing.Size(1074, 622);
+            this.pnlögün.TabIndex = 4;
+            // 
+            // cmbogun
+            // 
+            this.cmbogun.FormattingEnabled = true;
+            this.cmbogun.Location = new System.Drawing.Point(162, 162);
+            this.cmbogun.Name = "cmbogun";
+            this.cmbogun.Size = new System.Drawing.Size(255, 31);
+            this.cmbogun.TabIndex = 0;
+            this.cmbogun.SelectedIndexChanged += new System.EventHandler(this.cmbogun_SelectedIndexChanged);
+            // 
+            // lblogun
+            // 
+            this.lblogun.AutoSize = true;
+            this.lblogun.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.lblogun.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblogun.Location = new System.Drawing.Point(158, 123);
+            this.lblogun.Name = "lblogun";
+            this.lblogun.Size = new System.Drawing.Size(155, 24);
+            this.lblogun.TabIndex = 1;
+            this.lblogun.Text = "Öğün Seçenekleri";
+            // 
+            // lblkategori
+            // 
+            this.lblkategori.AutoSize = true;
+            this.lblkategori.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.lblkategori.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblkategori.Location = new System.Drawing.Point(284, 137);
+            this.lblkategori.Name = "lblkategori";
+            this.lblkategori.Size = new System.Drawing.Size(180, 24);
+            this.lblkategori.TabIndex = 3;
+            this.lblkategori.Text = "Kategori Seçenekleri";
+            // 
+            // cmbkategori
+            // 
+            this.cmbkategori.FormattingEnabled = true;
+            this.cmbkategori.Location = new System.Drawing.Point(279, 175);
+            this.cmbkategori.Name = "cmbkategori";
+            this.cmbkategori.Size = new System.Drawing.Size(255, 36);
+            this.cmbkategori.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(29, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Secilen Ürün";
+            // 
+            // listurun
+            // 
+            this.listurun.FormattingEnabled = true;
+            this.listurun.ItemHeight = 28;
+            this.listurun.Location = new System.Drawing.Point(312, 28);
+            this.listurun.Name = "listurun";
+            this.listurun.Size = new System.Drawing.Size(335, 536);
+            this.listurun.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(33, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(243, 34);
+            this.textBox1.TabIndex = 5;
+            // 
+            // btnkategoriekle
+            // 
+            this.btnkategoriekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnkategoriekle.Location = new System.Drawing.Point(279, 270);
+            this.btnkategoriekle.Name = "btnkategoriekle";
+            this.btnkategoriekle.Size = new System.Drawing.Size(124, 46);
+            this.btnkategoriekle.TabIndex = 4;
+            this.btnkategoriekle.Text = "Ekle";
+            this.btnkategoriekle.UseVisualStyleBackColor = true;
+            // 
+            // btnkategorisil
+            // 
+            this.btnkategorisil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnkategorisil.Location = new System.Drawing.Point(453, 270);
+            this.btnkategorisil.Name = "btnkategorisil";
+            this.btnkategorisil.Size = new System.Drawing.Size(124, 46);
+            this.btnkategorisil.TabIndex = 5;
+            this.btnkategorisil.Text = "Sil";
+            this.btnkategorisil.UseVisualStyleBackColor = true;
+            // 
+            // btnogunsil
+            // 
+            this.btnogunsil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnogunsil.Location = new System.Drawing.Point(336, 257);
+            this.btnogunsil.Name = "btnogunsil";
+            this.btnogunsil.Size = new System.Drawing.Size(124, 46);
+            this.btnogunsil.TabIndex = 7;
+            this.btnogunsil.Text = "Sil";
+            this.btnogunsil.UseVisualStyleBackColor = true;
+            // 
+            // btnogunekle
+            // 
+            this.btnogunekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnogunekle.Location = new System.Drawing.Point(162, 257);
+            this.btnogunekle.Name = "btnogunekle";
+            this.btnogunekle.Size = new System.Drawing.Size(124, 46);
+            this.btnogunekle.TabIndex = 6;
+            this.btnogunekle.Text = "Ekle";
+            this.btnogunekle.UseVisualStyleBackColor = true;
+            // 
+            // btnurunsil
+            // 
+            this.btnurunsil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnurunsil.Location = new System.Drawing.Point(877, 66);
+            this.btnurunsil.Name = "btnurunsil";
+            this.btnurunsil.Size = new System.Drawing.Size(124, 46);
+            this.btnurunsil.TabIndex = 7;
+            this.btnurunsil.Text = "Sil";
+            this.btnurunsil.UseVisualStyleBackColor = true;
+            // 
+            // btnurunekle
+            // 
+            this.btnurunekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnurunekle.Location = new System.Drawing.Point(703, 66);
+            this.btnurunekle.Name = "btnurunekle";
+            this.btnurunekle.Size = new System.Drawing.Size(124, 46);
+            this.btnurunekle.TabIndex = 6;
+            this.btnurunekle.Text = "Ekle";
+            this.btnurunekle.UseVisualStyleBackColor = true;
+            // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1333, 754);
@@ -322,6 +659,14 @@
             this.leftMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.topPanel.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
+            this.PanelMain.ResumeLayout(false);
+            this.pnlogun.ResumeLayout(false);
+            this.pnlogun.PerformLayout();
+            this.pnlkategori.ResumeLayout(false);
+            this.pnlkategori.PerformLayout();
+            this.pnlögün.ResumeLayout(false);
+            this.pnlögün.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +686,31 @@
         private Guna.UI2.WinForms.Guna2Button btnMealTimes;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnHelp;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Panel PanelMain;
+        public System.Windows.Forms.ImageList ımageList;
+        private System.Windows.Forms.Button btnogun;
+        private System.Windows.Forms.Button btnProduct;
+        private System.Windows.Forms.Button btncategory;
+        private System.Windows.Forms.Panel pnlögün;
+        private System.Windows.Forms.Label lblogun;
+        private System.Windows.Forms.ComboBox cmbogun;
+        private System.Windows.Forms.Panel pnlkategori;
+        private System.Windows.Forms.Panel pnlogun;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.Button btnogunsil;
+        private System.Windows.Forms.Button btnogunekle;
+        private System.Windows.Forms.Button btnkategorisil;
+        private System.Windows.Forms.Button btnkategoriekle;
+        private System.Windows.Forms.Label lblkategori;
+        private System.Windows.Forms.ComboBox cmbkategori;
+        private System.Windows.Forms.Button btnurunsil;
+        private System.Windows.Forms.Button btnurunekle;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox listurun;
+        private System.Windows.Forms.Label label4;
     }
 }
