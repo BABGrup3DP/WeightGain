@@ -21,7 +21,7 @@ namespace WeightGain.DAL.Repositories
 
         //ürün ekleme
 
-        public bool Insert(Product product)
+        public bool Insert(Product product)           
         {
             Products.Add(product);
             return _dbContext.SaveChanges() > 0;
@@ -39,9 +39,11 @@ namespace WeightGain.DAL.Repositories
         }
 
         //ürün silme
-        public bool Delete(Product product)
+        public bool Delete(int ProductID)
         {
-            Products.Remove(product);
+            var deleteProduct = Products.Find(ProductID);
+            if (deleteProduct != null)
+                Products.Remove(deleteProduct);
             return _dbContext.SaveChanges() > 0;
         }
 
