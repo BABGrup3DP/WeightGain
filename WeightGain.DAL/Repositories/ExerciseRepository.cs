@@ -1,4 +1,7 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
@@ -23,22 +26,37 @@ namespace WeightGain.DAL.Repositories
         }
 
         //güncelleme
-        public bool Update(Exercise exercise, ExerciseEnum exerciseEnum)
+        public bool Update(Exercise exercise)
         {
             //exercise tipini değiştirecek mi? exerciseEnum bu yüzden var!
 
-            Exercise updateExercise = _exercises.Find(exercise.ExerciseID);
-            updateExercise.Duration = exercise.Duration;
+            var updateExercise = _exercises.Find(exercise.ExerciseID);
+            if (updateExercise != null)
+            {
+                updateExercise.ExerciseType = exercise.ExerciseType;
+                updateExercise.Duration = exercise.Duration;
+                updateExercise.Users = exercise.Users;
+            }
             return DbContext.SaveChanges() > 0;
 
         }
 
         //silme
-        public bool Delete(Exercise exercise)
+        public bool Delete(int execiseId)
         {
-            _exercises.Remove(exercise);
+            var deleteExercise = _exercises.Find(execiseId);
+            if (deleteExercise != null)
+                _exercises.Remove(deleteExercise);
             return DbContext.SaveChanges() > 0;
         }
 
+        public List<Exercise> GetAll() => _exercises.ToList();
+
+        public Exercise GetById(int exerciseId) => _exercises.Find(exerciseId);
+
+        public List<ExerciseEnum> GetExercises()
+        {
+            return Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();
+        }
     }
 }

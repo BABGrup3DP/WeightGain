@@ -5,6 +5,7 @@ namespace WeightGain.DATA
     public class Exercise
     {
         public int ExerciseID { get; set; }
+        public ExerciseEnum ExerciseType { get; set; }
         public byte Duration { get; set; }
 
         // Birden fazla kullanıcı antreman seçebilir

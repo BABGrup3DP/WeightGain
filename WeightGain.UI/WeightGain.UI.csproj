@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm\ExeciseFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\ExeciseFormAdmin.Designer.cs">
+      <DependentUpon>ExeciseFormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm\ArchiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <Compile Include="AdminForm\UsersFormAdmin.Designer.cs">
       <DependentUpon>UsersFormAdmin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForm\ExeciseFormAdmin.resx">
+      <DependentUpon>ExeciseFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm\ArchiveForm.resx">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
