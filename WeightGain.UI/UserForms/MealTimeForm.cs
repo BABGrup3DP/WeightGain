@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 
-namespace WeightGain.UI
+namespace WeightGain.UI.UserForms
 {
     public partial class MealTimeForm : Form
     {

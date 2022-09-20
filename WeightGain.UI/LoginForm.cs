@@ -4,7 +4,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA.Helpers;
+using WeightGain.UI.AdminForms;
 using WeightGain.UI.Properties;
+using WeightGain.UI.UserForms;
 
 namespace WeightGain.UI
 {

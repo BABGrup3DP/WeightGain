@@ -1,4 +1,4 @@
-﻿namespace WeightGain.UI
+﻿namespace WeightGain.UI.UserForms
 {
     partial class MealTimeForm
     {

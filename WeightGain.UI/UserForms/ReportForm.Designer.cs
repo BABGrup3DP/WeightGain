@@ -1,6 +1,6 @@
-﻿namespace WeightGain.UI
+﻿namespace WeightGain.UI.UserForms
 {
-    partial class HelpForm
+    partial class ReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,20 +34,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(358, 187);
+            this.label1.Location = new System.Drawing.Point(369, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Yardım sayfası";
+            this.label1.Text = "report form";
             // 
-            // HelpForm
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "HelpForm";
-            this.Text = "HelpForm";
+            this.Name = "ReportForm";
+            this.Text = "ReportForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

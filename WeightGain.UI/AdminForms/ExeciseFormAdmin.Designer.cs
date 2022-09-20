@@ -1,4 +1,4 @@
-﻿namespace WeightGain.UI
+﻿namespace WeightGain.UI.AdminForms
 {
     partial class ExeciseFormAdmin
     {

@@ -1,6 +1,6 @@
-﻿namespace WeightGain.UI
+﻿namespace WeightGain.UI.UserForms
 {
-    partial class ExerciseForm
+    partial class ArchiveForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2VTrackBar1 = new Guna.UI2.WinForms.Guna2VTrackBar();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.SuspendLayout();
             // 
-            // guna2VTrackBar1
+            // guna2Shapes1
             // 
-            this.guna2VTrackBar1.Location = new System.Drawing.Point(346, 72);
-            this.guna2VTrackBar1.Name = "guna2VTrackBar1";
-            this.guna2VTrackBar1.Size = new System.Drawing.Size(23, 300);
-            this.guna2VTrackBar1.TabIndex = 0;
-            this.guna2VTrackBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.guna2Shapes1.Location = new System.Drawing.Point(315, 144);
+            this.guna2Shapes1.Name = "guna2Shapes1";
+            this.guna2Shapes1.PolygonSkip = 1;
+            this.guna2Shapes1.Rotate = 0F;
+            this.guna2Shapes1.Size = new System.Drawing.Size(200, 200);
+            this.guna2Shapes1.TabIndex = 0;
+            this.guna2Shapes1.Text = "guna2Shapes1";
+            this.guna2Shapes1.Zoom = 80;
             // 
-            // ExerciseForm
+            // ArchiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.guna2VTrackBar1);
-            this.Name = "ExerciseForm";
-            this.Text = "ExerciseForm";
+            this.Controls.Add(this.guna2Shapes1);
+            this.Name = "ArchiveForm";
+            this.Text = "ArchiveForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2VTrackBar guna2VTrackBar1;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
     }
 }

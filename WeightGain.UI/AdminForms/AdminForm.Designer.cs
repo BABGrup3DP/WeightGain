@@ -1,6 +1,6 @@
-﻿namespace WeightGain.UI
+﻿namespace WeightGain.UI.AdminForms
 {
-    partial class UserForm
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.leftMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCategories = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.btnMealTimes = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExercies = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnArchives = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTopTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.leftMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
@@ -55,22 +58,78 @@
             // leftMenuPanel
             // 
             this.leftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.leftMenuPanel.Controls.Add(this.btnProducts);
+            this.leftMenuPanel.Controls.Add(this.btnCategories);
             this.leftMenuPanel.Controls.Add(this.btnLogout);
             this.leftMenuPanel.Controls.Add(this.btnHelp);
             this.leftMenuPanel.Controls.Add(this.btnMealTimes);
             this.leftMenuPanel.Controls.Add(this.btnProfile);
-            this.leftMenuPanel.Controls.Add(this.btnExercies);
+            this.leftMenuPanel.Controls.Add(this.btnUsers);
             this.leftMenuPanel.Controls.Add(this.btnArchives);
             this.leftMenuPanel.Controls.Add(this.btnReports);
             this.leftMenuPanel.Controls.Add(this.leftPanelMenuLogo);
             this.leftMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMenuPanel.Name = "leftMenuPanel";
-            this.leftMenuPanel.Size = new System.Drawing.Size(239, 754);
+            this.leftMenuPanel.Size = new System.Drawing.Size(239, 863);
             this.leftMenuPanel.TabIndex = 0;
-            this.leftMenuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.leftMenuPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.leftMenuPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.leftMenuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.leftMenuPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.leftMenuPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.Animated = true;
+            this.btnProducts.AnimatedGIF = true;
+            this.btnProducts.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnProducts.BorderRadius = 5;
+            this.btnProducts.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnProducts.BorderThickness = 1;
+            this.btnProducts.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnProducts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnProducts.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnProducts.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnProducts.Image = global::WeightGain.UI.Properties.Resources.lunch;
+            this.btnProducts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProducts.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnProducts.Location = new System.Drawing.Point(6, 317);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.PressedColor = System.Drawing.Color.Transparent;
+            this.btnProducts.Size = new System.Drawing.Size(227, 70);
+            this.btnProducts.TabIndex = 8;
+            this.btnProducts.Text = "Ürünler";
+            this.btnProducts.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            // 
+            // btnCategories
+            // 
+            this.btnCategories.Animated = true;
+            this.btnCategories.AnimatedGIF = true;
+            this.btnCategories.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnCategories.BorderRadius = 5;
+            this.btnCategories.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnCategories.BorderThickness = 1;
+            this.btnCategories.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnCategories.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnCategories.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnCategories.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnCategories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCategories.Image = global::WeightGain.UI.Properties.Resources.lunch;
+            this.btnCategories.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCategories.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnCategories.Location = new System.Drawing.Point(6, 241);
+            this.btnCategories.Name = "btnCategories";
+            this.btnCategories.PressedColor = System.Drawing.Color.Transparent;
+            this.btnCategories.Size = new System.Drawing.Size(227, 70);
+            this.btnCategories.TabIndex = 7;
+            this.btnCategories.Text = "Kategoriler";
+            this.btnCategories.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // btnLogout
             // 
@@ -88,7 +147,7 @@
             this.btnLogout.Image = global::WeightGain.UI.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.Location = new System.Drawing.Point(6, 591);
+            this.btnLogout.Location = new System.Drawing.Point(6, 773);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(227, 70);
             this.btnLogout.TabIndex = 6;
@@ -112,7 +171,7 @@
             this.btnHelp.Image = global::WeightGain.UI.Properties.Resources.help;
             this.btnHelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHelp.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHelp.Location = new System.Drawing.Point(6, 520);
+            this.btnHelp.Location = new System.Drawing.Point(6, 697);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(227, 70);
             this.btnHelp.TabIndex = 5;
@@ -163,7 +222,7 @@
             this.btnProfile.Image = global::WeightGain.UI.Properties.Resources.profile;
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnProfile.Location = new System.Drawing.Point(6, 449);
+            this.btnProfile.Location = new System.Drawing.Point(6, 621);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(227, 70);
             this.btnProfile.TabIndex = 4;
@@ -171,28 +230,28 @@
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnExercies
+            // btnUsers
             // 
-            this.btnExercies.Animated = true;
-            this.btnExercies.AnimatedGIF = true;
-            this.btnExercies.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnExercies.BorderThickness = 1;
-            this.btnExercies.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnExercies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnExercies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnExercies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnExercies.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnExercies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnExercies.Image = global::WeightGain.UI.Properties.Resources.exercise;
-            this.btnExercies.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExercies.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExercies.Location = new System.Drawing.Point(6, 236);
-            this.btnExercies.Name = "btnExercies";
-            this.btnExercies.Size = new System.Drawing.Size(227, 70);
-            this.btnExercies.TabIndex = 1;
-            this.btnExercies.Text = "Antremanlar";
-            this.btnExercies.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExercies.Click += new System.EventHandler(this.btnExercies_Click);
+            this.btnUsers.Animated = true;
+            this.btnUsers.AnimatedGIF = true;
+            this.btnUsers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnUsers.BorderThickness = 1;
+            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUsers.Image = global::WeightGain.UI.Properties.Resources.exercise;
+            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnUsers.Location = new System.Drawing.Point(6, 393);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(227, 70);
+            this.btnUsers.TabIndex = 1;
+            this.btnUsers.Text = "Kullanıcılar";
+            this.btnUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnArchives
             // 
@@ -210,7 +269,7 @@
             this.btnArchives.Image = global::WeightGain.UI.Properties.Resources.archive;
             this.btnArchives.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnArchives.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnArchives.Location = new System.Drawing.Point(6, 378);
+            this.btnArchives.Location = new System.Drawing.Point(6, 545);
             this.btnArchives.Name = "btnArchives";
             this.btnArchives.Size = new System.Drawing.Size(227, 70);
             this.btnArchives.TabIndex = 3;
@@ -234,7 +293,7 @@
             this.btnReports.Image = global::WeightGain.UI.Properties.Resources.reports;
             this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReports.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnReports.Location = new System.Drawing.Point(6, 307);
+            this.btnReports.Location = new System.Drawing.Point(6, 469);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(227, 70);
             this.btnReports.TabIndex = 2;
@@ -254,9 +313,9 @@
             this.leftPanelMenuLogo.TabIndex = 0;
             this.leftPanelMenuLogo.TabStop = false;
             this.leftPanelMenuLogo.UseTransparentBackground = true;
-            this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
             // btnClose
             // 
@@ -273,15 +332,25 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.topPanel.Controls.Add(this.lblTopTitle);
             this.topPanel.Controls.Add(this.btnClose);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(239, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1094, 32);
             this.topPanel.TabIndex = 7;
-            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
+            // 
+            // lblTopTitle
+            // 
+            this.lblTopTitle.AutoSize = true;
+            this.lblTopTitle.Location = new System.Drawing.Point(6, 8);
+            this.lblTopTitle.Name = "lblTopTitle";
+            this.lblTopTitle.Size = new System.Drawing.Size(219, 21);
+            this.lblTopTitle.TabIndex = 7;
+            this.lblTopTitle.Text = "WeightGain Yönetici Paneli";
             // 
             // mainPanel
             // 
@@ -294,16 +363,16 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1094, 722);
             this.mainPanel.TabIndex = 8;
-            this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             // 
-            // UserForm
+            // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1333, 754);
+            this.ClientSize = new System.Drawing.Size(1333, 863);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftMenuPanel);
@@ -311,17 +380,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "UserForm";
+            this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
-            this.Load += new System.EventHandler(this.UserForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
+            this.Load += new System.EventHandler(this.AdminForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);
             this.leftMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,9 +407,12 @@
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Button btnArchives;
         private Guna.UI2.WinForms.Guna2Button btnReports;
-        private Guna.UI2.WinForms.Guna2Button btnExercies;
+        private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnMealTimes;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnHelp;
+        private System.Windows.Forms.Label lblTopTitle;
+        private Guna.UI2.WinForms.Guna2Button btnProducts;
+        private Guna.UI2.WinForms.Guna2Button btnCategories;
     }
 }

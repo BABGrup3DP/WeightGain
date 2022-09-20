@@ -1,11 +1,11 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.UI.Properties;
 
-namespace WeightGain.UI
+namespace WeightGain.UI.AdminForms
 {
     public partial class MealTimesAdminForm : Form
     {

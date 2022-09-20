@@ -51,9 +51,27 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,36 +82,37 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm\ExeciseFormAdmin.cs">
+    <Compile Include="AdminForms\ExeciseFormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm\ExeciseFormAdmin.Designer.cs">
+    <Compile Include="AdminForms\ExeciseFormAdmin.Designer.cs">
       <DependentUpon>ExeciseFormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\ArchiveForm.cs">
+    <Compile Include="UserForms\ArchiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\ArchiveForm.Designer.cs">
+    <Compile Include="UserForms\ArchiveForm.Designer.cs">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm\CategoriesAdminForm.cs">
+    <Compile Include="AdminForms\CategoriesAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm\CategoriesAdminForm.Designer.cs">
+    <Compile Include="AdminForms\CategoriesAdminForm.Designer.cs">
       <DependentUpon>CategoriesAdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\ExerciseForm.cs">
+    <Compile Include="UserForms\ExerciseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\ExerciseForm.Designer.cs">
+    <Compile Include="UserForms\ExerciseForm.Designer.cs">
       <DependentUpon>ExerciseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\HelpForm.cs">
+    <Compile Include="UserForms\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\HelpForm.Designer.cs">
+    <Compile Include="UserForms\HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
@@ -102,22 +121,22 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\MealTimeForm.cs">
+    <Compile Include="UserForms\MealTimeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\MealTimeForm.Designer.cs">
+    <Compile Include="UserForms\MealTimeForm.Designer.cs">
       <DependentUpon>MealTimeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm\MealTimesAdminForm.cs">
+    <Compile Include="AdminForms\MealTimesAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm\MealTimesAdminForm.Designer.cs">
+    <Compile Include="AdminForms\MealTimesAdminForm.Designer.cs">
       <DependentUpon>MealTimesAdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\ProfileForm.cs">
+    <Compile Include="UserForms\ProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\ProfileForm.Designer.cs">
+    <Compile Include="UserForms\ProfileForm.Designer.cs">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
@@ -128,61 +147,61 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserForm\ReportForm.cs">
+    <Compile Include="UserForms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\ReportForm.Designer.cs">
+    <Compile Include="UserForms\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm\AdminForm.cs">
+    <Compile Include="AdminForms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm\AdminForm.Designer.cs">
+    <Compile Include="AdminForms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm\UserForm.cs">
+    <Compile Include="UserForms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm\UserForm.Designer.cs">
+    <Compile Include="UserForms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm\ProductsFormAdmin.cs">
+    <Compile Include="AdminForms\ProductsFormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm\ProductsFormAdmin.Designer.cs">
+    <Compile Include="AdminForms\ProductsFormAdmin.Designer.cs">
       <DependentUpon>ProductsFormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm\UsersFormAdmin.cs">
+    <Compile Include="AdminForms\UsersFormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm\UsersFormAdmin.Designer.cs">
+    <Compile Include="AdminForms\UsersFormAdmin.Designer.cs">
       <DependentUpon>UsersFormAdmin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForm\ExeciseFormAdmin.resx">
+    <EmbeddedResource Include="AdminForms\ExeciseFormAdmin.resx">
       <DependentUpon>ExeciseFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\ArchiveForm.resx">
+    <EmbeddedResource Include="UserForms\ArchiveForm.resx">
       <DependentUpon>ArchiveForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm\CategoriesAdminForm.resx">
+    <EmbeddedResource Include="AdminForms\CategoriesAdminForm.resx">
       <DependentUpon>CategoriesAdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\ExerciseForm.resx">
+    <EmbeddedResource Include="UserForms\ExerciseForm.resx">
       <DependentUpon>ExerciseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\HelpForm.resx">
+    <EmbeddedResource Include="UserForms\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\MealTimeForm.resx">
+    <EmbeddedResource Include="UserForms\MealTimeForm.resx">
       <DependentUpon>MealTimeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm\MealTimesAdminForm.resx">
+    <EmbeddedResource Include="AdminForms\MealTimesAdminForm.resx">
       <DependentUpon>MealTimesAdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\ProfileForm.resx">
+    <EmbeddedResource Include="UserForms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
@@ -198,19 +217,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserForm\ReportForm.resx">
+    <EmbeddedResource Include="UserForms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm\AdminForm.resx">
+    <EmbeddedResource Include="AdminForms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm\UserForm.resx">
+    <EmbeddedResource Include="UserForms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm\ProductsFormAdmin.resx">
+    <EmbeddedResource Include="AdminForms\ProductsFormAdmin.resx">
       <DependentUpon>ProductsFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm\UsersFormAdmin.resx">
+    <EmbeddedResource Include="AdminForms\UsersFormAdmin.resx">
       <DependentUpon>UsersFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

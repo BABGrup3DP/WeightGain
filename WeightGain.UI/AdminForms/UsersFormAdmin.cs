@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 
-namespace WeightGain.UI
+namespace WeightGain.UI.AdminForms
 {
     public partial class UsersFormAdmin : Form
     {

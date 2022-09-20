@@ -9,20 +9,20 @@ namespace WeightGain.DAL.Repositories
 {
     public class ExerciseRepository
     {
-        WeightGainContext DbContext;
-        DbSet<Exercise> _exercises;
+        private readonly WeightGainContext _dbContext;
+        private readonly DbSet<Exercise> _exercises;
 
         public ExerciseRepository()
         {
-            DbContext = new WeightGainContext();
-            _exercises = DbContext.Set<Exercise>();
+            _dbContext = new WeightGainContext();
+            _exercises = _dbContext.Set<Exercise>();
         }
 
         //egzersiz ekleme
         public bool Insert(Exercise exercise)
         {
             _exercises.Add(exercise);
-            return DbContext.SaveChanges() > 0;
+            return _dbContext.SaveChanges() > 0;
         }
 
         //güncelleme
@@ -37,7 +37,7 @@ namespace WeightGain.DAL.Repositories
                 updateExercise.Duration = exercise.Duration;
                 updateExercise.Users = exercise.Users;
             }
-            return DbContext.SaveChanges() > 0;
+            return _dbContext.SaveChanges() > 0;
 
         }
 
@@ -47,7 +47,7 @@ namespace WeightGain.DAL.Repositories
             var deleteExercise = _exercises.Find(execiseId);
             if (deleteExercise != null)
                 _exercises.Remove(deleteExercise);
-            return DbContext.SaveChanges() > 0;
+            return _dbContext.SaveChanges() > 0;
         }
 
         public List<Exercise> GetAll() => _exercises.ToList();

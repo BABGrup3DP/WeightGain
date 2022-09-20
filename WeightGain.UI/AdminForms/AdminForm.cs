@@ -5,14 +5,15 @@ using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
+using WeightGain.UI.UserForms;
 
-namespace WeightGain.UI
+namespace WeightGain.UI.AdminForms
 {
-    public partial class UserForm : Form
+    public partial class AdminForm : Form
     {
-        private readonly UserRepository _userRepository;
+        public readonly UserRepository _userRepository;
         private readonly User _logginedUser;
-        public UserForm(UserRepository userRepository, User logginedUser)
+        public AdminForm(UserRepository userRepository, User logginedUser)
         {
             InitializeComponent();
             _userRepository = userRepository;
@@ -24,26 +25,26 @@ namespace WeightGain.UI
         private Point _dragCursorPoint;
         private Point _dragFormPoint;
 
-        private void UserForm_MouseDown(object sender, MouseEventArgs e)
+        private void AdminForm_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _dragCursorPoint = Cursor.Position;
             _dragFormPoint = Location;
         }
 
-        private void UserForm_MouseMove(object sender, MouseEventArgs e)
+        private void AdminForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (!_dragging) return;
             var dif = Point.Subtract(Cursor.Position, new Size(_dragCursorPoint));
             Location = Point.Add(_dragFormPoint, new Size(dif));
         }
 
-        private void UserForm_MouseUp(object sender, MouseEventArgs e)
+        private void AdminForm_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
         #endregion
-        private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Owner == null) return;
             Owner.Show();
@@ -54,13 +55,13 @@ namespace WeightGain.UI
         private void btnMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimeForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new MealTimesAdminForm(_logginedUser));
         }
 
-        private void btnExercies_Click(object sender, EventArgs e)
+        private void btnUsers_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ExerciseForm());
+            Helper.OpenChildForm(mainPanel, new UsersFormAdmin(_userRepository));
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -93,9 +94,21 @@ namespace WeightGain.UI
             Hide();
         }
 
-        private void UserForm_Load(object sender, EventArgs e)
+        private void AdminForm_Load(object sender, EventArgs e)
         {
             btnMealTimes.PerformClick();
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new CategoriesAdminForm());
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new ProductsFormAdmin());
         }
     }
 }
