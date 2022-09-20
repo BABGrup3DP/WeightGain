@@ -348,7 +348,7 @@
             this.lblTopTitle.AutoSize = true;
             this.lblTopTitle.Location = new System.Drawing.Point(6, 8);
             this.lblTopTitle.Name = "lblTopTitle";
-            this.lblTopTitle.Size = new System.Drawing.Size(219, 21);
+            this.lblTopTitle.Size = new System.Drawing.Size(268, 28);
             this.lblTopTitle.TabIndex = 7;
             this.lblTopTitle.Text = "WeightGain Yönetici Paneli";
             // 
@@ -369,7 +369,7 @@
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1333, 863);

@@ -84,7 +84,8 @@ namespace WeightGain.UI.AdminForms
             this.dgvProducts.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersVisible = false;
-            this.dgvProducts.Size = new System.Drawing.Size(1067, 388);
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.Size = new System.Drawing.Size(1147, 388);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -218,7 +219,7 @@ namespace WeightGain.UI.AdminForms
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(19, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
+            this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ürün Kategorisi: ";
             // 
@@ -228,7 +229,7 @@ namespace WeightGain.UI.AdminForms
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(19, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 20);
+            this.label1.Size = new System.Drawing.Size(189, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ürün Kalori Değeri: ";
             // 
@@ -238,7 +239,7 @@ namespace WeightGain.UI.AdminForms
             this.lblProductScale.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProductScale.Location = new System.Drawing.Point(19, 51);
             this.lblProductScale.Name = "lblProductScale";
-            this.lblProductScale.Size = new System.Drawing.Size(133, 20);
+            this.lblProductScale.Size = new System.Drawing.Size(170, 25);
             this.lblProductScale.TabIndex = 1;
             this.lblProductScale.Text = "Ürün Ölçü Birimi: ";
             // 
@@ -248,7 +249,7 @@ namespace WeightGain.UI.AdminForms
             this.lblProductName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProductName.Location = new System.Drawing.Point(19, 14);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(80, 20);
+            this.lblProductName.Size = new System.Drawing.Size(103, 25);
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Ürün Adı: ";
             // 
@@ -269,9 +270,9 @@ namespace WeightGain.UI.AdminForms
             // 
             // ProductsFormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 628);
+            this.ClientSize = new System.Drawing.Size(1147, 644);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.panelAddProduct);
             this.Controls.Add(this.dgvProducts);

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.UI.Properties;
@@ -27,7 +27,7 @@ namespace WeightGain.UI.AdminForms
             dgvProducts.DataSource = _productRepository.GetAll();
         }
 
-            private void ProductsFormAdmin_Load(object sender, EventArgs e)
+        private void ProductsFormAdmin_Load(object sender, EventArgs e)
         {
             dgvProducts.DataSource = _productRepository.GetAll();
             dgvProducts.Columns[0].HeaderText = "ID";
@@ -48,8 +48,8 @@ namespace WeightGain.UI.AdminForms
             var productName = txtProductName.Text.Trim();
             var productScale = txtProductScale.Text.Trim();
             var productCalory = txtProductCalory.Text.Trim();
-            var productCategory = cmbProductCategory.SelectedIndex;
-            if (string.IsNullOrEmpty(productName) || string.IsNullOrEmpty(productCalory)||string.IsNullOrEmpty(productScale)|| productCategory == -1)
+            var productCategory = (Category)cmbProductCategory.SelectedItem;
+            if (string.IsNullOrEmpty(productName) || string.IsNullOrEmpty(productCalory) || string.IsNullOrEmpty(productScale) || productCategory == null)
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -62,10 +62,10 @@ namespace WeightGain.UI.AdminForms
             var product = new Product
             {
                 ProductName = productName,
-                Scale=productScale,
+                Scale = productScale,
                 Calory = Convert.ToDecimal(productCalory),
-               // Category= (Category)productCategory,    //hata var düzeltilecek!!!!
 
+                Category = (Category)productCategory,
             };
             if (_productRepository.Insert(product))
             {
@@ -140,10 +140,10 @@ namespace WeightGain.UI.AdminForms
                 {
                     ProductID = (int)productId,
                     ProductName = (string)newProductName,
-                    Scale= (string)newScale,
-                    Calory=(decimal)newCalory,
-                    CategoryID= (int)newCategoryID,
-                    Category=(Category)newCategory,
+                    Scale = (string)newScale,
+                    Calory = (decimal)newCalory,
+                    CategoryID = (int)newCategoryID,
+                    Category = (Category)newCategory,
 
                 };
                 if (_productRepository.Update(product))

@@ -33,11 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvExercise = new Guna.UI2.WinForms.Guna2DataGridView();
             this.grbAddExercise = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbExerciseType = new System.Windows.Forms.ComboBox();
-            this.txtExerciseDuration = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddExercise = new Guna.UI2.WinForms.Guna2Button();
+            this.txtExerciseDuration = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbExerciseType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnDeleteExercise = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExercise)).BeginInit();
             this.grbAddExercise.SuspendLayout();
@@ -66,10 +66,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvExercise.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvExercise.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvExercise.Location = new System.Drawing.Point(9, 12);
+            this.dgvExercise.Location = new System.Drawing.Point(12, 15);
+            this.dgvExercise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvExercise.Name = "dgvExercise";
             this.dgvExercise.RowHeadersVisible = false;
-            this.dgvExercise.Size = new System.Drawing.Size(950, 345);
+            this.dgvExercise.RowHeadersWidth = 51;
+            this.dgvExercise.Size = new System.Drawing.Size(1267, 425);
             this.dgvExercise.TabIndex = 0;
             this.dgvExercise.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvExercise.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -106,37 +108,28 @@
             this.grbAddExercise.FillColor = System.Drawing.SystemColors.Control;
             this.grbAddExercise.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grbAddExercise.ForeColor = System.Drawing.Color.Black;
-            this.grbAddExercise.Location = new System.Drawing.Point(9, 363);
+            this.grbAddExercise.Location = new System.Drawing.Point(12, 447);
+            this.grbAddExercise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbAddExercise.Name = "grbAddExercise";
-            this.grbAddExercise.Size = new System.Drawing.Size(446, 200);
+            this.grbAddExercise.Size = new System.Drawing.Size(595, 246);
             this.grbAddExercise.TabIndex = 1;
             this.grbAddExercise.Text = "Egzersiz Ekleme";
             // 
-            // label1
+            // btnAddExercise
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Egzersiz Tipi";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Egzersiz Süresi";
-            // 
-            // cmbExerciseType
-            // 
-            this.cmbExerciseType.FormattingEnabled = true;
-            this.cmbExerciseType.Location = new System.Drawing.Point(145, 48);
-            this.cmbExerciseType.Name = "cmbExerciseType";
-            this.cmbExerciseType.Size = new System.Drawing.Size(280, 28);
-            this.cmbExerciseType.TabIndex = 1;
+            this.btnAddExercise.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddExercise.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddExercise.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddExercise.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddExercise.ForeColor = System.Drawing.Color.White;
+            this.btnAddExercise.Location = new System.Drawing.Point(337, 172);
+            this.btnAddExercise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddExercise.Name = "btnAddExercise";
+            this.btnAddExercise.Size = new System.Drawing.Size(229, 49);
+            this.btnAddExercise.TabIndex = 3;
+            this.btnAddExercise.Text = "Ekle";
+            this.btnAddExercise.Click += new System.EventHandler(this.btnAddExercise_Click);
             // 
             // txtExerciseDuration
             // 
@@ -149,28 +142,44 @@
             this.txtExerciseDuration.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExerciseDuration.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExerciseDuration.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExerciseDuration.Location = new System.Drawing.Point(145, 89);
+            this.txtExerciseDuration.Location = new System.Drawing.Point(193, 110);
+            this.txtExerciseDuration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtExerciseDuration.Name = "txtExerciseDuration";
             this.txtExerciseDuration.PasswordChar = '\0';
             this.txtExerciseDuration.PlaceholderText = "";
             this.txtExerciseDuration.SelectedText = "";
-            this.txtExerciseDuration.Size = new System.Drawing.Size(280, 32);
+            this.txtExerciseDuration.Size = new System.Drawing.Size(373, 39);
             this.txtExerciseDuration.TabIndex = 2;
             // 
-            // btnAddExercise
+            // cmbExerciseType
             // 
-            this.btnAddExercise.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddExercise.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddExercise.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddExercise.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddExercise.ForeColor = System.Drawing.Color.White;
-            this.btnAddExercise.Location = new System.Drawing.Point(253, 140);
-            this.btnAddExercise.Name = "btnAddExercise";
-            this.btnAddExercise.Size = new System.Drawing.Size(172, 40);
-            this.btnAddExercise.TabIndex = 3;
-            this.btnAddExercise.Text = "Ekle";
-            this.btnAddExercise.Click += new System.EventHandler(this.btnAddExercise_Click);
+            this.cmbExerciseType.FormattingEnabled = true;
+            this.cmbExerciseType.Location = new System.Drawing.Point(193, 59);
+            this.cmbExerciseType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbExerciseType.Name = "cmbExerciseType";
+            this.cmbExerciseType.Size = new System.Drawing.Size(372, 33);
+            this.cmbExerciseType.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Egzersiz Süresi";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Egzersiz Tipi";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnDeleteExercise
             // 
@@ -180,21 +189,23 @@
             this.btnDeleteExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDeleteExercise.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteExercise.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteExercise.Location = new System.Drawing.Point(478, 503);
+            this.btnDeleteExercise.Location = new System.Drawing.Point(637, 619);
+            this.btnDeleteExercise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeleteExercise.Name = "btnDeleteExercise";
-            this.btnDeleteExercise.Size = new System.Drawing.Size(172, 40);
+            this.btnDeleteExercise.Size = new System.Drawing.Size(229, 49);
             this.btnDeleteExercise.TabIndex = 3;
             this.btnDeleteExercise.Text = "Sil";
             this.btnDeleteExercise.Click += new System.EventHandler(this.btnDeleteExercise_Click);
             // 
             // ExeciseFormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 569);
+            this.ClientSize = new System.Drawing.Size(1295, 700);
             this.Controls.Add(this.btnDeleteExercise);
             this.Controls.Add(this.grbAddExercise);
             this.Controls.Add(this.dgvExercise);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ExeciseFormAdmin";
             this.Text = "ExeciseFormAdmin";
             this.Load += new System.EventHandler(this.ExeciseFormAdmin_Load);
