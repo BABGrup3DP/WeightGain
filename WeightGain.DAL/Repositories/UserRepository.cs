@@ -19,65 +19,83 @@ namespace WeightGain.DAL.Repositories
         //benzer üyelik var mı ve sonrasında ekleme
         public bool Insert(User newUser)
         {
-            var findUser = _users.Any(x => x.Email == newUser.Email || x.PhoneNumber == newUser.PhoneNumber);
-            if (findUser) return false;
-            _users.Add(newUser);
-            return DbContext.SaveChanges() > 0;
+            try
+            {
+                var findUser = _users.Any(x => x.Email == newUser.Email || x.PhoneNumber == newUser.PhoneNumber);
+                if (findUser) return false;
+                _users.Add(newUser);
+                return DbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //18-24 yas arasında olanların listesi
-        public List<User> GetAllAge()
-        {
-            return _users.Where(x => x.Age > 18 && x.Age < 25).ToList();
-        }
+        public List<User> GetAllAge() => _users.Where(x => x.Age > 18 && x.Age < 25).ToList();
 
         //Kullanıcı ıd sine göre üyeleri getirme
-        public User GetUserById(User id)
-        {
-            return _users.Find(id);
-        }
+        public User GetUserById(User id) => _users.Find(id);
 
         public List<User> GetAll() => _users.ToList();
 
         //kullanıcı giriş kontrol
         public User CheckLogin(string emailOrPhone, string password)
         {
-            var findUser = _users.FirstOrDefault(x => x.Email == emailOrPhone && x.Password == password);
-            if (findUser != null)
+            try
             {
+                var findUser = _users.FirstOrDefault(x => x.Email == emailOrPhone && x.Password == password);
+                if (findUser != null)
+                {
+                    return findUser;
+                }
+                findUser = _users.FirstOrDefault(x => x.PhoneNumber == emailOrPhone && x.Password == password);
                 return findUser;
             }
-            findUser = _users.FirstOrDefault(x => x.PhoneNumber == emailOrPhone && x.Password == password);
-            return findUser;
+            catch
+            {
+                return null;
+            }
         }
 
         //Silme
         public bool Delete(User id)
         {
-            _users.Remove(id);
-            return DbContext.SaveChanges() > 0;
+            try
+            {
+                _users.Remove(id);
+                return DbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //Update
         public bool Update(User user)
         {
-            var findUser = _users.Find(user.ID);
-            if (findUser == null) return false;
-            findUser.FirstName = user.FirstName;
-            findUser.LastName = user.LastName;
-            findUser.Email = user.Email;
-            findUser.Password = user.Password;
-            findUser.BirthDate = user.BirthDate;
-            findUser.PhoneNumber = user.PhoneNumber;
-            return DbContext.SaveChanges() > 0;
+            try
+            {
+                var findUser = _users.Find(user.ID);
+                if (findUser == null) return false;
+                findUser.FirstName = user.FirstName;
+                findUser.LastName = user.LastName;
+                findUser.Email = user.Email;
+                findUser.Password = user.Password;
+                findUser.BirthDate = user.BirthDate;
+                findUser.PhoneNumber = user.PhoneNumber;
+                return DbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //vücut kitle endex'ine göre kontrol
-        public List<User> CheckBmi()
-        {
-            return _users.Where(x => x.Bmi < 18.5).ToList();
-        }
-
+        public List<User> CheckBmi() => _users.Where(x => x.Bmi < 18.5).ToList();
 
     }
 }

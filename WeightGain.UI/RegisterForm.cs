@@ -167,7 +167,6 @@ namespace WeightGain.UI
                         Caption = Properties.Resources.ProgramTitle
                     };
                     successDialog.Show();
-                    
                 }
             }
             catch
