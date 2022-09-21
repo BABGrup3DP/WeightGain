@@ -60,7 +60,7 @@ namespace WeightGain.UI.UserForms
         private void btnExercies_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ExerciseForm());
+            Helper.OpenChildForm(mainPanel, new ExerciseForm(_logginedUser));
         }
 
         private void btnReports_Click(object sender, EventArgs e)

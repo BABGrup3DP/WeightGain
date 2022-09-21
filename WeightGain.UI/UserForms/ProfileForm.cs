@@ -21,7 +21,7 @@ namespace WeightGain.UI.UserForms
         private void btnSave_Click(object sender, EventArgs e)
         {
             var updatingUser = _logginedUser;
-            if (!Helper.CheckPanelEmptyValues(pnlProfile, new object[] { txtPassword, txtPassword2 }))
+            if (!Helper.CheckEmptyValues(pnlProfile, new object[] { txtPassword, txtPassword2 }))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {

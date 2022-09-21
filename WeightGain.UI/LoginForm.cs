@@ -56,7 +56,7 @@ namespace WeightGain.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!Helper.CheckPanelEmptyValues(formRightPanel))
+            if (!Helper.CheckEmptyValues(formRightPanel))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {

@@ -16,9 +16,40 @@ namespace WeightGain.DATA.Helpers
         /// <param name="pnl">Kontrol edilecek olan panel</param>
         /// <param name="dissmissObj">Kontrol edilmeyecek olan kontroller</param>
         /// <returns>Herhangi bir boş alan var ise false döner.</returns>
-        public static bool CheckPanelEmptyValues(Panel pnl, object[] dissmissObj = null)
+        public static bool CheckEmptyValues(Panel pnl, object[] dissmissObj = null)
         {
             foreach (var ctrl in pnl.Controls)
+            {
+                if (dissmissObj != null && dissmissObj.Contains(ctrl)) continue;
+                var ctrlName = ctrl.GetType().Name;
+                if (ctrlName.Contains("TextBox"))
+                {
+                    if (ctrl is Guna2TextBox textBox && string.IsNullOrEmpty(textBox.Text.Trim()))
+                        return false;
+                }
+                else if (ctrlName.Contains("DateTimePicker"))
+                {
+                    if (ctrl is Guna2DateTimePicker dateTimePicker && dateTimePicker.Value >= DateTime.Today)
+                        return false;
+                }
+                else if (ctrlName.Contains("NumericUpDown"))
+                {
+                    if (ctrl is Guna2NumericUpDown numericUpDown && numericUpDown.Value < 0)
+                        return false;
+                }
+            }
+            return true;
+        }
+        
+        /// <summary>
+        /// Groupbox içerisindeki kontrollerin uygun olup olmadığını kontrol ederi.
+        /// </summary>
+        /// <param name="groupBox">Kontrol edilecek olan groupbox</param>
+        /// <param name="dissmissObj">Kontrol edilmeyecek olan kontroller</param>
+        /// <returns>Herhangi bir boş alan var ise false döner.</returns>
+        public static bool CheckEmptyValues(Guna2GroupBox groupBox, object[] dissmissObj = null)
+        {
+            foreach (var ctrl in groupBox.Controls)
             {
                 if (dissmissObj != null && dissmissObj.Contains(ctrl)) continue;
                 var ctrlName = ctrl.GetType().Name;

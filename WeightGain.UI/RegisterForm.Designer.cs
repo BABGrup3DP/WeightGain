@@ -1,4 +1,6 @@
-﻿namespace WeightGain.UI
+﻿using System;
+
+namespace WeightGain.UI
 {
     partial class RegisterForm
     {
@@ -319,12 +321,11 @@
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBirthDate.Location = new System.Drawing.Point(26, 263);
-            this.dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthDate.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0, 0);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(262, 36);
             this.dtpBirthDate.TabIndex = 5;
-            this.dtpBirthDate.Value = new System.DateTime(2022, 9, 15, 11, 44, 50, 634);
             // 
             // txtLastname
             // 

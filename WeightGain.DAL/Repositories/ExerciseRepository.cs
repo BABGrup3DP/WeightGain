@@ -21,33 +21,53 @@ namespace WeightGain.DAL.Repositories
         //egzersiz ekleme
         public bool Insert(Exercise exercise)
         {
-            _exercises.Add(exercise);
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                _exercises.Add(exercise);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //güncelleme
         public bool Update(Exercise exercise)
         {
             //exercise tipini değiştirecek mi? exerciseEnum bu yüzden var!
-
-            var updateExercise = _exercises.Find(exercise.ExerciseID);
-            if (updateExercise != null)
+            try
             {
-                updateExercise.ExerciseType = exercise.ExerciseType;
-                updateExercise.Duration = exercise.Duration;
-                updateExercise.Users = exercise.Users;
-            }
-            return _dbContext.SaveChanges() > 0;
+                var updateExercise = _exercises.Find(exercise.ExerciseID);
+                if (updateExercise != null)
+                {
+                    updateExercise.ExerciseType = exercise.ExerciseType;
+                    updateExercise.Duration = exercise.Duration;
+                    updateExercise.Users = exercise.Users;
+                }
 
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //silme
         public bool Delete(int execiseId)
         {
-            var deleteExercise = _exercises.Find(execiseId);
-            if (deleteExercise != null)
-                _exercises.Remove(deleteExercise);
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                var deleteExercise = _exercises.Find(execiseId);
+                if (deleteExercise != null)
+                    _exercises.Remove(deleteExercise);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public List<Exercise> GetAll() => _exercises.ToList();

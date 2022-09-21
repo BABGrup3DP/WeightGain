@@ -2,15 +2,19 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using WeightGain.DAL.Repositories;
+using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI
 {
     public partial class RegisterForm : Form
     {
+        private readonly UserRepository _userRepository;
         public RegisterForm()
         {
             InitializeComponent();
+            _userRepository = new UserRepository();
         }
 
         #region Helper Functions
@@ -106,7 +110,7 @@ namespace WeightGain.UI
             var weight = nudWeight.Value;
             var height = nudHeight.Value;
 
-            if (!Helper.CheckPanelEmptyValues(formRightPanel, new object[] { txtPhoneNumber, txtEmail }))
+            if (!Helper.CheckEmptyValues(formRightPanel, new object[] { txtPhoneNumber, txtEmail }))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -142,6 +146,38 @@ namespace WeightGain.UI
                 return;
             }
 
+            try
+            {
+                var newUser = new User
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Email = email,
+                    PhoneNumber = telephone,
+                    BirthDate = birthDate,
+                    Password = Helper.GeneratePasswordHash(password),
+                    Weight = weight,
+                    Height = height,
+                };
+                if (_userRepository.Insert(newUser))
+                {
+                    var successDialog = new Guna2MessageDialog
+                    {
+                        Text = "Başarıyla kayıt oldunuz. Artık giriş yapabilirsiniz.",
+                        Caption = Properties.Resources.ProgramTitle
+                    };
+                    successDialog.Show();
+                }
+            }
+            catch
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Hata oluştu. Girilen değerleri lütfen kontrol edin.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+            }
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
