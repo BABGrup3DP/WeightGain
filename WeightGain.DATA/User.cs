@@ -14,21 +14,16 @@ namespace WeightGain.DATA
         public decimal Height { get; set; }
         public byte Bmi => (byte)(Weight / (Height * Height)); // Body mass index => vücut kitle endeksi
 
-        //User ve ürün ilişkisi
         public List<Product> Products { get; set; }
-
+        public List<Exercise> Exercises { get; set; }
+        public List<MealTime> MealTimes { get; set; }
+        
         public User()
         {
             Products = new List<Product>();
             Exercises = new List<Exercise>();
             MealTimes = new List<MealTime>();
-            //UserType = UserTypeEnum.User;
         }
-
-        // antreman ve user ilişkisi
-        public List<Exercise> Exercises { get; set; }
-
-        public List<MealTime> MealTimes { get; set; }
 
     }
 }

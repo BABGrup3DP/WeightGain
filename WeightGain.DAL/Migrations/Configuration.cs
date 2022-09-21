@@ -266,7 +266,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bıldırcın",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 192,
             //            CategoryID = 1,
             //            Category = context.Categories.Find(1)
@@ -274,7 +274,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Güvercin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 294,
             //            CategoryID = 1,
             //            Category = context.Categories.Find(1)
@@ -282,7 +282,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sülün",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 181,
             //            CategoryID = 1,
             //            Category = context.Categories.Find(1)
@@ -290,7 +290,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavşan",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 162,
             //            CategoryID = 1,
             //            Category = context.Categories.Find(1)
@@ -298,7 +298,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Alabalık",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 175,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -306,7 +306,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Balık Unu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 336,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -314,7 +314,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kalkan",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 193,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -322,7 +322,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kılıç",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 164,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -330,7 +330,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Levrek",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 93,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -338,7 +338,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mersin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 96,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -346,7 +346,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Palamut",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 168,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -354,7 +354,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sardalya",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 160,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -362,7 +362,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sardalya (konserve)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 205,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -370,7 +370,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Somon",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 155,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -378,7 +378,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ton",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 289,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -386,7 +386,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tuzlu Balık",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 305,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -394,7 +394,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Uskumru",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 159,
             //            CategoryID = 2,
             //            Category = context.Categories.Find(2)
@@ -402,7 +402,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ayçiçeği Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -410,7 +410,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Fındık Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -418,7 +418,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Haşhaş Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -426,7 +426,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Keten tohumu yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -434,7 +434,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Margarin (kahvaltılık)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 719,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -442,7 +442,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Margarin (kahvaltılık)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 720,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -450,7 +450,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mısırözü Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -458,7 +458,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Nebati Yağ",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 900,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -466,7 +466,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Palmiye Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -474,7 +474,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pamuk Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -482,7 +482,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soya Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -490,7 +490,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Susam Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -498,7 +498,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yerfıstığı Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -506,7 +506,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Zeytin Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 884,
             //            CategoryID = 3,
             //            Category = context.Categories.Find(3)
@@ -514,7 +514,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Defne Yaprağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 313,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -522,7 +522,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Dere Otu (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 253,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -530,7 +530,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hardal (Toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 469,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -538,7 +538,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Haşhaş Tohumu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 533,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -546,7 +546,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hindistan cevizi (Toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 525,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -562,7 +562,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karabiber",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 255,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -570,7 +570,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karanfil",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 323,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -578,7 +578,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kekik",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 276,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -586,7 +586,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kırmızıbiber (toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 318,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -594,7 +594,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kimyon (Toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 375,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -602,7 +602,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kuş üzümü",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 54,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -610,7 +610,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Maydonoz (kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 276,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -618,7 +618,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Nane (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 245,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -626,7 +626,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Safran",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 310,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -634,7 +634,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sofra Tuzu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 0,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -642,7 +642,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tarçın (Toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 261,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -650,7 +650,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Zencefil",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 347,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -658,7 +658,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Zerdecal",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 354,
             //            CategoryID = 4,
             //            Category = context.Categories.Find(4)
@@ -666,7 +666,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bezelye",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 295,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -674,7 +674,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Domates",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 219,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -682,7 +682,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ezogelin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 274,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -690,7 +690,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İşkembe",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 342,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -698,7 +698,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mercimek",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 235,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -706,7 +706,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sebze",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 227,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -714,7 +714,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tarhana (Acı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 290,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -722,7 +722,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tarhana (tatlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 280,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -730,7 +730,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yayla",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 252,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -738,7 +738,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yulaf çorbası",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 318,
             //            CategoryID = 5,
             //            Category = context.Categories.Find(5)
@@ -746,7 +746,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Havyar",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 262,
             //            CategoryID = 6,
             //            Category = context.Categories.Find(6)
@@ -754,7 +754,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İstakoz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 91,
             //            CategoryID = 6,
             //            Category = context.Categories.Find(6)
@@ -770,7 +770,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karides",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 91,
             //            CategoryID = 6,
             //            Category = context.Categories.Find(6)
@@ -778,7 +778,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Midye",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 95,
             //            CategoryID = 6,
             //            Category = context.Categories.Find(6)
@@ -786,7 +786,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yengeç (haşlanmış)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 127,
             //            CategoryID = 6,
             //            Category = context.Categories.Find(6)
@@ -794,7 +794,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Jelatin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 335,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -802,7 +802,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kakao",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 299,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -810,7 +810,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Maya (kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 282,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -818,7 +818,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Maya (Yaş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 86,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -826,7 +826,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sirke",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 12,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -834,7 +834,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tahin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 595,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -842,7 +842,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Turşu (Salatalık)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 10,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -850,7 +850,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Zeytin (Siyah)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 207,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -858,7 +858,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Zeytin (Yeşil)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 144,
             //            CategoryID = 7,
             //            Category = context.Categories.Find(7)
@@ -866,7 +866,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ekmek (buğday)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 276,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -874,7 +874,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ekmek (çavdar)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 243,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -890,7 +890,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Galeta Unu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 392,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -898,7 +898,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Grissini",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 433,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -906,7 +906,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İrmik",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 371,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -914,7 +914,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kraker (Peynirli)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 479,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -922,7 +922,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kraker (Sade)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 384,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -930,7 +930,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kraker (tuzlu)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 433,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -938,7 +938,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Makarna",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 369,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -946,7 +946,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sandviç ekmeği",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 298,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -954,7 +954,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yufka",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 271,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -962,7 +962,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yufka (Böreklik)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 152,
             //            CategoryID = 8,
             //            Category = context.Categories.Find(8)
@@ -970,7 +970,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Jambon",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 182,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -978,7 +978,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kavurma",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 670,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -986,7 +986,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pastırma (çemenli)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 250,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -994,7 +994,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pastırma (çemensiz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 269,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -1002,7 +1002,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Salam",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 450,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -1010,7 +1010,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sosis",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 322,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -1018,7 +1018,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sucuk",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 452,
             //            CategoryID = 9,
             //            Category = context.Categories.Find(9)
@@ -1026,7 +1026,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Balık Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 900,
             //            CategoryID = 10,
             //            Category = context.Categories.Find(10)
@@ -1034,7 +1034,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İçyağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 758,
             //            CategoryID = 10,
             //            Category = context.Categories.Find(10)
@@ -1042,7 +1042,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kuyruk Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 902,
             //            CategoryID = 10,
             //            Category = context.Categories.Find(10)
@@ -1050,7 +1050,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sade Yağ (erimiş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 890,
             //            CategoryID = 10,
             //            Category = context.Categories.Find(10)
@@ -1066,7 +1066,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Adaçayı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 315,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1090,7 +1090,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Cin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 231,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1114,7 +1114,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Domates suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 16,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1122,7 +1122,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Gazoz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 39,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1130,7 +1130,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ihlamur",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 42,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1154,7 +1154,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Limonata",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 21,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1162,7 +1162,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Meyve suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 31,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1170,7 +1170,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Portakal Suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 45,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1178,7 +1178,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Rose (şarap)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 71,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1186,7 +1186,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Viski",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 263,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1194,7 +1194,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Votka",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 275,
             //            CategoryID = 11,
             //            Category = context.Categories.Find(11)
@@ -1202,7 +1202,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Az yağlı dana eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 156,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1210,7 +1210,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Az yağlı domuz eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 472,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1218,7 +1218,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Az yağlı koyun eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 247,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1226,7 +1226,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Az yağlı sığır eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 225,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1234,7 +1234,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Keçi eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 145,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1242,7 +1242,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Orta yağlı dana eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 190,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1250,7 +1250,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Orta yağlı domuz eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 513,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1258,7 +1258,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Orta yağlı koyun eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 263,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1266,7 +1266,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Orta yağlı sığır eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 263,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1274,7 +1274,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yağlı dana eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 223,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1282,7 +1282,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yağlı domuz eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 553,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1290,7 +1290,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yağlı koyun eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 310,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1298,7 +1298,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yağlı sığır eti",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 301,
             //            CategoryID = 12,
             //            Category = context.Categories.Find(12)
@@ -1306,7 +1306,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ay çekirdeği",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 560,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1314,7 +1314,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Badem",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 598,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1322,7 +1322,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bakla (İç)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 338,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1330,7 +1330,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Barbunya",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 349,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1338,7 +1338,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bezelye",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 348,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1346,7 +1346,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Börülce",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 343,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1354,7 +1354,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ceviz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 651,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1362,7 +1362,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çam Fıstığı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 635,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1370,7 +1370,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Fındık",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 634,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1378,7 +1378,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Fıstık",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 560,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1386,7 +1386,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kuru Fasulye (beyaz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 340,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1394,7 +1394,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kabak Çekirdeği",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 610,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1402,7 +1402,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kavun,Karpuz Çekirdeği",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 581,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1410,7 +1410,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kestane",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 194,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1418,7 +1418,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kestane Haşlanmış",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 131,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1426,7 +1426,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kestane Kavrulmuş",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 245,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1434,7 +1434,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mercimek",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 340,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1442,7 +1442,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Nohut",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 360,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1450,7 +1450,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Palamut Çekirdeği",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 268,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1458,7 +1458,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soya Fasulyesi",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 403,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1466,7 +1466,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soya Unu (az yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 356,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1474,7 +1474,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soya Unu (yağsız)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 326,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1482,7 +1482,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Susam",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 582,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1490,7 +1490,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Şam Fıstığı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 594,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1498,7 +1498,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yer Fıstığı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 582,
             //            CategoryID = 13,
             //            Category = context.Categories.Find(13)
@@ -1506,7 +1506,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hindi, et ve deri",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 160,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1514,7 +1514,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kaz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 371,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1522,7 +1522,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ördek",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 404,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1538,7 +1538,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk bütün",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 215,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1546,7 +1546,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk beyaz et (derili)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 186,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1554,7 +1554,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk beyaz et (derisiz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 114,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1570,7 +1570,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk siyah et derisiz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 125,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1578,7 +1578,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk, deri",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 349,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1586,7 +1586,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk, siyah et (derili)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 237,
             //            CategoryID = 14,
             //            Category = context.Categories.Find(14)
@@ -1594,7 +1594,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ahududu (Kırmızı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 57,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1602,7 +1602,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ahududu (Siyah)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 73,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1610,7 +1610,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ananas",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 52,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1618,7 +1618,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Armut",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 61,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1626,7 +1626,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Avokado",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 167,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1634,7 +1634,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ayva",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 57,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1642,7 +1642,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Böğürtlen",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 58,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1650,7 +1650,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çilek",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 37,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1658,7 +1658,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Dut",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 93,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1666,7 +1666,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Elma",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 58,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1674,7 +1674,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Elma Suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 47,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1682,7 +1682,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Erik (Kırmızı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 66,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1690,7 +1690,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Erik (Mürdüm)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 79,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1698,7 +1698,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Erik Mürdüm (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 255,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1706,7 +1706,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Erik Pestil",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 344,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1714,7 +1714,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Greyfurt",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 41,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1722,7 +1722,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Greyfurt Suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 39,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1730,7 +1730,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hurma",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 274,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1746,7 +1746,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İncir (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 274,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1754,7 +1754,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İncir (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 80,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1762,7 +1762,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karpuz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 26,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1770,7 +1770,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kavun",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 33,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1778,7 +1778,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kayısı (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 260,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1794,7 +1794,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kayısı Pestil",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 332,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1810,7 +1810,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kivi",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 30,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1818,7 +1818,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Limon",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 27,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1826,7 +1826,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Limon Suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 25,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1834,7 +1834,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mandalina",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 46,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1842,7 +1842,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mandalina Suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 43,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1850,7 +1850,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Muz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 105,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1858,7 +1858,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Nar",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 63,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1866,7 +1866,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Portakal",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 49,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1874,7 +1874,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Şeftali",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 38,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1882,7 +1882,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Üzüm (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 289,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1890,7 +1890,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Üzüm (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 67,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1898,7 +1898,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Üzüm Suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 66,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1906,7 +1906,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Vişne",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 58,
             //            CategoryID = 15,
             //            Category = context.Categories.Find(15)
@@ -1914,7 +1914,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bey. peynir (Edirne)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 235,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1922,7 +1922,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bey. peynir (Urfa)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 312,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1930,7 +1930,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bey. peynir (yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 289,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1938,7 +1938,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bey.peynir (yağsız)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 99,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1946,7 +1946,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Cheddar",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 403,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1954,7 +1954,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çökelek (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 379,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1962,7 +1962,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çökelek (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 215,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1970,7 +1970,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Gravyer (%8 Tuzlu)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 413,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1978,7 +1978,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kars Tipi",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 357,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1986,7 +1986,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kaşar Peyniri",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 404,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -1994,7 +1994,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Krem Peynir (Sade)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 349,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -2002,7 +2002,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lor peyniri (%1 yağ)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 72,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -2010,7 +2010,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lor peyniri (%2 yağ)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 90,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -2018,7 +2018,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lor peyniri (yağsız)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 85,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -2026,7 +2026,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Otlu Peynir",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 327,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -2034,7 +2034,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Rokfor",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 369,
             //            CategoryID = 16,
             //            Category = context.Categories.Find(16)
@@ -2042,7 +2042,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Akciğer (dana)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 106,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2050,7 +2050,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Beyin",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 125,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2058,7 +2058,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Böbrek (kuzu)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 105,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2066,7 +2066,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Dalak (sığır, dana)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 104,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2074,7 +2074,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Dil (dana)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 130,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2082,7 +2082,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İşkembe (sığır)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 100,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2090,7 +2090,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karaciğer (dana)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 140,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2098,7 +2098,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karaciğer (tavuk)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 129,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2106,7 +2106,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yürek (dana)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 124,
             //            CategoryID = 17,
             //            Category = context.Categories.Find(17)
@@ -2114,7 +2114,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Asma Yaprağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 97,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2122,7 +2122,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bamya (Kurutulmuş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 266,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2130,7 +2130,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bamya (taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 36,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2138,7 +2138,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bezelye (İç)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 84,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2146,7 +2146,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bezelye (Konserve)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 88,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2154,7 +2154,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Biber (Kurutulmuş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 293,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2162,7 +2162,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Biber (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 22,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2170,7 +2170,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Börülce (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 127,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2186,7 +2186,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Domates (Kırmızı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 25,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2194,7 +2194,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Domates (Yeşil)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 24,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2202,7 +2202,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Domates suyu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 19,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2210,7 +2210,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ebegümeci",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 47,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2218,7 +2218,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Enginar",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 53,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2226,7 +2226,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Fasulye (Kurutulmuş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 274,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2234,7 +2234,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Fasulye (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 32,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2242,7 +2242,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Havuç",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 42,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2250,7 +2250,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hıyar (Soyulmamış)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 15,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2258,7 +2258,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hıyar (soyulmuş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 14,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2266,7 +2266,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hindibağ Otu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 53,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2274,7 +2274,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ispanak",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 26,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2282,7 +2282,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kabak (Kış)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 26,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2290,7 +2290,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kabak (Yaz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 19,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2298,7 +2298,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karnıbahar",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 27,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2306,7 +2306,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kereviz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 40,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2314,7 +2314,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kırmızı Biber (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 93,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2322,7 +2322,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kıvırcık",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 20,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2330,7 +2330,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Konserve fasulye",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 24,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2338,7 +2338,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kuşkonmaz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 26,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2346,7 +2346,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lahana (Beyaz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 24,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2354,7 +2354,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lahana (Brüksel)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 63,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2362,7 +2362,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lahana (Kara)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 45,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2370,7 +2370,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lahana (Kırmızı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 31,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2378,7 +2378,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Madımak",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 22,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2386,7 +2386,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mantar",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 28,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2394,7 +2394,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Marul",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 14,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2402,7 +2402,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Maydonoz",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 44,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2410,7 +2410,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mısır (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 96,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2418,7 +2418,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Nane (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 65,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2426,7 +2426,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pancar (Kırmızı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 43,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2434,7 +2434,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pancar (Yaprak)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 24,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2442,7 +2442,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Patates",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 76,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2450,7 +2450,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Patates unu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 351,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2458,7 +2458,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Patlıcan (kurutul.)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 286,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2466,7 +2466,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Patlıcan (Taze)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 25,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2474,7 +2474,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pazı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 33,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2482,7 +2482,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pırasa",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 52,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2490,7 +2490,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Roka",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 33,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2498,7 +2498,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sarmısak (Baş)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 137,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2506,7 +2506,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sarmısak (Toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 332,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2514,7 +2514,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Semiz Otu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 32,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2522,7 +2522,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soğan (Kuru)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 38,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2530,7 +2530,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soğan (Toz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 347,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2538,7 +2538,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soğan (Yeşil)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 36,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2546,7 +2546,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Şalgam",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 30,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2554,7 +2554,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Taze Bakla",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 72,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2562,7 +2562,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tere",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 33,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2570,7 +2570,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Turp (Kırmızı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 19,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2578,7 +2578,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Turp (Siyah)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 30,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2586,7 +2586,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yer Elması",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 75,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2594,7 +2594,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yonca",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 49,
             //            CategoryID = 18,
             //            Category = context.Categories.Find(18)
@@ -2602,7 +2602,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bin Ada Yağı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 377,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2610,7 +2610,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Fransız salata sosu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 430,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2618,7 +2618,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İtalyan salata sosu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 467,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2626,7 +2626,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ketçap",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 106,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2642,7 +2642,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Krema (%50 yağ, süt)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 134,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2650,7 +2650,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mayonez",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 390,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2658,7 +2658,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Salata sosu (yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 449,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2666,7 +2666,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Salça",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 98,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2674,7 +2674,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soya Sosu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 68,
             //            CategoryID = 19,
             //            Category = context.Categories.Find(19)
@@ -2682,7 +2682,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Anne sütü",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 70,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2690,7 +2690,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İnek (1/2 yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 50,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2698,7 +2698,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İnek (Yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 61,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2706,7 +2706,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İnek (yağsız)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 35,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2714,7 +2714,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Keçi sütü",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 69,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2722,7 +2722,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Koyun",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 108,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2730,7 +2730,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Manda sütü",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 97,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2738,7 +2738,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Soya",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 33,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2746,7 +2746,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Süt Tozu (Yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 496,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2754,7 +2754,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Süt Tozu (Yağsız)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 362,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2762,7 +2762,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yoğurt (1/2 yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 50,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2770,7 +2770,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yoğurt (Yağlı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 62,
             //            CategoryID = 20,
             //            Category = context.Categories.Find(20)
@@ -2778,7 +2778,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Akide şekeri",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 330,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2786,7 +2786,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bal",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 315,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2794,7 +2794,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bisküvi",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 418,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2802,7 +2802,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bisküvi (pasta)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 462,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2810,7 +2810,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çikolata (Bademli)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 532,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2818,7 +2818,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çikolata (Fıstıklı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 543,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2826,7 +2826,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çikolata (Şekerli)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 528,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2834,7 +2834,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çikolata (Şekersiz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 477,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2842,7 +2842,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Dondurma (Sütlü)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 193,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2850,7 +2850,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Karamela",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 399,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2858,7 +2858,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Lokum",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 240,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2866,7 +2866,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Marmelat",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 278,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2874,7 +2874,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Meyva şekerleme",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 316,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2882,7 +2882,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pekmez (Üzüm)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 293,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2890,7 +2890,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Reçel",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 272,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2898,7 +2898,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Şeker",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 385,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2906,7 +2906,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tahin helvası",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 516,
             //            CategoryID = 21,
             //            Category = context.Categories.Find(21)
@@ -2914,7 +2914,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Arpa",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 349,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2922,7 +2922,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Buğday (aşurelik)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 335,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2930,7 +2930,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Buğday (durum)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 332,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2938,7 +2938,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bulgur",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 357,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2946,7 +2946,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Corn Flakes",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 386,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2954,7 +2954,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Çavdar Unu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 350,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2970,7 +2970,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ekmeklik",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 365,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2978,7 +2978,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kepek",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 213,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2986,7 +2986,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mısır (haşlan.)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 91,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -2994,7 +2994,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mısır unu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 368,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3002,7 +3002,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Mısır, tane",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 362,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3010,7 +3010,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Nişasta",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 362,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3018,7 +3018,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Patlamış mısır",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 456,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3026,7 +3026,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Pirinç",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 363,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3034,7 +3034,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Şehriye",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 388,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3042,7 +3042,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tarhana",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 316,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3050,7 +3050,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Yulaf Unu",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 388,
             //            CategoryID = 22,
             //            Category = context.Categories.Find(22)
@@ -3098,7 +3098,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hanımgöbeği",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 211,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3122,7 +3122,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Hurma tatlısı",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 318,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3130,7 +3130,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "İrmik helvası",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 302,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3138,7 +3138,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Jöle",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 259,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3146,7 +3146,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kastırd",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 126,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3154,7 +3154,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kek pasta",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 364,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3162,7 +3162,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Muhallebi",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 173,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3170,7 +3170,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Sütlaç",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 139,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3178,7 +3178,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tel kadayıf (fıstıklı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 286,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3186,7 +3186,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Wafers",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 535,
             //            CategoryID = 23,
             //            Category = context.Categories.Find(23)
@@ -3194,7 +3194,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Bıldırcın yumurta",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 158,
             //            CategoryID = 24,
             //            Category = context.Categories.Find(24)
@@ -3202,7 +3202,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Kaz yumurta",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 185,
             //            CategoryID = 24,
             //            Category = context.Categories.Find(24)
@@ -3210,7 +3210,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Ördek yumurta",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 185,
             //            CategoryID = 24,
             //            Category = context.Categories.Find(24)
@@ -3218,7 +3218,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk yumurta (beyaz)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 49,
             //            CategoryID = 24,
             //            Category = context.Categories.Find(24)
@@ -3226,7 +3226,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk yumurta (sarı)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 369,
             //            CategoryID = 24,
             //            Category = context.Categories.Find(24)
@@ -3234,7 +3234,7 @@ namespace WeightGain.DAL.Migrations
             //        new Product
             //        {
             //            ProductName = "Tavuk yumurta (tam)",
-            //            Scale = "gr",
+            //            Scale = "porsiyon",
             //            Calory = 158,
             //            CategoryID = 24,
             //            Category = context.Categories.Find(24)

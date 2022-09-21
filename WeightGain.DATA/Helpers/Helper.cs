@@ -133,7 +133,7 @@ namespace WeightGain.DATA.Helpers
                 score++;
             if (password.Length >= 12)
                 score++;
-            if (Regex.IsMatch(password, @"[0-9]+(\.[0-9][0-9]?)?", RegexOptions.ECMAScript))   //number only //"^\d+$" if you need to match more than one digit.
+            if (Regex.IsMatch(password, @"[0-9]+(\.[0-9][0-9]?)?", RegexOptions.ECMAScript)) //number only //"^\d+$" if you need to match more than one digit.
                 score++;
             if (Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z]).+$", RegexOptions.ECMAScript)) //both, lower and upper case
                 score++;

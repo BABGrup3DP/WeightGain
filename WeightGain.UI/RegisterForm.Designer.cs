@@ -55,6 +55,7 @@ namespace WeightGain.UI
             this.lblAlready = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -69,6 +70,7 @@ namespace WeightGain.UI
             // 
             this.formRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.formRightPanel.BorderRadius = 15;
+            this.formRightPanel.Controls.Add(this.pbStr);
             this.formRightPanel.Controls.Add(this.lblTerms);
             this.formRightPanel.Controls.Add(this.lblGender);
             this.formRightPanel.Controls.Add(this.cbFemale);
@@ -201,6 +203,7 @@ namespace WeightGain.UI
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(262, 36);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // lblHeight
@@ -320,12 +323,13 @@ namespace WeightGain.UI
             this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthDate.Location = new System.Drawing.Point(26, 263);
-            this.dtpBirthDate.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0, 0);
+            this.dtpBirthDate.Location = new System.Drawing.Point(26, 276);
+            this.dtpBirthDate.MaxDate = new System.DateTime(2022, 9, 21, 0, 0, 0, 0);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(262, 36);
             this.dtpBirthDate.TabIndex = 5;
+            this.dtpBirthDate.Value = new System.DateTime(2022, 9, 21, 0, 0, 0, 0);
             // 
             // txtLastname
             // 
@@ -445,12 +449,21 @@ namespace WeightGain.UI
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pbStr
+            // 
+            this.pbStr.Location = new System.Drawing.Point(28, 262);
+            this.pbStr.Name = "pbStr";
+            this.pbStr.Size = new System.Drawing.Size(260, 11);
+            this.pbStr.TabIndex = 14;
+            this.pbStr.Text = "guna2ProgressBar1";
+            this.pbStr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(841, 529);
+            this.ClientSize = new System.Drawing.Size(841, 542);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblAlready);
@@ -506,6 +519,7 @@ namespace WeightGain.UI
         private System.Windows.Forms.Label lblGender;
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private System.Windows.Forms.Label lblTerms;
+        private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
     }
 }
 

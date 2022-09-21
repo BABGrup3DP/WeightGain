@@ -18,11 +18,7 @@ namespace WeightGain.UI.UserForms
 
         private void MealTimeForm_Load(object sender, EventArgs e)
         {
-            var findMealTimes = _mealTimeRepository.GetByUserId(_logginedUser.ID);
-            if (findMealTimes.Count != 0)
-            {
-                guna2DataGridView1.DataSource = findMealTimes;
-            }
+
         }
     }
 }

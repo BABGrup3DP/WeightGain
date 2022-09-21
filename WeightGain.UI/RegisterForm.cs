@@ -184,5 +184,42 @@ namespace WeightGain.UI
         {
             txtName.Focus();
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            var password = txtPassword.Text.Trim();
+            if (!string.IsNullOrEmpty(password))
+            {
+                var score = Helper.CheckPasswordStrenght(password);
+                pbStr.Value = 20 * score;
+                switch (score)
+                {
+                    case 0:
+                        pbStr.ProgressColor = Color.Red;
+                        pbStr.ProgressColor2 = Color.Red;
+                        break;
+                    case 1:
+                        pbStr.ProgressColor = Color.Orange;
+                        pbStr.ProgressColor2 = Color.Orange;
+                        break;
+                    case 2:
+                        pbStr.ProgressColor = Color.Blue;
+                        pbStr.ProgressColor2 = Color.Blue;
+                        break;
+                    case 3:
+                        pbStr.ProgressColor = Color.DarkBlue;
+                        pbStr.ProgressColor2 = Color.DarkBlue;
+                        break;
+                    case 4:
+                        pbStr.ProgressColor = Color.Green;
+                        pbStr.ProgressColor2 = Color.Green;
+                        break;
+                    case 5:
+                        pbStr.ProgressColor = Color.DarkGreen;
+                        pbStr.ProgressColor2 = Color.DarkGreen;
+                        break;
+                }
+            }
+        }
     }
 }

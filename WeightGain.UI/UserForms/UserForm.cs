@@ -95,42 +95,14 @@ namespace WeightGain.UI.UserForms
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            btnMealTimes.PerformClick();
+            Helper.OpenChildForm(mainPanel, new MainForm());
         }
 
-        private void ıconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void leftPanelMenuLogo_Click(object sender, EventArgs e)
         {
-
+            Helper.OpenChildForm(mainPanel, new MainForm());
         }
-
-        private void btnogun_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btncategory_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlogun_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cmbogun_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
