@@ -43,40 +43,40 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.PanelMain = new System.Windows.Forms.Panel();
-            this.ımageList = new System.Windows.Forms.ImageList(this.components);
-            this.btnogun = new System.Windows.Forms.Button();
-            this.btncategory = new System.Windows.Forms.Button();
-            this.btnProduct = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnlogun = new System.Windows.Forms.Panel();
-            this.pnlkategori = new System.Windows.Forms.Panel();
             this.pnlögün = new System.Windows.Forms.Panel();
-            this.cmbogun = new System.Windows.Forms.ComboBox();
-            this.lblogun = new System.Windows.Forms.Label();
-            this.lblkategori = new System.Windows.Forms.Label();
-            this.cmbkategori = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listurun = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnkategoriekle = new System.Windows.Forms.Button();
-            this.btnkategorisil = new System.Windows.Forms.Button();
             this.btnogunsil = new System.Windows.Forms.Button();
             this.btnogunekle = new System.Windows.Forms.Button();
+            this.lblogun = new System.Windows.Forms.Label();
+            this.cmbogun = new System.Windows.Forms.ComboBox();
+            this.pnlkategori = new System.Windows.Forms.Panel();
+            this.btnkategorisil = new System.Windows.Forms.Button();
+            this.btnkategoriekle = new System.Windows.Forms.Button();
+            this.lblkategori = new System.Windows.Forms.Label();
+            this.cmbkategori = new System.Windows.Forms.ComboBox();
+            this.pnlogun = new System.Windows.Forms.Panel();
             this.btnurunsil = new System.Windows.Forms.Button();
             this.btnurunekle = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listurun = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PanelMain = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.ımageList = new System.Windows.Forms.ImageList(this.components);
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnogun = new System.Windows.Forms.Button();
+            this.btncategory = new System.Windows.Forms.Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.leftMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            this.PanelMain.SuspendLayout();
-            this.pnlogun.SuspendLayout();
-            this.pnlkategori.SuspendLayout();
             this.pnlögün.SuspendLayout();
+            this.pnlkategori.SuspendLayout();
+            this.pnlogun.SuspendLayout();
+            this.PanelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // formElipse
@@ -119,7 +119,7 @@
             this.btnLogout.Image = global::WeightGain.UI.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.Location = new System.Drawing.Point(6, 591);
+            this.btnLogout.Location = new System.Drawing.Point(6, 587);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(227, 70);
             this.btnLogout.TabIndex = 6;
@@ -143,7 +143,7 @@
             this.btnHelp.Image = global::WeightGain.UI.Properties.Resources.help;
             this.btnHelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHelp.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHelp.Location = new System.Drawing.Point(6, 520);
+            this.btnHelp.Location = new System.Drawing.Point(6, 516);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(227, 70);
             this.btnHelp.TabIndex = 5;
@@ -157,7 +157,6 @@
             this.btnMealTimes.AnimatedGIF = true;
             this.btnMealTimes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnMealTimes.BorderRadius = 5;
-            this.btnMealTimes.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnMealTimes.BorderThickness = 1;
             this.btnMealTimes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnMealTimes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
@@ -194,7 +193,7 @@
             this.btnProfile.Image = global::WeightGain.UI.Properties.Resources.profile;
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnProfile.Location = new System.Drawing.Point(6, 449);
+            this.btnProfile.Location = new System.Drawing.Point(6, 445);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(227, 70);
             this.btnProfile.TabIndex = 4;
@@ -207,6 +206,7 @@
             this.btnExercies.Animated = true;
             this.btnExercies.AnimatedGIF = true;
             this.btnExercies.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnExercies.BorderRadius = 5;
             this.btnExercies.BorderThickness = 1;
             this.btnExercies.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.btnExercies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
@@ -217,7 +217,7 @@
             this.btnExercies.Image = global::WeightGain.UI.Properties.Resources.exercise;
             this.btnExercies.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExercies.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExercies.Location = new System.Drawing.Point(6, 236);
+            this.btnExercies.Location = new System.Drawing.Point(6, 232);
             this.btnExercies.Name = "btnExercies";
             this.btnExercies.Size = new System.Drawing.Size(227, 70);
             this.btnExercies.TabIndex = 1;
@@ -241,7 +241,7 @@
             this.btnArchives.Image = global::WeightGain.UI.Properties.Resources.archive;
             this.btnArchives.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnArchives.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnArchives.Location = new System.Drawing.Point(6, 378);
+            this.btnArchives.Location = new System.Drawing.Point(6, 374);
             this.btnArchives.Name = "btnArchives";
             this.btnArchives.Size = new System.Drawing.Size(227, 70);
             this.btnArchives.TabIndex = 3;
@@ -265,7 +265,7 @@
             this.btnReports.Image = global::WeightGain.UI.Properties.Resources.reports;
             this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReports.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnReports.Location = new System.Drawing.Point(6, 307);
+            this.btnReports.Location = new System.Drawing.Point(6, 303);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(227, 70);
             this.btnReports.TabIndex = 2;
@@ -278,7 +278,7 @@
             this.leftPanelMenuLogo.BackColor = System.Drawing.Color.Transparent;
             this.leftPanelMenuLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
             this.leftPanelMenuLogo.ImageRotate = 0F;
-            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-44, -71);
+            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-40, -65);
             this.leftPanelMenuLogo.Name = "leftPanelMenuLogo";
             this.leftPanelMenuLogo.Size = new System.Drawing.Size(309, 339);
             this.leftPanelMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,11 +334,173 @@
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
             this.mainPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseUp);
             // 
-            // guna2BorderlessForm1
+            // pnlögün
             // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.pnlögün.Controls.Add(this.btnogunsil);
+            this.pnlögün.Controls.Add(this.btnogunekle);
+            this.pnlögün.Controls.Add(this.lblogun);
+            this.pnlögün.Controls.Add(this.cmbogun);
+            this.pnlögün.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlögün.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.pnlögün.Location = new System.Drawing.Point(-1081, 100);
+            this.pnlögün.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlögün.Name = "pnlögün";
+            this.pnlögün.Size = new System.Drawing.Size(1074, 622);
+            this.pnlögün.TabIndex = 4;
+            // 
+            // btnogunsil
+            // 
+            this.btnogunsil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnogunsil.Location = new System.Drawing.Point(336, 257);
+            this.btnogunsil.Name = "btnogunsil";
+            this.btnogunsil.Size = new System.Drawing.Size(124, 46);
+            this.btnogunsil.TabIndex = 7;
+            this.btnogunsil.Text = "Sil";
+            this.btnogunsil.UseVisualStyleBackColor = true;
+            // 
+            // btnogunekle
+            // 
+            this.btnogunekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnogunekle.Location = new System.Drawing.Point(162, 257);
+            this.btnogunekle.Name = "btnogunekle";
+            this.btnogunekle.Size = new System.Drawing.Size(124, 46);
+            this.btnogunekle.TabIndex = 6;
+            this.btnogunekle.Text = "Ekle";
+            this.btnogunekle.UseVisualStyleBackColor = true;
+            // 
+            // lblogun
+            // 
+            this.lblogun.AutoSize = true;
+            this.lblogun.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.lblogun.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblogun.Location = new System.Drawing.Point(158, 123);
+            this.lblogun.Name = "lblogun";
+            this.lblogun.Size = new System.Drawing.Size(128, 19);
+            this.lblogun.TabIndex = 1;
+            this.lblogun.Text = "Öğün Seçenekleri";
+            // 
+            // cmbogun
+            // 
+            this.cmbogun.FormattingEnabled = true;
+            this.cmbogun.Location = new System.Drawing.Point(162, 162);
+            this.cmbogun.Name = "cmbogun";
+            this.cmbogun.Size = new System.Drawing.Size(255, 27);
+            this.cmbogun.TabIndex = 0;
+            this.cmbogun.SelectedIndexChanged += new System.EventHandler(this.cmbogun_SelectedIndexChanged);
+            // 
+            // pnlkategori
+            // 
+            this.pnlkategori.Controls.Add(this.btnkategorisil);
+            this.pnlkategori.Controls.Add(this.btnkategoriekle);
+            this.pnlkategori.Controls.Add(this.lblkategori);
+            this.pnlkategori.Controls.Add(this.cmbkategori);
+            this.pnlkategori.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlkategori.Location = new System.Drawing.Point(-7, 100);
+            this.pnlkategori.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlkategori.Name = "pnlkategori";
+            this.pnlkategori.Size = new System.Drawing.Size(10, 622);
+            this.pnlkategori.TabIndex = 3;
+            // 
+            // btnkategorisil
+            // 
+            this.btnkategorisil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnkategorisil.Location = new System.Drawing.Point(453, 270);
+            this.btnkategorisil.Name = "btnkategorisil";
+            this.btnkategorisil.Size = new System.Drawing.Size(124, 46);
+            this.btnkategorisil.TabIndex = 5;
+            this.btnkategorisil.Text = "Sil";
+            this.btnkategorisil.UseVisualStyleBackColor = true;
+            // 
+            // btnkategoriekle
+            // 
+            this.btnkategoriekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnkategoriekle.Location = new System.Drawing.Point(279, 270);
+            this.btnkategoriekle.Name = "btnkategoriekle";
+            this.btnkategoriekle.Size = new System.Drawing.Size(124, 46);
+            this.btnkategoriekle.TabIndex = 4;
+            this.btnkategoriekle.Text = "Ekle";
+            this.btnkategoriekle.UseVisualStyleBackColor = true;
+            // 
+            // lblkategori
+            // 
+            this.lblkategori.AutoSize = true;
+            this.lblkategori.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.lblkategori.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblkategori.Location = new System.Drawing.Point(284, 137);
+            this.lblkategori.Name = "lblkategori";
+            this.lblkategori.Size = new System.Drawing.Size(149, 19);
+            this.lblkategori.TabIndex = 3;
+            this.lblkategori.Text = "Kategori Seçenekleri";
+            // 
+            // cmbkategori
+            // 
+            this.cmbkategori.FormattingEnabled = true;
+            this.cmbkategori.Location = new System.Drawing.Point(279, 175);
+            this.cmbkategori.Name = "cmbkategori";
+            this.cmbkategori.Size = new System.Drawing.Size(255, 29);
+            this.cmbkategori.TabIndex = 2;
+            // 
+            // pnlogun
+            // 
+            this.pnlogun.Controls.Add(this.btnurunsil);
+            this.pnlogun.Controls.Add(this.btnurunekle);
+            this.pnlogun.Controls.Add(this.textBox1);
+            this.pnlogun.Controls.Add(this.listurun);
+            this.pnlogun.Controls.Add(this.label4);
+            this.pnlogun.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlogun.Location = new System.Drawing.Point(3, 100);
+            this.pnlogun.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlogun.Name = "pnlogun";
+            this.pnlogun.Size = new System.Drawing.Size(1091, 622);
+            this.pnlogun.TabIndex = 1;
+            this.pnlogun.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlogun_Paint);
+            // 
+            // btnurunsil
+            // 
+            this.btnurunsil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnurunsil.Location = new System.Drawing.Point(877, 66);
+            this.btnurunsil.Name = "btnurunsil";
+            this.btnurunsil.Size = new System.Drawing.Size(124, 46);
+            this.btnurunsil.TabIndex = 7;
+            this.btnurunsil.Text = "Sil";
+            this.btnurunsil.UseVisualStyleBackColor = true;
+            // 
+            // btnurunekle
+            // 
+            this.btnurunekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnurunekle.Location = new System.Drawing.Point(703, 66);
+            this.btnurunekle.Name = "btnurunekle";
+            this.btnurunekle.Size = new System.Drawing.Size(124, 46);
+            this.btnurunekle.TabIndex = 6;
+            this.btnurunekle.Text = "Ekle";
+            this.btnurunekle.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(33, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(243, 29);
+            this.textBox1.TabIndex = 5;
+            // 
+            // listurun
+            // 
+            this.listurun.FormattingEnabled = true;
+            this.listurun.ItemHeight = 21;
+            this.listurun.Location = new System.Drawing.Point(312, 28);
+            this.listurun.Name = "listurun";
+            this.listurun.Size = new System.Drawing.Size(335, 529);
+            this.listurun.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(29, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Secilen Ürün";
             // 
             // PanelMain
             // 
@@ -357,6 +519,51 @@
             this.PanelMain.Size = new System.Drawing.Size(1094, 100);
             this.PanelMain.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.SlateBlue;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(701, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 13);
+            this.label3.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.SlateBlue;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(441, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 13);
+            this.label2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.SlateBlue;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(179, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 13);
+            this.label1.TabIndex = 1;
+            // 
+            // btnsave
+            // 
+            this.btnsave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnsave.ForeColor = System.Drawing.Color.Gray;
+            this.btnsave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsave.ImageKey = "ok1.png";
+            this.btnsave.ImageList = this.ımageList;
+            this.btnsave.Location = new System.Drawing.Point(856, 10);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(106, 87);
+            this.btnsave.TabIndex = 4;
+            this.btnsave.Text = "Kaydet";
+            this.btnsave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnsave.UseVisualStyleBackColor = true;
+            // 
             // ımageList
             // 
             this.ımageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList.ImageStream")));
@@ -364,6 +571,25 @@
             this.ımageList.Images.SetKeyName(0, "ok1.png");
             this.ımageList.Images.SetKeyName(1, "ok2.png");
             this.ımageList.Images.SetKeyName(2, "ok3.png");
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnProduct.ForeColor = System.Drawing.Color.Gray;
+            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProduct.ImageKey = "ok1.png";
+            this.btnProduct.ImageList = this.ımageList;
+            this.btnProduct.Location = new System.Drawing.Point(596, 10);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(106, 87);
+            this.btnProduct.TabIndex = 3;
+            this.btnProduct.Text = "Ürünler";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnogun
             // 
@@ -403,241 +629,15 @@
             this.btncategory.UseVisualStyleBackColor = true;
             this.btncategory.Click += new System.EventHandler(this.btncategory_Click);
             // 
-            // btnProduct
+            // guna2BorderlessForm1
             // 
-            this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnProduct.ForeColor = System.Drawing.Color.Gray;
-            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProduct.ImageKey = "ok1.png";
-            this.btnProduct.ImageList = this.ımageList;
-            this.btnProduct.Location = new System.Drawing.Point(596, 10);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(106, 87);
-            this.btnProduct.TabIndex = 3;
-            this.btnProduct.Text = "Ürünler";
-            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnProduct.UseVisualStyleBackColor = true;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
-            // 
-            // btnsave
-            // 
-            this.btnsave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnsave.ForeColor = System.Drawing.Color.Gray;
-            this.btnsave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnsave.ImageKey = "ok1.png";
-            this.btnsave.ImageList = this.ımageList;
-            this.btnsave.Location = new System.Drawing.Point(856, 10);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(106, 87);
-            this.btnsave.TabIndex = 4;
-            this.btnsave.Text = "Kaydet";
-            this.btnsave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnsave.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.SlateBlue;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(179, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 13);
-            this.label1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.SlateBlue;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(441, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 13);
-            this.label2.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.SlateBlue;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(701, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 13);
-            this.label3.TabIndex = 6;
-            // 
-            // pnlogun
-            // 
-            this.pnlogun.Controls.Add(this.btnurunsil);
-            this.pnlogun.Controls.Add(this.btnurunekle);
-            this.pnlogun.Controls.Add(this.textBox1);
-            this.pnlogun.Controls.Add(this.listurun);
-            this.pnlogun.Controls.Add(this.label4);
-            this.pnlogun.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlogun.Location = new System.Drawing.Point(3, 100);
-            this.pnlogun.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlogun.Name = "pnlogun";
-            this.pnlogun.Size = new System.Drawing.Size(1091, 622);
-            this.pnlogun.TabIndex = 1;
-            this.pnlogun.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlogun_Paint);
-            // 
-            // pnlkategori
-            // 
-            this.pnlkategori.Controls.Add(this.btnkategorisil);
-            this.pnlkategori.Controls.Add(this.btnkategoriekle);
-            this.pnlkategori.Controls.Add(this.lblkategori);
-            this.pnlkategori.Controls.Add(this.cmbkategori);
-            this.pnlkategori.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlkategori.Location = new System.Drawing.Point(-7, 100);
-            this.pnlkategori.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlkategori.Name = "pnlkategori";
-            this.pnlkategori.Size = new System.Drawing.Size(10, 622);
-            this.pnlkategori.TabIndex = 3;
-            // 
-            // pnlögün
-            // 
-            this.pnlögün.Controls.Add(this.btnogunsil);
-            this.pnlögün.Controls.Add(this.btnogunekle);
-            this.pnlögün.Controls.Add(this.lblogun);
-            this.pnlögün.Controls.Add(this.cmbogun);
-            this.pnlögün.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlögün.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.pnlögün.Location = new System.Drawing.Point(-1081, 100);
-            this.pnlögün.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlögün.Name = "pnlögün";
-            this.pnlögün.Size = new System.Drawing.Size(1074, 622);
-            this.pnlögün.TabIndex = 4;
-            // 
-            // cmbogun
-            // 
-            this.cmbogun.FormattingEnabled = true;
-            this.cmbogun.Location = new System.Drawing.Point(162, 162);
-            this.cmbogun.Name = "cmbogun";
-            this.cmbogun.Size = new System.Drawing.Size(255, 31);
-            this.cmbogun.TabIndex = 0;
-            this.cmbogun.SelectedIndexChanged += new System.EventHandler(this.cmbogun_SelectedIndexChanged);
-            // 
-            // lblogun
-            // 
-            this.lblogun.AutoSize = true;
-            this.lblogun.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblogun.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblogun.Location = new System.Drawing.Point(158, 123);
-            this.lblogun.Name = "lblogun";
-            this.lblogun.Size = new System.Drawing.Size(155, 24);
-            this.lblogun.TabIndex = 1;
-            this.lblogun.Text = "Öğün Seçenekleri";
-            // 
-            // lblkategori
-            // 
-            this.lblkategori.AutoSize = true;
-            this.lblkategori.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblkategori.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblkategori.Location = new System.Drawing.Point(284, 137);
-            this.lblkategori.Name = "lblkategori";
-            this.lblkategori.Size = new System.Drawing.Size(180, 24);
-            this.lblkategori.TabIndex = 3;
-            this.lblkategori.Text = "Kategori Seçenekleri";
-            // 
-            // cmbkategori
-            // 
-            this.cmbkategori.FormattingEnabled = true;
-            this.cmbkategori.Location = new System.Drawing.Point(279, 175);
-            this.cmbkategori.Name = "cmbkategori";
-            this.cmbkategori.Size = new System.Drawing.Size(255, 36);
-            this.cmbkategori.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(29, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Secilen Ürün";
-            // 
-            // listurun
-            // 
-            this.listurun.FormattingEnabled = true;
-            this.listurun.ItemHeight = 28;
-            this.listurun.Location = new System.Drawing.Point(312, 28);
-            this.listurun.Name = "listurun";
-            this.listurun.Size = new System.Drawing.Size(335, 536);
-            this.listurun.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(33, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 34);
-            this.textBox1.TabIndex = 5;
-            // 
-            // btnkategoriekle
-            // 
-            this.btnkategoriekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnkategoriekle.Location = new System.Drawing.Point(279, 270);
-            this.btnkategoriekle.Name = "btnkategoriekle";
-            this.btnkategoriekle.Size = new System.Drawing.Size(124, 46);
-            this.btnkategoriekle.TabIndex = 4;
-            this.btnkategoriekle.Text = "Ekle";
-            this.btnkategoriekle.UseVisualStyleBackColor = true;
-            // 
-            // btnkategorisil
-            // 
-            this.btnkategorisil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnkategorisil.Location = new System.Drawing.Point(453, 270);
-            this.btnkategorisil.Name = "btnkategorisil";
-            this.btnkategorisil.Size = new System.Drawing.Size(124, 46);
-            this.btnkategorisil.TabIndex = 5;
-            this.btnkategorisil.Text = "Sil";
-            this.btnkategorisil.UseVisualStyleBackColor = true;
-            // 
-            // btnogunsil
-            // 
-            this.btnogunsil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnogunsil.Location = new System.Drawing.Point(336, 257);
-            this.btnogunsil.Name = "btnogunsil";
-            this.btnogunsil.Size = new System.Drawing.Size(124, 46);
-            this.btnogunsil.TabIndex = 7;
-            this.btnogunsil.Text = "Sil";
-            this.btnogunsil.UseVisualStyleBackColor = true;
-            // 
-            // btnogunekle
-            // 
-            this.btnogunekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnogunekle.Location = new System.Drawing.Point(162, 257);
-            this.btnogunekle.Name = "btnogunekle";
-            this.btnogunekle.Size = new System.Drawing.Size(124, 46);
-            this.btnogunekle.TabIndex = 6;
-            this.btnogunekle.Text = "Ekle";
-            this.btnogunekle.UseVisualStyleBackColor = true;
-            // 
-            // btnurunsil
-            // 
-            this.btnurunsil.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnurunsil.Location = new System.Drawing.Point(877, 66);
-            this.btnurunsil.Name = "btnurunsil";
-            this.btnurunsil.Size = new System.Drawing.Size(124, 46);
-            this.btnurunsil.TabIndex = 7;
-            this.btnurunsil.Text = "Sil";
-            this.btnurunsil.UseVisualStyleBackColor = true;
-            // 
-            // btnurunekle
-            // 
-            this.btnurunekle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnurunekle.Location = new System.Drawing.Point(703, 66);
-            this.btnurunekle.Name = "btnurunekle";
-            this.btnurunekle.Size = new System.Drawing.Size(124, 46);
-            this.btnurunekle.TabIndex = 6;
-            this.btnurunekle.Text = "Ekle";
-            this.btnurunekle.UseVisualStyleBackColor = true;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1333, 754);
@@ -660,13 +660,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
-            this.PanelMain.ResumeLayout(false);
-            this.pnlogun.ResumeLayout(false);
-            this.pnlogun.PerformLayout();
-            this.pnlkategori.ResumeLayout(false);
-            this.pnlkategori.PerformLayout();
             this.pnlögün.ResumeLayout(false);
             this.pnlögün.PerformLayout();
+            this.pnlkategori.ResumeLayout(false);
+            this.pnlkategori.PerformLayout();
+            this.pnlogun.ResumeLayout(false);
+            this.pnlogun.PerformLayout();
+            this.PanelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

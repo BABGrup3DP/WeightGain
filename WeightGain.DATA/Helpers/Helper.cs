@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 
 namespace WeightGain.DATA.Helpers
 {
@@ -64,10 +64,12 @@ namespace WeightGain.DATA.Helpers
         public static void OpenChildForm(Panel pnl, Form childForm)
         {
             if (pnl.Controls.Count > 0) // Eğer önceden form eklendiyse
-                pnl.Controls.RemoveAt(0); // formu içerisinden kaldır
+                pnl.Controls.Clear(); // panel içerisindeki kontrolleri temizler
             childForm.TopLevel = false;
             childForm.AutoScroll = true; // Formun içerisindeki kontrolleri otomatik olarak kaydırma özelliğini aktif eder.
             childForm.FormBorderStyle = FormBorderStyle.None; // Formun kenarlıklarını kaldırır.
+            childForm.MaximumSize = pnl.Size; // Formun boyutunu panelin boyutuna göre ayarlar.
+            childForm.MinimumSize = pnl.Size; // Formun boyutunu panelin boyutuna göre ayarlar.
             pnl.Controls.Add(childForm); // Formu panel içerisine ekle
             childForm.Show(); // Formu göster
         }

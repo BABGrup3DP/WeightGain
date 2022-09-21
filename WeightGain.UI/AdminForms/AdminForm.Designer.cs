@@ -348,7 +348,7 @@
             this.lblTopTitle.AutoSize = true;
             this.lblTopTitle.Location = new System.Drawing.Point(6, 8);
             this.lblTopTitle.Name = "lblTopTitle";
-            this.lblTopTitle.Size = new System.Drawing.Size(268, 28);
+            this.lblTopTitle.Size = new System.Drawing.Size(219, 21);
             this.lblTopTitle.TabIndex = 7;
             this.lblTopTitle.Text = "WeightGain Yönetici Paneli";
             // 
@@ -358,10 +358,8 @@
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(239, 32);
-            this.mainPanel.MaximumSize = new System.Drawing.Size(1094, 722);
-            this.mainPanel.MinimumSize = new System.Drawing.Size(1094, 722);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1094, 722);
+            this.mainPanel.Size = new System.Drawing.Size(1094, 831);
             this.mainPanel.TabIndex = 8;
             this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
@@ -369,7 +367,7 @@
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1333, 863);
