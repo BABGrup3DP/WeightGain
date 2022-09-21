@@ -8,5 +8,6 @@ namespace WeightGain.UI.UserForms
         {
             InitializeComponent();
         }
+
     }
 }
