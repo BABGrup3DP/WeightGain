@@ -182,79 +182,79 @@ namespace WeightGain.DAL.Migrations
             //        {
             //            Name = "KIRMIZI ETLER",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "KURUBAKLAGİLLER",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "KÜMES HAYVANLARI",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "MEYVELER",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "PEYNİRLER",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "SAKATATLAR",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "SEBZELER",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "SOSLAR",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "SÜT VE ÜRÜNLERİ",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "ŞEKER ve ŞEKER ÜRÜNLERİ",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "TAHIL ÜRÜNLERİ",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "TATLILAR",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        },
             //        new Category
             //        {
             //            Name = "YUMURTALAR",
             //            Description = "",
-            //             // Picture = new byte[] { }
+            //            // Picture = new byte[] { }
             //        }
             //    );
             //    context.SaveChanges();
