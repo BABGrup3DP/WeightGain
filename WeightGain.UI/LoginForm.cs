@@ -13,6 +13,7 @@ namespace WeightGain.UI
     public partial class LoginForm : Form
     {
         private readonly UserRepository _userRepository;
+        private bool showPassword = false;
         public LoginForm()
         {
             InitializeComponent();
@@ -145,6 +146,12 @@ namespace WeightGain.UI
                 txtPassword.Text = Settings.Default.password;
                 cbRememberMe.Checked = true;
             }
+        }
+
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+            txtPassword.PasswordChar = showPassword ? '\0' : '*';
         }
     }
 }

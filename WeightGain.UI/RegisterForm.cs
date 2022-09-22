@@ -11,6 +11,7 @@ namespace WeightGain.UI
     public partial class RegisterForm : Form
     {
         private readonly UserRepository _userRepository;
+        private bool showPassword = false;
         public RegisterForm()
         {
             InitializeComponent();
@@ -220,6 +221,12 @@ namespace WeightGain.UI
                         break;
                 }
             }
+        }
+
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+            txtPassword.PasswordChar = showPassword ? '\0' : '*';
         }
     }
 }

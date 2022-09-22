@@ -34,6 +34,7 @@ namespace WeightGain.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.formRightPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.lblTerms = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.cbFemale = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -55,7 +56,6 @@ namespace WeightGain.UI
             this.lblAlready = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -90,8 +90,17 @@ namespace WeightGain.UI
             this.formRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.formRightPanel.Location = new System.Drawing.Point(518, 13);
             this.formRightPanel.Name = "formRightPanel";
-            this.formRightPanel.Size = new System.Drawing.Size(311, 504);
+            this.formRightPanel.Size = new System.Drawing.Size(311, 517);
             this.formRightPanel.TabIndex = 0;
+            // 
+            // pbStr
+            // 
+            this.pbStr.Location = new System.Drawing.Point(28, 262);
+            this.pbStr.Name = "pbStr";
+            this.pbStr.Size = new System.Drawing.Size(260, 11);
+            this.pbStr.TabIndex = 14;
+            this.pbStr.Text = "guna2ProgressBar1";
+            this.pbStr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // lblTerms
             // 
@@ -195,6 +204,7 @@ namespace WeightGain.UI
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.IconRight = global::WeightGain.UI.Properties.Resources.showpass;
             this.txtPassword.Location = new System.Drawing.Point(26, 221);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -203,6 +213,7 @@ namespace WeightGain.UI
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(262, 36);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.IconRightClick += new System.EventHandler(this.txtPassword_IconRightClick);
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
@@ -448,15 +459,6 @@ namespace WeightGain.UI
             this.btnClose.Size = new System.Drawing.Size(45, 29);
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pbStr
-            // 
-            this.pbStr.Location = new System.Drawing.Point(28, 262);
-            this.pbStr.Name = "pbStr";
-            this.pbStr.Size = new System.Drawing.Size(260, 11);
-            this.pbStr.TabIndex = 14;
-            this.pbStr.Text = "guna2ProgressBar1";
-            this.pbStr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // RegisterForm
             // 
