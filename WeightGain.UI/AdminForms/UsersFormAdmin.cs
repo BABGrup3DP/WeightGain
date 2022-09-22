@@ -68,7 +68,12 @@ namespace WeightGain.UI.AdminForms
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
-
+            using (var userAddFormAdmin = new UserAddFormAdmin(_userRepository))
+            {
+                userAddFormAdmin.Owner = this;
+                userAddFormAdmin.ShowDialog();
+            }
+            RefreshDataGridView();
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)

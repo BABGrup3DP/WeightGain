@@ -6,16 +6,16 @@ using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
 
-namespace WeightGain.UI
+namespace WeightGain.UI.AdminForms
 {
-    public partial class RegisterForm : Form
+    public partial class UserAddFormAdmin : Form
     {
         private readonly UserRepository _userRepository;
         private bool showPassword = false;
-        public RegisterForm()
+        public UserAddFormAdmin(UserRepository userRepository)
         {
             InitializeComponent();
-            _userRepository = new UserRepository();
+            _userRepository = userRepository;
         }
 
         #region Helper Functions
@@ -23,40 +23,25 @@ namespace WeightGain.UI
         private Point _dragCursorPoint;
         private Point _dragFormPoint;
 
-        private void RegisterForm_MouseDown(object sender, MouseEventArgs e)
+        private void UserAddFormAdmin_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _dragCursorPoint = Cursor.Position;
             _dragFormPoint = Location;
         }
 
-        private void RegisterForm_MouseMove(object sender, MouseEventArgs e)
+        private void UserAddFormAdmin_MouseMove(object sender, MouseEventArgs e)
         {
             if (!_dragging) return;
             var dif = Point.Subtract(Cursor.Position, new Size(_dragCursorPoint));
             Location = Point.Add(_dragFormPoint, new Size(dif));
         }
 
-        private void RegisterForm_MouseUp(object sender, MouseEventArgs e)
+        private void UserAddFormAdmin_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
         #endregion
-
-        private void cbMale_CheckedChanged(object sender, EventArgs e)
-        {
-            cbFemale.Checked = !cbMale.Checked;
-        }
-
-        private void cbFemale_CheckedChanged(object sender, EventArgs e)
-        {
-            cbMale.Checked = !cbFemale.Checked;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -76,21 +61,50 @@ namespace WeightGain.UI
                 e.Handled = true;
         }
 
-        private void lblLogin_Click(object sender, EventArgs e)
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            Owner?.Show();
-            Hide();
+            var password = txtPassword.Text.Trim();
+            if (!string.IsNullOrEmpty(password))
+            {
+                var score = Helper.CheckPasswordStrenght(password);
+                pbStr.Value = 20 * score;
+                switch (score)
+                {
+                    case 0:
+                        pbStr.ProgressColor = Color.Red;
+                        pbStr.ProgressColor2 = Color.Red;
+                        break;
+                    case 1:
+                        pbStr.ProgressColor = Color.Orange;
+                        pbStr.ProgressColor2 = Color.Orange;
+                        break;
+                    case 2:
+                        pbStr.ProgressColor = Color.Blue;
+                        pbStr.ProgressColor2 = Color.Blue;
+                        break;
+                    case 3:
+                        pbStr.ProgressColor = Color.DarkBlue;
+                        pbStr.ProgressColor2 = Color.DarkBlue;
+                        break;
+                    case 4:
+                        pbStr.ProgressColor = Color.Green;
+                        pbStr.ProgressColor2 = Color.Green;
+                        break;
+                    case 5:
+                        pbStr.ProgressColor = Color.DarkGreen;
+                        pbStr.ProgressColor2 = Color.DarkGreen;
+                        break;
+                }
+            }
         }
 
-        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
         {
-            if (Owner == null) return;
-            Owner.Show();
-            if (e.CloseReason != CloseReason.FormOwnerClosing)
-                Owner.Close();
+            showPassword = !showPassword;
+            txtPassword.PasswordChar = showPassword ? '\0' : '*';
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void btnAddUser_Click(object sender, EventArgs e)
         {
             var firstName = txtName.Text.Trim();
             var lastName = txtLastname.Text.Trim();
@@ -118,7 +132,7 @@ namespace WeightGain.UI
                 {
                     var messageDialogError = new Guna2MessageDialog
                     {
-                        Text = "Lütfen mail adresinizi kontrol edin.",
+                        Text = "Lütfen mail adresini kontrol edin.",
                         Caption = Properties.Resources.ProgramTitle
                     };
                     messageDialogError.Show();
@@ -164,7 +178,7 @@ namespace WeightGain.UI
                 {
                     var successDialog = new Guna2MessageDialog
                     {
-                        Text = "Başarıyla kayıt oldunuz. Artık giriş yapabilirsiniz.",
+                        Text = "Yeni üye başarıyla eklendi.",
                         Caption = Properties.Resources.ProgramTitle
                     };
                     successDialog.Show();
@@ -179,54 +193,6 @@ namespace WeightGain.UI
                 };
                 messageDialogError.Show();
             }
-        }
-
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
-            txtName.Focus();
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            var password = txtPassword.Text.Trim();
-            if (!string.IsNullOrEmpty(password))
-            {
-                var score = Helper.CheckPasswordStrenght(password);
-                pbStr.Value = 20 * score;
-                switch (score)
-                {
-                    case 0:
-                        pbStr.ProgressColor = Color.Red;
-                        pbStr.ProgressColor2 = Color.Red;
-                        break;
-                    case 1:
-                        pbStr.ProgressColor = Color.Orange;
-                        pbStr.ProgressColor2 = Color.Orange;
-                        break;
-                    case 2:
-                        pbStr.ProgressColor = Color.Blue;
-                        pbStr.ProgressColor2 = Color.Blue;
-                        break;
-                    case 3:
-                        pbStr.ProgressColor = Color.DarkBlue;
-                        pbStr.ProgressColor2 = Color.DarkBlue;
-                        break;
-                    case 4:
-                        pbStr.ProgressColor = Color.Green;
-                        pbStr.ProgressColor2 = Color.Green;
-                        break;
-                    case 5:
-                        pbStr.ProgressColor = Color.DarkGreen;
-                        pbStr.ProgressColor2 = Color.DarkGreen;
-                        break;
-                }
-            }
-        }
-
-        private void txtPassword_IconRightClick(object sender, EventArgs e)
-        {
-            showPassword = !showPassword;
-            txtPassword.PasswordChar = showPassword ? '\0' : '*';
         }
     }
 }

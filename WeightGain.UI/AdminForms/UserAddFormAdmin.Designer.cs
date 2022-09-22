@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace WeightGain.UI
+﻿
+namespace WeightGain.UI.AdminForms
 {
-    partial class RegisterForm
+    partial class UserAddFormAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +30,14 @@ namespace WeightGain.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.formRightPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.lblTerms = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.cbFemale = new Guna.UI2.WinForms.Guna2CheckBox();
             this.cbMale = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblHeight = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
@@ -51,31 +49,34 @@ namespace WeightGain.UI
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.mainFormLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblSlogan = new System.Windows.Forms.Label();
-            this.lblAlready = new System.Windows.Forms.Label();
-            this.lblLogin = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // formElipse
             // 
             this.formElipse.TargetControl = this;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(340, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(45, 29);
+            this.btnClose.TabIndex = 0;
+            // 
             // formRightPanel
             // 
             this.formRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.formRightPanel.BorderRadius = 15;
             this.formRightPanel.Controls.Add(this.pbStr);
-            this.formRightPanel.Controls.Add(this.lblTerms);
             this.formRightPanel.Controls.Add(this.lblGender);
             this.formRightPanel.Controls.Add(this.cbFemale);
             this.formRightPanel.Controls.Add(this.cbMale);
-            this.formRightPanel.Controls.Add(this.btnSignUp);
+            this.formRightPanel.Controls.Add(this.btnAddUser);
             this.formRightPanel.Controls.Add(this.txtPassword);
             this.formRightPanel.Controls.Add(this.lblHeight);
             this.formRightPanel.Controls.Add(this.lblWeight);
@@ -88,10 +89,10 @@ namespace WeightGain.UI
             this.formRightPanel.Controls.Add(this.lblSignUp);
             this.formRightPanel.Controls.Add(this.txtName);
             this.formRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.formRightPanel.Location = new System.Drawing.Point(518, 13);
+            this.formRightPanel.Location = new System.Drawing.Point(12, 12);
             this.formRightPanel.Name = "formRightPanel";
             this.formRightPanel.Size = new System.Drawing.Size(311, 517);
-            this.formRightPanel.TabIndex = 0;
+            this.formRightPanel.TabIndex = 1;
             // 
             // pbStr
             // 
@@ -102,26 +103,14 @@ namespace WeightGain.UI
             this.pbStr.Text = "guna2ProgressBar1";
             this.pbStr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
-            // lblTerms
-            // 
-            this.lblTerms.AutoSize = true;
-            this.lblTerms.BackColor = System.Drawing.Color.Transparent;
-            this.lblTerms.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTerms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.lblTerms.Location = new System.Drawing.Point(24, 479);
-            this.lblTerms.Name = "lblTerms";
-            this.lblTerms.Size = new System.Drawing.Size(264, 24);
-            this.lblTerms.TabIndex = 13;
-            this.lblTerms.Text = "Üye olduğunuz zaman kullanım koşullarını kabul etmiş \r\nsayılırsınız.";
-            // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.lblGender.Location = new System.Drawing.Point(22, 315);
+            this.lblGender.Location = new System.Drawing.Point(22, 321);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(99, 21);
+            this.lblGender.Size = new System.Drawing.Size(58, 13);
             this.lblGender.TabIndex = 12;
             this.lblGender.Text = "Cinsiyetiniz";
             // 
@@ -136,9 +125,9 @@ namespace WeightGain.UI
             this.cbFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFemale.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
-            this.cbFemale.Location = new System.Drawing.Point(215, 314);
+            this.cbFemale.Location = new System.Drawing.Point(215, 320);
             this.cbFemale.Name = "cbFemale";
-            this.cbFemale.Size = new System.Drawing.Size(73, 25);
+            this.cbFemale.Size = new System.Drawing.Size(53, 17);
             this.cbFemale.TabIndex = 7;
             this.cbFemale.Text = "Kadın";
             this.cbFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
@@ -146,7 +135,6 @@ namespace WeightGain.UI
             this.cbFemale.UncheckedState.BorderThickness = 0;
             this.cbFemale.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.cbFemale.UseVisualStyleBackColor = false;
-            this.cbFemale.CheckedChanged += new System.EventHandler(this.cbFemale_CheckedChanged);
             // 
             // cbMale
             // 
@@ -157,9 +145,9 @@ namespace WeightGain.UI
             this.cbMale.CheckedState.BorderThickness = 0;
             this.cbMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
-            this.cbMale.Location = new System.Drawing.Point(127, 314);
+            this.cbMale.Location = new System.Drawing.Point(127, 320);
             this.cbMale.Name = "cbMale";
-            this.cbMale.Size = new System.Drawing.Size(71, 25);
+            this.cbMale.Size = new System.Drawing.Size(54, 17);
             this.cbMale.TabIndex = 6;
             this.cbMale.Text = "Erkek";
             this.cbMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
@@ -167,27 +155,26 @@ namespace WeightGain.UI
             this.cbMale.UncheckedState.BorderThickness = 0;
             this.cbMale.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.cbMale.UseVisualStyleBackColor = false;
-            this.cbMale.CheckedChanged += new System.EventHandler(this.cbMale_CheckedChanged);
             // 
-            // btnSignUp
+            // btnAddUser
             // 
-            this.btnSignUp.Animated = true;
-            this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignUp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.btnSignUp.BorderRadius = 6;
-            this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSignUp.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSignUp.Location = new System.Drawing.Point(26, 431);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(262, 45);
-            this.btnSignUp.TabIndex = 10;
-            this.btnSignUp.Text = "Kayıt Ol";
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.btnAddUser.Animated = true;
+            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.btnAddUser.BorderRadius = 6;
+            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddUser.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddUser.Location = new System.Drawing.Point(26, 433);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(262, 45);
+            this.btnAddUser.TabIndex = 10;
+            this.btnAddUser.Text = "Ekle";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // txtPassword
             // 
@@ -209,7 +196,7 @@ namespace WeightGain.UI
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtPassword.PlaceholderText = "Şifreniz";
+            this.txtPassword.PlaceholderText = "Şifre";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(262, 36);
             this.txtPassword.TabIndex = 4;
@@ -223,7 +210,7 @@ namespace WeightGain.UI
             this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.lblHeight.Location = new System.Drawing.Point(22, 394);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(77, 21);
+            this.lblHeight.Size = new System.Drawing.Size(48, 13);
             this.lblHeight.TabIndex = 7;
             this.lblHeight.Text = "Boyunuz";
             // 
@@ -234,7 +221,7 @@ namespace WeightGain.UI
             this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.lblWeight.Location = new System.Drawing.Point(22, 355);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(68, 21);
+            this.lblWeight.Size = new System.Drawing.Size(41, 13);
             this.lblWeight.TabIndex = 6;
             this.lblWeight.Text = "Kilonuz";
             // 
@@ -293,7 +280,7 @@ namespace WeightGain.UI
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtPhoneNumber.PlaceholderText = "Telefon Numaranız";
+            this.txtPhoneNumber.PlaceholderText = "Telefon Numarası";
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.Size = new System.Drawing.Size(262, 36);
             this.txtPhoneNumber.TabIndex = 3;
@@ -318,7 +305,7 @@ namespace WeightGain.UI
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtEmail.PlaceholderText = "Mail Adresiniz";
+            this.txtEmail.PlaceholderText = "Mail Adresi";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(262, 36);
             this.txtEmail.TabIndex = 2;
@@ -359,7 +346,7 @@ namespace WeightGain.UI
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.PasswordChar = '\0';
             this.txtLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtLastname.PlaceholderText = "Soyadınız";
+            this.txtLastname.PlaceholderText = "Soyadı";
             this.txtLastname.SelectedText = "";
             this.txtLastname.Size = new System.Drawing.Size(262, 36);
             this.txtLastname.TabIndex = 1;
@@ -371,11 +358,11 @@ namespace WeightGain.UI
             this.lblSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.lblSignUp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.lblSignUp.Location = new System.Drawing.Point(113, 13);
+            this.lblSignUp.Location = new System.Drawing.Point(84, 14);
             this.lblSignUp.Name = "lblSignUp";
-            this.lblSignUp.Size = new System.Drawing.Size(78, 30);
+            this.lblSignUp.Size = new System.Drawing.Size(143, 30);
             this.lblSignUp.TabIndex = 1;
-            this.lblSignUp.Text = "Üye Ol";
+            this.lblSignUp.Text = "Yeni Üye Ekle";
             // 
             // txtName
             // 
@@ -396,130 +383,55 @@ namespace WeightGain.UI
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.txtName.PlaceholderText = "Adınız";
+            this.txtName.PlaceholderText = "Adı";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(262, 36);
             this.txtName.TabIndex = 0;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
-            // mainFormLogo
+            // UserAddFormAdmin
             // 
-            this.mainFormLogo.Image = ((System.Drawing.Image)(resources.GetObject("mainFormLogo.Image")));
-            this.mainFormLogo.ImageRotate = 0F;
-            this.mainFormLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("mainFormLogo.InitialImage")));
-            this.mainFormLogo.Location = new System.Drawing.Point(12, 57);
-            this.mainFormLogo.Name = "mainFormLogo";
-            this.mainFormLogo.Size = new System.Drawing.Size(500, 342);
-            this.mainFormLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.mainFormLogo.TabIndex = 1;
-            this.mainFormLogo.TabStop = false;
-            // 
-            // lblSlogan
-            // 
-            this.lblSlogan.AutoSize = true;
-            this.lblSlogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblSlogan.Location = new System.Drawing.Point(170, 33);
-            this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(186, 21);
-            this.lblSlogan.TabIndex = 2;
-            this.lblSlogan.Text = "Buraya slogan gelebilir";
-            // 
-            // lblAlready
-            // 
-            this.lblAlready.AutoSize = true;
-            this.lblAlready.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblAlready.Location = new System.Drawing.Point(117, 496);
-            this.lblAlready.Name = "lblAlready";
-            this.lblAlready.Size = new System.Drawing.Size(193, 21);
-            this.lblAlready.TabIndex = 3;
-            this.lblAlready.Text = "Zaten üyeliğiniz var mı?";
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
-            this.lblLogin.Location = new System.Drawing.Point(316, 496);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(95, 21);
-            this.lblLogin.TabIndex = 4;
-            this.lblLogin.Text = "Giriş yapın.";
-            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(137)))));
-            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.btnClose.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(137)))));
-            this.btnClose.Location = new System.Drawing.Point(12, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 29);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // RegisterForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(841, 542);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.lblAlready);
-            this.Controls.Add(this.lblSlogan);
-            this.Controls.Add(this.mainFormLogo);
+            this.ClientSize = new System.Drawing.Size(397, 550);
             this.Controls.Add(this.formRightPanel);
-            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximumSize = new System.Drawing.Size(3200, 1680);
-            this.Name = "RegisterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Diyet Programı";
-            this.TransparencyKey = System.Drawing.Color.Fuchsia;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
-            this.Load += new System.EventHandler(this.RegisterForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RegisterForm_MouseUp);
+            this.Name = "UserAddFormAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "UserAddFormAdmin";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserAddFormAdmin_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserAddFormAdmin_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserAddFormAdmin_MouseUp);
             this.formRightPanel.ResumeLayout(false);
             this.formRightPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
+        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2Panel formRightPanel;
-        private Guna.UI2.WinForms.Guna2PictureBox mainFormLogo;
-        private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Label lblAlready;
-        private System.Windows.Forms.Label lblSlogan;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private System.Windows.Forms.Label lblSignUp;
-        private Guna.UI2.WinForms.Guna2TextBox txtLastname;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
-        private System.Windows.Forms.Label lblHeight;
-        private System.Windows.Forms.Label lblWeight;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2Button btnSignUp;
+        private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
+        private System.Windows.Forms.Label lblGender;
         private Guna.UI2.WinForms.Guna2CheckBox cbFemale;
         private Guna.UI2.WinForms.Guna2CheckBox cbMale;
-        private System.Windows.Forms.Label lblGender;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
-        private System.Windows.Forms.Label lblTerms;
-        private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
+        private Guna.UI2.WinForms.Guna2Button btnAddUser;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private System.Windows.Forms.Label lblHeight;
+        private System.Windows.Forms.Label lblWeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
+        private Guna.UI2.WinForms.Guna2TextBox txtLastname;
+        private System.Windows.Forms.Label lblSignUp;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
     }
 }
-
