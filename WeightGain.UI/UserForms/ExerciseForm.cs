@@ -35,7 +35,7 @@ namespace WeightGain.UI.UserForms
         {
             decimal weight = _logginedUser.Weight;
             decimal parCoefficient=1.1m ;
-            switch (cmbExercies.SelectedItem) // comboboxta yapılan değişikliği görmüyor
+            switch (cmbExercies.Text) // comboboxta yapılan değişikliği görmüyor
             {
                 case "Bicycle":
                     parCoefficient = 5.6m;
