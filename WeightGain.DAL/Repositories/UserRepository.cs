@@ -60,11 +60,11 @@ namespace WeightGain.DAL.Repositories
         }
 
         //Silme
-        public bool Delete(User id)
+        public bool Delete(User user)
         {
             try
             {
-                _users.Remove(id);
+                _users.Remove(user);
                 return DbContext.SaveChanges() > 0;
             }
             catch

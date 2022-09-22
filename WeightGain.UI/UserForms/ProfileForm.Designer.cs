@@ -52,6 +52,7 @@ namespace WeightGain.UI.UserForms
             this.label2 = new System.Windows.Forms.Label();
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             this.pnlProfile.SuspendLayout();
@@ -231,11 +232,12 @@ namespace WeightGain.UI.UserForms
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBirthDate.Location = new System.Drawing.Point(235, 198);
-            this.dtpBirthDate.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0, 0);
+            this.dtpBirthDate.MaxDate = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(412, 36);
             this.dtpBirthDate.TabIndex = 4;
+            this.dtpBirthDate.Value = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             // 
             // nudHeight
             // 
@@ -308,6 +310,7 @@ namespace WeightGain.UI.UserForms
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(412, 30);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblPassword
             // 
@@ -354,6 +357,7 @@ namespace WeightGain.UI.UserForms
             // 
             // pnlProfile
             // 
+            this.pnlProfile.Controls.Add(this.pbStr);
             this.pnlProfile.Controls.Add(this.lblBirthDate);
             this.pnlProfile.Controls.Add(this.btnSave);
             this.pnlProfile.Controls.Add(this.txtPassword2);
@@ -381,6 +385,15 @@ namespace WeightGain.UI.UserForms
             // formElipse
             // 
             this.formElipse.TargetControl = this;
+            // 
+            // pbStr
+            // 
+            this.pbStr.Location = new System.Drawing.Point(235, 368);
+            this.pbStr.Name = "pbStr";
+            this.pbStr.Size = new System.Drawing.Size(412, 11);
+            this.pbStr.TabIndex = 18;
+            this.pbStr.Text = "guna2ProgressBar1";
+            this.pbStr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // ProfileForm
             // 
@@ -425,5 +438,6 @@ namespace WeightGain.UI.UserForms
         private System.Windows.Forms.Label lblPassword;
         private Guna.UI2.WinForms.Guna2Panel pnlProfile;
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
+        private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
     }
 }
