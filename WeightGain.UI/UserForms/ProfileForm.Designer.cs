@@ -51,8 +51,11 @@ namespace WeightGain.UI.UserForms
             this.txtPassword2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
-            this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             this.pnlProfile.SuspendLayout();
@@ -65,7 +68,7 @@ namespace WeightGain.UI.UserForms
             this.lblName.Location = new System.Drawing.Point(6, 14);
             this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(88, 30);
+            this.lblName.Size = new System.Drawing.Size(112, 37);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Adınız: ";
             // 
@@ -76,7 +79,7 @@ namespace WeightGain.UI.UserForms
             this.lblLastName.Location = new System.Drawing.Point(6, 60);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(120, 30);
+            this.lblLastName.Size = new System.Drawing.Size(155, 37);
             this.lblLastName.TabIndex = 1;
             this.lblLastName.Text = "Soyadınız: ";
             // 
@@ -87,7 +90,7 @@ namespace WeightGain.UI.UserForms
             this.lblEmail.Location = new System.Drawing.Point(6, 106);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(159, 30);
+            this.lblEmail.Size = new System.Drawing.Size(207, 37);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Mail Adresiniz:";
             // 
@@ -98,7 +101,7 @@ namespace WeightGain.UI.UserForms
             this.lblTelephone.Location = new System.Drawing.Point(6, 152);
             this.lblTelephone.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(205, 30);
+            this.lblTelephone.Size = new System.Drawing.Size(266, 37);
             this.lblTelephone.TabIndex = 3;
             this.lblTelephone.Text = "Telefon Numaranız:";
             // 
@@ -109,7 +112,7 @@ namespace WeightGain.UI.UserForms
             this.lblBirthDate.Location = new System.Drawing.Point(6, 199);
             this.lblBirthDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(181, 30);
+            this.lblBirthDate.Size = new System.Drawing.Size(235, 37);
             this.lblBirthDate.TabIndex = 4;
             this.lblBirthDate.Text = "Doğum Tarihiniz:";
             // 
@@ -120,7 +123,7 @@ namespace WeightGain.UI.UserForms
             this.lblWeight.Location = new System.Drawing.Point(6, 244);
             this.lblWeight.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(94, 30);
+            this.lblWeight.Size = new System.Drawing.Size(120, 37);
             this.lblWeight.TabIndex = 5;
             this.lblWeight.Text = "Kilonuz:";
             // 
@@ -131,7 +134,7 @@ namespace WeightGain.UI.UserForms
             this.lblHeight.Location = new System.Drawing.Point(6, 290);
             this.lblHeight.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(105, 30);
+            this.lblHeight.Size = new System.Drawing.Size(134, 37);
             this.lblHeight.TabIndex = 6;
             this.lblHeight.Text = "Boyunuz:";
             // 
@@ -283,7 +286,7 @@ namespace WeightGain.UI.UserForms
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(235, 423);
+            this.btnSave.Location = new System.Drawing.Point(235, 556);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(412, 53);
             this.btnSave.TabIndex = 12;
@@ -319,7 +322,7 @@ namespace WeightGain.UI.UserForms
             this.lblPassword.Location = new System.Drawing.Point(6, 336);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(93, 30);
+            this.lblPassword.Size = new System.Drawing.Size(120, 37);
             this.lblPassword.TabIndex = 14;
             this.lblPassword.Text = "Şifreniz:";
             // 
@@ -348,15 +351,18 @@ namespace WeightGain.UI.UserForms
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.label2.Location = new System.Drawing.Point(6, 382);
+            this.label2.Location = new System.Drawing.Point(3, 375);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 30);
+            this.label2.Size = new System.Drawing.Size(215, 37);
             this.label2.TabIndex = 16;
             this.label2.Text = "Tekrar Şifreniz: ";
             // 
             // pnlProfile
             // 
+            this.pnlProfile.Controls.Add(this.guna2Button1);
+            this.pnlProfile.Controls.Add(this.label1);
+            this.pnlProfile.Controls.Add(this.checkBox1);
             this.pnlProfile.Controls.Add(this.pbStr);
             this.pnlProfile.Controls.Add(this.lblBirthDate);
             this.pnlProfile.Controls.Add(this.btnSave);
@@ -379,12 +385,8 @@ namespace WeightGain.UI.UserForms
             this.pnlProfile.Controls.Add(this.txtEmail);
             this.pnlProfile.Location = new System.Drawing.Point(12, 12);
             this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(678, 514);
+            this.pnlProfile.Size = new System.Drawing.Size(691, 629);
             this.pnlProfile.TabIndex = 17;
-            // 
-            // formElipse
-            // 
-            this.formElipse.TargetControl = this;
             // 
             // pbStr
             // 
@@ -395,12 +397,54 @@ namespace WeightGain.UI.UserForms
             this.pbStr.Text = "guna2ProgressBar1";
             this.pbStr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
+            // formElipse
+            // 
+            this.formElipse.TargetControl = this;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBox1.Location = new System.Drawing.Point(246, 478);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(243, 41);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "Kabul Ediyorum";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.label1.Location = new System.Drawing.Point(13, 421);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 37);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "KVKK: ";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(235, 423);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(412, 35);
+            this.guna2Button1.TabIndex = 21;
+            this.guna2Button1.Text = "Metni okumak için tıklayınız";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // ProfileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(714, 547);
+            this.ClientSize = new System.Drawing.Size(739, 676);
             this.Controls.Add(this.pnlProfile);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -439,5 +483,8 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2Panel pnlProfile;
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
         private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

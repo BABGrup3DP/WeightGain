@@ -2,10 +2,10 @@
 {
     public enum ExerciseEnum
     {
-        Bicycle = 1,
-        JumpingRope = 2,
-        Run = 3,
-        Walk = 4,
-        Swim = 5,
+        Bisiklet_Sürme = 1,
+        İp_Atlama = 2,
+        Koşu = 3,
+        Yürüyüş = 4,
+        Yüzme = 5,
     }
 }
