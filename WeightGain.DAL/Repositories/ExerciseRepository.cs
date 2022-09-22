@@ -43,7 +43,9 @@ namespace WeightGain.DAL.Repositories
                 {
                     updateExercise.ExerciseType = exercise.ExerciseType;
                     updateExercise.Duration = exercise.Duration;
-                    updateExercise.Users = exercise.Users;
+                    updateExercise.User = exercise.User;
+                    updateExercise.UserId = exercise.UserId;
+                    //updateExercise.Users = exercise.Users;
                 }
 
                 return _dbContext.SaveChanges() > 0;

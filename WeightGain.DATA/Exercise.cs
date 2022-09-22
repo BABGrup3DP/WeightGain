@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace WeightGain.DATA
 {
@@ -7,10 +7,17 @@ namespace WeightGain.DATA
         public int ExerciseID { get; set; }
         public ExerciseEnum ExerciseType { get; set; }
         public byte Duration { get; set; }
+        public DateTime ExerciseDate { get; set; }
 
         // Birden fazla kullanıcı antreman seçebilir
+        public int UserId { get; set; }
+        public User User { get; set; }
+        //public List<User> Users { get; set; }
 
-        public List<User> Users { get; set; }
+        //public Exercise()
+        //{
+        //    Users = new List<User>();
+        //}
 
     }
 }

@@ -19,7 +19,8 @@ namespace WeightGain.DAL
             Ignore(x => x.FullName);
             Ignore(x => x.Age);
 
-            HasMany(x => x.Exercises).WithMany(x => x.Users);
+            HasMany(x => x.Exercises).WithRequired(x => x.User).HasForeignKey(x => x.UserId);
+            //HasMany(x => x.Exercises).WithMany(x => x.Users);
             HasMany(x => x.Products).WithMany(x => x.Users);
         }
     }

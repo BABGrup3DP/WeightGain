@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
-using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI.UserForms
 {
@@ -24,14 +23,25 @@ namespace WeightGain.UI.UserForms
 
         private void btnCalculateCal_Click(object sender, EventArgs e)
         {
+            txtExerciseCal.Text = Convert.ToString(1 * nudExerciseTime.Value);
 
         }
 
         private void btnAddExercise_Click(object sender, EventArgs e)
         {
-            if (Helper.CheckEmptyValues(gpExercise))
+            if (!string.IsNullOrEmpty(txtExerciseCal.Text))
             {
-
+                if(_exerciseRepository.Insert(new Exercise
+                {
+                    Duration = (byte)nudExerciseTime.Value,
+                    ExerciseType = ExerciseEnum.Bicycle,
+                    ExerciseDate = DateTime.Now,
+                    User = _logginedUser,
+                    UserId = _logginedUser.ID
+                }))
+                {
+                    MessageBox.Show("eklendi");
+                }
             }
         }
     }

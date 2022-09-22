@@ -34,13 +34,15 @@
             this.lblExerciseTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtExerciseCal = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnCalculateCal = new Guna.UI2.WinForms.Guna2Button();
             this.gbCalory = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.nudExerciseTime = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnAddExercise = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gpExercise = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblTable = new System.Windows.Forms.Label();
             this.lblCalBicycle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCalSwim = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCalBicycleV = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,12 +60,10 @@
             this.lblExerciseJumpRope = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCalHour = new System.Windows.Forms.Label();
             this.lblExercises = new System.Windows.Forms.Label();
-            this.lblTable = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.dtpExerciseDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.gbCalory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExerciseTime)).BeginInit();
             this.gpExercise.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblExersiceDate
@@ -135,14 +135,14 @@
             this.guna2HtmlLabel5.TabIndex = 0;
             this.guna2HtmlLabel5.Text = "Yakılan Kalori :";
             // 
-            // textBox2
+            // txtExerciseCal
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 275);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(218, 36);
-            this.textBox2.TabIndex = 3;
+            this.txtExerciseCal.Location = new System.Drawing.Point(129, 275);
+            this.txtExerciseCal.Multiline = true;
+            this.txtExerciseCal.Name = "txtExerciseCal";
+            this.txtExerciseCal.ReadOnly = true;
+            this.txtExerciseCal.Size = new System.Drawing.Size(218, 36);
+            this.txtExerciseCal.TabIndex = 3;
             // 
             // guna2HtmlLabel6
             // 
@@ -174,11 +174,11 @@
             // 
             // gbCalory
             // 
-            this.gbCalory.Controls.Add(this.guna2NumericUpDown1);
+            this.gbCalory.Controls.Add(this.nudExerciseTime);
             this.gbCalory.Controls.Add(this.btnAddExercise);
             this.gbCalory.Controls.Add(this.btnCalculateCal);
             this.gbCalory.Controls.Add(this.lblExerciseType);
-            this.gbCalory.Controls.Add(this.textBox2);
+            this.gbCalory.Controls.Add(this.txtExerciseCal);
             this.gbCalory.Controls.Add(this.lblExerciseTime);
             this.gbCalory.Controls.Add(this.guna2HtmlLabel22);
             this.gbCalory.Controls.Add(this.guna2HtmlLabel5);
@@ -192,6 +192,31 @@
             this.gbCalory.Size = new System.Drawing.Size(410, 458);
             this.gbCalory.TabIndex = 5;
             this.gbCalory.Text = "Egzersize Göre Kalori Hesaplama";
+            // 
+            // nudExerciseTime
+            // 
+            this.nudExerciseTime.BackColor = System.Drawing.Color.Transparent;
+            this.nudExerciseTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudExerciseTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nudExerciseTime.Location = new System.Drawing.Point(129, 125);
+            this.nudExerciseTime.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudExerciseTime.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudExerciseTime.Name = "nudExerciseTime";
+            this.nudExerciseTime.Size = new System.Drawing.Size(218, 36);
+            this.nudExerciseTime.TabIndex = 6;
+            this.nudExerciseTime.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnAddExercise
             // 
@@ -248,6 +273,17 @@
             this.gpExercise.Size = new System.Drawing.Size(459, 458);
             this.gpExercise.TabIndex = 6;
             this.gpExercise.Text = "Egzersiz Bilgileri";
+            // 
+            // lblTable
+            // 
+            this.lblTable.AutoSize = true;
+            this.lblTable.BackColor = System.Drawing.Color.Transparent;
+            this.lblTable.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblTable.Location = new System.Drawing.Point(59, 59);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(352, 17);
+            this.lblTable.TabIndex = 2;
+            this.lblTable.Text = "Egzersizlerin 1 saatte kaybettirdiği kalori mitarları tablosu";
             // 
             // lblCalBicycle
             // 
@@ -436,42 +472,6 @@
             this.lblExercises.TabIndex = 0;
             this.lblExercises.Text = "Egzersizler :";
             // 
-            // lblTable
-            // 
-            this.lblTable.AutoSize = true;
-            this.lblTable.BackColor = System.Drawing.Color.Transparent;
-            this.lblTable.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblTable.Location = new System.Drawing.Point(59, 59);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(352, 17);
-            this.lblTable.TabIndex = 2;
-            this.lblTable.Text = "Egzersizlerin 1 saatte kaybettirdiği kalori mitarları tablosu";
-            // 
-            // guna2NumericUpDown1
-            // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(129, 125);
-            this.guna2NumericUpDown1.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.guna2NumericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(218, 36);
-            this.guna2NumericUpDown1.TabIndex = 6;
-            this.guna2NumericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // dtpExerciseDate
             // 
             this.dtpExerciseDate.BackColor = System.Drawing.Color.Transparent;
@@ -503,9 +503,9 @@
             this.Load += new System.EventHandler(this.ExerciseForm_Load);
             this.gbCalory.ResumeLayout(false);
             this.gbCalory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExerciseTime)).EndInit();
             this.gpExercise.ResumeLayout(false);
             this.gpExercise.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,7 +519,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblExerciseTime;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtExerciseCal;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2Button btnCalculateCal;
         private Guna.UI2.WinForms.Guna2GroupBox gbCalory;
@@ -544,7 +544,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCalJumpingRopeV;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblExerciseRun;
         private System.Windows.Forms.Label lblTable;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudExerciseTime;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpExerciseDate;
     }
 }
