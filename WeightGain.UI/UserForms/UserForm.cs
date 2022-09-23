@@ -95,13 +95,13 @@ namespace WeightGain.UI.UserForms
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            Helper.OpenChildForm(mainPanel, new MainForm());
+            Helper.OpenChildForm(mainPanel, new MainForm(_logginedUser));
         }
 
 
         private void leftPanelMenuLogo_Click(object sender, EventArgs e)
         {
-            Helper.OpenChildForm(mainPanel, new MainForm());
+            Helper.OpenChildForm(mainPanel, new MainForm(_logginedUser));
         }
      
     }
