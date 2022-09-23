@@ -75,8 +75,6 @@ namespace WeightGain.UI.Extensions
 
             UpdateState();
             OnPageChanged();
-
-
         }
 
         private void PrevButton_Click(object sender, EventArgs e)
@@ -173,7 +171,7 @@ namespace WeightGain.UI.Extensions
                 }
                 else
                 {
-                    NextButton.Text = SelectedTab.Text;
+                    NextButton.Text = TabPages[SelectedIndex + 1].Text;
                     NextButton.IconChar = IconChar.Forward;
                 }
             }
