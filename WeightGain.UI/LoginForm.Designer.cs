@@ -84,7 +84,7 @@
             this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.lblRegister.Location = new System.Drawing.Point(311, 397);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(140, 21);
+            this.lblRegister.Size = new System.Drawing.Size(172, 28);
             this.lblRegister.TabIndex = 13;
             this.lblRegister.Text = "Hemen üye olun.";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
@@ -95,19 +95,21 @@
             this.lblNotRegistered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.lblNotRegistered.Location = new System.Drawing.Point(149, 397);
             this.lblNotRegistered.Name = "lblNotRegistered";
-            this.lblNotRegistered.Size = new System.Drawing.Size(156, 21);
+            this.lblNotRegistered.Size = new System.Drawing.Size(191, 28);
             this.lblNotRegistered.TabIndex = 12;
             this.lblNotRegistered.Text = "Üyeliğiniz yok mu?";
             // 
             // lblSlogan
             // 
             this.lblSlogan.AutoSize = true;
+            this.lblSlogan.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSlogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblSlogan.Location = new System.Drawing.Point(193, 20);
+            this.lblSlogan.Location = new System.Drawing.Point(196, 26);
             this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(186, 21);
+            this.lblSlogan.Size = new System.Drawing.Size(201, 33);
             this.lblSlogan.TabIndex = 11;
-            this.lblSlogan.Text = "Buraya slogan gelebilir";
+            this.lblSlogan.Text = "Sağlıkla kilo alın";
+            this.lblSlogan.Click += new System.EventHandler(this.lblSlogan_Click);
             // 
             // formRightPanel
             // 
@@ -137,7 +139,7 @@
             this.cbRememberMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
             this.cbRememberMe.Location = new System.Drawing.Point(169, 136);
             this.cbRememberMe.Name = "cbRememberMe";
-            this.cbRememberMe.Size = new System.Drawing.Size(119, 25);
+            this.cbRememberMe.Size = new System.Drawing.Size(147, 32);
             this.cbRememberMe.TabIndex = 11;
             this.cbRememberMe.Text = "Beni Hatırla";
             this.cbRememberMe.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
@@ -224,7 +226,7 @@
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.lblLogin.Location = new System.Drawing.Point(111, 13);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(98, 30);
+            this.lblLogin.Size = new System.Drawing.Size(128, 37);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Giriş Yap";
             // 
@@ -242,7 +244,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(898, 445);
