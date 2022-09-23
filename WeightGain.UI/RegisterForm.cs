@@ -156,6 +156,16 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
+            if(telephone.Length != 11)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Telefon numarası 11 haneli olmalıdır.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+                return;
+            }
             try
             {
                 var newUser = new User

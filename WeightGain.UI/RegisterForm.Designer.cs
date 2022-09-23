@@ -34,6 +34,8 @@ namespace WeightGain.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.formRightPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbAgree = new System.Windows.Forms.CheckBox();
+            this.btnRead = new Guna.UI2.WinForms.Guna2Button();
             this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.lblTerms = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace WeightGain.UI
             this.lblAlready = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnRead = new Guna.UI2.WinForms.Guna2Button();
-            this.cbAgree = new System.Windows.Forms.CheckBox();
             this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -96,6 +96,40 @@ namespace WeightGain.UI
             this.formRightPanel.Name = "formRightPanel";
             this.formRightPanel.Size = new System.Drawing.Size(311, 567);
             this.formRightPanel.TabIndex = 0;
+            // 
+            // cbAgree
+            // 
+            this.cbAgree.AutoSize = true;
+            this.cbAgree.BackColor = System.Drawing.Color.Transparent;
+            this.cbAgree.Enabled = false;
+            this.cbAgree.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbAgree.ForeColor = System.Drawing.Color.White;
+            this.cbAgree.Location = new System.Drawing.Point(94, 516);
+            this.cbAgree.Name = "cbAgree";
+            this.cbAgree.Size = new System.Drawing.Size(125, 21);
+            this.cbAgree.TabIndex = 23;
+            this.cbAgree.Text = "Kabul Ediyorum";
+            this.cbAgree.UseVisualStyleBackColor = false;
+            // 
+            // btnRead
+            // 
+            this.btnRead.Animated = true;
+            this.btnRead.BackColor = System.Drawing.Color.Transparent;
+            this.btnRead.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.btnRead.BorderRadius = 6;
+            this.btnRead.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRead.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRead.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRead.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRead.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.btnRead.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRead.ForeColor = System.Drawing.Color.White;
+            this.btnRead.Location = new System.Drawing.Point(28, 466);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(262, 47);
+            this.btnRead.TabIndex = 22;
+            this.btnRead.Text = "KVKK Metni okumak için tıklayınız";
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // pbStr
             // 
@@ -294,6 +328,7 @@ namespace WeightGain.UI
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.Location = new System.Drawing.Point(26, 170);
+            this.txtPhoneNumber.MaxLength = 11;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -461,40 +496,6 @@ namespace WeightGain.UI
             this.btnClose.Size = new System.Drawing.Size(45, 29);
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnRead
-            // 
-            this.btnRead.Animated = true;
-            this.btnRead.BackColor = System.Drawing.Color.Transparent;
-            this.btnRead.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.btnRead.BorderRadius = 6;
-            this.btnRead.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRead.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRead.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRead.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRead.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.btnRead.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRead.ForeColor = System.Drawing.Color.White;
-            this.btnRead.Location = new System.Drawing.Point(28, 466);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(262, 47);
-            this.btnRead.TabIndex = 22;
-            this.btnRead.Text = "KVKK Metni okumak için tıklayınız";
-            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-            // 
-            // cbAgree
-            // 
-            this.cbAgree.AutoSize = true;
-            this.cbAgree.BackColor = System.Drawing.Color.Transparent;
-            this.cbAgree.Enabled = false;
-            this.cbAgree.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbAgree.ForeColor = System.Drawing.Color.White;
-            this.cbAgree.Location = new System.Drawing.Point(94, 516);
-            this.cbAgree.Name = "cbAgree";
-            this.cbAgree.Size = new System.Drawing.Size(125, 21);
-            this.cbAgree.TabIndex = 23;
-            this.cbAgree.Text = "Kabul Ediyorum";
-            this.cbAgree.UseVisualStyleBackColor = false;
             // 
             // RegisterForm
             // 

@@ -32,10 +32,15 @@ namespace WeightGain.UI.UserForms
                 messageDialogError.Show();
                 return;
             }
-            updatingUser.FirstName = txtFirstName.Text.Trim();
-            updatingUser.LastName = txtLastName.Text.Trim();
+            var userName = txtFirstName.Text.Trim();
+            var lastName = txtLastName.Text.Trim();
+            updatingUser.FirstName = userName;
+            updatingUser.LastName = lastName;
 
-            if (!string.IsNullOrEmpty(txtPassword.Text.Trim()) && !string.IsNullOrEmpty(txtPassword2.Text))
+            var password = txtPassword.Text.Trim();
+            var password2 = txtPassword2.Text.Trim();
+
+            if (!string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(password2))
             {
                 if (txtPassword.Text.Trim() != txtPassword2.Text.Trim())
                 {
@@ -47,7 +52,7 @@ namespace WeightGain.UI.UserForms
                     messageDialogError.Show();
                     return;
                 }
-                if (Helper.CheckPasswordStrenght(txtPassword.Text.Trim()) < 3)
+                if (Helper.CheckPasswordStrenght(password) < 3)
                 {
                     var messageDialogError = new Guna2MessageDialog
                     {
@@ -57,10 +62,11 @@ namespace WeightGain.UI.UserForms
                     messageDialogError.Show();
                     return;
                 }
-                updatingUser.Password = Helper.GeneratePasswordHash(txtPassword.Text.Trim());
+                updatingUser.Password = Helper.GeneratePasswordHash(password);
             }
 
-            if (!string.IsNullOrEmpty(txtEmail.Text.Trim()) && !Helper.CheckEmail(txtEmail.Text.Trim()))
+            var email = txtEmail.Text.Trim();
+            if (!string.IsNullOrEmpty(email) && !Helper.CheckEmail(email))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -70,11 +76,34 @@ namespace WeightGain.UI.UserForms
                 messageDialogError.Show();
                 return;
             }
-            updatingUser.Email = txtEmail.Text.Trim();
-            updatingUser.PhoneNumber = txtPhone.Text.Trim();
+            var telephone = txtPhone.Text.Trim();
+            if (telephone.Length != 11)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Telefon numarası 11 haneli olmalıdır.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+                return;
+            }
+            var weight = nudWeight.Value;
+            var height = nudHeight.Value;
+            if (weight == 0 || height == 0)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Kilo ve boy değerlerini kontrol edin.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+                return;
+            }
+            updatingUser.Email = email;
+            updatingUser.PhoneNumber = telephone;
             updatingUser.BirthDate = dtpBirthDate.Value;
-            updatingUser.Weight = nudWeight.Value;
-            updatingUser.Height = nudHeight.Value;
+            updatingUser.Weight = weight;
+            updatingUser.Height = height;
             _userRepository.Update(updatingUser);
             var messageDialog = new Guna2MessageDialog
             {
@@ -98,7 +127,7 @@ namespace WeightGain.UI.UserForms
                 e.Handled = true;
         }
 
-        private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
                 e.Handled = true;
