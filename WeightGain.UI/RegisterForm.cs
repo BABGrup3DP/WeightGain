@@ -92,6 +92,16 @@ namespace WeightGain.UI
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            if (!cbAgree.Checked)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "KVKK koşullarını okuyup kabul etmeniz gerekmektedir.",
+                    Caption = Properties.Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+                return;
+            }
             var firstName = txtName.Text.Trim();
             var lastName = txtLastname.Text.Trim();
             var email = txtEmail.Text.Trim();
@@ -227,6 +237,18 @@ namespace WeightGain.UI
         {
             showPassword = !showPassword;
             txtPassword.PasswordChar = showPassword ? '\0' : '*';
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Kişisel verileriniz üyelik başvurunuz sırasında ve / veya sonrasında yazılı ve / veya sözlü olarak ve / veya elektronik ortamda tarafımıza iletmiş olduğunuz, sağlık bilgileri de dahil olmak üzere (ad, soyad, kimlik bilgileri, doğum tarihi, cep telefonu numarası, e - posta,  vb.) özel nitelikli kişisel verilerinizi de içeren her türlü bilgi ve belgeyi ifade etmekte olup, bu veriler üyelerimizin rızaları ve mevzuat hükümleri uyarınca WeightGain tarafından fiziki ve dijital ortamda işlenmekte ve saklanmaktadır. Kabul ediyor musunuz?", Properties.Resources.ProgramTitle, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                cbAgree.Checked = true;
+            }
+            else
+            {
+                cbAgree.Checked = false;
+            }
         }
     }
 }

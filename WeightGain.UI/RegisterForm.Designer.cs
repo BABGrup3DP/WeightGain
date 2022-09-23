@@ -56,6 +56,8 @@ namespace WeightGain.UI
             this.lblAlready = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnRead = new Guna.UI2.WinForms.Guna2Button();
+            this.cbAgree = new System.Windows.Forms.CheckBox();
             this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -70,6 +72,8 @@ namespace WeightGain.UI
             // 
             this.formRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.formRightPanel.BorderRadius = 15;
+            this.formRightPanel.Controls.Add(this.cbAgree);
+            this.formRightPanel.Controls.Add(this.btnRead);
             this.formRightPanel.Controls.Add(this.pbStr);
             this.formRightPanel.Controls.Add(this.lblTerms);
             this.formRightPanel.Controls.Add(this.lblGender);
@@ -90,12 +94,12 @@ namespace WeightGain.UI
             this.formRightPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.formRightPanel.Location = new System.Drawing.Point(518, 13);
             this.formRightPanel.Name = "formRightPanel";
-            this.formRightPanel.Size = new System.Drawing.Size(311, 517);
+            this.formRightPanel.Size = new System.Drawing.Size(311, 567);
             this.formRightPanel.TabIndex = 0;
             // 
             // pbStr
             // 
-            this.pbStr.Location = new System.Drawing.Point(28, 262);
+            this.pbStr.Location = new System.Drawing.Point(28, 253);
             this.pbStr.Name = "pbStr";
             this.pbStr.Size = new System.Drawing.Size(260, 11);
             this.pbStr.TabIndex = 14;
@@ -108,7 +112,7 @@ namespace WeightGain.UI
             this.lblTerms.BackColor = System.Drawing.Color.Transparent;
             this.lblTerms.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTerms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.lblTerms.Location = new System.Drawing.Point(24, 479);
+            this.lblTerms.Location = new System.Drawing.Point(24, 540);
             this.lblTerms.Name = "lblTerms";
             this.lblTerms.Size = new System.Drawing.Size(264, 24);
             this.lblTerms.TabIndex = 13;
@@ -119,7 +123,7 @@ namespace WeightGain.UI
             this.lblGender.AutoSize = true;
             this.lblGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.lblGender.Location = new System.Drawing.Point(22, 315);
+            this.lblGender.Location = new System.Drawing.Point(22, 308);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(99, 21);
             this.lblGender.TabIndex = 12;
@@ -136,7 +140,7 @@ namespace WeightGain.UI
             this.cbFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFemale.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
-            this.cbFemale.Location = new System.Drawing.Point(215, 314);
+            this.cbFemale.Location = new System.Drawing.Point(215, 307);
             this.cbFemale.Name = "cbFemale";
             this.cbFemale.Size = new System.Drawing.Size(73, 25);
             this.cbFemale.TabIndex = 7;
@@ -157,7 +161,7 @@ namespace WeightGain.UI
             this.cbMale.CheckedState.BorderThickness = 0;
             this.cbMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
-            this.cbMale.Location = new System.Drawing.Point(127, 314);
+            this.cbMale.Location = new System.Drawing.Point(127, 307);
             this.cbMale.Name = "cbMale";
             this.cbMale.Size = new System.Drawing.Size(71, 25);
             this.cbMale.TabIndex = 6;
@@ -182,7 +186,7 @@ namespace WeightGain.UI
             this.btnSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSignUp.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSignUp.Location = new System.Drawing.Point(26, 431);
+            this.btnSignUp.Location = new System.Drawing.Point(26, 417);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(262, 45);
             this.btnSignUp.TabIndex = 10;
@@ -205,7 +209,7 @@ namespace WeightGain.UI
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconRight = global::WeightGain.UI.Properties.Resources.showpass;
-            this.txtPassword.Location = new System.Drawing.Point(26, 221);
+            this.txtPassword.Location = new System.Drawing.Point(26, 212);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -221,7 +225,7 @@ namespace WeightGain.UI
             this.lblHeight.AutoSize = true;
             this.lblHeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.lblHeight.Location = new System.Drawing.Point(22, 394);
+            this.lblHeight.Location = new System.Drawing.Point(22, 380);
             this.lblHeight.Name = "lblHeight";
             this.lblHeight.Size = new System.Drawing.Size(77, 21);
             this.lblHeight.TabIndex = 7;
@@ -232,7 +236,7 @@ namespace WeightGain.UI
             this.lblWeight.AutoSize = true;
             this.lblWeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.lblWeight.Location = new System.Drawing.Point(22, 355);
+            this.lblWeight.Location = new System.Drawing.Point(22, 341);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(68, 21);
             this.lblWeight.TabIndex = 6;
@@ -246,7 +250,7 @@ namespace WeightGain.UI
             this.nudHeight.DecimalPlaces = 1;
             this.nudHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nudHeight.Location = new System.Drawing.Point(127, 389);
+            this.nudHeight.Location = new System.Drawing.Point(127, 375);
             this.nudHeight.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -264,7 +268,7 @@ namespace WeightGain.UI
             this.nudWeight.DecimalPlaces = 2;
             this.nudWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nudWeight.Location = new System.Drawing.Point(127, 347);
+            this.nudWeight.Location = new System.Drawing.Point(127, 333);
             this.nudWeight.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -289,7 +293,7 @@ namespace WeightGain.UI
             this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(26, 179);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(26, 170);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -314,7 +318,7 @@ namespace WeightGain.UI
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(26, 137);
+            this.txtEmail.Location = new System.Drawing.Point(26, 128);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -332,13 +336,13 @@ namespace WeightGain.UI
             this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthDate.Location = new System.Drawing.Point(26, 276);
-            this.dtpBirthDate.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            this.dtpBirthDate.Location = new System.Drawing.Point(26, 267);
+            this.dtpBirthDate.MaxDate = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(262, 36);
             this.dtpBirthDate.TabIndex = 5;
-            this.dtpBirthDate.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            this.dtpBirthDate.Value = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
             // 
             // txtLastname
             // 
@@ -355,7 +359,7 @@ namespace WeightGain.UI
             this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastname.Location = new System.Drawing.Point(26, 95);
+            this.txtLastname.Location = new System.Drawing.Point(26, 86);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.PasswordChar = '\0';
             this.txtLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -371,7 +375,7 @@ namespace WeightGain.UI
             this.lblSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
             this.lblSignUp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.lblSignUp.Location = new System.Drawing.Point(113, 13);
+            this.lblSignUp.Location = new System.Drawing.Point(113, 10);
             this.lblSignUp.Name = "lblSignUp";
             this.lblSignUp.Size = new System.Drawing.Size(78, 30);
             this.lblSignUp.TabIndex = 1;
@@ -392,7 +396,7 @@ namespace WeightGain.UI
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(26, 53);
+            this.txtName.Location = new System.Drawing.Point(26, 44);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -458,12 +462,46 @@ namespace WeightGain.UI
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnRead
+            // 
+            this.btnRead.Animated = true;
+            this.btnRead.BackColor = System.Drawing.Color.Transparent;
+            this.btnRead.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.btnRead.BorderRadius = 6;
+            this.btnRead.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRead.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRead.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRead.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRead.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
+            this.btnRead.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRead.ForeColor = System.Drawing.Color.White;
+            this.btnRead.Location = new System.Drawing.Point(28, 466);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(262, 47);
+            this.btnRead.TabIndex = 22;
+            this.btnRead.Text = "KVKK Metni okumak için tıklayınız";
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // cbAgree
+            // 
+            this.cbAgree.AutoSize = true;
+            this.cbAgree.BackColor = System.Drawing.Color.Transparent;
+            this.cbAgree.Enabled = false;
+            this.cbAgree.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbAgree.ForeColor = System.Drawing.Color.White;
+            this.cbAgree.Location = new System.Drawing.Point(94, 516);
+            this.cbAgree.Name = "cbAgree";
+            this.cbAgree.Size = new System.Drawing.Size(125, 21);
+            this.cbAgree.TabIndex = 23;
+            this.cbAgree.Text = "Kabul Ediyorum";
+            this.cbAgree.UseVisualStyleBackColor = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(841, 542);
+            this.ClientSize = new System.Drawing.Size(841, 592);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblAlready);
@@ -520,6 +558,8 @@ namespace WeightGain.UI
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private System.Windows.Forms.Label lblTerms;
         private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
+        private Guna.UI2.WinForms.Guna2Button btnRead;
+        private System.Windows.Forms.CheckBox cbAgree;
     }
 }
 

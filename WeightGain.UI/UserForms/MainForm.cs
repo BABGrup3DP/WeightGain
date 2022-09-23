@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 
 namespace WeightGain.UI.UserForms
@@ -19,21 +11,21 @@ namespace WeightGain.UI.UserForms
         {
             _logginedUser = logginedUser;
             InitializeComponent();
-           
+
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            lblDateToday.Text = DateTime.Now.ToString();
+            lblDateNow.Text = "Tarih: " + DateTime.Now.ToString("D");
             decimal weight = _logginedUser.Weight;
             decimal height = _logginedUser.Height;
-            byte age= _logginedUser.Age;
+            byte age = _logginedUser.Age;
             lblUser.Text = _logginedUser.FullName;
             txtAgeText.Text = Convert.ToString(age);
-            txtHeightText.Text = Convert.ToString(height);
-            txtWeightText.Text = Convert.ToString(weight);
+            txtHeightText.Text = Convert.ToString(decimal.Round(height, 2));
+            txtWeightText.Text = Convert.ToString(decimal.Round(weight, 2));
 
-            txtBMH.Text =Convert.ToString( weight / (height * height) * 10000) ;
-            double neededCalory = (655.1+(9.56 *(double)weight)+(1.85*(double)height)-(4.68*age))*1.1;
+            txtBMH.Text = Convert.ToString(decimal.Round(weight / (height * height) * 10000, 2));
+            decimal neededCalory = decimal.Round((655.1m + (9.56m * weight) + (1.85m * height) - (4.68m * age)) * 1.1m, 2);
             txtGetCalory.Text = neededCalory.ToString();
         }
     }
