@@ -32,7 +32,7 @@ namespace WeightGain.UI.UserForms
             txtHeightText.Text = Convert.ToString(height);
             txtWeightText.Text = Convert.ToString(weight);
 
-            txtBMH.Text =Convert.ToString( weight / height * height) ;
+            txtBMH.Text =Convert.ToString( weight / (height * height) * 10000) ;
             double neededCalory = (655.1+(9.56 *(double)weight)+(1.85*(double)height)-(4.68*age))*1.1;
             txtGetCalory.Text = neededCalory.ToString();
         }
