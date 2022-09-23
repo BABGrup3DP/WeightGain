@@ -333,12 +333,12 @@ namespace WeightGain.UI
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBirthDate.Location = new System.Drawing.Point(26, 276);
-            this.dtpBirthDate.MaxDate = new System.DateTime(2022, 9, 21, 0, 0, 0, 0);
+            this.dtpBirthDate.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(262, 36);
             this.dtpBirthDate.TabIndex = 5;
-            this.dtpBirthDate.Value = new System.DateTime(2022, 9, 21, 0, 0, 0, 0);
+            this.dtpBirthDate.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             // 
             // txtLastname
             // 

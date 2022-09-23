@@ -109,7 +109,7 @@ namespace WeightGain.UI.AdminForms
             }
             else
             {
-                MessageDialog.Show("Seçilmiş üye bulunamadı !", Properties.Resources.ProgramTitle, MessageDialogButtons.OK, MessageDialogStyle.Light);
+                MessageDialog.Show("Seçilmiş üye bulunamadı !", Resources.ProgramTitle, MessageDialogButtons.OK, MessageDialogStyle.Light);
             }
         }
 

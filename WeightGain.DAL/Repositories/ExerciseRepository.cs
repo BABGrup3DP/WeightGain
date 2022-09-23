@@ -35,7 +35,6 @@ namespace WeightGain.DAL.Repositories
         //güncelleme
         public bool Update(Exercise exercise)
         {
-            //exercise tipini değiştirecek mi? exerciseEnum bu yüzden var!
             try
             {
                 var updateExercise = _exercises.Find(exercise.ExerciseID);
@@ -45,7 +44,6 @@ namespace WeightGain.DAL.Repositories
                     updateExercise.Duration = exercise.Duration;
                     updateExercise.User = exercise.User;
                     updateExercise.UserId = exercise.UserId;
-                    //updateExercise.Users = exercise.Users;
                 }
 
                 return _dbContext.SaveChanges() > 0;
@@ -74,11 +72,23 @@ namespace WeightGain.DAL.Repositories
 
         public List<Exercise> GetAll() => _exercises.ToList();
 
+        public List<Exercise> GetByUserId(int userId)
+        {
+            try
+            {
+                var findExercises = _exercises.Any(x => x.UserId == userId);
+                if (!findExercises)
+                    return new List<Exercise>();
+                return _exercises.Where(x => x.UserId == userId).ToList();
+            }
+            catch
+            {
+                return new List<Exercise>();
+            }
+        }
+
         public Exercise GetById(int exerciseId) => _exercises.Find(exerciseId);
 
-        public List<ExerciseEnum> GetExercises()
-        {
-            return Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();
-        }
+        public List<ExerciseEnum> GetExercises() => Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();
     }
 }

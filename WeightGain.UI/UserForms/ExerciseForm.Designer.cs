@@ -1,4 +1,6 @@
-﻿namespace WeightGain.UI.UserForms
+﻿using System;
+
+namespace WeightGain.UI.UserForms
 {
     partial class ExerciseForm
     {
@@ -28,9 +30,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblExersiceDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblExerciseType = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbExercies = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -66,6 +69,7 @@
             this.dtpExerciseDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dgvShowExercise = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnDeleteExercise = new Guna.UI2.WinForms.Guna2Button();
+            this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gbCalory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudExerciseTime)).BeginInit();
             this.gpExercise.SuspendLayout();
@@ -76,7 +80,7 @@
             // 
             this.lblExersiceDate.BackColor = System.Drawing.Color.Transparent;
             this.lblExersiceDate.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblExersiceDate.Location = new System.Drawing.Point(217, 35);
+            this.lblExersiceDate.Location = new System.Drawing.Point(279, 35);
             this.lblExersiceDate.Name = "lblExersiceDate";
             this.lblExersiceDate.Size = new System.Drawing.Size(58, 27);
             this.lblExersiceDate.TabIndex = 0;
@@ -113,7 +117,7 @@
             this.lblExerciseTime.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblExerciseTime.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseTime.Location = new System.Drawing.Point(22, 137);
+            this.lblExerciseTime.Location = new System.Drawing.Point(13, 137);
             this.lblExerciseTime.Name = "lblExerciseTime";
             this.lblExerciseTime.Size = new System.Drawing.Size(101, 19);
             this.lblExerciseTime.TabIndex = 0;
@@ -135,7 +139,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(22, 286);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(13, 286);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(96, 19);
             this.guna2HtmlLabel5.TabIndex = 0;
@@ -195,7 +199,7 @@
             this.gbCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.gbCalory.Location = new System.Drawing.Point(12, 94);
             this.gbCalory.Name = "gbCalory";
-            this.gbCalory.Size = new System.Drawing.Size(410, 488);
+            this.gbCalory.Size = new System.Drawing.Size(514, 488);
             this.gbCalory.TabIndex = 5;
             this.gbCalory.Text = "Egzersize Göre Kalori Hesaplama";
             // 
@@ -246,7 +250,7 @@
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(33, 349);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(43, 349);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(359, 31);
             this.guna2HtmlLabel22.TabIndex = 0;
@@ -274,29 +278,30 @@
             this.gpExercise.Controls.Add(this.lblExercises);
             this.gpExercise.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gpExercise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.gpExercise.Location = new System.Drawing.Point(441, 94);
+            this.gpExercise.Location = new System.Drawing.Point(532, 94);
             this.gpExercise.Name = "gpExercise";
-            this.gpExercise.Size = new System.Drawing.Size(459, 223);
+            this.gpExercise.Size = new System.Drawing.Size(543, 257);
             this.gpExercise.TabIndex = 6;
             this.gpExercise.Text = "Egzersiz Bilgileri";
             // 
             // lblTable
             // 
-            this.lblTable.AutoSize = true;
             this.lblTable.BackColor = System.Drawing.Color.Transparent;
             this.lblTable.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblTable.Location = new System.Drawing.Point(59, 44);
+            this.lblTable.Location = new System.Drawing.Point(78, 44);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(352, 17);
+            this.lblTable.Size = new System.Drawing.Size(366, 51);
             this.lblTable.TabIndex = 2;
-            this.lblTable.Text = "Egzersizlerin 1 saatte kaybettirdiği kalori mitarları tablosu";
+            this.lblTable.Text = "Egzersizlerin 1 saatte kaybettirdiği kalori mitarları tablosu (girdiğiniz kilo, b" +
+    "oy ve yaş bilgisine göre değişiklik gösterebilir)";
+            this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCalBicycle
             // 
             this.lblCalBicycle.BackColor = System.Drawing.Color.Transparent;
             this.lblCalBicycle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalBicycle.ForeColor = System.Drawing.Color.Black;
-            this.lblCalBicycle.Location = new System.Drawing.Point(373, 91);
+            this.lblCalBicycle.Location = new System.Drawing.Point(406, 124);
             this.lblCalBicycle.Name = "lblCalBicycle";
             this.lblCalBicycle.Size = new System.Drawing.Size(38, 19);
             this.lblCalBicycle.TabIndex = 1;
@@ -307,7 +312,7 @@
             this.lblCalSwim.BackColor = System.Drawing.Color.Transparent;
             this.lblCalSwim.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalSwim.ForeColor = System.Drawing.Color.Black;
-            this.lblCalSwim.Location = new System.Drawing.Point(373, 192);
+            this.lblCalSwim.Location = new System.Drawing.Point(406, 225);
             this.lblCalSwim.Name = "lblCalSwim";
             this.lblCalSwim.Size = new System.Drawing.Size(38, 19);
             this.lblCalSwim.TabIndex = 1;
@@ -318,7 +323,7 @@
             this.lblCalBicycleV.BackColor = System.Drawing.Color.Transparent;
             this.lblCalBicycleV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalBicycleV.ForeColor = System.Drawing.Color.Black;
-            this.lblCalBicycleV.Location = new System.Drawing.Point(281, 91);
+            this.lblCalBicycleV.Location = new System.Drawing.Point(314, 124);
             this.lblCalBicycleV.Name = "lblCalBicycleV";
             this.lblCalBicycleV.Size = new System.Drawing.Size(35, 19);
             this.lblCalBicycleV.TabIndex = 1;
@@ -329,7 +334,7 @@
             this.lblCalSwimV.BackColor = System.Drawing.Color.Transparent;
             this.lblCalSwimV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalSwimV.ForeColor = System.Drawing.Color.Black;
-            this.lblCalSwimV.Location = new System.Drawing.Point(281, 192);
+            this.lblCalSwimV.Location = new System.Drawing.Point(314, 225);
             this.lblCalSwimV.Name = "lblCalSwimV";
             this.lblCalSwimV.Size = new System.Drawing.Size(35, 19);
             this.lblCalSwimV.TabIndex = 1;
@@ -340,7 +345,7 @@
             this.lblCalWalk.BackColor = System.Drawing.Color.Transparent;
             this.lblCalWalk.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalWalk.ForeColor = System.Drawing.Color.Black;
-            this.lblCalWalk.Location = new System.Drawing.Point(373, 167);
+            this.lblCalWalk.Location = new System.Drawing.Point(406, 200);
             this.lblCalWalk.Name = "lblCalWalk";
             this.lblCalWalk.Size = new System.Drawing.Size(38, 19);
             this.lblCalWalk.TabIndex = 1;
@@ -351,18 +356,18 @@
             this.lblExerciseBic.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseBic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExerciseBic.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseBic.Location = new System.Drawing.Point(49, 91);
+            this.lblExerciseBic.Location = new System.Drawing.Point(82, 124);
             this.lblExerciseBic.Name = "lblExerciseBic";
-            this.lblExerciseBic.Size = new System.Drawing.Size(45, 19);
+            this.lblExerciseBic.Size = new System.Drawing.Size(48, 19);
             this.lblExerciseBic.TabIndex = 1;
-            this.lblExerciseBic.Text = "Bicycle";
+            this.lblExerciseBic.Text = "Bisiklet";
             // 
             // lblCalWalkV
             // 
             this.lblCalWalkV.BackColor = System.Drawing.Color.Transparent;
             this.lblCalWalkV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalWalkV.ForeColor = System.Drawing.Color.Black;
-            this.lblCalWalkV.Location = new System.Drawing.Point(281, 167);
+            this.lblCalWalkV.Location = new System.Drawing.Point(314, 200);
             this.lblCalWalkV.Name = "lblCalWalkV";
             this.lblCalWalkV.Size = new System.Drawing.Size(35, 19);
             this.lblCalWalkV.TabIndex = 1;
@@ -373,7 +378,7 @@
             this.lblCalRun.BackColor = System.Drawing.Color.Transparent;
             this.lblCalRun.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalRun.ForeColor = System.Drawing.Color.Black;
-            this.lblCalRun.Location = new System.Drawing.Point(373, 142);
+            this.lblCalRun.Location = new System.Drawing.Point(406, 175);
             this.lblCalRun.Name = "lblCalRun";
             this.lblCalRun.Size = new System.Drawing.Size(38, 19);
             this.lblCalRun.TabIndex = 1;
@@ -384,18 +389,18 @@
             this.lblExerciseSwim.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseSwim.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExerciseSwim.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseSwim.Location = new System.Drawing.Point(49, 192);
+            this.lblExerciseSwim.Location = new System.Drawing.Point(82, 225);
             this.lblExerciseSwim.Name = "lblExerciseSwim";
-            this.lblExerciseSwim.Size = new System.Drawing.Size(36, 19);
+            this.lblExerciseSwim.Size = new System.Drawing.Size(44, 19);
             this.lblExerciseSwim.TabIndex = 1;
-            this.lblExerciseSwim.Text = "Swim ";
+            this.lblExerciseSwim.Text = "Yüzme";
             // 
             // lblCalRunV
             // 
             this.lblCalRunV.BackColor = System.Drawing.Color.Transparent;
             this.lblCalRunV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalRunV.ForeColor = System.Drawing.Color.Black;
-            this.lblCalRunV.Location = new System.Drawing.Point(281, 142);
+            this.lblCalRunV.Location = new System.Drawing.Point(314, 175);
             this.lblCalRunV.Name = "lblCalRunV";
             this.lblCalRunV.Size = new System.Drawing.Size(35, 19);
             this.lblCalRunV.TabIndex = 1;
@@ -406,7 +411,7 @@
             this.lblCalJumpingRope.BackColor = System.Drawing.Color.Transparent;
             this.lblCalJumpingRope.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalJumpingRope.ForeColor = System.Drawing.Color.Black;
-            this.lblCalJumpingRope.Location = new System.Drawing.Point(373, 116);
+            this.lblCalJumpingRope.Location = new System.Drawing.Point(406, 149);
             this.lblCalJumpingRope.Name = "lblCalJumpingRope";
             this.lblCalJumpingRope.Size = new System.Drawing.Size(38, 19);
             this.lblCalJumpingRope.TabIndex = 1;
@@ -417,18 +422,18 @@
             this.lblExerciseWalk.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseWalk.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExerciseWalk.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseWalk.Location = new System.Drawing.Point(48, 167);
+            this.lblExerciseWalk.Location = new System.Drawing.Point(81, 200);
             this.lblExerciseWalk.Name = "lblExerciseWalk";
-            this.lblExerciseWalk.Size = new System.Drawing.Size(34, 19);
+            this.lblExerciseWalk.Size = new System.Drawing.Size(53, 19);
             this.lblExerciseWalk.TabIndex = 1;
-            this.lblExerciseWalk.Text = "Walk ";
+            this.lblExerciseWalk.Text = "Yürüyüş";
             // 
             // lblCalJumpingRopeV
             // 
             this.lblCalJumpingRopeV.BackColor = System.Drawing.Color.Transparent;
             this.lblCalJumpingRopeV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalJumpingRopeV.ForeColor = System.Drawing.Color.Black;
-            this.lblCalJumpingRopeV.Location = new System.Drawing.Point(281, 116);
+            this.lblCalJumpingRopeV.Location = new System.Drawing.Point(314, 149);
             this.lblCalJumpingRopeV.Name = "lblCalJumpingRopeV";
             this.lblCalJumpingRopeV.Size = new System.Drawing.Size(35, 19);
             this.lblCalJumpingRopeV.TabIndex = 1;
@@ -439,29 +444,29 @@
             this.lblExerciseRun.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseRun.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExerciseRun.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseRun.Location = new System.Drawing.Point(49, 142);
+            this.lblExerciseRun.Location = new System.Drawing.Point(82, 175);
             this.lblExerciseRun.Name = "lblExerciseRun";
-            this.lblExerciseRun.Size = new System.Drawing.Size(27, 19);
+            this.lblExerciseRun.Size = new System.Drawing.Size(44, 19);
             this.lblExerciseRun.TabIndex = 1;
-            this.lblExerciseRun.Text = "Run";
+            this.lblExerciseRun.Text = "Koşma";
             // 
             // lblExerciseJumpRope
             // 
             this.lblExerciseJumpRope.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseJumpRope.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExerciseJumpRope.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseJumpRope.Location = new System.Drawing.Point(48, 116);
+            this.lblExerciseJumpRope.Location = new System.Drawing.Point(81, 149);
             this.lblExerciseJumpRope.Name = "lblExerciseJumpRope";
-            this.lblExerciseJumpRope.Size = new System.Drawing.Size(88, 19);
+            this.lblExerciseJumpRope.Size = new System.Drawing.Size(63, 19);
             this.lblExerciseJumpRope.TabIndex = 1;
-            this.lblExerciseJumpRope.Text = " JumpingRope";
+            this.lblExerciseJumpRope.Text = "İp Atlama";
             // 
             // lblCalHour
             // 
             this.lblCalHour.AutoSize = true;
             this.lblCalHour.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalHour.ForeColor = System.Drawing.Color.Black;
-            this.lblCalHour.Location = new System.Drawing.Point(277, 68);
+            this.lblCalHour.Location = new System.Drawing.Point(310, 101);
             this.lblCalHour.Name = "lblCalHour";
             this.lblCalHour.Size = new System.Drawing.Size(134, 20);
             this.lblCalHour.TabIndex = 0;
@@ -472,7 +477,7 @@
             this.lblExercises.AutoSize = true;
             this.lblExercises.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExercises.ForeColor = System.Drawing.Color.Black;
-            this.lblExercises.Location = new System.Drawing.Point(45, 68);
+            this.lblExercises.Location = new System.Drawing.Point(78, 101);
             this.lblExercises.Name = "lblExercises";
             this.lblExercises.Size = new System.Drawing.Size(91, 20);
             this.lblExercises.TabIndex = 0;
@@ -487,41 +492,40 @@
             this.dtpExerciseDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpExerciseDate.ForeColor = System.Drawing.Color.Black;
             this.dtpExerciseDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpExerciseDate.Location = new System.Drawing.Point(281, 29);
-            this.dtpExerciseDate.MaxDate = new System.DateTime(2022, 9, 21, 0, 0, 0, 0);
+            this.dtpExerciseDate.Location = new System.Drawing.Point(343, 29);
+            this.dtpExerciseDate.MaxDate = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
             this.dtpExerciseDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpExerciseDate.Name = "dtpExerciseDate";
             this.dtpExerciseDate.Size = new System.Drawing.Size(376, 36);
             this.dtpExerciseDate.TabIndex = 5;
-            this.dtpExerciseDate.Value = new System.DateTime(2022, 9, 21, 0, 0, 0, 0);
+            this.dtpExerciseDate.Value = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
             // 
             // dgvShowExercise
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowExercise.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvShowExercise.ColumnHeadersHeight = 4;
-            this.dgvShowExercise.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvShowExercise.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowExercise.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvShowExercise.ColumnHeadersHeight = 55;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShowExercise.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvShowExercise.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvShowExercise.Location = new System.Drawing.Point(444, 323);
+            this.dgvShowExercise.Location = new System.Drawing.Point(535, 357);
             this.dgvShowExercise.Name = "dgvShowExercise";
             this.dgvShowExercise.RowHeadersVisible = false;
-            this.dgvShowExercise.Size = new System.Drawing.Size(456, 259);
+            this.dgvShowExercise.Size = new System.Drawing.Size(540, 259);
             this.dgvShowExercise.TabIndex = 7;
             this.dgvShowExercise.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvShowExercise.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -534,8 +538,8 @@
             this.dgvShowExercise.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvShowExercise.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dgvShowExercise.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvShowExercise.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvShowExercise.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvShowExercise.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvShowExercise.ThemeStyle.HeaderStyle.Height = 55;
             this.dgvShowExercise.ThemeStyle.ReadOnly = false;
             this.dgvShowExercise.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvShowExercise.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -554,24 +558,29 @@
             this.btnDeleteExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDeleteExercise.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteExercise.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteExercise.Location = new System.Drawing.Point(707, 588);
+            this.btnDeleteExercise.Location = new System.Drawing.Point(813, 622);
             this.btnDeleteExercise.Name = "btnDeleteExercise";
-            this.btnDeleteExercise.Size = new System.Drawing.Size(193, 46);
+            this.btnDeleteExercise.Size = new System.Drawing.Size(262, 46);
             this.btnDeleteExercise.TabIndex = 8;
             this.btnDeleteExercise.Text = "Sil";
             this.btnDeleteExercise.Click += new System.EventHandler(this.btnDeleteExercise_Click);
+            // 
+            // formElipse
+            // 
+            this.formElipse.TargetControl = this;
             // 
             // ExerciseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(987, 646);
+            this.ClientSize = new System.Drawing.Size(1087, 680);
             this.Controls.Add(this.btnDeleteExercise);
             this.Controls.Add(this.dgvShowExercise);
             this.Controls.Add(this.dtpExerciseDate);
             this.Controls.Add(this.gpExercise);
             this.Controls.Add(this.gbCalory);
             this.Controls.Add(this.lblExersiceDate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExerciseForm";
             this.Text = "ExerciseForm";
             this.Load += new System.EventHandler(this.ExerciseForm_Load);
@@ -623,5 +632,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpExerciseDate;
         private Guna.UI2.WinForms.Guna2DataGridView dgvShowExercise;
         private Guna.UI2.WinForms.Guna2Button btnDeleteExercise;
+        private Guna.UI2.WinForms.Guna2Elipse formElipse;
     }
 }
