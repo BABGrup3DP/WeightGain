@@ -135,10 +135,7 @@
   <metadata name="btnDinner.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="label15.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="label16.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="lblMealTimeProducts.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="formElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -148,20 +145,10 @@
     <value>50</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMUAAAAZCAYAAACBxOqkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cwAAEnMBjCK5BwAAAQdJREFUeF7t070NwjAQhmH2ZJpsQA0zsAP0SFBADUhpaFkgYIsT0uEkjn8uBW+k
-        R1Q+UXzvYnVqOwBfRAEoRAEoRAFTy80lWuj9kNCNPqH3gihgyg0y5hsbbkip20QBU0QBKEQBKEQBKEQB
-        KEQBKEQBKEQBKEQBKESBv9Xsb358ITHfz7v12f+6uzVvu/9OFKim2V392I7352eOaZ9770f7vmdxmyhQ
-        Ve54Q6OtfZsoUF3qeIeCEDVuEwVMTB1vTBCi9G2igJnY8U4JQpS8TRQwNTbelCBEqdtEAXN9480JQpS4
-        TRSYhR5viSBE7m2iwGxkvNvDo1gQIuc2UWBWMt6SQYi02233AnR0enMXa8PmAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAddProducts.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAE4AAAAcCAYAAADP7InhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAAQFJREFUaEPt2KsOwkAQhWHeE40FElKJ4gXqsbiSAgKHwyIwJIQ2hKQ1PMWSIymz
+        cQAAEnEB89x6jgAAAQFJREFUaEPt2KsOwkAQhWHeE40FElKJ4gXqsbiSAgKHwyIwJIQ2hKQ1PMWSIymz
         t2lDspk5yW923ed2R/m1NVp8IuGyY02exyQWbrK5k3ehiYXLitrMy4q8D0ks3PbyNvmpYeOJhsO4eOLh
         MA5eMnCr82uwpuXjCw6LxUsGbry+meXhOVhdOCwGLym4fywUT+GIheApnGU+PIVzzIWncJ7Z8BTOM8At
         9r+fAgrnmA0NKZxlLjSkcMR8aEjhOgtBQ0nBUU8nbrYnVwgaSgaOeqxzm+3oR34oGkoGbsiob6UYNCQe

@@ -247,7 +247,7 @@
             this.leftPanelMenuLogo.BackColor = System.Drawing.Color.Transparent;
             this.leftPanelMenuLogo.Image = global::WeightGain.UI.Properties.Resources.WGLogo;
             this.leftPanelMenuLogo.ImageRotate = 0F;
-            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-40, -65);
+            this.leftPanelMenuLogo.Location = new System.Drawing.Point(-33, -65);
             this.leftPanelMenuLogo.Name = "leftPanelMenuLogo";
             this.leftPanelMenuLogo.Size = new System.Drawing.Size(309, 339);
             this.leftPanelMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

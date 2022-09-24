@@ -10,10 +10,12 @@ namespace WeightGain.UI.UserForms
     {
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly CategoryRepository _categoryRepository;
+        private readonly ProductRepository _productRepository;
         private readonly User _logginedUser;
         private MealTimeEnum selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
         private List<Category> selectedCategories;
         private List<Product> selectedProducts;
+
         public MealTimeForm(User logginedUser)
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace WeightGain.UI.UserForms
             twcMealTimes.PreviousButton = btnPrev;
             _mealTimeRepository = new MealTimeRepository();
             _categoryRepository = new CategoryRepository();
+            _productRepository = new ProductRepository();
             selectedCategories = new List<Category>();
             selectedProducts = new List<Product>();
             _logginedUser = logginedUser;
@@ -28,9 +31,12 @@ namespace WeightGain.UI.UserForms
 
         private void MealTimeForm_Load(object sender, EventArgs e)
         {
-            cmbCategory.DataSource = _categoryRepository.GetAll();
-            cmbCategory.DisplayMember = "Name";
-            cmbCategory.ValueMember = "CategoryId";
+            clbCategories.DataSource = _categoryRepository.GetAll();
+            clbCategories.DisplayMember = "Name";
+            clbCategories.ValueMember = "CategoryId";
+
+            lbMealTimeProducts.DisplayMember = "ProductName";
+            lbMealTimeProducts.ValueMember = "ProductID";
         }
 
         private void SelectMealTime(object sender, EventArgs e)
@@ -56,6 +62,7 @@ namespace WeightGain.UI.UserForms
                     selectedMealTime = MealTimeEnum.Üçüncü_Ara_Öğün;
                     break;
             }
+
         }
 
         private void twcMealTimes_Selected(object sender, TabControlEventArgs e)
@@ -72,9 +79,70 @@ namespace WeightGain.UI.UserForms
             }
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
+        private void RefreshProductList()
         {
+            foreach (var selectedCategory in selectedCategories)
+            {
+                var selectedCategoryId = selectedCategory.CategoryID;
+                var selectedCategoryProducts = _productRepository.GetByCategoryId(selectedCategoryId);
+                if (selectedCategoryProducts == null) continue;
+                var categoryGroup = new ListViewGroup(selectedCategory.Name);
+                if (lwProducts.Groups.Contains(categoryGroup)) continue;
+                lwProducts.Groups.Add(categoryGroup);
+                foreach (var selectedCategoryProduct in selectedCategoryProducts)
+                {
+                    lwProducts.Items.Add(new ListViewItem(
+                        new[] { selectedCategoryProduct.ProductName, selectedCategoryProduct.Calory.ToString("F") }, categoryGroup
+                    ));
+                }
+            }
+        }
 
+        private void clbCategories_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            lwProducts.Items.Clear();
+            var selecedCategory = (Category)((CheckedListBox)sender).SelectedItem;
+            if (selectedCategories.Count != 0)
+            {
+                if (!selectedCategories.Contains(selecedCategory))
+                {
+                    selectedCategories.Add(selecedCategory);
+                }
+                else
+                {
+                    if (e.NewValue == CheckState.Unchecked)
+                    {
+                        selectedCategories.Remove(selecedCategory);
+                    }
+                }
+            }
+            else
+            {
+                if (e.NewValue == CheckState.Checked)
+                {
+                    selectedCategories.Add(selecedCategory);
+                }
+            }
+            RefreshProductList();
+        }
+
+        private void btnAddProducts_Click(object sender, EventArgs e)
+        {
+            if (lwProducts.SelectedItems.Count == 0) return;
+            foreach (var products in lwProducts.SelectedItems)
+            {
+                if (lbMealTimeProducts.Items.Count != 0)
+                {
+                    if (!lbMealTimeProducts.Items.Contains(products))
+                    {
+                        lbMealTimeProducts.Items.Add(products);
+                    }
+                }
+                else
+                {
+                    lbMealTimeProducts.Items.Add(products);
+                }
+            }
         }
     }
 }

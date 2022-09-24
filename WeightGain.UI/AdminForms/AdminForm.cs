@@ -110,10 +110,5 @@ namespace WeightGain.UI.AdminForms
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
             Helper.OpenChildForm(mainPanel, new ProductsFormAdmin());
         }
-
-        private void leftPanelMenuLogo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -21,32 +21,58 @@ namespace WeightGain.DAL.Repositories
 
         //ürün ekleme
 
-        public bool Insert(Product product)           
+        public bool Insert(Product product)
         {
-            Products.Add(product);
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                Products.Add(product);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //ürün güncelleme
         public bool Update(Product product)
         {
-            Product updateProduct = Products.Find(product.ProductID);
-            updateProduct.ProductName = product.ProductName;
-            updateProduct.Scale = product.Scale;
-            updateProduct.Calory = product.Calory;
-            updateProduct.Category = product.Category;
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                var updateProduct = Products.Find(product.ProductID);
+                if (updateProduct == null) return false;
+                updateProduct.ProductName = product.ProductName;
+                updateProduct.Scale = product.Scale;
+                updateProduct.Calory = product.Calory;
+                updateProduct.Category = product.Category;
+                return _dbContext.SaveChanges() > 0;
+
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //ürün silme
-        public bool Delete(int ProductID)
+        public bool Delete(int productId)
         {
-            var deleteProduct = Products.Find(ProductID);
-            if (deleteProduct != null)
-                Products.Remove(deleteProduct);
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                var deleteProduct = Products.Find(productId);
+                if (deleteProduct != null)
+                    Products.Remove(deleteProduct);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-       public List<Product> GetAll() => Products.ToList();
+        public List<Product> GetByCategoryId(int categoryId) =>
+            Products.Where(x => x.CategoryID == categoryId).ToList();
+
+        public List<Product> GetAll() => Products.ToList();
     }
 }

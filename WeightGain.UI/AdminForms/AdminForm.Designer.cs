@@ -313,7 +313,6 @@
             this.leftPanelMenuLogo.TabIndex = 0;
             this.leftPanelMenuLogo.TabStop = false;
             this.leftPanelMenuLogo.UseTransparentBackground = true;
-            this.leftPanelMenuLogo.Click += new System.EventHandler(this.leftPanelMenuLogo_Click);
             this.leftPanelMenuLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseDown);
             this.leftPanelMenuLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseMove);
             this.leftPanelMenuLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminForm_MouseUp);

@@ -38,13 +38,11 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 var updateExercise = _exercises.Find(exercise.ExerciseID);
-                if (updateExercise != null)
-                {
-                    updateExercise.ExerciseType = exercise.ExerciseType;
-                    updateExercise.Duration = exercise.Duration;
-                    updateExercise.User = exercise.User;
-                    updateExercise.UserId = exercise.UserId;
-                }
+                if (updateExercise == null) return _dbContext.SaveChanges() > 0;
+                updateExercise.ExerciseType = exercise.ExerciseType;
+                updateExercise.Duration = exercise.Duration;
+                updateExercise.User = exercise.User;
+                updateExercise.UserId = exercise.UserId;
 
                 return _dbContext.SaveChanges() > 0;
             }
@@ -89,6 +87,15 @@ namespace WeightGain.DAL.Repositories
 
         public Exercise GetById(int exerciseId) => _exercises.Find(exerciseId);
 
-        public List<ExerciseEnum> GetExercises() => Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();
+        public List<string> GetExercises()
+        {
+            var exercises = new List<string>();
+            foreach (var exerciseName in Enum.GetValues(typeof(ExerciseEnum)))
+            {
+                exercises.Add(exerciseName.ToString().Replace("_", " "));
+            }
+            return exercises;
+        }
+
     }
 }

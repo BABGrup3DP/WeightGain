@@ -127,7 +127,7 @@
             // 
             this.lblCal.BackColor = System.Drawing.Color.Transparent;
             this.lblCal.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCal.Location = new System.Drawing.Point(518, 415);
+            this.lblCal.Location = new System.Drawing.Point(518, 411);
             this.lblCal.Name = "lblCal";
             this.lblCal.Size = new System.Drawing.Size(44, 22);
             this.lblCal.TabIndex = 5;

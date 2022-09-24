@@ -21,7 +21,7 @@ namespace WeightGain.UI.UserForms
         private void ExerciseForm_Load(object sender, EventArgs e)
         {
             cmbExercies.DataSource = _exerciseRepository.GetExercises();
-            decimal weight = _logginedUser.Weight;
+            var weight = _logginedUser.Weight;
             lblCalBicycleV.Text = Convert.ToString(weight * 5.6m * 1);
             lblCalJumpingRopeV.Text = Convert.ToString(weight * 5.8m * 1);
             lblCalRunV.Text = Convert.ToString(weight * 6.34m * 1);
@@ -35,21 +35,21 @@ namespace WeightGain.UI.UserForms
         {
             decimal weight = _logginedUser.Weight;
             decimal parCoefficient = 1.1m;
-            switch (cmbExercies.SelectedItem)
+            switch (cmbExercies.SelectedIndex)
             {
-                case ExerciseEnum.Bisiklet_Sürme:
+                case 0:
                     parCoefficient = 5.6m;
                     break;
-                case ExerciseEnum.İp_Atlama:
+                case 1:
                     parCoefficient = 5.8m;
                     break;
-                case ExerciseEnum.Koşu:
+                case 2:
                     parCoefficient = 6.34m;
                     break;
-                case ExerciseEnum.Yürüyüş:
+                case 3:
                     parCoefficient = 2.1m;
                     break;
-                case ExerciseEnum.Yüzme:
+                case 4:
                     parCoefficient = 9.0m;
                     break;
             }
@@ -58,7 +58,7 @@ namespace WeightGain.UI.UserForms
 
         private void btnAddExercise_Click(object sender, EventArgs e)
         {
-            var exerciseType = cmbExercies.SelectedValue;
+            var exerciseType = cmbExercies.SelectedIndex + 1;
             if (!string.IsNullOrEmpty(txtExerciseCal.Text))
             {
                 if (_exerciseRepository.Insert(new Exercise
@@ -66,7 +66,6 @@ namespace WeightGain.UI.UserForms
                     Duration = (byte)nudExerciseTime.Value,
                     ExerciseType = (ExerciseEnum)exerciseType,
                     ExerciseDate = DateTime.Now,
-                    //User = _logginedUser,
                     UserId = _logginedUser.ID
                 }))
                 {
