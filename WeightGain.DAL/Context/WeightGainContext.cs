@@ -17,6 +17,7 @@ namespace WeightGain.DAL.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<MealTime> MealTimes { get; set; }
+        public DbSet<ProductPortion> ProductPortions { get; set; }
         //public DbSet<Admin> Admins { get; set; }
         //public DbSet<Dietitian> Dietitians { get; set; }
         //public DbSet<ProjectManager> ProjectManagers { get; set; }
@@ -28,6 +29,7 @@ namespace WeightGain.DAL.Context
             modelBuilder.Configurations.Add(new ExerciseMapping());
             modelBuilder.Configurations.Add(new ProductMapping());
             modelBuilder.Configurations.Add(new MealTimeMapping());
+            modelBuilder.Configurations.Add(new ProductPortionMapping());
 
 
             base.OnModelCreating(modelBuilder);
@@ -55,7 +57,7 @@ namespace WeightGain.DAL.Context
 
                 throw new DbEntityValidationException(
                     "Entity Validation Failed - errors follow:\n" +
-                    sb.ToString(), ex
+                    sb, ex
                 ); // Add the original exception as the innerException
             }
         }

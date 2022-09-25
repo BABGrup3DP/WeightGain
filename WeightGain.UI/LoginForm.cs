@@ -59,12 +59,12 @@ namespace WeightGain.UI
         {
             if (!Helper.CheckEmptyValues(formRightPanel))
             {
-                var messageDialogError = new Guna2MessageDialog
+                var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
                     Caption = Resources.ProgramTitle
                 };
-                messageDialogError.Show();
+                messageDialog.Show();
                 return;
             }
 

@@ -10,16 +10,8 @@ namespace WeightGain.DATA
         public decimal Calory { get; set; }
         public byte[] Picture { get; set; }
         
-
-        //Her ürünün kesinlikle bir kategorisi var.
-
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
-
-
-        //Bir ürünü birden fazla kullanıcı seçebilir
-        //public List<User> Users { get; set; }
-
         public virtual List<MealTime> MealTimes { get; set; }
 
     }

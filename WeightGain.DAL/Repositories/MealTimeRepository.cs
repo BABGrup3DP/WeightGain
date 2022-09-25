@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
@@ -10,10 +9,14 @@ namespace WeightGain.DAL.Repositories
     public class MealTimeRepository : BaseRepository
     {
         private readonly DbSet<MealTime> _mealTimes;
+        private readonly DbSet<Product> _products;
+        private readonly DbSet<ProductPortion> _productPortions;
 
         public MealTimeRepository()
         {
             _mealTimes = weightGainContext.Set<MealTime>();
+            _products = weightGainContext.Set<Product>();
+            _productPortions = weightGainContext.Set<ProductPortion>();
         }
 
         public List<MealTime> GetAll() => _mealTimes.ToList();
@@ -63,6 +66,26 @@ namespace WeightGain.DAL.Repositories
             if (deleteMealTime != null)
                 _mealTimes.Remove(deleteMealTime);
             return weightGainContext.SaveChanges() > 0;
+        }
+
+        public bool AddProductsToMealTime(MealTime mealTime, List<Product> products)
+        {
+            try
+            {
+                foreach (var product in products)
+                {
+                    var p = _products.Find(product.ProductId);
+                    if (p != null)
+                    {
+                        mealTime.Products.Add(p);
+                    }
+                }
+                return weightGainContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public List<MealTimeEnum> GetMealTimes()

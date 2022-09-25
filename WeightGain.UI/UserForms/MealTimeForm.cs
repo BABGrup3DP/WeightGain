@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.UserForms
 {
@@ -14,10 +16,10 @@ namespace WeightGain.UI.UserForms
         private readonly CategoryRepository _categoryRepository;
         private readonly ProductRepository _productRepository;
         private readonly User _logginedUser;
-        private MealTimeEnum selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
-        private List<Category> selectedCategories;
-        private List<Product> selectedProducts;
-
+        private MealTimeEnum _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
+        private readonly List<Category> _selectedCategories;
+        private readonly List<Product> _selectedProducts;
+        
         public MealTimeForm(User logginedUser)
         {
             InitializeComponent();
@@ -26,8 +28,8 @@ namespace WeightGain.UI.UserForms
             _mealTimeRepository = new MealTimeRepository();
             _categoryRepository = new CategoryRepository();
             _productRepository = new ProductRepository();
-            selectedCategories = new List<Category>();
-            selectedProducts = new List<Product>();
+            _selectedCategories = new List<Category>();
+            _selectedProducts = new List<Product>();
             _logginedUser = logginedUser;
         }
 
@@ -36,35 +38,49 @@ namespace WeightGain.UI.UserForms
             clbCategories.DataSource = _categoryRepository.GetAll();
             clbCategories.DisplayMember = "Name";
             clbCategories.ValueMember = "CategoryId";
-
             twcMealTimes.LastButtonClicked += TwcMealTimes_LastButtonClicked;
-
-            //twcMealTimes.NextFunction(tpCategoryAndProduct, () => selectedProducts.Count != 0);
         }
 
 
         private void TwcMealTimes_LastButtonClicked(object sender, EventArgs e)
         {
-            if (selectedProducts.Count == 0)
+            if (_selectedProducts.Count == 0)
             {
-                MessageBox.Show("Lütfen en az bir ürün seçiniz.");
+                var messageDialog = new Guna2MessageDialog
+                {
+                    Text = "Lütfen en az bir ürün seçin.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialog.Show();
                 return;
             }
 
-            //var mealTimeDate = dtpMealTime.Value;
-            //var newMealTime = new MealTime
-            //{
-            //    MealTimeType = selectedMealTime,
-            //    MealTimeDescription = "",
-            //    MealTimeDate = mealTimeDate,
-            //    UserId = _logginedUser.Id,
-            //};
-            //foreach (var product in selectedProducts)
-            //{
-            //    newMealTime.Products.Add(_productRepository.GetById(product.ProductId));
-            //}
-            //MessageBox.Show(_mealTimeRepository.Insert(newMealTime) ? "eklendi" : "eklenemedi");
-            // TODO : DÜZELTİLECEK
+            var mealTimeDate = dtpMealTime.Value;
+            var newMealTime = new MealTime
+            {
+                MealTimeType = _selectedMealTime,
+                MealTimeDescription = "",
+                MealTimeDate = mealTimeDate,
+                UserId = _logginedUser.Id,
+            };
+            if (_mealTimeRepository.Insert(newMealTime) && _mealTimeRepository.AddProductsToMealTime(newMealTime, _selectedProducts))
+            {
+                var messageDialog = new Guna2MessageDialog
+                {
+                    Text = "Öğün başarıyla eklendi.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialog.Show();
+            }
+            else
+            {
+                var messageDialog = new Guna2MessageDialog
+                {
+                    Text = "Öğün eklenirken hata oluştu.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialog.Show();
+            }
         }
 
         private void SelectMealTime(object sender, EventArgs e)
@@ -72,29 +88,29 @@ namespace WeightGain.UI.UserForms
             switch (((Button)sender).Tag)
             {
                 case "breakfast":
-                    selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
+                    _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
                     break;
                 case "firstsnack":
-                    selectedMealTime = MealTimeEnum.Birinci_Ara_öğün;
+                    _selectedMealTime = MealTimeEnum.Birinci_Ara_öğün;
                     break;
                 case "lunch":
-                    selectedMealTime = MealTimeEnum.Öğle_Yemeği;
+                    _selectedMealTime = MealTimeEnum.Öğle_Yemeği;
                     break;
                 case "secondsnack":
-                    selectedMealTime = MealTimeEnum.İkinci_Ara_Öğün;
+                    _selectedMealTime = MealTimeEnum.İkinci_Ara_Öğün;
                     break;
                 case "dinner":
-                    selectedMealTime = MealTimeEnum.Akşam_Yemeği;
+                    _selectedMealTime = MealTimeEnum.Akşam_Yemeği;
                     break;
                 case "thirdsnack":
-                    selectedMealTime = MealTimeEnum.Üçüncü_Ara_Öğün;
+                    _selectedMealTime = MealTimeEnum.Üçüncü_Ara_Öğün;
                     break;
             }
         }
 
         private void RefreshProductList()
         {
-            foreach (var selectedCategory in selectedCategories)
+            foreach (var selectedCategory in _selectedCategories)
             {
                 var selectedCategoryId = selectedCategory.CategoryId;
                 var selectedCategoryProducts = _productRepository.GetByCategoryId(selectedCategoryId);
@@ -104,7 +120,7 @@ namespace WeightGain.UI.UserForms
                 lwProducts.Groups.Add(categoryGroup);
                 foreach (var selectedCategoryProduct in selectedCategoryProducts)
                 {
-                    MemoryStream memStream = new MemoryStream(selectedCategoryProduct.Picture);
+                    var memStream = new MemoryStream(selectedCategoryProduct.Picture);
                     imageList1.Images.Add(Image.FromStream(memStream));
                     var lastId = imageList1.Images.Count - 1;
                     var item = new ListViewItem(new[]
@@ -126,9 +142,7 @@ namespace WeightGain.UI.UserForms
         {
             dgvSelectedProducts.AutoGenerateColumns = false;
             dgvSelectedProducts.DataSource = null;
-            dgvSelectedProducts.DataSource = selectedProducts;
-            //dgvSelectedProducts.Update();
-            //dgvSelectedProducts.Refresh();
+            dgvSelectedProducts.DataSource = _selectedProducts;
             if (dgvSelectedProducts.Columns.Count == 0)
             {
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
@@ -177,23 +191,24 @@ namespace WeightGain.UI.UserForms
                 if (row.Cells[4].Value == null)
                     row.Cells[4].Value = 1;
             }
+            dgvSelectedProducts_CellEndEdit(dgvSelectedProducts, null);
         }
 
         private void clbCategories_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             lwProducts.Items.Clear();
             var selecedCategory = (Category)((CheckedListBox)sender).SelectedItem;
-            if (selectedCategories.Count != 0)
+            if (_selectedCategories.Count != 0)
             {
-                if (!selectedCategories.Contains(selecedCategory))
+                if (!_selectedCategories.Contains(selecedCategory))
                 {
-                    selectedCategories.Add(selecedCategory);
+                    _selectedCategories.Add(selecedCategory);
                 }
                 else
                 {
                     if (e.NewValue == CheckState.Unchecked)
                     {
-                        selectedCategories.Remove(selecedCategory);
+                        _selectedCategories.Remove(selecedCategory);
                     }
                 }
             }
@@ -201,7 +216,7 @@ namespace WeightGain.UI.UserForms
             {
                 if (e.NewValue == CheckState.Checked)
                 {
-                    selectedCategories.Add(selecedCategory);
+                    _selectedCategories.Add(selecedCategory);
                 }
             }
             RefreshProductList();
@@ -213,16 +228,16 @@ namespace WeightGain.UI.UserForms
             foreach (var products in lwProducts.SelectedItems)
             {
                 var product = _productRepository.GetById(((ListViewItem)products).Tag);
-                if (selectedProducts.Count == 0)
+                if (_selectedProducts.Count == 0)
                 {
 
-                    selectedProducts.Add(product);
+                    _selectedProducts.Add(product);
                 }
                 else
                 {
-                    if (!selectedProducts.Contains(product))
+                    if (!_selectedProducts.Contains(product))
                     {
-                        selectedProducts.Add(product);
+                        _selectedProducts.Add(product);
                     }
                 }
             }
