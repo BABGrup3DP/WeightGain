@@ -54,6 +54,18 @@ namespace WeightGain.DAL.Repositories
             }
         }
 
+        public Product GetById(object id)
+        {
+            try
+            {
+                return Products.Find(id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         //ürün silme
         public bool Delete(int productId)
         {

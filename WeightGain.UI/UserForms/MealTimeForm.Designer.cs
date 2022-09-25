@@ -37,7 +37,6 @@ namespace WeightGain.UI.UserForms
             System.Windows.Forms.Button btnFirstSnack;
             System.Windows.Forms.Button btnLunch;
             System.Windows.Forms.Button btnDinner;
-            System.Windows.Forms.Label lblMealTimeProducts;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealTimeForm));
             this.tpMealTimes = new System.Windows.Forms.TabPage();
             this.lblAddBreakfast = new System.Windows.Forms.Label();
@@ -58,22 +57,24 @@ namespace WeightGain.UI.UserForms
             this.btnNext = new FontAwesome.Sharp.IconButton();
             this.twcMealTimes = new WeightGain.UI.Extensions.TabWizardControl();
             this.tpCategoryAndProduct = new System.Windows.Forms.TabPage();
+            this.lblTotalCal = new System.Windows.Forms.Label();
+            this.txtTotalCal = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvSelectedProducts = new System.Windows.Forms.DataGridView();
             this.clbCategories = new System.Windows.Forms.CheckedListBox();
             this.btnAddProducts = new System.Windows.Forms.Button();
             this.lwProducts = new System.Windows.Forms.ListView();
             this.productName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.productCalory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lbMealTimeProducts = new System.Windows.Forms.ListBox();
             btnBreakfast = new System.Windows.Forms.Button();
             btnThirdSnack = new System.Windows.Forms.Button();
             btnSecondSnack = new System.Windows.Forms.Button();
             btnFirstSnack = new System.Windows.Forms.Button();
             btnLunch = new System.Windows.Forms.Button();
             btnDinner = new System.Windows.Forms.Button();
-            lblMealTimeProducts = new System.Windows.Forms.Label();
             this.tpMealTimes.SuspendLayout();
             this.twcMealTimes.SuspendLayout();
             this.tpCategoryAndProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBreakfast
@@ -183,21 +184,6 @@ namespace WeightGain.UI.UserForms
             btnDinner.Text = "+";
             btnDinner.UseVisualStyleBackColor = false;
             btnDinner.Click += new System.EventHandler(this.SelectMealTime);
-            // 
-            // lblMealTimeProducts
-            // 
-            lblMealTimeProducts.AutoSize = true;
-            lblMealTimeProducts.BackColor = System.Drawing.Color.Transparent;
-            lblMealTimeProducts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            lblMealTimeProducts.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            lblMealTimeProducts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            lblMealTimeProducts.Location = new System.Drawing.Point(861, 77);
-            lblMealTimeProducts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            lblMealTimeProducts.Name = "lblMealTimeProducts";
-            lblMealTimeProducts.Size = new System.Drawing.Size(154, 19);
-            lblMealTimeProducts.TabIndex = 1;
-            lblMealTimeProducts.Text = "Öğününe Eklenen Ürünler";
-            lblMealTimeProducts.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tpMealTimes
             // 
@@ -429,11 +415,12 @@ namespace WeightGain.UI.UserForms
             // 
             // tpCategoryAndProduct
             // 
+            this.tpCategoryAndProduct.Controls.Add(this.lblTotalCal);
+            this.tpCategoryAndProduct.Controls.Add(this.txtTotalCal);
+            this.tpCategoryAndProduct.Controls.Add(this.dgvSelectedProducts);
             this.tpCategoryAndProduct.Controls.Add(this.clbCategories);
             this.tpCategoryAndProduct.Controls.Add(this.btnAddProducts);
             this.tpCategoryAndProduct.Controls.Add(this.lwProducts);
-            this.tpCategoryAndProduct.Controls.Add(lblMealTimeProducts);
-            this.tpCategoryAndProduct.Controls.Add(this.lbMealTimeProducts);
             this.tpCategoryAndProduct.Location = new System.Drawing.Point(4, 22);
             this.tpCategoryAndProduct.Name = "tpCategoryAndProduct";
             this.tpCategoryAndProduct.Size = new System.Drawing.Size(1055, 549);
@@ -441,10 +428,49 @@ namespace WeightGain.UI.UserForms
             this.tpCategoryAndProduct.Text = "Kategori ve Ürün Seç";
             this.tpCategoryAndProduct.UseVisualStyleBackColor = true;
             // 
+            // lblTotalCal
+            // 
+            this.lblTotalCal.AutoSize = true;
+            this.lblTotalCal.Location = new System.Drawing.Point(592, 436);
+            this.lblTotalCal.Name = "lblTotalCal";
+            this.lblTotalCal.Size = new System.Drawing.Size(111, 13);
+            this.lblTotalCal.TabIndex = 11;
+            this.lblTotalCal.Text = "Toplam Kalori Miktarı: ";
+            // 
+            // txtTotalCal
+            // 
+            this.txtTotalCal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalCal.DefaultText = "";
+            this.txtTotalCal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalCal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalCal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalCal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalCal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalCal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTotalCal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalCal.Location = new System.Drawing.Point(852, 427);
+            this.txtTotalCal.Name = "txtTotalCal";
+            this.txtTotalCal.PasswordChar = '\0';
+            this.txtTotalCal.PlaceholderText = "";
+            this.txtTotalCal.ReadOnly = true;
+            this.txtTotalCal.SelectedText = "";
+            this.txtTotalCal.Size = new System.Drawing.Size(200, 36);
+            this.txtTotalCal.TabIndex = 10;
+            // 
+            // dgvSelectedProducts
+            // 
+            this.dgvSelectedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSelectedProducts.Location = new System.Drawing.Point(595, 13);
+            this.dgvSelectedProducts.Name = "dgvSelectedProducts";
+            this.dgvSelectedProducts.Size = new System.Drawing.Size(457, 409);
+            this.dgvSelectedProducts.TabIndex = 9;
+            this.dgvSelectedProducts.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelectedProducts_CellEndEdit);
+            this.dgvSelectedProducts.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvSelectedProducts_EditingControlShowing);
+            // 
             // clbCategories
             // 
             this.clbCategories.FormattingEnabled = true;
-            this.clbCategories.Location = new System.Drawing.Point(16, 98);
+            this.clbCategories.Location = new System.Drawing.Point(3, 13);
             this.clbCategories.Name = "clbCategories";
             this.clbCategories.Size = new System.Drawing.Size(228, 409);
             this.clbCategories.TabIndex = 8;
@@ -455,10 +481,10 @@ namespace WeightGain.UI.UserForms
             this.btnAddProducts.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAddProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProducts.Image")));
-            this.btnAddProducts.Location = new System.Drawing.Point(721, 245);
+            this.btnAddProducts.Location = new System.Drawing.Point(236, 427);
             this.btnAddProducts.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProducts.Name = "btnAddProducts";
-            this.btnAddProducts.Size = new System.Drawing.Size(117, 96);
+            this.btnAddProducts.Size = new System.Drawing.Size(354, 96);
             this.btnAddProducts.TabIndex = 3;
             this.btnAddProducts.Text = "Ekle";
             this.btnAddProducts.UseVisualStyleBackColor = false;
@@ -472,10 +498,10 @@ namespace WeightGain.UI.UserForms
             this.lwProducts.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lwProducts.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lwProducts.HideSelection = false;
-            this.lwProducts.Location = new System.Drawing.Point(249, 98);
+            this.lwProducts.Location = new System.Drawing.Point(236, 13);
             this.lwProducts.Margin = new System.Windows.Forms.Padding(2);
             this.lwProducts.Name = "lwProducts";
-            this.lwProducts.Size = new System.Drawing.Size(468, 409);
+            this.lwProducts.Size = new System.Drawing.Size(354, 409);
             this.lwProducts.TabIndex = 2;
             this.lwProducts.UseCompatibleStateImageBehavior = false;
             this.lwProducts.View = System.Windows.Forms.View.Details;
@@ -489,15 +515,6 @@ namespace WeightGain.UI.UserForms
             // 
             this.productCalory.Text = "Kalori Değeri";
             this.productCalory.Width = 124;
-            // 
-            // lbMealTimeProducts
-            // 
-            this.lbMealTimeProducts.FormattingEnabled = true;
-            this.lbMealTimeProducts.Location = new System.Drawing.Point(842, 98);
-            this.lbMealTimeProducts.Margin = new System.Windows.Forms.Padding(2);
-            this.lbMealTimeProducts.Name = "lbMealTimeProducts";
-            this.lbMealTimeProducts.Size = new System.Drawing.Size(195, 407);
-            this.lbMealTimeProducts.TabIndex = 0;
             // 
             // MealTimeForm
             // 
@@ -516,6 +533,7 @@ namespace WeightGain.UI.UserForms
             this.twcMealTimes.ResumeLayout(false);
             this.tpCategoryAndProduct.ResumeLayout(false);
             this.tpCategoryAndProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,12 +558,14 @@ namespace WeightGain.UI.UserForms
         private System.Windows.Forms.Label lblAddSecondSnack;
         private System.Windows.Forms.Label lblAddBreakfast;
         private System.Windows.Forms.Label lblBreakfast;
-        private System.Windows.Forms.ListBox lbMealTimeProducts;
         private System.Windows.Forms.Button btnAddProducts;
         private System.Windows.Forms.ListView lwProducts;
         private System.Windows.Forms.TabPage tpMealTimes;
         private System.Windows.Forms.CheckedListBox clbCategories;
         private System.Windows.Forms.ColumnHeader productName;
         private System.Windows.Forms.ColumnHeader productCalory;
+        private System.Windows.Forms.DataGridView dgvSelectedProducts;
+        private System.Windows.Forms.Label lblTotalCal;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalCal;
     }
 }
