@@ -4,7 +4,7 @@ namespace WeightGain.DATA
 {
     public class Exercise
     {
-        public int ExerciseID { get; set; }
+        public int ExerciseId { get; set; }
         public ExerciseEnum ExerciseType { get; set; }
         public byte Duration { get; set; }
         public DateTime ExerciseDate { get; set; }

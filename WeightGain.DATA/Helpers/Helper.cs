@@ -10,6 +10,23 @@ namespace WeightGain.DATA.Helpers
 {
     public class Helper
     {
+
+        public static byte[] GetImageBytes(string nameOfFile)
+        {
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            using (var stream = assembly.GetManifestResourceStream($"WeightGain.DATA.Resources.{nameOfFile}.jpg"))
+            {
+                if (stream != null)
+                {
+                    byte[] buffer = new byte[stream.Length];
+                    stream.Read(buffer, 0, buffer.Length);
+                    return buffer;
+                }
+
+            }
+            return null;
+        }
+
         /// <summary>
         /// Panel içerisindeki kontrollerin uygun olup olmadığını kontrol ederi.
         /// </summary>

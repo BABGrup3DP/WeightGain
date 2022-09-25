@@ -14,7 +14,7 @@ namespace WeightGain.DAL
             this.Property(x => x.MealTimeDescription).IsRequired().HasMaxLength(100);
 
             this.HasMany(x => x.Products).WithMany(x => x.MealTimes);
-            this.HasMany(x => x.Users).WithMany(x => x.MealTimes);
+            this.HasRequired(x => x.User).WithMany(x => x.MealTimes).HasForeignKey(x => x.UserId).WillCascadeOnDelete(false);
         }
     }
 }

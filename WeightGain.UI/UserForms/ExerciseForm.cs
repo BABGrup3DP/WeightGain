@@ -66,7 +66,7 @@ namespace WeightGain.UI.UserForms
                     Duration = (byte)nudExerciseTime.Value,
                     ExerciseType = (ExerciseEnum)exerciseType,
                     ExerciseDate = DateTime.Now,
-                    UserId = _logginedUser.ID
+                    UserId = _logginedUser.Id
                 }))
                 {
                     var messageDialogSuccess = new Guna2MessageDialog
@@ -82,7 +82,7 @@ namespace WeightGain.UI.UserForms
         }
         public void RefreshDataGridView()
         {
-            dgvShowExercise.DataSource = _exerciseRepository.GetByUserId(_logginedUser.ID);
+            dgvShowExercise.DataSource = _exerciseRepository.GetByUserId(_logginedUser.Id);
             dgvShowExercise.Columns[0].ReadOnly = true;
             dgvShowExercise.Columns[0].HeaderText = "Egzersiz ID";
             dgvShowExercise.Columns[1].HeaderText = "Egzersiz Tipi";
@@ -105,13 +105,13 @@ namespace WeightGain.UI.UserForms
                     var selectedExercise = (Exercise)((DataGridViewRow)selectedRow).DataBoundItem;
                     if (selectedExercise != null)
                     {
-                        if (_exerciseRepository.Delete(selectedExercise.ExerciseID))
+                        if (_exerciseRepository.Delete(selectedExercise.ExerciseId))
                         {
-                            dialogMessage += $"{selectedExercise.ExerciseID} başarıyla silindi.\n";
+                            dialogMessage += $"{selectedExercise.ExerciseId} başarıyla silindi.\n";
                         }
                         else
                         {
-                            dialogMessage += $"{selectedExercise.ExerciseID} silinirken hata oluştu.\n";
+                            dialogMessage += $"{selectedExercise.ExerciseId} silinirken hata oluştu.\n";
                         }
                     }
                 }
@@ -145,7 +145,7 @@ namespace WeightGain.UI.UserForms
                 var exerciseId = dgvShowExercise.Rows[e.RowIndex].Cells[0].Value;
                 var exercise = new Exercise
                 {
-                    ExerciseID = (int)exerciseId,
+                    ExerciseId = (int)exerciseId,
                     ExerciseType = (ExerciseEnum)newExerciseType,
                     Duration = (byte)newExerciseDuration,
                     ExerciseDate = (DateTime)newExerciseDate,

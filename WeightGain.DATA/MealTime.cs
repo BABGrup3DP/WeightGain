@@ -10,7 +10,10 @@ namespace WeightGain.DATA
         public string MealTimeDescription { get; set; }
         public DateTime MealTimeDate { get; set; }
 
-        public List<Product> Products { get; set; }
-        public List<User> Users { get; set; }
+        public virtual List<Product> Products { get; set; }
+        //public List<User> Users { get; set; }
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
+
     }
 }

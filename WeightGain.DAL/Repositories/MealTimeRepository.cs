@@ -7,22 +7,20 @@ using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
 {
-    public class MealTimeRepository
+    public class MealTimeRepository : BaseRepository
     {
-        private readonly WeightGainContext _dbContext;
         private readonly DbSet<MealTime> _mealTimes;
 
         public MealTimeRepository()
         {
-            _dbContext = new WeightGainContext();
-            _mealTimes = _dbContext.Set<MealTime>();
+            _mealTimes = weightGainContext.Set<MealTime>();
         }
 
         public List<MealTime> GetAll() => _mealTimes.ToList();
 
         public MealTime GetById(int mealTimeId) => _mealTimes.Find(mealTimeId);
 
-        public List<MealTime> GetByUserId(int userId) => _mealTimes.Where(x => x.Users.Any(y => y.ID == userId)).ToList();
+        public List<MealTime> GetByUserId(int userId) => _mealTimes.Where(x => x.UserId == userId).ToList();
 
         //ekleme
         public bool Insert(MealTime mealTime)
@@ -30,7 +28,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 _mealTimes.Add(mealTime);
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -50,7 +48,7 @@ namespace WeightGain.DAL.Repositories
                     updateMealTime.MealTimeDescription = mealTime.MealTimeDescription;
                     updateMealTime.Products = mealTime.Products;
                 }
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -64,7 +62,7 @@ namespace WeightGain.DAL.Repositories
             var deleteMealTime = _mealTimes.Find(mealTimeId);
             if (deleteMealTime != null)
                 _mealTimes.Remove(deleteMealTime);
-            return _dbContext.SaveChanges() > 0;
+            return weightGainContext.SaveChanges() > 0;
         }
 
         public List<MealTimeEnum> GetMealTimes()

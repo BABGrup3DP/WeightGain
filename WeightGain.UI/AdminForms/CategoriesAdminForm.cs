@@ -118,7 +118,7 @@ namespace WeightGain.UI.AdminForms
                 var categoryId = dgvCategories.Rows[e.RowIndex].Cells[0].Value;
                 var category = new Category
                 {
-                    CategoryID = (int)categoryId,
+                    CategoryId = (int)categoryId,
                     Name=(string)newcategoryName,
                     Description = newDescription.ToString()
                 };

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
-using WeightGain.UI.Extensions;
 
 namespace WeightGain.UI.UserForms
 {
@@ -36,6 +37,34 @@ namespace WeightGain.UI.UserForms
             clbCategories.DisplayMember = "Name";
             clbCategories.ValueMember = "CategoryId";
 
+            twcMealTimes.LastButtonClicked += TwcMealTimes_LastButtonClicked;
+
+            //twcMealTimes.NextFunction(tpCategoryAndProduct, () => selectedProducts.Count != 0);
+        }
+
+
+        private void TwcMealTimes_LastButtonClicked(object sender, EventArgs e)
+        {
+            if (selectedProducts.Count == 0)
+            {
+                MessageBox.Show("Lütfen en az bir ürün seçiniz.");
+                return;
+            }
+
+            //var mealTimeDate = dtpMealTime.Value;
+            //var newMealTime = new MealTime
+            //{
+            //    MealTimeType = selectedMealTime,
+            //    MealTimeDescription = "",
+            //    MealTimeDate = mealTimeDate,
+            //    UserId = _logginedUser.Id,
+            //};
+            //foreach (var product in selectedProducts)
+            //{
+            //    newMealTime.Products.Add(_productRepository.GetById(product.ProductId));
+            //}
+            //MessageBox.Show(_mealTimeRepository.Insert(newMealTime) ? "eklendi" : "eklenemedi");
+            // TODO : DÜZELTİLECEK
         }
 
         private void SelectMealTime(object sender, EventArgs e)
@@ -61,28 +90,13 @@ namespace WeightGain.UI.UserForms
                     selectedMealTime = MealTimeEnum.Üçüncü_Ara_Öğün;
                     break;
             }
-
-        }
-
-        private void twcMealTimes_Selected(object sender, TabControlEventArgs e)
-        {
-            var selectedIndex = twcMealTimes.SelectedIndex;
-            switch (selectedIndex - 1)
-            {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-            }
         }
 
         private void RefreshProductList()
         {
             foreach (var selectedCategory in selectedCategories)
             {
-                var selectedCategoryId = selectedCategory.CategoryID;
+                var selectedCategoryId = selectedCategory.CategoryId;
                 var selectedCategoryProducts = _productRepository.GetByCategoryId(selectedCategoryId);
                 if (selectedCategoryProducts == null) continue;
                 var categoryGroup = new ListViewGroup(selectedCategory.Name);
@@ -90,13 +104,22 @@ namespace WeightGain.UI.UserForms
                 lwProducts.Groups.Add(categoryGroup);
                 foreach (var selectedCategoryProduct in selectedCategoryProducts)
                 {
-                    lwProducts.Items.Add(new ListViewItem(new[] { selectedCategoryProduct.ProductName, selectedCategoryProduct.Calory.ToString("F") })
+                    MemoryStream memStream = new MemoryStream(selectedCategoryProduct.Picture);
+                    imageList1.Images.Add(Image.FromStream(memStream));
+                    var lastId = imageList1.Images.Count - 1;
+                    var item = new ListViewItem(new[]
                     {
-                        Tag = selectedCategoryProduct.ProductID,
+                        selectedCategoryProduct.ProductName,
+                        selectedCategoryProduct.Calory.ToString("F")
+                    }, lastId)
+                    {
+                        Tag = selectedCategoryProduct.ProductId,
                         Group = categoryGroup
-                    });
+                    };
+                    lwProducts.Items.Add(item);
                 }
             }
+            lwProducts.SmallImageList = imageList1;
         }
 
         private void RefreshSelectedProductList()
@@ -148,6 +171,7 @@ namespace WeightGain.UI.UserForms
                     Width = 50,
                 });
             }
+
             foreach (DataGridViewRow row in dgvSelectedProducts.Rows)
             {
                 if (row.Cells[4].Value == null)

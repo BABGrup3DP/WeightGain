@@ -115,7 +115,7 @@ namespace WeightGain.UI.AdminForms
                 var exerciseId = dgvExercise.Rows[e.RowIndex].Cells[0].Value;
                 var exercise = new Exercise
                 {
-                    ExerciseID = (int)exerciseId,
+                    ExerciseId = (int)exerciseId,
                     ExerciseType = (ExerciseEnum)newExerciseType,
                     Duration = Convert.ToByte(newExerciseDuration),
                 };

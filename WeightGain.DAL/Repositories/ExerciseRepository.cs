@@ -7,15 +7,13 @@ using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
 {
-    public class ExerciseRepository
+    public class ExerciseRepository : BaseRepository
     {
-        private readonly WeightGainContext _dbContext;
         private readonly DbSet<Exercise> _exercises;
 
         public ExerciseRepository()
         {
-            _dbContext = new WeightGainContext();
-            _exercises = _dbContext.Set<Exercise>();
+            _exercises = weightGainContext.Set<Exercise>();
         }
 
         //egzersiz ekleme
@@ -24,7 +22,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 _exercises.Add(exercise);
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -37,14 +35,14 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var updateExercise = _exercises.Find(exercise.ExerciseID);
-                if (updateExercise == null) return _dbContext.SaveChanges() > 0;
+                var updateExercise = _exercises.Find(exercise.ExerciseId);
+                if (updateExercise == null) return weightGainContext.SaveChanges() > 0;
                 updateExercise.ExerciseType = exercise.ExerciseType;
                 updateExercise.Duration = exercise.Duration;
                 updateExercise.User = exercise.User;
                 updateExercise.UserId = exercise.UserId;
 
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -60,7 +58,7 @@ namespace WeightGain.DAL.Repositories
                 var deleteExercise = _exercises.Find(execiseId);
                 if (deleteExercise != null)
                     _exercises.Remove(deleteExercise);
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {

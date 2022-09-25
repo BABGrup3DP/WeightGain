@@ -6,14 +6,12 @@ using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
 {
-    public class UserRepository
+    public class UserRepository : BaseRepository
     {
-        protected readonly WeightGainContext DbContext;
         private readonly DbSet<User> _users;
         public UserRepository()
         {
-            DbContext = new WeightGainContext();
-            _users = DbContext.Set<User>();
+            _users = weightGainContext.Set<User>();
         }
 
         //benzer üyelik var mı ve sonrasında ekleme
@@ -24,7 +22,7 @@ namespace WeightGain.DAL.Repositories
                 var findUser = _users.Any(x => x.Email == newUser.Email || x.PhoneNumber == newUser.PhoneNumber);
                 if (findUser) return false;
                 _users.Add(newUser);
-                return DbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -65,7 +63,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 _users.Remove(user);
-                return DbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -78,7 +76,7 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var findUser = _users.Find(user.ID);
+                var findUser = _users.Find(user.Id);
                 if (findUser == null) return false;
                 findUser.FirstName = user.FirstName;
                 findUser.LastName = user.LastName;
@@ -86,7 +84,7 @@ namespace WeightGain.DAL.Repositories
                 findUser.Password = user.Password;
                 findUser.BirthDate = user.BirthDate;
                 findUser.PhoneNumber = user.PhoneNumber;
-                return DbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {

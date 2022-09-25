@@ -6,17 +6,15 @@ using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
 {
-    public class ProductRepository
+    public class ProductRepository : BaseRepository
     {
-        private readonly WeightGainContext _dbContext;
         private readonly DbSet<Product> Products;
         private readonly DbSet<Category> Categories;
 
         public ProductRepository()
         {
-            _dbContext = new WeightGainContext();
-            Products = _dbContext.Set<Product>();
-            Categories = _dbContext.Set<Category>();
+            Products = weightGainContext.Set<Product>();
+            Categories = weightGainContext.Set<Category>();
         }
 
         //ürün ekleme
@@ -26,7 +24,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 Products.Add(product);
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -39,13 +37,13 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var updateProduct = Products.Find(product.ProductID);
+                var updateProduct = Products.Find(product.ProductId);
                 if (updateProduct == null) return false;
                 updateProduct.ProductName = product.ProductName;
                 updateProduct.Scale = product.Scale;
                 updateProduct.Calory = product.Calory;
                 updateProduct.Category = product.Category;
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
 
             }
             catch
@@ -74,7 +72,7 @@ namespace WeightGain.DAL.Repositories
                 var deleteProduct = Products.Find(productId);
                 if (deleteProduct != null)
                     Products.Remove(deleteProduct);
-                return _dbContext.SaveChanges() > 0;
+                return weightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -83,7 +81,7 @@ namespace WeightGain.DAL.Repositories
         }
 
         public List<Product> GetByCategoryId(int categoryId) =>
-            Products.Where(x => x.CategoryID == categoryId).ToList();
+            Products.Where(x => x.CategoryId == categoryId).ToList();
 
         public List<Product> GetAll() => Products.ToList();
     }

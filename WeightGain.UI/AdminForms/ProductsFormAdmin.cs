@@ -138,11 +138,11 @@ namespace WeightGain.UI.AdminForms
                 var productId = dgvProducts.Rows[e.RowIndex].Cells[0].Value;
                 var product = new Product
                 {
-                    ProductID = (int)productId,
+                    ProductId = (int)productId,
                     ProductName = (string)newProductName,
                     Scale = (string)newScale,
                     Calory = (decimal)newCalory,
-                    CategoryID = (int)newCategoryID,
+                    CategoryId = (int)newCategoryID,
                     Category = (Category)newCategory,
 
                 };

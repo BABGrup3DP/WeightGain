@@ -6,42 +6,40 @@ using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
 {
-    public class CategoryRepository
+    public class CategoryRepository : BaseRepository
     {
-        private readonly WeightGainContext _dbContext;
         private readonly DbSet<Category> _categories;
 
         public CategoryRepository()
         {
-            _dbContext = new WeightGainContext();
-            _categories = _dbContext.Set<Category>();
+            _categories = weightGainContext.Set<Category>();
         }
 
         //kategori ekleme
         public bool Insert(Category category)
         {
             _categories.Add(category);
-            return _dbContext.SaveChanges() > 0;
+            return weightGainContext.SaveChanges() > 0;
         }
 
         //kategori güncellem
         public bool Update(Category category)
         {
-            Category updateCategory = _categories.Find(category.CategoryID);
+            Category updateCategory = _categories.Find(category.CategoryId);
             updateCategory.Description = category.Description;
             updateCategory.Name = category.Name;
             //updateCategory.Picture = category.Picture;
             updateCategory.Products = category.Products;
-            return _dbContext.SaveChanges() > 0;
+            return weightGainContext.SaveChanges() > 0;
         }
 
         //kategori silme
-        public bool Delete(int categoryID)
+        public bool Delete(int categoryId)
         {
-            var deleteCategory = _categories.Find(categoryID);
+            var deleteCategory = _categories.Find(categoryId);
             if (deleteCategory != null)
-            _categories.Remove(deleteCategory);
-            return _dbContext.SaveChanges() > 0;
+                _categories.Remove(deleteCategory);
+            return weightGainContext.SaveChanges() > 0;
         }
 
         public List<Category> GetAll() => _categories.ToList();
