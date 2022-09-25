@@ -22,11 +22,11 @@ namespace WeightGain.UI.UserForms
         {
             cmbExercies.DataSource = _exerciseRepository.GetExercises();
             var weight = _logginedUser.Weight;
-            lblCalBicycleV.Text = Convert.ToString(weight * 5.6m * 1);
-            lblCalJumpingRopeV.Text = Convert.ToString(weight * 5.8m * 1);
-            lblCalRunV.Text = Convert.ToString(weight * 6.34m * 1);
-            lblCalWalkV.Text = Convert.ToString(weight * 2.1m * 1);
-            lblCalSwimV.Text = Convert.ToString(weight * 9.0m * 1);
+            lblCalBicycleV.Text = (weight * 5.6m * 1).ToString("F");
+            lblCalJumpingRopeV.Text = (weight * 5.8m * 1).ToString("F");
+            lblCalRunV.Text = (weight * 6.34m * 1).ToString("F");
+            lblCalWalkV.Text = (weight * 2.1m * 1).ToString("F");
+            lblCalSwimV.Text = (weight * 9.0m * 1).ToString("F");
 
             RefreshDataGridView();
         }

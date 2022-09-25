@@ -493,12 +493,12 @@ namespace WeightGain.UI.UserForms
             this.dtpExerciseDate.ForeColor = System.Drawing.Color.Black;
             this.dtpExerciseDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpExerciseDate.Location = new System.Drawing.Point(343, 29);
-            this.dtpExerciseDate.MaxDate = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
+            this.dtpExerciseDate.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpExerciseDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpExerciseDate.Name = "dtpExerciseDate";
             this.dtpExerciseDate.Size = new System.Drawing.Size(376, 36);
             this.dtpExerciseDate.TabIndex = 5;
-            this.dtpExerciseDate.Value = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
+            this.dtpExerciseDate.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // dgvShowExercise
             // 
@@ -506,7 +506,7 @@ namespace WeightGain.UI.UserForms
             this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -515,7 +515,7 @@ namespace WeightGain.UI.UserForms
             this.dgvShowExercise.ColumnHeadersHeight = 55;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -580,6 +580,7 @@ namespace WeightGain.UI.UserForms
             this.Controls.Add(this.gpExercise);
             this.Controls.Add(this.gbCalory);
             this.Controls.Add(this.lblExersiceDate);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExerciseForm";
             this.Text = "ExerciseForm";
