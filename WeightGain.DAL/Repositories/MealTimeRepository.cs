@@ -27,8 +27,15 @@ namespace WeightGain.DAL.Repositories
         //ekleme
         public bool Insert(MealTime mealTime)
         {
-            _mealTimes.Add(mealTime);
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                _mealTimes.Add(mealTime);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         //güncelleme
