@@ -43,6 +43,7 @@
             this.txtEmailPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ttBtnLogin = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainFormLogo)).BeginInit();
             this.formRightPanel.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +85,7 @@
             this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.lblRegister.Location = new System.Drawing.Point(311, 397);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(172, 28);
+            this.lblRegister.Size = new System.Drawing.Size(140, 21);
             this.lblRegister.TabIndex = 13;
             this.lblRegister.Text = "Hemen üye olun.";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
@@ -95,7 +96,7 @@
             this.lblNotRegistered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.lblNotRegistered.Location = new System.Drawing.Point(149, 397);
             this.lblNotRegistered.Name = "lblNotRegistered";
-            this.lblNotRegistered.Size = new System.Drawing.Size(191, 28);
+            this.lblNotRegistered.Size = new System.Drawing.Size(156, 21);
             this.lblNotRegistered.TabIndex = 12;
             this.lblNotRegistered.Text = "Üyeliğiniz yok mu?";
             // 
@@ -106,7 +107,7 @@
             this.lblSlogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.lblSlogan.Location = new System.Drawing.Point(196, 26);
             this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(201, 33);
+            this.lblSlogan.Size = new System.Drawing.Size(161, 27);
             this.lblSlogan.TabIndex = 11;
             this.lblSlogan.Text = "Sağlıkla kilo alın";
             this.lblSlogan.Click += new System.EventHandler(this.lblSlogan_Click);
@@ -139,7 +140,7 @@
             this.cbRememberMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
             this.cbRememberMe.Location = new System.Drawing.Point(169, 136);
             this.cbRememberMe.Name = "cbRememberMe";
-            this.cbRememberMe.Size = new System.Drawing.Size(147, 32);
+            this.cbRememberMe.Size = new System.Drawing.Size(119, 25);
             this.cbRememberMe.TabIndex = 11;
             this.cbRememberMe.Text = "Beni Hatırla";
             this.cbRememberMe.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
@@ -226,7 +227,7 @@
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.lblLogin.Location = new System.Drawing.Point(111, 13);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(128, 37);
+            this.lblLogin.Size = new System.Drawing.Size(98, 30);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Giriş Yap";
             // 
@@ -244,7 +245,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(898, 445);
@@ -289,5 +290,6 @@
         private System.Windows.Forms.Label lblLogin;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2CheckBox cbRememberMe;
+        private System.Windows.Forms.ToolTip ttBtnLogin;
     }
 }

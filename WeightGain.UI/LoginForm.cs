@@ -146,6 +146,7 @@ namespace WeightGain.UI
                 txtPassword.Text = Settings.Default.password;
                 cbRememberMe.Checked = true;
             }
+            ttBtnLogin.SetToolTip(btnLogin, "Giriş yapmak için tıklayın.");
         }
 
         private void txtPassword_IconRightClick(object sender, EventArgs e)

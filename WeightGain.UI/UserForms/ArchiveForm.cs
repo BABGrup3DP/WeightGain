@@ -9,6 +9,7 @@ namespace WeightGain.UI.UserForms
     {
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly User _logginedUser;
+
         public ArchiveForm(User logginedUser)
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace WeightGain.UI.UserForms
         {
             var selectedDate = dtpArchiveStartDate.Value;
             var mealTimeList = _mealTimeRepository.GetByDate(selectedDate, _logginedUser.Id);
+            dgvDataEntryDays.DataSource = mealTimeList;
         }
     }
 }

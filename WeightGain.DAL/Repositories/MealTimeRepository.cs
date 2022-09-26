@@ -74,15 +74,7 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                //foreach (var product in products)
-                //{
-                //    var p = _products.Find(product.ProductId);
-                //    if (p != null)
-                //    {
-                //        mealTime.Products.Add(p);
-                //    }
-                //}
-
+                #region Öğüne Ürün Ekleme
                 foreach (var productPortions in productWithPortions)
                 {
 
@@ -96,11 +88,12 @@ namespace WeightGain.DAL.Repositories
                         return false;
                     }
                 }
+                #endregion
                 if (weightGainContext.SaveChanges() > 0)
                 {
                     foreach (var productPortions in productWithPortions)
                     {
-                        _portions.Add(new Portion()
+                        _portions.Add(new Portion
                         {
                             ProductId = productPortions.ProductId,
                             MealTimeId = mealTime.MealTimeId,
@@ -120,7 +113,7 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var mealTimeList = _mealTimes.Where(x => x.MealTimeDate == startDate && x.UserId == userId).ToList();
+                var mealTimeList = _mealTimes.Where(x => x.MealTimeDate == startDate && x.UserId == userId && x.Products != null).ToList();
                 return mealTimeList.Any() ? mealTimeList : null;
             }
             catch
