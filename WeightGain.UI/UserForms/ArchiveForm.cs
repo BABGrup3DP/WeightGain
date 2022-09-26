@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 
@@ -13,6 +14,7 @@ namespace WeightGain.UI.UserForms
             InitializeComponent();
             _logginedUser = logginedUser;
             _mealTimeRepository = new MealTimeRepository();
+            dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
 
         private void btnGet_Click(object sender, System.EventArgs e)

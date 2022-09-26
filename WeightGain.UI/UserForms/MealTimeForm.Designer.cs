@@ -62,6 +62,8 @@ namespace WeightGain.UI.UserForms
             this.lblTotalCal = new System.Windows.Forms.Label();
             this.txtTotalCal = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvSelectedProducts = new System.Windows.Forms.DataGridView();
+            this.cmsProducts = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clbCategories = new System.Windows.Forms.CheckedListBox();
             this.btnAddProducts = new System.Windows.Forms.Button();
             this.lwProducts = new System.Windows.Forms.ListView();
@@ -78,6 +80,7 @@ namespace WeightGain.UI.UserForms
             this.twcMealTimes.SuspendLayout();
             this.tpCategoryAndProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedProducts)).BeginInit();
+            this.cmsProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBreakfast
@@ -449,12 +452,11 @@ namespace WeightGain.UI.UserForms
             this.dtpMealTime.ForeColor = System.Drawing.Color.Black;
             this.dtpMealTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpMealTime.Location = new System.Drawing.Point(388, 29);
-            this.dtpMealTime.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            this.dtpMealTime.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpMealTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpMealTime.Name = "dtpMealTime";
             this.dtpMealTime.Size = new System.Drawing.Size(200, 36);
             this.dtpMealTime.TabIndex = 12;
-            this.dtpMealTime.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             // 
             // lblTotalCal
             // 
@@ -488,12 +490,37 @@ namespace WeightGain.UI.UserForms
             // dgvSelectedProducts
             // 
             this.dgvSelectedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSelectedProducts.ContextMenuStrip = this.cmsProducts;
             this.dgvSelectedProducts.Location = new System.Drawing.Point(613, 70);
             this.dgvSelectedProducts.Name = "dgvSelectedProducts";
+            this.dgvSelectedProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSelectedProducts.Size = new System.Drawing.Size(438, 412);
             this.dgvSelectedProducts.TabIndex = 9;
             this.dgvSelectedProducts.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelectedProducts_CellEndEdit);
             this.dgvSelectedProducts.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvSelectedProducts_EditingControlShowing);
+            // 
+            // cmsProducts
+            // 
+            this.cmsProducts.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem});
+            this.cmsProducts.Name = "cmsProducts";
+            this.cmsProducts.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsProducts.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsProducts.RenderStyle.ColorTable = null;
+            this.cmsProducts.RenderStyle.RoundedEdges = true;
+            this.cmsProducts.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsProducts.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsProducts.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsProducts.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsProducts.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsProducts.Size = new System.Drawing.Size(87, 26);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // clbCategories
             // 
@@ -570,6 +597,7 @@ namespace WeightGain.UI.UserForms
             this.tpCategoryAndProduct.ResumeLayout(false);
             this.tpCategoryAndProduct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedProducts)).EndInit();
+            this.cmsProducts.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -606,5 +634,7 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSelectDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpMealTime;
         private System.Windows.Forms.ImageList lwImageList;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsProducts;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
     }
 }

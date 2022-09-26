@@ -498,7 +498,6 @@ namespace WeightGain.UI.UserForms
             this.dtpExerciseDate.Name = "dtpExerciseDate";
             this.dtpExerciseDate.Size = new System.Drawing.Size(376, 36);
             this.dtpExerciseDate.TabIndex = 5;
-            this.dtpExerciseDate.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // dgvShowExercise
             // 

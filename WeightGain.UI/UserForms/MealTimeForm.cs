@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -34,6 +35,7 @@ namespace WeightGain.UI.UserForms
             _selectedCategories = new List<Category>();
             _productWithPortions = new List<ProductWithPortion>();
             _logginedUser = logginedUser;
+            dtpMealTime.MaxDate = DateTime.Today;
         }
 
         private void MealTimeForm_Load(object sender, EventArgs e)
@@ -281,6 +283,28 @@ namespace WeightGain.UI.UserForms
                 totalCal += Convert.ToDouble(row.Cells[3].Value) * Convert.ToDouble(row.Cells[4].Value);
             }
             txtTotalCal.Text = totalCal.ToString("0.##");
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvSelectedProducts.SelectedRows.Count != 0)
+            {
+                foreach (var row in dgvSelectedProducts.SelectedRows)
+                {
+                    var product = _productWithPortions.FirstOrDefault(x => x.ProductId == Convert.ToInt32(((DataGridViewRow)row).Cells[0].Value));
+                    _productWithPortions.Remove(product);
+                }
+                RefreshSelectedProductList();
+            }
+            else
+            {
+                var messageDialog = new Guna2MessageDialog
+                {
+                    Text = "Hiçbir ürün seçilmemiş.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialog.Show();
+            }
         }
     }
 }

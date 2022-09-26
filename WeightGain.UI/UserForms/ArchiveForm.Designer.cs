@@ -88,7 +88,6 @@ namespace WeightGain.UI.UserForms
             this.dtpArchiveStartDate.Name = "dtpArchiveStartDate";
             this.dtpArchiveStartDate.Size = new System.Drawing.Size(200, 36);
             this.dtpArchiveStartDate.TabIndex = 0;
-            this.dtpArchiveStartDate.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // guna2HtmlLabel1
             // 
