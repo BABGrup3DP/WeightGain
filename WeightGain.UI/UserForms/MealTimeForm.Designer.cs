@@ -41,7 +41,7 @@ namespace WeightGain.UI.UserForms
             this.tpMealTimes = new System.Windows.Forms.TabPage();
             this.lblAddBreakfast = new System.Windows.Forms.Label();
             this.lblBreakfast = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
             this.lblAddFirstSnack = new System.Windows.Forms.Label();
             this.lblAddThirdSnack = new System.Windows.Forms.Label();
             this.lblAddSecondSnack = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace WeightGain.UI.UserForms
             this.btnNext = new FontAwesome.Sharp.IconButton();
             this.twcMealTimes = new WeightGain.UI.Extensions.TabWizardControl();
             this.tpCategoryAndProduct = new System.Windows.Forms.TabPage();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dtpMealTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblTotalCal = new System.Windows.Forms.Label();
             this.txtTotalCal = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,7 +67,7 @@ namespace WeightGain.UI.UserForms
             this.lwProducts = new System.Windows.Forms.ListView();
             this.productName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.productCalory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lwImageList = new System.Windows.Forms.ImageList(this.components);
             btnBreakfast = new System.Windows.Forms.Button();
             btnThirdSnack = new System.Windows.Forms.Button();
             btnSecondSnack = new System.Windows.Forms.Button();
@@ -193,7 +193,7 @@ namespace WeightGain.UI.UserForms
             this.tpMealTimes.Controls.Add(this.lblAddBreakfast);
             this.tpMealTimes.Controls.Add(this.lblBreakfast);
             this.tpMealTimes.Controls.Add(btnBreakfast);
-            this.tpMealTimes.Controls.Add(this.label13);
+            this.tpMealTimes.Controls.Add(this.lblStart);
             this.tpMealTimes.Controls.Add(this.lblAddFirstSnack);
             this.tpMealTimes.Controls.Add(this.lblAddThirdSnack);
             this.tpMealTimes.Controls.Add(this.lblAddSecondSnack);
@@ -241,16 +241,16 @@ namespace WeightGain.UI.UserForms
             this.lblBreakfast.Text = "Kahvaltı";
             this.lblBreakfast.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // lblStart
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(52, 482);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(464, 19);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Senin Sağlığın, Senin Kuralların. İlk Öğün Planıyla güne başlayabilirsin..";
+            this.lblStart.AutoSize = true;
+            this.lblStart.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblStart.Location = new System.Drawing.Point(52, 482);
+            this.lblStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(464, 19);
+            this.lblStart.TabIndex = 21;
+            this.lblStart.Text = "Senin Sağlığın, Senin Kuralların. İlk Öğün Planıyla güne başlayabilirsin..";
             // 
             // lblAddFirstSnack
             // 
@@ -417,7 +417,7 @@ namespace WeightGain.UI.UserForms
             // 
             // tpCategoryAndProduct
             // 
-            this.tpCategoryAndProduct.Controls.Add(this.guna2HtmlLabel7);
+            this.tpCategoryAndProduct.Controls.Add(this.lblSelectDate);
             this.tpCategoryAndProduct.Controls.Add(this.dtpMealTime);
             this.tpCategoryAndProduct.Controls.Add(this.lblTotalCal);
             this.tpCategoryAndProduct.Controls.Add(this.txtTotalCal);
@@ -432,15 +432,15 @@ namespace WeightGain.UI.UserForms
             this.tpCategoryAndProduct.Text = "Kategori ve Ürün Seç";
             this.tpCategoryAndProduct.UseVisualStyleBackColor = true;
             // 
-            // guna2HtmlLabel7
+            // lblSelectDate
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(299, 37);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(74, 22);
-            this.guna2HtmlLabel7.TabIndex = 13;
-            this.guna2HtmlLabel7.Text = "Tarih Seç :";
+            this.lblSelectDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSelectDate.Location = new System.Drawing.Point(299, 37);
+            this.lblSelectDate.Name = "lblSelectDate";
+            this.lblSelectDate.Size = new System.Drawing.Size(74, 22);
+            this.lblSelectDate.TabIndex = 13;
+            this.lblSelectDate.Text = "Tarih Seç :";
             // 
             // dtpMealTime
             // 
@@ -449,12 +449,12 @@ namespace WeightGain.UI.UserForms
             this.dtpMealTime.ForeColor = System.Drawing.Color.Black;
             this.dtpMealTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpMealTime.Location = new System.Drawing.Point(388, 29);
-            this.dtpMealTime.MaxDate = new System.DateTime(2022, 9, 25, 0, 0, 0, 0);
+            this.dtpMealTime.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             this.dtpMealTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpMealTime.Name = "dtpMealTime";
             this.dtpMealTime.Size = new System.Drawing.Size(200, 36);
             this.dtpMealTime.TabIndex = 12;
-            this.dtpMealTime.Value = new System.DateTime(2022, 9, 25, 0, 0, 0, 0);
+            this.dtpMealTime.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             // 
             // lblTotalCal
             // 
@@ -488,9 +488,9 @@ namespace WeightGain.UI.UserForms
             // dgvSelectedProducts
             // 
             this.dgvSelectedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSelectedProducts.Location = new System.Drawing.Point(660, 67);
+            this.dgvSelectedProducts.Location = new System.Drawing.Point(613, 70);
             this.dgvSelectedProducts.Name = "dgvSelectedProducts";
-            this.dgvSelectedProducts.Size = new System.Drawing.Size(391, 415);
+            this.dgvSelectedProducts.Size = new System.Drawing.Size(438, 412);
             this.dgvSelectedProducts.TabIndex = 9;
             this.dgvSelectedProducts.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelectedProducts_CellEndEdit);
             this.dgvSelectedProducts.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvSelectedProducts_EditingControlShowing);
@@ -530,7 +530,7 @@ namespace WeightGain.UI.UserForms
             this.lwProducts.Location = new System.Drawing.Point(235, 70);
             this.lwProducts.Margin = new System.Windows.Forms.Padding(2);
             this.lwProducts.Name = "lwProducts";
-            this.lwProducts.Size = new System.Drawing.Size(420, 412);
+            this.lwProducts.Size = new System.Drawing.Size(373, 412);
             this.lwProducts.TabIndex = 2;
             this.lwProducts.UseCompatibleStateImageBehavior = false;
             this.lwProducts.View = System.Windows.Forms.View.Details;
@@ -545,11 +545,11 @@ namespace WeightGain.UI.UserForms
             this.productCalory.Text = "Kalori Değeri";
             this.productCalory.Width = 124;
             // 
-            // imageList1
+            // lwImageList
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(50, 50);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.lwImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.lwImageList.ImageSize = new System.Drawing.Size(50, 50);
+            this.lwImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // MealTimeForm
             // 
@@ -588,7 +588,7 @@ namespace WeightGain.UI.UserForms
         private System.Windows.Forms.Label lblAddDinner;
         private System.Windows.Forms.Label lblLunch;
         private System.Windows.Forms.Label lblDinner;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblAddFirstSnack;
         private System.Windows.Forms.Label lblAddThirdSnack;
         private System.Windows.Forms.Label lblAddSecondSnack;
@@ -603,8 +603,8 @@ namespace WeightGain.UI.UserForms
         private System.Windows.Forms.DataGridView dgvSelectedProducts;
         private System.Windows.Forms.Label lblTotalCal;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalCal;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSelectDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpMealTime;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList lwImageList;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 
 namespace WeightGain.DAL.Repositories
 {
@@ -10,13 +11,14 @@ namespace WeightGain.DAL.Repositories
     {
         private readonly DbSet<MealTime> _mealTimes;
         private readonly DbSet<Product> _products;
-        private readonly DbSet<ProductPortion> _productPortions;
+        private readonly DbSet<Portion> _portions;
+
 
         public MealTimeRepository()
         {
             _mealTimes = weightGainContext.Set<MealTime>();
             _products = weightGainContext.Set<Product>();
-            _productPortions = weightGainContext.Set<ProductPortion>();
+            _portions = weightGainContext.Set<Portion>();
         }
 
         public List<MealTime> GetAll() => _mealTimes.ToList();
@@ -68,16 +70,42 @@ namespace WeightGain.DAL.Repositories
             return weightGainContext.SaveChanges() > 0;
         }
 
-        public bool AddProductsToMealTime(MealTime mealTime, List<Product> products)
+        public bool AddProductsToMealTime(MealTime mealTime, List<ProductWithPortion> productWithPortions)
         {
             try
             {
-                foreach (var product in products)
+                //foreach (var product in products)
+                //{
+                //    var p = _products.Find(product.ProductId);
+                //    if (p != null)
+                //    {
+                //        mealTime.Products.Add(p);
+                //    }
+                //}
+
+                foreach (var productPortions in productWithPortions)
                 {
-                    var p = _products.Find(product.ProductId);
+
+                    var p = _products.Find(productPortions.ProductId);
                     if (p != null)
                     {
                         mealTime.Products.Add(p);
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                if (weightGainContext.SaveChanges() > 0)
+                {
+                    foreach (var productPortions in productWithPortions)
+                    {
+                        _portions.Add(new Portion()
+                        {
+                            ProductId = productPortions.ProductId,
+                            MealTimeId = mealTime.MealTimeId,
+                            Size = productPortions.Size
+                        });
                     }
                 }
                 return weightGainContext.SaveChanges() > 0;

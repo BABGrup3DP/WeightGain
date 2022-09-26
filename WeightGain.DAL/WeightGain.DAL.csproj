@@ -175,22 +175,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryMapping.cs" />
+    <Compile Include="Mappings\CategoryMapping.cs" />
     <Compile Include="Context\WeightGainContext.cs" />
-    <Compile Include="ExerciseMapping.cs" />
-    <Compile Include="MealTimeMapping.cs" />
+    <Compile Include="Mappings\ExerciseMapping.cs" />
+    <Compile Include="Mappings\MealTimeMapping.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="ProductMapping.cs" />
-    <Compile Include="ProductPortionMapping.cs" />
+    <Compile Include="Mappings\ProductMapping.cs" />
+    <Compile Include="Mappings\PortionMapping.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\ExerciseRepository.cs" />
     <Compile Include="Repositories\MealTimeRepository.cs" />
+    <Compile Include="Repositories\PortionRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="UserMapping.cs" />
+    <Compile Include="Mappings\UserMapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

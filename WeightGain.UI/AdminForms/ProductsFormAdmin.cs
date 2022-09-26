@@ -63,7 +63,7 @@ namespace WeightGain.UI.AdminForms
             {
                 ProductName = productName,
                 Scale = productScale,
-                Calory = Convert.ToDecimal(productCalory),
+                Calory = Convert.ToDouble(productCalory),
 
                 Category = (Category)productCategory,
             };
@@ -141,7 +141,7 @@ namespace WeightGain.UI.AdminForms
                     ProductId = (int)productId,
                     ProductName = (string)newProductName,
                     Scale = (string)newScale,
-                    Calory = (decimal)newCalory,
+                    Calory = (double)newCalory,
                     CategoryId = (int)newCategoryID,
                     Category = (Category)newCategory,
 

@@ -235,7 +235,7 @@ namespace WeightGain.UI.UserForms
             this.btnAddExercise.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddExercise.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddExercise.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddExercise.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAddExercise.ForeColor = System.Drawing.Color.White;
             this.btnAddExercise.Location = new System.Drawing.Point(129, 386);
             this.btnAddExercise.Name = "btnAddExercise";
@@ -556,13 +556,13 @@ namespace WeightGain.UI.UserForms
             this.btnDeleteExercise.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDeleteExercise.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDeleteExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeleteExercise.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteExercise.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnDeleteExercise.ForeColor = System.Drawing.Color.White;
             this.btnDeleteExercise.Location = new System.Drawing.Point(813, 622);
             this.btnDeleteExercise.Name = "btnDeleteExercise";
             this.btnDeleteExercise.Size = new System.Drawing.Size(262, 46);
             this.btnDeleteExercise.TabIndex = 8;
-            this.btnDeleteExercise.Text = "Sil";
+            this.btnDeleteExercise.Text = "Seçilenleri Sil";
             this.btnDeleteExercise.Click += new System.EventHandler(this.btnDeleteExercise_Click);
             // 
             // formElipse

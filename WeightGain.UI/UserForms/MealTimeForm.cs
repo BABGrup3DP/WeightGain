@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.UserForms
@@ -15,11 +16,12 @@ namespace WeightGain.UI.UserForms
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly CategoryRepository _categoryRepository;
         private readonly ProductRepository _productRepository;
+        private readonly PortionRepository _portionRepository;
         private readonly User _logginedUser;
         private MealTimeEnum _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
         private readonly List<Category> _selectedCategories;
-        private readonly List<Product> _selectedProducts;
-        
+        private readonly List<ProductWithPortion> _productWithPortions;
+
         public MealTimeForm(User logginedUser)
         {
             InitializeComponent();
@@ -28,8 +30,9 @@ namespace WeightGain.UI.UserForms
             _mealTimeRepository = new MealTimeRepository();
             _categoryRepository = new CategoryRepository();
             _productRepository = new ProductRepository();
+            _portionRepository = new PortionRepository();
             _selectedCategories = new List<Category>();
-            _selectedProducts = new List<Product>();
+            _productWithPortions = new List<ProductWithPortion>();
             _logginedUser = logginedUser;
         }
 
@@ -44,7 +47,7 @@ namespace WeightGain.UI.UserForms
 
         private void TwcMealTimes_LastButtonClicked(object sender, EventArgs e)
         {
-            if (_selectedProducts.Count == 0)
+            if (_productWithPortions.Count == 0)
             {
                 var messageDialog = new Guna2MessageDialog
                 {
@@ -63,7 +66,9 @@ namespace WeightGain.UI.UserForms
                 MealTimeDate = mealTimeDate,
                 UserId = _logginedUser.Id,
             };
-            if (_mealTimeRepository.Insert(newMealTime) && _mealTimeRepository.AddProductsToMealTime(newMealTime, _selectedProducts))
+
+
+            if (_mealTimeRepository.Insert(newMealTime) && _mealTimeRepository.AddProductsToMealTime(newMealTime, _productWithPortions))
             {
                 var messageDialog = new Guna2MessageDialog
                 {
@@ -121,8 +126,8 @@ namespace WeightGain.UI.UserForms
                 foreach (var selectedCategoryProduct in selectedCategoryProducts)
                 {
                     var memStream = new MemoryStream(selectedCategoryProduct.Picture);
-                    imageList1.Images.Add(Image.FromStream(memStream));
-                    var lastId = imageList1.Images.Count - 1;
+                    lwImageList.Images.Add(Image.FromStream(memStream));
+                    var lastId = lwImageList.Images.Count - 1;
                     var item = new ListViewItem(new[]
                     {
                         selectedCategoryProduct.ProductName,
@@ -135,14 +140,15 @@ namespace WeightGain.UI.UserForms
                     lwProducts.Items.Add(item);
                 }
             }
-            lwProducts.SmallImageList = imageList1;
+            lwProducts.SmallImageList = lwImageList;
         }
 
         private void RefreshSelectedProductList()
         {
             dgvSelectedProducts.AutoGenerateColumns = false;
             dgvSelectedProducts.DataSource = null;
-            dgvSelectedProducts.DataSource = _selectedProducts;
+            dgvSelectedProducts.DataSource = _productWithPortions;
+
             if (dgvSelectedProducts.Columns.Count == 0)
             {
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
@@ -179,9 +185,9 @@ namespace WeightGain.UI.UserForms
                 });
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "Serving",
+                    DataPropertyName = "Size",
                     HeaderText = "Porsiyon",
-                    Name = "Serving",
+                    Name = "Size",
                     Width = 50,
                 });
             }
@@ -228,20 +234,24 @@ namespace WeightGain.UI.UserForms
             foreach (var products in lwProducts.SelectedItems)
             {
                 var product = _productRepository.GetById(((ListViewItem)products).Tag);
-                if (_selectedProducts.Count == 0)
+                var productWithPortion = new ProductWithPortion()
                 {
-
-                    _selectedProducts.Add(product);
+                    ProductId = product.ProductId,
+                    ProductName = product.ProductName,
+                    Scale = product.Scale,
+                    Calory = product.Calory,
+                    Size = 1
+                };
+                if (_productWithPortions.Count == 0)
+                {
+                    _productWithPortions.Add(productWithPortion);
                 }
                 else
                 {
-                    if (!_selectedProducts.Contains(product))
-                    {
-                        _selectedProducts.Add(product);
-                    }
+                    if (!_productWithPortions.Contains(productWithPortion))
+                        _productWithPortions.Add(productWithPortion);
                 }
             }
-
             RefreshSelectedProductList();
         }
 

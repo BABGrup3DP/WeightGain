@@ -2,7 +2,7 @@
 using System.Data.Entity.ModelConfiguration;
 using WeightGain.DATA;
 
-namespace WeightGain.DAL
+namespace WeightGain.DAL.Mappings
 {
     public class ProductMapping : EntityTypeConfiguration<Product>
     {

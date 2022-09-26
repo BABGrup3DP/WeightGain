@@ -61,10 +61,11 @@
     <Compile Include="Dietitian.cs" />
     <Compile Include="Exercise.cs" />
     <Compile Include="ExerciseEnum.cs" />
+    <Compile Include="Helpers\ProductWithPortion.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="MealTime.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="ProductPortion.cs" />
+    <Compile Include="Portion.cs" />
     <Compile Include="ProjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseModel.cs" />

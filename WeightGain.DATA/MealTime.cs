@@ -11,7 +11,6 @@ namespace WeightGain.DATA
         public DateTime MealTimeDate { get; set; }
 
         public List<Product> Products { get; set; }
-        public List<ProductPortion> ProductPortions { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
 
