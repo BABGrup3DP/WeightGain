@@ -22,6 +22,7 @@ namespace WeightGain.UI.UserForms
         private MealTimeEnum _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
         private readonly List<Category> _selectedCategories;
         private readonly List<ProductWithPortion> _productWithPortions;
+        private bool _resizing;
 
         public MealTimeForm(User logginedUser)
         {
@@ -143,6 +144,7 @@ namespace WeightGain.UI.UserForms
                 }
             }
             lwProducts.SmallImageList = lwImageList;
+            //lwProducts.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void RefreshSelectedProductList()
@@ -159,6 +161,7 @@ namespace WeightGain.UI.UserForms
                     HeaderText = "ID",
                     Name = "ProductID",
                     ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 });
                 dgvSelectedProducts.Columns[0].Visible = false;
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
@@ -167,7 +170,9 @@ namespace WeightGain.UI.UserForms
                     HeaderText = "Ürün Adı",
                     Name = "ProductName",
                     Width = 200,
-                    ReadOnly = true
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+
                 });
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
                 {
@@ -175,7 +180,8 @@ namespace WeightGain.UI.UserForms
                     HeaderText = "Ölçü",
                     Name = "Scale",
                     Width = 100,
-                    ReadOnly = true
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 });
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
                 {
@@ -183,7 +189,10 @@ namespace WeightGain.UI.UserForms
                     HeaderText = "Kalori",
                     Name = "Calory",
                     Width = 100,
-                    ReadOnly = true
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "F" }
+
                 });
                 dgvSelectedProducts.Columns.Add(new DataGridViewTextBoxColumn
                 {
@@ -191,13 +200,8 @@ namespace WeightGain.UI.UserForms
                     HeaderText = "Porsiyon",
                     Name = "Size",
                     Width = 50,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 });
-            }
-
-            foreach (DataGridViewRow row in dgvSelectedProducts.Rows)
-            {
-                if (row.Cells[4].Value == null)
-                    row.Cells[4].Value = 1;
             }
             dgvSelectedProducts_CellEndEdit(dgvSelectedProducts, null);
         }
@@ -230,7 +234,57 @@ namespace WeightGain.UI.UserForms
             RefreshProductList();
         }
 
-        private void btnAddProducts_Click(object sender, EventArgs e)
+        private void dgvSelectedProducts_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= CheckServing_KeyPress;
+            if (dgvSelectedProducts.CurrentCell.ColumnIndex != 4) return;
+            if (e.Control is TextBox tb)
+            {
+                tb.KeyPress += CheckServing_KeyPress;
+            }
+        }
+        private static void CheckServing_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dgvSelectedProducts_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            double totalCal = 0;
+            foreach (DataGridViewRow row in ((DataGridView)sender).Rows)
+            {
+                if (row.Cells[4].Value == null) continue;
+                totalCal += Convert.ToDouble(row.Cells[3].Value) * Convert.ToDouble(row.Cells[4].Value);
+            }
+            txtTotalCal.Text = totalCal.ToString("F");
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvSelectedProducts.SelectedRows.Count != 0)
+            {
+                foreach (var row in dgvSelectedProducts.SelectedRows)
+                {
+                    var product = _productWithPortions.FirstOrDefault(x => x.ProductId == Convert.ToInt32(((DataGridViewRow)row).Cells[0].Value));
+                    _productWithPortions.Remove(product);
+                }
+                RefreshSelectedProductList();
+            }
+            else
+            {
+                var messageDialog = new Guna2MessageDialog
+                {
+                    Text = "Hiçbir ürün seçilmemiş.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialog.Show();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             if (lwProducts.SelectedItems.Count == 0) return;
             foreach (var products in lwProducts.SelectedItems)
@@ -257,54 +311,25 @@ namespace WeightGain.UI.UserForms
             RefreshSelectedProductList();
         }
 
-        private void dgvSelectedProducts_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        private void lwProducts_SizeChanged(object sender, EventArgs e)
         {
-            e.Control.KeyPress -= CheckServing_KeyPress;
-            if (dgvSelectedProducts.CurrentCell.ColumnIndex != 4) return;
-            if (e.Control is TextBox tb)
+            if (!_resizing)
             {
-                tb.KeyPress += CheckServing_KeyPress;
-            }
-        }
-        private static void CheckServing_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void dgvSelectedProducts_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            double totalCal = 0;
-            foreach (DataGridViewRow row in ((DataGridView)sender).Rows)
-            {
-                if (row.Cells[4].Value == null) continue;
-                totalCal += Convert.ToDouble(row.Cells[3].Value) * Convert.ToDouble(row.Cells[4].Value);
-            }
-            txtTotalCal.Text = totalCal.ToString("0.##");
-        }
-
-        private void silToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvSelectedProducts.SelectedRows.Count != 0)
-            {
-                foreach (var row in dgvSelectedProducts.SelectedRows)
+                _resizing = true;
+                if (sender is ListView listView)
                 {
-                    var product = _productWithPortions.FirstOrDefault(x => x.ProductId == Convert.ToInt32(((DataGridViewRow)row).Cells[0].Value));
-                    _productWithPortions.Remove(product);
+                    float totalColumnWidth = 0;
+                    for (var i = 0; i < listView.Columns.Count; i++)
+                        totalColumnWidth += Convert.ToInt32(listView.Columns[i].Tag);
+
+                    for (var i = 0; i < listView.Columns.Count; i++)
+                    {
+                        var colPercentage = (Convert.ToInt32(listView.Columns[i].Tag) / totalColumnWidth);
+                        listView.Columns[i].Width = (int)(colPercentage * listView.ClientRectangle.Width);
+                    }
                 }
-                RefreshSelectedProductList();
             }
-            else
-            {
-                var messageDialog = new Guna2MessageDialog
-                {
-                    Text = "Hiçbir ürün seçilmemiş.",
-                    Caption = Resources.ProgramTitle
-                };
-                messageDialog.Show();
-            }
+            _resizing = false;
         }
     }
 }

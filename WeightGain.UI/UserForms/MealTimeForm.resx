@@ -144,17 +144,6 @@
   <metadata name="cmsProducts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>242, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAddProducts.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAE4AAAAcCAYAAADP7InhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cQAAEnEB89x6jgAAAQFJREFUaEPt2KsOwkAQhWHeE40FElKJ4gXqsbiSAgKHwyIwJIQ2hKQ1PMWSIymz
-        t2lDspk5yW923ed2R/m1NVp8IuGyY02exyQWbrK5k3ehiYXLitrMy4q8D0ks3PbyNvmpYeOJhsO4eOLh
-        MA5eMnCr82uwpuXjCw6LxUsGbry+meXhOVhdOCwGLym4fywUT+GIheApnGU+PIVzzIWncJ7Z8BTOM8At
-        9r+fAgrnmA0NKZxlLjSkcMR8aEjhOgtBQ0nBUU8nbrYnVwgaSgaOeqxzm+3oR34oGkoGbsiob6UYNCQe
-        joOGRMNx0ZBYuKyo2GhILFwfNCQWjjqPSSRc/1rzAbKqiPKSVQIoAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="lwImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
   </metadata>

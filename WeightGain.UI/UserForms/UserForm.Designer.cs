@@ -66,7 +66,7 @@
             this.leftMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMenuPanel.Name = "leftMenuPanel";
-            this.leftMenuPanel.Size = new System.Drawing.Size(239, 754);
+            this.leftMenuPanel.Size = new System.Drawing.Size(239, 806);
             this.leftMenuPanel.TabIndex = 0;
             this.leftMenuPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.leftMenuPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
@@ -266,7 +266,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnClose.ForeColor = System.Drawing.Color.FloralWhite;
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(137)))));
-            this.btnClose.Location = new System.Drawing.Point(1049, 0);
+            this.btnClose.Location = new System.Drawing.Point(1292, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 32);
             this.btnClose.TabIndex = 6;
@@ -278,7 +278,7 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(239, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1094, 32);
+            this.topPanel.Size = new System.Drawing.Size(1337, 32);
             this.topPanel.TabIndex = 7;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
@@ -290,10 +290,8 @@
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(239, 32);
-            this.mainPanel.MaximumSize = new System.Drawing.Size(1094, 722);
-            this.mainPanel.MinimumSize = new System.Drawing.Size(1094, 722);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1094, 722);
+            this.mainPanel.Size = new System.Drawing.Size(1337, 774);
             this.mainPanel.TabIndex = 8;
             this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseDown);
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserForm_MouseMove);
@@ -304,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1333, 754);
+            this.ClientSize = new System.Drawing.Size(1576, 806);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftMenuPanel);
