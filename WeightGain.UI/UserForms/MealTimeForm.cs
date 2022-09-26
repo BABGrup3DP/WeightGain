@@ -17,7 +17,6 @@ namespace WeightGain.UI.UserForms
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly CategoryRepository _categoryRepository;
         private readonly ProductRepository _productRepository;
-        private readonly PortionRepository _portionRepository;
         private readonly User _logginedUser;
         private MealTimeEnum _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
         private readonly List<Category> _selectedCategories;
@@ -32,7 +31,6 @@ namespace WeightGain.UI.UserForms
             _mealTimeRepository = new MealTimeRepository();
             _categoryRepository = new CategoryRepository();
             _productRepository = new ProductRepository();
-            _portionRepository = new PortionRepository();
             _selectedCategories = new List<Category>();
             _productWithPortions = new List<ProductWithPortion>();
             _logginedUser = logginedUser;
