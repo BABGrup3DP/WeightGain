@@ -30,9 +30,9 @@ namespace WeightGain.UI.UserForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpArchiveStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -40,7 +40,7 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbReport = new System.Windows.Forms.GroupBox();
             this.btnGet = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -69,10 +69,12 @@ namespace WeightGain.UI.UserForms
             this.lblEvening = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSecondSnack = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblAfternoon = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvDataEntryDays = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.groupBox1.SuspendLayout();
+            this.cmbDateTo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblToDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.gbReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataEntryDays)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,18 +84,19 @@ namespace WeightGain.UI.UserForms
             this.dtpArchiveStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpArchiveStartDate.ForeColor = System.Drawing.Color.Black;
             this.dtpArchiveStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpArchiveStartDate.Location = new System.Drawing.Point(128, 31);
+            this.dtpArchiveStartDate.Location = new System.Drawing.Point(114, 14);
             this.dtpArchiveStartDate.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpArchiveStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpArchiveStartDate.Name = "dtpArchiveStartDate";
             this.dtpArchiveStartDate.Size = new System.Drawing.Size(200, 36);
             this.dtpArchiveStartDate.TabIndex = 0;
+            this.dtpArchiveStartDate.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(39, 100);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(43, 108);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(68, 22);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -104,7 +107,7 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 171);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(16, 179);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(95, 22);
             this.guna2HtmlLabel2.TabIndex = 1;
@@ -114,7 +117,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(64, 242);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(68, 250);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(43, 22);
             this.guna2HtmlLabel3.TabIndex = 1;
@@ -124,7 +127,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(12, 313);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 321);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(95, 22);
             this.guna2HtmlLabel4.TabIndex = 1;
@@ -134,7 +137,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(48, 384);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(52, 392);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(59, 22);
             this.guna2HtmlLabel5.TabIndex = 1;
@@ -144,56 +147,58 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(12, 455);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(16, 463);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(95, 22);
             this.guna2HtmlLabel6.TabIndex = 1;
             this.guna2HtmlLabel6.Text = "3. Ara Öğün :";
             // 
-            // groupBox1
+            // gbReport
             // 
-            this.groupBox1.Controls.Add(this.btnGet);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel25);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel26);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel24);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel23);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel22);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel21);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel20);
-            this.groupBox1.Controls.Add(this.txtTotalCalory);
-            this.groupBox1.Controls.Add(this.txtThirdSnack);
-            this.groupBox1.Controls.Add(this.txtDinner);
-            this.groupBox1.Controls.Add(this.txtSecondSnack);
-            this.groupBox1.Controls.Add(this.txtLunch);
-            this.groupBox1.Controls.Add(this.txtFirstSnack);
-            this.groupBox1.Controls.Add(this.txtBreakFast);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel19);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel18);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel17);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel16);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel15);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel14);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel13);
-            this.groupBox1.Controls.Add(this.lblFirstSnack);
-            this.groupBox1.Controls.Add(this.lblThirdSnack);
-            this.groupBox1.Controls.Add(this.lblMorning);
-            this.groupBox1.Controls.Add(this.lblEvening);
-            this.groupBox1.Controls.Add(this.lblSecondSnack);
-            this.groupBox1.Controls.Add(this.lblAfternoon);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel7);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel1);
-            this.groupBox1.Controls.Add(this.dtpArchiveStartDate);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel4);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel6);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel3);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel2);
-            this.groupBox1.Controls.Add(this.guna2HtmlLabel5);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(519, 597);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.gbReport.Controls.Add(this.lblToDate);
+            this.gbReport.Controls.Add(this.cmbDateTo);
+            this.gbReport.Controls.Add(this.btnGet);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel25);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel26);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel24);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel23);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel22);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel21);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel20);
+            this.gbReport.Controls.Add(this.txtTotalCalory);
+            this.gbReport.Controls.Add(this.txtThirdSnack);
+            this.gbReport.Controls.Add(this.txtDinner);
+            this.gbReport.Controls.Add(this.txtSecondSnack);
+            this.gbReport.Controls.Add(this.txtLunch);
+            this.gbReport.Controls.Add(this.txtFirstSnack);
+            this.gbReport.Controls.Add(this.txtBreakFast);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel19);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel18);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel17);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel16);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel15);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel14);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel13);
+            this.gbReport.Controls.Add(this.lblFirstSnack);
+            this.gbReport.Controls.Add(this.lblThirdSnack);
+            this.gbReport.Controls.Add(this.lblMorning);
+            this.gbReport.Controls.Add(this.lblEvening);
+            this.gbReport.Controls.Add(this.lblSecondSnack);
+            this.gbReport.Controls.Add(this.lblAfternoon);
+            this.gbReport.Controls.Add(this.lblSelectDate);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel1);
+            this.gbReport.Controls.Add(this.dtpArchiveStartDate);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel4);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel6);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel3);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel2);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel5);
+            this.gbReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gbReport.Location = new System.Drawing.Point(12, 12);
+            this.gbReport.Name = "gbReport";
+            this.gbReport.Size = new System.Drawing.Size(462, 597);
+            this.gbReport.TabIndex = 3;
+            this.gbReport.TabStop = false;
             // 
             // btnGet
             // 
@@ -201,11 +206,11 @@ namespace WeightGain.UI.UserForms
             this.btnGet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGet.ForeColor = System.Drawing.Color.White;
-            this.btnGet.Location = new System.Drawing.Point(371, 31);
+            this.btnGet.Location = new System.Drawing.Point(329, 14);
             this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(99, 36);
+            this.btnGet.Size = new System.Drawing.Size(117, 78);
             this.btnGet.TabIndex = 7;
             this.btnGet.Text = "Getir";
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
@@ -213,7 +218,7 @@ namespace WeightGain.UI.UserForms
             // guna2HtmlLabel25
             // 
             this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(273, 426);
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(277, 434);
             this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
             this.guna2HtmlLabel25.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel25.TabIndex = 6;
@@ -223,7 +228,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel26.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(428, 559);
+            this.guna2HtmlLabel26.Location = new System.Drawing.Point(404, 542);
             this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
             this.guna2HtmlLabel26.Size = new System.Drawing.Size(42, 22);
             this.guna2HtmlLabel26.TabIndex = 6;
@@ -232,7 +237,7 @@ namespace WeightGain.UI.UserForms
             // guna2HtmlLabel24
             // 
             this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(273, 499);
+            this.guna2HtmlLabel24.Location = new System.Drawing.Point(277, 507);
             this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
             this.guna2HtmlLabel24.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel24.TabIndex = 6;
@@ -241,7 +246,7 @@ namespace WeightGain.UI.UserForms
             // guna2HtmlLabel23
             // 
             this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(273, 352);
+            this.guna2HtmlLabel23.Location = new System.Drawing.Point(277, 360);
             this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
             this.guna2HtmlLabel23.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel23.TabIndex = 6;
@@ -250,7 +255,7 @@ namespace WeightGain.UI.UserForms
             // guna2HtmlLabel22
             // 
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(273, 285);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(277, 293);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel22.TabIndex = 6;
@@ -259,7 +264,7 @@ namespace WeightGain.UI.UserForms
             // guna2HtmlLabel21
             // 
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(273, 210);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(277, 218);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel21.TabIndex = 6;
@@ -268,7 +273,7 @@ namespace WeightGain.UI.UserForms
             // guna2HtmlLabel20
             // 
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(273, 139);
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(277, 147);
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel20.TabIndex = 6;
@@ -285,7 +290,7 @@ namespace WeightGain.UI.UserForms
             this.txtTotalCalory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalCalory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTotalCalory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalCalory.Location = new System.Drawing.Point(301, 548);
+            this.txtTotalCalory.Location = new System.Drawing.Point(277, 536);
             this.txtTotalCalory.Name = "txtTotalCalory";
             this.txtTotalCalory.PasswordChar = '\0';
             this.txtTotalCalory.PlaceholderText = "";
@@ -305,7 +310,7 @@ namespace WeightGain.UI.UserForms
             this.txtThirdSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThirdSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtThirdSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThirdSnack.Location = new System.Drawing.Point(146, 485);
+            this.txtThirdSnack.Location = new System.Drawing.Point(150, 493);
             this.txtThirdSnack.Name = "txtThirdSnack";
             this.txtThirdSnack.PasswordChar = '\0';
             this.txtThirdSnack.PlaceholderText = "";
@@ -325,7 +330,7 @@ namespace WeightGain.UI.UserForms
             this.txtDinner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDinner.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDinner.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDinner.Location = new System.Drawing.Point(146, 414);
+            this.txtDinner.Location = new System.Drawing.Point(150, 422);
             this.txtDinner.Name = "txtDinner";
             this.txtDinner.PasswordChar = '\0';
             this.txtDinner.PlaceholderText = "";
@@ -345,7 +350,7 @@ namespace WeightGain.UI.UserForms
             this.txtSecondSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSecondSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSecondSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSecondSnack.Location = new System.Drawing.Point(146, 343);
+            this.txtSecondSnack.Location = new System.Drawing.Point(150, 351);
             this.txtSecondSnack.Name = "txtSecondSnack";
             this.txtSecondSnack.PasswordChar = '\0';
             this.txtSecondSnack.PlaceholderText = "";
@@ -365,7 +370,7 @@ namespace WeightGain.UI.UserForms
             this.txtLunch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLunch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLunch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLunch.Location = new System.Drawing.Point(146, 272);
+            this.txtLunch.Location = new System.Drawing.Point(150, 280);
             this.txtLunch.Name = "txtLunch";
             this.txtLunch.PasswordChar = '\0';
             this.txtLunch.PlaceholderText = "";
@@ -385,7 +390,7 @@ namespace WeightGain.UI.UserForms
             this.txtFirstSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFirstSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFirstSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstSnack.Location = new System.Drawing.Point(146, 201);
+            this.txtFirstSnack.Location = new System.Drawing.Point(150, 209);
             this.txtFirstSnack.Name = "txtFirstSnack";
             this.txtFirstSnack.PasswordChar = '\0';
             this.txtFirstSnack.PlaceholderText = "";
@@ -405,7 +410,7 @@ namespace WeightGain.UI.UserForms
             this.txtBreakFast.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBreakFast.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBreakFast.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBreakFast.Location = new System.Drawing.Point(146, 130);
+            this.txtBreakFast.Location = new System.Drawing.Point(150, 138);
             this.txtBreakFast.Name = "txtBreakFast";
             this.txtBreakFast.PasswordChar = '\0';
             this.txtBreakFast.PlaceholderText = "";
@@ -418,7 +423,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(39, 559);
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(15, 544);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
             this.guna2HtmlLabel19.Size = new System.Drawing.Size(256, 22);
             this.guna2HtmlLabel19.TabIndex = 4;
@@ -428,7 +433,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(15, 497);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(19, 505);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(125, 17);
             this.guna2HtmlLabel18.TabIndex = 3;
@@ -438,7 +443,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(15, 424);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(19, 432);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(125, 17);
             this.guna2HtmlLabel17.TabIndex = 3;
@@ -448,7 +453,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(15, 350);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(19, 358);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             this.guna2HtmlLabel16.Size = new System.Drawing.Size(125, 17);
             this.guna2HtmlLabel16.TabIndex = 3;
@@ -458,7 +463,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(15, 283);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(19, 291);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(125, 17);
             this.guna2HtmlLabel15.TabIndex = 3;
@@ -468,7 +473,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(15, 210);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(19, 218);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             this.guna2HtmlLabel14.Size = new System.Drawing.Size(125, 17);
             this.guna2HtmlLabel14.TabIndex = 3;
@@ -478,7 +483,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(15, 139);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(19, 147);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             this.guna2HtmlLabel13.Size = new System.Drawing.Size(125, 17);
             this.guna2HtmlLabel13.TabIndex = 3;
@@ -488,7 +493,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblFirstSnack.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstSnack.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFirstSnack.Location = new System.Drawing.Point(128, 178);
+            this.lblFirstSnack.Location = new System.Drawing.Point(141, 184);
             this.lblFirstSnack.Name = "lblFirstSnack";
             this.lblFirstSnack.Size = new System.Drawing.Size(139, 17);
             this.lblFirstSnack.TabIndex = 2;
@@ -498,7 +503,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblThirdSnack.BackColor = System.Drawing.Color.Transparent;
             this.lblThirdSnack.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblThirdSnack.Location = new System.Drawing.Point(128, 462);
+            this.lblThirdSnack.Location = new System.Drawing.Point(141, 468);
             this.lblThirdSnack.Name = "lblThirdSnack";
             this.lblThirdSnack.Size = new System.Drawing.Size(139, 17);
             this.lblThirdSnack.TabIndex = 2;
@@ -508,7 +513,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblMorning.BackColor = System.Drawing.Color.Transparent;
             this.lblMorning.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMorning.Location = new System.Drawing.Point(128, 107);
+            this.lblMorning.Location = new System.Drawing.Point(141, 113);
             this.lblMorning.Name = "lblMorning";
             this.lblMorning.Size = new System.Drawing.Size(139, 17);
             this.lblMorning.TabIndex = 2;
@@ -518,7 +523,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblEvening.BackColor = System.Drawing.Color.Transparent;
             this.lblEvening.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEvening.Location = new System.Drawing.Point(128, 391);
+            this.lblEvening.Location = new System.Drawing.Point(141, 397);
             this.lblEvening.Name = "lblEvening";
             this.lblEvening.Size = new System.Drawing.Size(139, 17);
             this.lblEvening.TabIndex = 2;
@@ -528,7 +533,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblSecondSnack.BackColor = System.Drawing.Color.Transparent;
             this.lblSecondSnack.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSecondSnack.Location = new System.Drawing.Point(128, 320);
+            this.lblSecondSnack.Location = new System.Drawing.Point(141, 326);
             this.lblSecondSnack.Name = "lblSecondSnack";
             this.lblSecondSnack.Size = new System.Drawing.Size(139, 17);
             this.lblSecondSnack.TabIndex = 2;
@@ -538,49 +543,49 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblAfternoon.BackColor = System.Drawing.Color.Transparent;
             this.lblAfternoon.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAfternoon.Location = new System.Drawing.Point(128, 249);
+            this.lblAfternoon.Location = new System.Drawing.Point(141, 255);
             this.lblAfternoon.Name = "lblAfternoon";
             this.lblAfternoon.Size = new System.Drawing.Size(139, 17);
             this.lblAfternoon.TabIndex = 2;
             this.lblAfternoon.Text = "Öğünde Yenilen Besinler";
             // 
-            // guna2HtmlLabel7
+            // lblSelectDate
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(39, 39);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(74, 22);
-            this.guna2HtmlLabel7.TabIndex = 1;
-            this.guna2HtmlLabel7.Text = "Tarih Seç :";
+            this.lblSelectDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSelectDate.Location = new System.Drawing.Point(15, 22);
+            this.lblSelectDate.Name = "lblSelectDate";
+            this.lblSelectDate.Size = new System.Drawing.Size(74, 22);
+            this.lblSelectDate.TabIndex = 1;
+            this.lblSelectDate.Text = "Tarih Seç :";
             // 
             // dgvDataEntryDays
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataEntryDays.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvDataEntryDays.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataEntryDays.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvDataEntryDays.ColumnHeadersHeight = 4;
             this.dgvDataEntryDays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataEntryDays.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataEntryDays.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvDataEntryDays.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDataEntryDays.Location = new System.Drawing.Point(547, 39);
+            this.dgvDataEntryDays.Location = new System.Drawing.Point(480, 34);
             this.dgvDataEntryDays.Name = "dgvDataEntryDays";
             this.dgvDataEntryDays.RowHeadersVisible = false;
-            this.dgvDataEntryDays.Size = new System.Drawing.Size(453, 569);
+            this.dgvDataEntryDays.Size = new System.Drawing.Size(520, 574);
             this.dgvDataEntryDays.TabIndex = 4;
             this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -608,25 +613,58 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(547, 18);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(480, 14);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(126, 19);
             this.guna2HtmlLabel8.TabIndex = 5;
             this.guna2HtmlLabel8.Text = "Veri Girilen Günler :";
             // 
+            // cmbDateTo
+            // 
+            this.cmbDateTo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbDateTo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDateTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDateTo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbDateTo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbDateTo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbDateTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbDateTo.ItemHeight = 30;
+            this.cmbDateTo.Items.AddRange(new object[] {
+            "Günlük",
+            "Haftalık",
+            "Aylık",
+            "Yıllık"});
+            this.cmbDateTo.Location = new System.Drawing.Point(114, 56);
+            this.cmbDateTo.Name = "cmbDateTo";
+            this.cmbDateTo.Size = new System.Drawing.Size(201, 36);
+            this.cmbDateTo.StartIndex = 0;
+            this.cmbDateTo.TabIndex = 8;
+            // 
+            // lblToDate
+            // 
+            this.lblToDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblToDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToDate.Location = new System.Drawing.Point(15, 62);
+            this.lblToDate.Name = "lblToDate";
+            this.lblToDate.Size = new System.Drawing.Size(93, 22);
+            this.lblToDate.TabIndex = 9;
+            this.lblToDate.Text = "Tarih Aralığı:";
+            // 
             // ArchiveForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1016, 621);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.dgvDataEntryDays);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbReport);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ArchiveForm";
             this.Text = "ArchiveForm";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbReport.ResumeLayout(false);
+            this.gbReport.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataEntryDays)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -642,7 +680,7 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbReport;
         private Guna.UI2.WinForms.Guna2Button btnGet;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
@@ -671,8 +709,10 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2HtmlLabel lblEvening;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSecondSnack;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblAfternoon;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSelectDate;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDataEntryDays;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblToDate;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbDateTo;
     }
 }

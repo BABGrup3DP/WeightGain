@@ -62,7 +62,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblName.AutoSize = true;
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblName.Location = new System.Drawing.Point(6, 14);
+            this.lblName.Location = new System.Drawing.Point(40, 50);
             this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(88, 30);
@@ -73,7 +73,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblLastName.Location = new System.Drawing.Point(6, 60);
+            this.lblLastName.Location = new System.Drawing.Point(40, 96);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(120, 30);
@@ -84,7 +84,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblEmail.Location = new System.Drawing.Point(6, 106);
+            this.lblEmail.Location = new System.Drawing.Point(40, 142);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(159, 30);
@@ -95,7 +95,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblTelephone.Location = new System.Drawing.Point(6, 152);
+            this.lblTelephone.Location = new System.Drawing.Point(40, 188);
             this.lblTelephone.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(205, 30);
@@ -106,7 +106,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblBirthDate.AutoSize = true;
             this.lblBirthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblBirthDate.Location = new System.Drawing.Point(6, 199);
+            this.lblBirthDate.Location = new System.Drawing.Point(40, 235);
             this.lblBirthDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblBirthDate.Name = "lblBirthDate";
             this.lblBirthDate.Size = new System.Drawing.Size(181, 30);
@@ -117,7 +117,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblWeight.AutoSize = true;
             this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblWeight.Location = new System.Drawing.Point(6, 244);
+            this.lblWeight.Location = new System.Drawing.Point(40, 280);
             this.lblWeight.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(94, 30);
@@ -128,7 +128,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblHeight.AutoSize = true;
             this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblHeight.Location = new System.Drawing.Point(6, 290);
+            this.lblHeight.Location = new System.Drawing.Point(40, 326);
             this.lblHeight.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblHeight.Name = "lblHeight";
             this.lblHeight.Size = new System.Drawing.Size(105, 30);
@@ -147,7 +147,7 @@ namespace WeightGain.UI.UserForms
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Location = new System.Drawing.Point(235, 14);
+            this.txtFirstName.Location = new System.Drawing.Point(269, 50);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.PasswordChar = '\0';
@@ -169,7 +169,7 @@ namespace WeightGain.UI.UserForms
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(235, 60);
+            this.txtLastName.Location = new System.Drawing.Point(269, 96);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
@@ -191,7 +191,7 @@ namespace WeightGain.UI.UserForms
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(235, 106);
+            this.txtEmail.Location = new System.Drawing.Point(269, 142);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -212,7 +212,7 @@ namespace WeightGain.UI.UserForms
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(235, 152);
+            this.txtPhone.Location = new System.Drawing.Point(269, 188);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtPhone.MaxLength = 11;
             this.txtPhone.Name = "txtPhone";
@@ -232,7 +232,7 @@ namespace WeightGain.UI.UserForms
             this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthDate.Location = new System.Drawing.Point(235, 198);
+            this.dtpBirthDate.Location = new System.Drawing.Point(269, 234);
             this.dtpBirthDate.MaxDate = new System.DateTime(2022, 9, 23, 0, 0, 0, 0);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
@@ -248,7 +248,7 @@ namespace WeightGain.UI.UserForms
             this.nudHeight.DecimalPlaces = 1;
             this.nudHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nudHeight.Location = new System.Drawing.Point(235, 290);
+            this.nudHeight.Location = new System.Drawing.Point(269, 326);
             this.nudHeight.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -266,7 +266,7 @@ namespace WeightGain.UI.UserForms
             this.nudWeight.DecimalPlaces = 2;
             this.nudWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nudWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(116)))), ((int)(((byte)(196)))));
-            this.nudWeight.Location = new System.Drawing.Point(235, 244);
+            this.nudWeight.Location = new System.Drawing.Point(269, 280);
             this.nudWeight.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -284,7 +284,7 @@ namespace WeightGain.UI.UserForms
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(235, 423);
+            this.btnSave.Location = new System.Drawing.Point(269, 459);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(412, 53);
             this.btnSave.TabIndex = 12;
@@ -303,7 +303,7 @@ namespace WeightGain.UI.UserForms
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(235, 336);
+            this.txtPassword.Location = new System.Drawing.Point(269, 372);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -317,7 +317,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblPassword.Location = new System.Drawing.Point(6, 336);
+            this.lblPassword.Location = new System.Drawing.Point(40, 372);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(93, 30);
@@ -336,7 +336,7 @@ namespace WeightGain.UI.UserForms
             this.txtPassword2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(118)))), ((int)(((byte)(195)))));
             this.txtPassword2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword2.Location = new System.Drawing.Point(235, 382);
+            this.txtPassword2.Location = new System.Drawing.Point(269, 418);
             this.txtPassword2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.PasswordChar = '\0';
@@ -349,7 +349,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.label2.Location = new System.Drawing.Point(6, 382);
+            this.label2.Location = new System.Drawing.Point(40, 418);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 30);
@@ -378,14 +378,15 @@ namespace WeightGain.UI.UserForms
             this.pnlProfile.Controls.Add(this.txtLastName);
             this.pnlProfile.Controls.Add(this.txtPhone);
             this.pnlProfile.Controls.Add(this.txtEmail);
-            this.pnlProfile.Location = new System.Drawing.Point(12, 12);
+            this.pnlProfile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlProfile.Location = new System.Drawing.Point(0, 0);
             this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(691, 629);
+            this.pnlProfile.Size = new System.Drawing.Size(739, 676);
             this.pnlProfile.TabIndex = 17;
             // 
             // pbStr
             // 
-            this.pbStr.Location = new System.Drawing.Point(235, 368);
+            this.pbStr.Location = new System.Drawing.Point(269, 404);
             this.pbStr.Name = "pbStr";
             this.pbStr.Size = new System.Drawing.Size(412, 11);
             this.pbStr.TabIndex = 18;
@@ -397,8 +398,8 @@ namespace WeightGain.UI.UserForms
             // 
             // ProfileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(739, 676);
             this.Controls.Add(this.pnlProfile);

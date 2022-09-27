@@ -114,7 +114,7 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var mealTimeList = _mealTimes.Where(x => x.MealTimeDate == startDate && x.UserId == userId && x.Products != null).ToList();
+                var mealTimeList = _mealTimes.Where(x => x.MealTimeDate == startDate && x.UserId == userId).ToList();
                 return mealTimeList.Any() ? mealTimeList : null;
             }
             catch
