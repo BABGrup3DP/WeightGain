@@ -229,7 +229,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(908, 500);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1229, 636);
             this.Controls.Add(this.lblSlogan);
             this.Controls.Add(this.leftPanelMenuLogo);
             this.Controls.Add(this.txtGetCalory);

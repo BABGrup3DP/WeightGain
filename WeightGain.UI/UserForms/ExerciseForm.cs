@@ -1,10 +1,8 @@
 ﻿using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
-using WeightGain.DATA.Helpers;
 using WeightGain.UI.Extensions;
 using WeightGain.UI.Properties;
 
@@ -24,27 +22,18 @@ namespace WeightGain.UI.UserForms
 
         private void ExerciseForm_Load(object sender, EventArgs e)
         {
-            List<ExerciseEnum> listEnum = _exerciseRepository.GetExercises();
-            foreach (ExerciseEnum exercise in listEnum)
+            var listEnum = _exerciseRepository.GetExercises();
+            foreach (var exercise in listEnum)
             {
-                switch (exercise)
-                {
-                    case ExerciseEnum.Bicycle:
-                        cmbExercies.Items.Add("Bisiklet");
-                        break;
-                    case ExerciseEnum.JumpRope:
-                        cmbExercies.Items.Add("İp Atlama");
-                        break;
-                    case ExerciseEnum.Run:
-                        cmbExercies.Items.Add("Koşu");
-                        break;
-                    case ExerciseEnum.Walk:
-                        cmbExercies.Items.Add("Yürüyüş");
-                        break;
-                    case ExerciseEnum.Swim:
-                        cmbExercies.Items.Add("Yüzme");
-                        break;
-                }
+                if (exercise == ExerciseEnum.Bicycle)
+                    cmbExercies.Items.Add("Bisiklet");
+                else if (exercise == ExerciseEnum.JumpRope)
+                    cmbExercies.Items.Add("İp Atlama");
+                else if (exercise == ExerciseEnum.Run)
+                    cmbExercies.Items.Add("Koşu");
+                else if (exercise == ExerciseEnum.Walk)
+                    cmbExercies.Items.Add("Yürüyüş");
+                else if (exercise == ExerciseEnum.Swim) cmbExercies.Items.Add("Yüzme");
             }
 
             cmbExercies.SelectedIndex = 0;
@@ -60,8 +49,8 @@ namespace WeightGain.UI.UserForms
 
         private void btnCalculateCal_Click(object sender, EventArgs e)
         {
-            decimal weight = _logginedUser.Weight;
-            decimal parCoefficient = 1.1m;
+            var weight = _logginedUser.Weight;
+            var parCoefficient = 1.1m;
             switch (cmbExercies.SelectedIndex)
             {
                 case 0:
@@ -100,10 +89,11 @@ namespace WeightGain.UI.UserForms
             {
                 if (_exerciseRepository.Insert(new Exercise
                 {
-                    Duration = (byte)nudExerciseTime.Value,
+                    Duration = (int)nudExerciseTime.Value,
                     ExerciseType = (ExerciseEnum)exerciseType,
-                    ExerciseDate = DateTime.Now,
-                    UserId = _logginedUser.Id
+                    ExerciseDate = dtpExerciseDate.Value,
+                    UserId = _logginedUser.Id,
+                    TotalCal = Convert.ToDouble(txtExerciseCal.Text)
                 }))
                 {
                     var messageDialogSuccess = new Guna2MessageDialog
@@ -113,6 +103,9 @@ namespace WeightGain.UI.UserForms
                     };
                     messageDialogSuccess.Show();
                     RefreshDataGridView();
+                    cmbExercies.SelectedIndex = 0;
+                    nudExerciseTime.Value = 1;
+                    txtExerciseCal.Text = string.Empty;
                 }
                 else
                 {
@@ -131,46 +124,55 @@ namespace WeightGain.UI.UserForms
             dgvShowExercise.AutoGenerateColumns = false;
             dgvShowExercise.DataSource = null;
             dgvShowExercise.DataSource = _exerciseRepository.GetByUserId(_logginedUser.Id);
-            if (dgvShowExercise.Columns.Count == 0)
+            if (dgvShowExercise.Columns.Count != 0) return;
+            dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
             {
-                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
-                {
-                    DataPropertyName = "ExerciseId",
-                    HeaderText = "ID",
-                    Name = "ExerciseId",
-                    ReadOnly = true,
-                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
-                });
-                dgvShowExercise.Columns[0].Visible = false;
-                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
-                {
-                    DataPropertyName = "ExerciseType",
-                    HeaderText = "Egzersiz Tipi",
-                    Name = "ExerciseType",
-                    Width = 200,
-                    ReadOnly = true,
-                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
-                    CellTemplate = new ExerciseTypeEnumTextBoxCell()
-                });
-                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
-                {
-                    DataPropertyName = "Duration",
-                    HeaderText = "Toplam Süre",
-                    Name = "Duration",
-                    Width = 100,
-                    ReadOnly = true,
-                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
-                });
-                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
-                {
-                    DataPropertyName = "ExerciseDate",
-                    HeaderText = "Egsersiz Tarihi",
-                    Name = "ExersizeDate",
-                    Width = 100,
-                    ReadOnly = true,
-                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
-                });
-            }
+                DataPropertyName = "ExerciseId",
+                HeaderText = "ID",
+                Name = "ExerciseId",
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+            });
+            dgvShowExercise.Columns[0].Visible = false;
+            dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "ExerciseType",
+                HeaderText = "Egzersiz Tipi",
+                Name = "ExerciseType",
+                Width = 200,
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                CellTemplate = new ExerciseTypeEnumTextBoxCell()
+            });
+            dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Duration",
+                HeaderText = "Toplam Süre (Dakika)",
+                Name = "Duration",
+                Width = 100,
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+            });
+            dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "TotalCal",
+                HeaderText = "Toplam Yakılan Kalori",
+                Name = "TotalCal",
+                Width = 100,
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "0.00##" }
+            });
+            dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "ExerciseDate",
+                HeaderText = "Egzersiz Tarihi",
+                Name = "ExersizeDate",
+                Width = 100,
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "dd.MM.yyyy" }
+            });
         }
 
         private void btnDeleteExercise_Click(object sender, EventArgs e)
@@ -182,16 +184,14 @@ namespace WeightGain.UI.UserForms
                 foreach (var selectedRow in selectedRows)
                 {
                     var selectedExercise = (Exercise)((DataGridViewRow)selectedRow).DataBoundItem;
-                    if (selectedExercise != null)
+                    if (selectedExercise == null) continue;
+                    if (_exerciseRepository.Delete(selectedExercise.ExerciseId))
                     {
-                        if (_exerciseRepository.Delete(selectedExercise.ExerciseId))
-                        {
-                            dialogMessage += $"{selectedExercise.ExerciseId} başarıyla silindi.\n";
-                        }
-                        else
-                        {
-                            dialogMessage += $"{selectedExercise.ExerciseId} silinirken hata oluştu.\n";
-                        }
+                        dialogMessage += $"{selectedExercise.ExerciseId} başarıyla silindi.\n";
+                    }
+                    else
+                    {
+                        dialogMessage += $"{selectedExercise.ExerciseId} silinirken hata oluştu.\n";
                     }
                 }
                 var messageDialogSuccess = new Guna2MessageDialog
@@ -215,41 +215,39 @@ namespace WeightGain.UI.UserForms
 
         private void dgvShowExercise_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex != 2) return;
+            var userId = dgvShowExercise.Rows[e.RowIndex].Cells[4].Value;
+            var newExerciseDate = dgvShowExercise.Rows[e.RowIndex].Cells[3].Value;
+            var newExerciseDuration = dgvShowExercise.Rows[e.RowIndex].Cells[2].Value;
+            var newExerciseType = dgvShowExercise.Rows[e.RowIndex].Cells[1].Value;
+            var exerciseId = dgvShowExercise.Rows[e.RowIndex].Cells[0].Value;
+            var exercise = new Exercise
             {
-                var userId = dgvShowExercise.Rows[e.RowIndex].Cells[4].Value;
-                var newExerciseDate = dgvShowExercise.Rows[e.RowIndex].Cells[3].Value;
-                var newExerciseDuration = dgvShowExercise.Rows[e.RowIndex].Cells[2].Value;
-                var newExerciseType = dgvShowExercise.Rows[e.RowIndex].Cells[1].Value;
-                var exerciseId = dgvShowExercise.Rows[e.RowIndex].Cells[0].Value;
-                var exercise = new Exercise
-                {
-                    ExerciseId = (int)exerciseId,
-                    ExerciseType = (ExerciseEnum)newExerciseType,
-                    Duration = (byte)newExerciseDuration,
-                    ExerciseDate = (DateTime)newExerciseDate,
-                    UserId = (int)userId
-                };
+                ExerciseId = (int)exerciseId,
+                ExerciseType = (ExerciseEnum)newExerciseType,
+                Duration = (byte)newExerciseDuration,
+                ExerciseDate = (DateTime)newExerciseDate,
+                UserId = (int)userId
+            };
 
-                if (_exerciseRepository.Update(exercise))
+            if (_exerciseRepository.Update(exercise))
+            {
+                var messageDialogSuccess = new Guna2MessageDialog
                 {
-                    var messageDialogSuccess = new Guna2MessageDialog
-                    {
-                        Text = "Egzersiz başarıyla düzenlendi.",
-                        Caption = Resources.ProgramTitle
-                    };
-                    messageDialogSuccess.Show();
-                    RefreshDataGridView();
-                }
-                else
+                    Text = "Egzersiz başarıyla düzenlendi.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogSuccess.Show();
+                RefreshDataGridView();
+            }
+            else
+            {
+                var messageDialogError = new Guna2MessageDialog
                 {
-                    var messageDialogError = new Guna2MessageDialog
-                    {
-                        Text = "Egzersiz düzenlenirken hata oluştu.",
-                        Caption = Resources.ProgramTitle
-                    };
-                    messageDialogError.Show();
-                }
+                    Text = "Egzersiz düzenlenirken hata oluştu.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogError.Show();
             }
         }
 
