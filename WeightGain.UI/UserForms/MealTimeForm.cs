@@ -18,7 +18,7 @@ namespace WeightGain.UI.UserForms
         private readonly CategoryRepository _categoryRepository;
         private readonly ProductRepository _productRepository;
         private readonly User _logginedUser;
-        private MealTimeEnum _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
+        private MealTimeEnum _selectedMealTime = MealTimeEnum.Breakfast;
         private readonly List<Category> _selectedCategories;
         private readonly List<ProductWithPortion> _productWithPortions;
         private bool _resizing;
@@ -94,22 +94,22 @@ namespace WeightGain.UI.UserForms
             switch (((Button)sender).Tag)
             {
                 case "breakfast":
-                    _selectedMealTime = MealTimeEnum.Sabah_Kahvaltısı;
+                    _selectedMealTime = MealTimeEnum.Breakfast;
                     break;
                 case "firstsnack":
-                    _selectedMealTime = MealTimeEnum.Birinci_Ara_öğün;
+                    _selectedMealTime = MealTimeEnum.FirstSnack;
                     break;
                 case "lunch":
-                    _selectedMealTime = MealTimeEnum.Öğle_Yemeği;
+                    _selectedMealTime = MealTimeEnum.Lunch;
                     break;
                 case "secondsnack":
-                    _selectedMealTime = MealTimeEnum.İkinci_Ara_Öğün;
+                    _selectedMealTime = MealTimeEnum.SecondSnack;
                     break;
                 case "dinner":
-                    _selectedMealTime = MealTimeEnum.Akşam_Yemeği;
+                    _selectedMealTime = MealTimeEnum.Dinner;
                     break;
                 case "thirdsnack":
-                    _selectedMealTime = MealTimeEnum.Üçüncü_Ara_Öğün;
+                    _selectedMealTime = MealTimeEnum.LastSnack;
                     break;
             }
         }
@@ -142,7 +142,6 @@ namespace WeightGain.UI.UserForms
                 }
             }
             lwProducts.SmallImageList = lwImageList;
-            //lwProducts.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void RefreshSelectedProductList()

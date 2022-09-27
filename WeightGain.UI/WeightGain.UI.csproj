@@ -104,6 +104,7 @@
     <Compile Include="AdminForms\UserAddFormAdmin.Designer.cs">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\ExerciseTypeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\TabControlEx.cs">
       <SubType>Component</SubType>
     </Compile>

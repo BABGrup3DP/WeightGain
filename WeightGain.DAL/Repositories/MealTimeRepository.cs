@@ -74,6 +74,7 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
+                if (mealTime.Products == null) mealTime.Products = new List<Product>();
                 #region Öğüne Ürün Ekleme
                 foreach (var productPortions in productWithPortions)
                 {
@@ -127,9 +128,7 @@ namespace WeightGain.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public List<MealTimeEnum> GetMealTimes()
-        {
-            return Enum.GetValues(typeof(MealTimeEnum)).Cast<MealTimeEnum>().ToList();
-        }
+        public List<MealTimeEnum> GetMealTimes() => Enum.GetValues(typeof(MealTimeEnum)).Cast<MealTimeEnum>().ToList();
+
     }
 }

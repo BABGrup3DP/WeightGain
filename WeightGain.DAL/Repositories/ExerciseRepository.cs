@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
@@ -85,15 +84,7 @@ namespace WeightGain.DAL.Repositories
 
         public Exercise GetById(int exerciseId) => _exercises.Find(exerciseId);
 
-        public List<string> GetExercises()
-        {
-            var exercises = new List<string>();
-            foreach (var exerciseName in Enum.GetValues(typeof(ExerciseEnum)))
-            {
-                exercises.Add(exerciseName.ToString().Replace("_", " "));
-            }
-            return exercises;
-        }
+        public List<ExerciseEnum> GetExercises() => Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();
 
     }
 }

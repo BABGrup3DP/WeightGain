@@ -1,8 +1,11 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
+using WeightGain.UI.Extensions;
 using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.UserForms
@@ -21,7 +24,30 @@ namespace WeightGain.UI.UserForms
 
         private void ExerciseForm_Load(object sender, EventArgs e)
         {
-            cmbExercies.DataSource = _exerciseRepository.GetExercises();
+            List<ExerciseEnum> listEnum = _exerciseRepository.GetExercises();
+            foreach (ExerciseEnum exercise in listEnum)
+            {
+                switch (exercise)
+                {
+                    case ExerciseEnum.Bicycle:
+                        cmbExercies.Items.Add("Bisiklet");
+                        break;
+                    case ExerciseEnum.JumpRope:
+                        cmbExercies.Items.Add("İp Atlama");
+                        break;
+                    case ExerciseEnum.Run:
+                        cmbExercies.Items.Add("Koşu");
+                        break;
+                    case ExerciseEnum.Walk:
+                        cmbExercies.Items.Add("Yürüyüş");
+                        break;
+                    case ExerciseEnum.Swim:
+                        cmbExercies.Items.Add("Yüzme");
+                        break;
+                }
+            }
+
+            cmbExercies.SelectedIndex = 0;
             var weight = _logginedUser.Weight;
             lblCalBicycleV.Text = (weight * 5.6m * 1).ToString("F");
             lblCalJumpingRopeV.Text = (weight * 5.8m * 1).ToString("F");
@@ -54,12 +80,22 @@ namespace WeightGain.UI.UserForms
                     parCoefficient = 9.0m;
                     break;
             }
-            txtExerciseCal.Text = Convert.ToString(weight * parCoefficient * nudExerciseTime.Value / 60);
+            txtExerciseCal.Text = (weight * parCoefficient * nudExerciseTime.Value / 60).ToString("F");
         }
 
         private void btnAddExercise_Click(object sender, EventArgs e)
         {
             var exerciseType = cmbExercies.SelectedIndex + 1;
+            if (exerciseType == 0)
+            {
+                var messageDialogSuccess = new Guna2MessageDialog
+                {
+                    Text = "Egzersiz tipi yanlış seçilmiş.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogSuccess.Show();
+                return;
+            }
             if (!string.IsNullOrEmpty(txtExerciseCal.Text))
             {
                 if (_exerciseRepository.Insert(new Exercise
@@ -78,21 +114,63 @@ namespace WeightGain.UI.UserForms
                     messageDialogSuccess.Show();
                     RefreshDataGridView();
                 }
+                else
+                {
+                    var messageDialogSuccess = new Guna2MessageDialog
+                    {
+                        Text = "Egzersiz eklenirken hata oluştu.",
+                        Caption = Resources.ProgramTitle
+                    };
+                    messageDialogSuccess.Show();
+                }
             }
-            RefreshDataGridView();
         }
+
         public void RefreshDataGridView()
         {
+            dgvShowExercise.AutoGenerateColumns = false;
+            dgvShowExercise.DataSource = null;
             dgvShowExercise.DataSource = _exerciseRepository.GetByUserId(_logginedUser.Id);
-            dgvShowExercise.Columns[0].ReadOnly = true;
-            dgvShowExercise.Columns[0].HeaderText = "Egzersiz ID";
-            dgvShowExercise.Columns[1].HeaderText = "Egzersiz Tipi";
-            dgvShowExercise.Columns[2].HeaderText = "Egzersiz Süresi(dak)";
-            dgvShowExercise.Columns[3].HeaderText = "Egzersiz Tarihi";
-            //dgvShowExercise.Columns[4].HeaderText = "Kullanıcı ID";
-            dgvShowExercise.Columns[4].Visible = false;
-            dgvShowExercise.Columns[5].Visible = false;
-            dgvShowExercise.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            if (dgvShowExercise.Columns.Count == 0)
+            {
+                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "ExerciseId",
+                    HeaderText = "ID",
+                    Name = "ExerciseId",
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvShowExercise.Columns[0].Visible = false;
+                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "ExerciseType",
+                    HeaderText = "Egzersiz Tipi",
+                    Name = "ExerciseType",
+                    Width = 200,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    CellTemplate = new ExerciseTypeEnumTextBoxCell()
+                });
+                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Duration",
+                    HeaderText = "Toplam Süre",
+                    Name = "Duration",
+                    Width = 100,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvShowExercise.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "ExerciseDate",
+                    HeaderText = "Egsersiz Tarihi",
+                    Name = "ExersizeDate",
+                    Width = 100,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+            }
         }
 
         private void btnDeleteExercise_Click(object sender, EventArgs e)
@@ -174,5 +252,6 @@ namespace WeightGain.UI.UserForms
                 }
             }
         }
+
     }
 }
