@@ -139,6 +139,20 @@ namespace WeightGain.UI
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            lblSlogan.Text = Resources.ProgramSlogan;
+            if (!Helper.CheckInternetConnection())
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "İnternete bağlanılamıyor. Programı kullanmak için internete bağlı olmalısınız.",
+                    Caption = Resources.ProgramTitle,
+                    Buttons = MessageDialogButtons.OK,
+                };
+                if (messageDialogError.Show() == DialogResult.OK)
+                    Close();
+
+            }
+
             txtEmailPhone.Focus();
             if (!string.IsNullOrEmpty(Settings.Default.emailphone) && !string.IsNullOrEmpty(Settings.Default.password))
             {

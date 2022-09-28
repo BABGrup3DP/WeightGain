@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
+using WeightGain.UI.Properties;
 
 namespace WeightGain.UI
 {
@@ -97,7 +98,7 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "KVKK koşullarını okuyup kabul etmeniz gerekmektedir.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
                 return;
@@ -108,6 +109,7 @@ namespace WeightGain.UI
             var telephone = txtPhoneNumber.Text.Trim();
             var password = txtPassword.Text.Trim();
             var birthDate = dtpBirthDate.Value;
+            var age = DateTime.Now.Year - birthDate.Year;
             var weight = nudWeight.Value;
             var height = nudHeight.Value;
 
@@ -116,7 +118,7 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
                 return;
@@ -129,7 +131,7 @@ namespace WeightGain.UI
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Lütfen mail adresinizi kontrol edin.",
-                        Caption = Properties.Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle
                     };
                     messageDialogError.Show();
                     return;
@@ -141,7 +143,7 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Girdiğiniz şifre güvenlik açısından çok zayıf. Lütfen özel karakter, büyük harf girmeyi ve şifre uzunluğunu fazla tutmayı deneyin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
                 return;
@@ -151,17 +153,28 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Kilo ve boy değerlerini kontrol edin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
                 return;
             }
-            if(telephone.Length != 11)
+            if (telephone.Length != 11)
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Telefon numarası 11 haneli olmalıdır.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+                return;
+            }
+
+            if (age < 19 || age > 24)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Üzgünüm. Program 19-24 yaş arası için uygundur.",
+                    Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
                 return;
@@ -185,7 +198,7 @@ namespace WeightGain.UI
                     var successDialog = new Guna2MessageDialog
                     {
                         Text = "Başarıyla kayıt oldunuz. Artık giriş yapabilirsiniz.",
-                        Caption = Properties.Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle
                     };
                     successDialog.Show();
                 }
@@ -195,7 +208,7 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Hata oluştu. Girilen değerleri lütfen kontrol edin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
             }
@@ -203,6 +216,18 @@ namespace WeightGain.UI
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
+            lblSlogan.Text = Resources.ProgramSlogan;
+            if (!Helper.CheckInternetConnection())
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "İnternete bağlanılamıyor. Programı kullanmak için internete bağlı olmalısınız.",
+                    Caption = Resources.ProgramTitle,
+                    Buttons = MessageDialogButtons.OK,
+                };
+                if (messageDialogError.Show() == DialogResult.OK)
+                    Close();
+            }
             txtName.Focus();
         }
 

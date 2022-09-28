@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -10,6 +11,12 @@ namespace WeightGain.DATA.Helpers
 {
     public class Helper
     {
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int description, int reservedValue);
+        public static bool CheckInternetConnection()
+        {
+            return InternetGetConnectedState(out int desc, 0);
+        }
 
         public static byte[] GetImageBytes(string nameOfFile)
         {
@@ -57,7 +64,7 @@ namespace WeightGain.DATA.Helpers
             }
             return true;
         }
-        
+
         /// <summary>
         /// Groupbox içerisindeki kontrollerin uygun olup olmadığını kontrol ederi.
         /// </summary>
