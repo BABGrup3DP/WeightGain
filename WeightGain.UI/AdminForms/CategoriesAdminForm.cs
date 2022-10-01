@@ -111,36 +111,34 @@ namespace WeightGain.UI.AdminForms
 
         private void dgvCategories_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex != 2) return;
+            var newDescription = dgvCategories.Rows[e.RowIndex].Cells[2].Value;
+            var newcategoryName = dgvCategories.Rows[e.RowIndex].Cells[1].Value;
+            var categoryId = dgvCategories.Rows[e.RowIndex].Cells[0].Value;
+            var category = new Category
             {
-                var newDescription = dgvCategories.Rows[e.RowIndex].Cells[2].Value;
-                var newcategoryName = dgvCategories.Rows[e.RowIndex].Cells[1].Value;
-                var categoryId = dgvCategories.Rows[e.RowIndex].Cells[0].Value;
-                var category = new Category
+                CategoryId = (int)categoryId,
+                Name=(string)newcategoryName,
+                Description = newDescription == null ? "" : newDescription.ToString()
+            };
+            if (_categoryRepository.Update(category))
+            {
+                var messageDialogSuccess = new Guna2MessageDialog
                 {
-                    CategoryId = (int)categoryId,
-                    Name=(string)newcategoryName,
-                    Description = newDescription.ToString()
+                    Text = "Kategori başarıyla düzenlendi.",
+                    Caption = Resources.ProgramTitle
                 };
-                if (_categoryRepository.Update(category))
+                messageDialogSuccess.Show();
+                RefreshDataGridView();
+            }
+            else
+            {
+                var messageDialogError = new Guna2MessageDialog
                 {
-                    var messageDialogSuccess = new Guna2MessageDialog
-                    {
-                        Text = "Kategori başarıyla düzenlendi.",
-                        Caption = Resources.ProgramTitle
-                    };
-                    messageDialogSuccess.Show();
-                    RefreshDataGridView();
-                }
-                else
-                {
-                    var messageDialogError = new Guna2MessageDialog
-                    {
-                        Text = "Kategori düzenlenirken hata oluştu.",
-                        Caption = Resources.ProgramTitle
-                    };
-                    messageDialogError.Show();
-                }
+                    Text = "Kategori düzenlenirken hata oluştu.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogError.Show();
             }
         }
     }

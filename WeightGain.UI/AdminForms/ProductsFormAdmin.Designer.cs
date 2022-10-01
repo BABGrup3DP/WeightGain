@@ -69,7 +69,6 @@ namespace WeightGain.UI.AdminForms
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProducts.ColumnHeadersHeight = 20;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -98,7 +97,7 @@ namespace WeightGain.UI.AdminForms
             this.dgvProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dgvProducts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProducts.ThemeStyle.HeaderStyle.Height = 20;
             this.dgvProducts.ThemeStyle.ReadOnly = false;
             this.dgvProducts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -219,7 +218,7 @@ namespace WeightGain.UI.AdminForms
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(19, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.Size = new System.Drawing.Size(127, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ürün Kategorisi: ";
             // 
@@ -229,7 +228,7 @@ namespace WeightGain.UI.AdminForms
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(19, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 25);
+            this.label1.Size = new System.Drawing.Size(147, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ürün Kalori Değeri: ";
             // 
@@ -239,7 +238,7 @@ namespace WeightGain.UI.AdminForms
             this.lblProductScale.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProductScale.Location = new System.Drawing.Point(19, 51);
             this.lblProductScale.Name = "lblProductScale";
-            this.lblProductScale.Size = new System.Drawing.Size(170, 25);
+            this.lblProductScale.Size = new System.Drawing.Size(133, 20);
             this.lblProductScale.TabIndex = 1;
             this.lblProductScale.Text = "Ürün Ölçü Birimi: ";
             // 
@@ -249,7 +248,7 @@ namespace WeightGain.UI.AdminForms
             this.lblProductName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProductName.Location = new System.Drawing.Point(19, 14);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(103, 25);
+            this.lblProductName.Size = new System.Drawing.Size(80, 20);
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Ürün Adı: ";
             // 
@@ -270,7 +269,7 @@ namespace WeightGain.UI.AdminForms
             // 
             // ProductsFormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1147, 644);
             this.Controls.Add(this.btnDeleteProduct);
