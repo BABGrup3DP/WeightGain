@@ -63,7 +63,7 @@ namespace WeightGain.UI.UserForms
             var newMealTime = new MealTime
             {
                 MealTimeType = _selectedMealTime,
-                MealTimeDescription = "",
+                MealTimeDescription = txtDescription.Text.Trim(),
                 MealTimeDate = mealTimeDate,
                 UserId = _logginedUser.Id,
             };
