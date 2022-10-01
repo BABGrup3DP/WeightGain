@@ -13,7 +13,7 @@ namespace WeightGain.UI
     public partial class LoginForm : Form
     {
         private readonly UserRepository _userRepository;
-        private bool showPassword = false;
+        private bool _showPassword;
         public LoginForm()
         {
             InitializeComponent();
@@ -165,8 +165,8 @@ namespace WeightGain.UI
 
         private void txtPassword_IconRightClick(object sender, EventArgs e)
         {
-            showPassword = !showPassword;
-            txtPassword.PasswordChar = showPassword ? '\0' : '*';
+            _showPassword = !_showPassword;
+            txtPassword.PasswordChar = _showPassword ? '\0' : '*';
         }
 
         private void lblSlogan_Click(object sender, EventArgs e)

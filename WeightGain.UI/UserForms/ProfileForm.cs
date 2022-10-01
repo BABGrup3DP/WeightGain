@@ -12,6 +12,10 @@ namespace WeightGain.UI.UserForms
     {
         private readonly UserRepository _userRepository;
         private readonly User _logginedUser;
+        private bool _showPassword;
+        private bool _showPassword2;
+        
+
         public ProfileForm(UserRepository userRepository, User logginedUser)
         {
             InitializeComponent();
@@ -179,6 +183,18 @@ namespace WeightGain.UI.UserForms
                         break;
                 }
             }
+        }
+
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            _showPassword = !_showPassword;
+            txtPassword.PasswordChar = _showPassword ? '\0' : '*';
+        }
+
+        private void txtPassword2_IconRightClick(object sender, EventArgs e)
+        {
+            _showPassword2 = !_showPassword2;
+            txtPassword2.PasswordChar = _showPassword2 ? '\0' : '*';
         }
     }
 }
