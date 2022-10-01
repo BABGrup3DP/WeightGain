@@ -616,7 +616,7 @@ namespace WeightGain.UI.UserForms
             this.dgvDataEntryDays.Location = new System.Drawing.Point(480, 34);
             this.dgvDataEntryDays.Name = "dgvDataEntryDays";
             this.dgvDataEntryDays.RowHeadersVisible = false;
-            this.dgvDataEntryDays.Size = new System.Drawing.Size(491, 395);
+            this.dgvDataEntryDays.Size = new System.Drawing.Size(520, 395);
             this.dgvDataEntryDays.TabIndex = 4;
             this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.Font = null;
