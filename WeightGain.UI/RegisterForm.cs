@@ -61,19 +61,19 @@ namespace WeightGain.UI
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'A' || e.KeyChar > 'D') && (e.KeyChar < 'a' || e.KeyChar > 'd') && e.KeyChar != 8)
+            if ((e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar < 'a' || e.KeyChar > 'z') && e.KeyChar != 8)
                 e.Handled = true;
         }
 
         private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'A' || e.KeyChar > 'D') && (e.KeyChar < 'a' || e.KeyChar > 'd') && e.KeyChar != 8)
+            if ((e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar < 'a' || e.KeyChar > 'z') && e.KeyChar != 8)
                 e.Handled = true;
         }
 
         private void txtTelephoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
         }
 
@@ -201,6 +201,8 @@ namespace WeightGain.UI
                         Caption = Resources.ProgramTitle
                     };
                     successDialog.Show();
+                    Owner?.Show();
+                    Hide();
                 }
             }
             catch

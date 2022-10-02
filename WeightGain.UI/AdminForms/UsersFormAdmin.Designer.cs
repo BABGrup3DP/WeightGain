@@ -38,7 +38,6 @@ namespace WeightGain.UI.AdminForms
             this.btnNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateUser = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUserDetails = new Guna.UI2.WinForms.Guna2Button();
             this.lblNote = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +60,7 @@ namespace WeightGain.UI.AdminForms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsers.ColumnHeadersHeight = 20;
+            this.dgvUsers.ColumnHeadersHeight = 30;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -90,7 +89,7 @@ namespace WeightGain.UI.AdminForms
             this.dgvUsers.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dgvUsers.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvUsers.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvUsers.ThemeStyle.HeaderStyle.Height = 20;
+            this.dgvUsers.ThemeStyle.HeaderStyle.Height = 30;
             this.dgvUsers.ThemeStyle.ReadOnly = false;
             this.dgvUsers.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsers.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -145,21 +144,6 @@ namespace WeightGain.UI.AdminForms
             this.btnUpdateUser.Text = "Seçili Üyeyi Düzenle";
             this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
-            // btnUserDetails
-            // 
-            this.btnUserDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUserDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUserDetails.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnUserDetails.ForeColor = System.Drawing.Color.White;
-            this.btnUserDetails.Location = new System.Drawing.Point(558, 371);
-            this.btnUserDetails.Name = "btnUserDetails";
-            this.btnUserDetails.Size = new System.Drawing.Size(180, 67);
-            this.btnUserDetails.TabIndex = 4;
-            this.btnUserDetails.Text = "Seçili Üyenin Diğer Bilgilerigi Gör";
-            this.btnUserDetails.Click += new System.EventHandler(this.btnUserDetails_Click);
-            // 
             // lblNote
             // 
             this.lblNote.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -176,7 +160,6 @@ namespace WeightGain.UI.AdminForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(800, 525);
             this.Controls.Add(this.lblNote);
-            this.Controls.Add(this.btnUserDetails);
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnNewUser);
@@ -195,7 +178,6 @@ namespace WeightGain.UI.AdminForms
 
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
         private Guna.UI2.WinForms.Guna2DataGridView dgvUsers;
-        private Guna.UI2.WinForms.Guna2Button btnUserDetails;
         private Guna.UI2.WinForms.Guna2Button btnUpdateUser;
         private Guna.UI2.WinForms.Guna2Button btnDeleteUser;
         private Guna.UI2.WinForms.Guna2Button btnNewUser;

@@ -11,7 +11,8 @@ namespace WeightGain.UI.AdminForms
     public partial class UserAddFormAdmin : Form
     {
         private readonly UserRepository _userRepository;
-        private bool showPassword = false;
+        private bool _showPassword;
+        public User selectedUser;
         public UserAddFormAdmin(UserRepository userRepository)
         {
             InitializeComponent();
@@ -45,13 +46,13 @@ namespace WeightGain.UI.AdminForms
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'A' || e.KeyChar > 'D') && (e.KeyChar < 'a' || e.KeyChar > 'd') && e.KeyChar != 8)
+            if ((e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar < 'a' || e.KeyChar > 'z') && e.KeyChar != 8)
                 e.Handled = true;
         }
 
         private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'A' || e.KeyChar > 'D') && (e.KeyChar < 'a' || e.KeyChar > 'd') && e.KeyChar != 8)
+            if ((e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar < 'a' || e.KeyChar > 'z') && e.KeyChar != 8)
                 e.Handled = true;
         }
 
@@ -100,8 +101,8 @@ namespace WeightGain.UI.AdminForms
 
         private void txtPassword_IconRightClick(object sender, EventArgs e)
         {
-            showPassword = !showPassword;
-            txtPassword.PasswordChar = showPassword ? '\0' : '*';
+            _showPassword = !_showPassword;
+            txtPassword.PasswordChar = _showPassword ? '\0' : '*';
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -193,6 +194,19 @@ namespace WeightGain.UI.AdminForms
                 };
                 messageDialogError.Show();
             }
+        }
+
+        private void UserAddFormAdmin_Load(object sender, EventArgs e)
+        {
+            if (selectedUser == null) return;
+            txtName.Text = selectedUser.FirstName;
+            txtLastname.Text = selectedUser.LastName;
+            txtEmail.Text = selectedUser.Email;
+            txtPhoneNumber.Text = selectedUser.PhoneNumber;
+            txtPassword.Text = string.Empty;
+            dtpBirthDate.Value = selectedUser.BirthDate;
+            nudWeight.Value = selectedUser.Weight;
+            nudHeight.Value = selectedUser.Height;
         }
     }
 }

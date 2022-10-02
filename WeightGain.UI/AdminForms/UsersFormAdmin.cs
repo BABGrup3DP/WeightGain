@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.UI.Extensions;
 using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.AdminForms
@@ -18,50 +19,107 @@ namespace WeightGain.UI.AdminForms
 
         private void RefreshDataGridView()
         {
-            dgvUsers.DataSource = _userRepository.GetAll();
-            dgvUsers.AutoGenerateColumns = true;
-            
-
-            
-            dgvUsers.Columns["FullName"].DisplayIndex = dgvUsers.Columns.Count - 1;
-            dgvUsers.Columns["FullName"].Visible = false;
-
-            dgvUsers.Columns["Password"].DisplayIndex = dgvUsers.Columns.Count - 2;
-            dgvUsers.Columns["Password"].Visible = false;
-
-            dgvUsers.Columns["ID"].DisplayIndex = 0;
-
-            dgvUsers.Columns["FirstName"].DisplayIndex = 1;
-            dgvUsers.Columns["FirstName"].HeaderText = "AD";
-
-            dgvUsers.Columns["LastName"].DisplayIndex = 2;
-            dgvUsers.Columns["LastName"].HeaderText = "SOYAD";
-
-            dgvUsers.Columns["BirthDate"].DisplayIndex = 3;
-            dgvUsers.Columns["BirthDate"].HeaderText = "DOĞUM TARİHİ";
-
-            dgvUsers.Columns["Age"].DisplayIndex = 4;
-            dgvUsers.Columns["Age"].HeaderText = "YAŞ";
-
-            dgvUsers.Columns["Height"].DisplayIndex = 5;
-            dgvUsers.Columns["Height"].HeaderText = "KİLO";
-
-            dgvUsers.Columns["Weight"].DisplayIndex = 6;
-            dgvUsers.Columns["Weight"].HeaderText = "BOY";
-
-            dgvUsers.Columns["Bmi"].DisplayIndex = 7;
-            dgvUsers.Columns["Bmi"].HeaderText = "BMI";
-
-            dgvUsers.Columns["Email"].DisplayIndex = 8;
-            dgvUsers.Columns["Email"].HeaderText = "EMAİL";
-
-            dgvUsers.Columns["PhoneNumber"].DisplayIndex = 9;
-            dgvUsers.Columns["PhoneNumber"].HeaderText = "TELEFON";
-
-            dgvUsers.Columns["UserType"].DisplayIndex = 10;
-            dgvUsers.Columns["UserType"].HeaderText = "ÜYELİK TİPİ";
-            dgvUsers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
             dgvUsers.AutoGenerateColumns = false;
+
+            dgvUsers.DataSource = _userRepository.GetAll();
+
+            if (dgvUsers.Columns.Count == 0)
+            {
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Id",
+                    HeaderText = "ID",
+                    Name = "Id",
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvUsers.Columns[0].Visible = false;
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "FirstName",
+                    HeaderText = "Adı",
+                    Name = "FirstName",
+                    Width = 100,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "LastName",
+                    HeaderText = "Soyadı",
+                    Name = "LastName",
+                    Width = 100,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Email",
+                    HeaderText = "Email",
+                    Name = "Email",
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "PhoneNumber",
+                    HeaderText = "Telefon",
+                    Name = "PhoneNumber",
+                    Width = 100,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "BirthDate",
+                    HeaderText = "Doğum Yılı",
+                    Name = "BirhDate",
+                    Width = 50,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "yyyy-MM-dd" },
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Age",
+                    HeaderText = "Yaş",
+                    Name = "Age",
+                    Width = 20,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Weight",
+                    HeaderText = "Kilo",
+                    Name = "Weight",
+                    Width = 40,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "F" },
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Height",
+                    HeaderText = "Boy",
+                    Name = "Height",
+                    Width = 40,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "F" },
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Bmi",
+                    HeaderText = "BMI",
+                    Name = "Bmi",
+                    Width = 40,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "F" },
+                });
+                dgvUsers.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "UserType",
+                    HeaderText = "Kullanıcı Türü",
+                    Name = "UserType",
+                    Width = 40,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    CellTemplate = new UserTypeEnumTextBoxCell()
+                });
+            }
         }
 
         private void UsersFormAdmin_Load(object sender, EventArgs e)
@@ -87,7 +145,7 @@ namespace WeightGain.UI.AdminForms
             {
                 foreach (var selectedUser in selectedUsers)
                 {
-                    var user = ((DataGridViewRow)selectedUser).DataBoundItem as User;
+                    var user = (User)((DataGridViewRow)selectedUser).DataBoundItem;
                     if (user == null) continue;
                     if (user.UserType == UserTypeEnum.Admin)
                     {
@@ -119,12 +177,24 @@ namespace WeightGain.UI.AdminForms
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-
+            var selectedUsers = dgvUsers.SelectedRows;
+            if (selectedUsers.Count > 1)
+            {
+                var messageDialog = new Guna2MessageDialog
+                {
+                    Text = "Lütfen sadece bir üye seçin.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialog.Show();
+                return;
+            }
+            using (var userAddFormAdmin = new UserAddFormAdmin(_userRepository))
+            {
+                userAddFormAdmin.Owner = this;
+                userAddFormAdmin.selectedUser = (User)selectedUsers[0].DataBoundItem;
+                userAddFormAdmin.ShowDialog();
+            }
         }
 
-        private void btnUserDetails_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
