@@ -53,7 +53,6 @@ namespace WeightGain.UI.UserForms
             this.lblLunch = new System.Windows.Forms.Label();
             this.lblDinner = new System.Windows.Forms.Label();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnPrev = new FontAwesome.Sharp.IconButton();
             this.btnNext = new FontAwesome.Sharp.IconButton();
             this.twcMealTimes = new WeightGain.UI.Extensions.TabWizardControl();
             this.tpCategoryAndProduct = new System.Windows.Forms.TabPage();
@@ -76,6 +75,7 @@ namespace WeightGain.UI.UserForms
             this.lwImageList = new System.Windows.Forms.ImageList(this.components);
             this.tlpTabs = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPrev = new FontAwesome.Sharp.IconButton();
             btnBreakfast = new System.Windows.Forms.Button();
             btnThirdSnack = new System.Windows.Forms.Button();
             btnSecondSnack = new System.Windows.Forms.Button();
@@ -95,7 +95,7 @@ namespace WeightGain.UI.UserForms
             // 
             // btnBreakfast
             // 
-            btnBreakfast.BackColor = System.Drawing.Color.PaleTurquoise;
+            btnBreakfast.BackColor = System.Drawing.Color.SkyBlue;
             btnBreakfast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnBreakfast.CausesValidation = false;
             btnBreakfast.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -111,7 +111,7 @@ namespace WeightGain.UI.UserForms
             // 
             // btnThirdSnack
             // 
-            btnThirdSnack.BackColor = System.Drawing.Color.Aquamarine;
+            btnThirdSnack.BackColor = System.Drawing.Color.SkyBlue;
             btnThirdSnack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnThirdSnack.CausesValidation = false;
             btnThirdSnack.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
@@ -129,7 +129,7 @@ namespace WeightGain.UI.UserForms
             // 
             // btnSecondSnack
             // 
-            btnSecondSnack.BackColor = System.Drawing.Color.Aquamarine;
+            btnSecondSnack.BackColor = System.Drawing.Color.SkyBlue;
             btnSecondSnack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnSecondSnack.CausesValidation = false;
             btnSecondSnack.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
@@ -147,7 +147,7 @@ namespace WeightGain.UI.UserForms
             // 
             // btnFirstSnack
             // 
-            btnFirstSnack.BackColor = System.Drawing.Color.Aquamarine;
+            btnFirstSnack.BackColor = System.Drawing.Color.SkyBlue;
             btnFirstSnack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnFirstSnack.CausesValidation = false;
             btnFirstSnack.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
@@ -165,7 +165,7 @@ namespace WeightGain.UI.UserForms
             // 
             // btnLunch
             // 
-            btnLunch.BackColor = System.Drawing.Color.PaleTurquoise;
+            btnLunch.BackColor = System.Drawing.Color.SkyBlue;
             btnLunch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnLunch.CausesValidation = false;
             btnLunch.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -181,7 +181,7 @@ namespace WeightGain.UI.UserForms
             // 
             // btnDinner
             // 
-            btnDinner.BackColor = System.Drawing.Color.PaleTurquoise;
+            btnDinner.BackColor = System.Drawing.Color.SkyBlue;
             btnDinner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnDinner.CausesValidation = false;
             btnDinner.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -227,23 +227,25 @@ namespace WeightGain.UI.UserForms
             // lblAddBreakfast
             // 
             this.lblAddBreakfast.AutoSize = true;
-            this.lblAddBreakfast.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblAddBreakfast.BackColor = System.Drawing.Color.SkyBlue;
             this.lblAddBreakfast.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddBreakfast.Location = new System.Drawing.Point(102, 119);
+            this.lblAddBreakfast.Location = new System.Drawing.Point(99, 119);
             this.lblAddBreakfast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddBreakfast.Name = "lblAddBreakfast";
             this.lblAddBreakfast.Size = new System.Drawing.Size(38, 16);
             this.lblAddBreakfast.TabIndex = 24;
             this.lblAddBreakfast.Text = "Ekle";
+            this.lblAddBreakfast.Click += new System.EventHandler(this.lblAddBreakfast_Click);
             // 
             // lblBreakfast
             // 
-            this.lblBreakfast.BackColor = System.Drawing.Color.LightGreen;
+            this.lblBreakfast.BackColor = System.Drawing.Color.Teal;
             this.lblBreakfast.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBreakfast.Location = new System.Drawing.Point(30, 15);
+            this.lblBreakfast.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblBreakfast.Location = new System.Drawing.Point(36, 21);
             this.lblBreakfast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBreakfast.Name = "lblBreakfast";
-            this.lblBreakfast.Size = new System.Drawing.Size(173, 23);
+            this.lblBreakfast.Size = new System.Drawing.Size(160, 23);
             this.lblBreakfast.TabIndex = 23;
             this.lblBreakfast.Text = "Kahvaltı";
             this.lblBreakfast.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,18 +253,18 @@ namespace WeightGain.UI.UserForms
             // lblStart
             // 
             this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStart.Location = new System.Drawing.Point(46, 378);
+            this.lblStart.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblStart.Location = new System.Drawing.Point(124, 376);
             this.lblStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(979, 41);
+            this.lblStart.Size = new System.Drawing.Size(584, 24);
             this.lblStart.TabIndex = 21;
             this.lblStart.Text = "Senin Sağlığın, Senin Kuralların. İlk Öğün Planıyla güne başlayabilirsin..";
             // 
             // lblAddFirstSnack
             // 
             this.lblAddFirstSnack.AutoSize = true;
-            this.lblAddFirstSnack.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblAddFirstSnack.BackColor = System.Drawing.Color.SkyBlue;
             this.lblAddFirstSnack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAddFirstSnack.Location = new System.Drawing.Point(421, 119);
             this.lblAddFirstSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -274,9 +276,9 @@ namespace WeightGain.UI.UserForms
             // lblAddThirdSnack
             // 
             this.lblAddThirdSnack.AutoSize = true;
-            this.lblAddThirdSnack.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblAddThirdSnack.BackColor = System.Drawing.Color.SkyBlue;
             this.lblAddThirdSnack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddThirdSnack.Location = new System.Drawing.Point(742, 309);
+            this.lblAddThirdSnack.Location = new System.Drawing.Point(739, 309);
             this.lblAddThirdSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddThirdSnack.Name = "lblAddThirdSnack";
             this.lblAddThirdSnack.Size = new System.Drawing.Size(38, 16);
@@ -286,7 +288,7 @@ namespace WeightGain.UI.UserForms
             // lblAddSecondSnack
             // 
             this.lblAddSecondSnack.AutoSize = true;
-            this.lblAddSecondSnack.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblAddSecondSnack.BackColor = System.Drawing.Color.SkyBlue;
             this.lblAddSecondSnack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAddSecondSnack.Location = new System.Drawing.Point(102, 311);
             this.lblAddSecondSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -297,36 +299,39 @@ namespace WeightGain.UI.UserForms
             // 
             // lblThirdSnack
             // 
-            this.lblThirdSnack.BackColor = System.Drawing.Color.LemonChiffon;
+            this.lblThirdSnack.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblThirdSnack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblThirdSnack.Location = new System.Drawing.Point(670, 202);
+            this.lblThirdSnack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblThirdSnack.Location = new System.Drawing.Point(677, 210);
             this.lblThirdSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThirdSnack.Name = "lblThirdSnack";
-            this.lblThirdSnack.Size = new System.Drawing.Size(173, 23);
+            this.lblThirdSnack.Size = new System.Drawing.Size(159, 23);
             this.lblThirdSnack.TabIndex = 17;
             this.lblThirdSnack.Text = "3.Ara Öğün";
             this.lblThirdSnack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSecondSnack
             // 
-            this.lblSecondSnack.BackColor = System.Drawing.Color.LemonChiffon;
+            this.lblSecondSnack.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblSecondSnack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSecondSnack.Location = new System.Drawing.Point(30, 204);
+            this.lblSecondSnack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblSecondSnack.Location = new System.Drawing.Point(34, 210);
             this.lblSecondSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSecondSnack.Name = "lblSecondSnack";
-            this.lblSecondSnack.Size = new System.Drawing.Size(173, 23);
+            this.lblSecondSnack.Size = new System.Drawing.Size(164, 23);
             this.lblSecondSnack.TabIndex = 16;
             this.lblSecondSnack.Text = "2.Ara Öğün";
             this.lblSecondSnack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFirstSnack
             // 
-            this.lblFirstSnack.BackColor = System.Drawing.Color.LemonChiffon;
+            this.lblFirstSnack.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblFirstSnack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFirstSnack.Location = new System.Drawing.Point(350, 15);
+            this.lblFirstSnack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblFirstSnack.Location = new System.Drawing.Point(354, 20);
             this.lblFirstSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstSnack.Name = "lblFirstSnack";
-            this.lblFirstSnack.Size = new System.Drawing.Size(173, 23);
+            this.lblFirstSnack.Size = new System.Drawing.Size(164, 23);
             this.lblFirstSnack.TabIndex = 13;
             this.lblFirstSnack.Text = "1.Ara Öğün";
             this.lblFirstSnack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,9 +339,9 @@ namespace WeightGain.UI.UserForms
             // lblAddLunch
             // 
             this.lblAddLunch.AutoSize = true;
-            this.lblAddLunch.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblAddLunch.BackColor = System.Drawing.Color.SkyBlue;
             this.lblAddLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddLunch.Location = new System.Drawing.Point(742, 117);
+            this.lblAddLunch.Location = new System.Drawing.Point(739, 112);
             this.lblAddLunch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddLunch.Name = "lblAddLunch";
             this.lblAddLunch.Size = new System.Drawing.Size(38, 16);
@@ -346,9 +351,9 @@ namespace WeightGain.UI.UserForms
             // lblAddDinner
             // 
             this.lblAddDinner.AutoSize = true;
-            this.lblAddDinner.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblAddDinner.BackColor = System.Drawing.Color.SkyBlue;
             this.lblAddDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddDinner.Location = new System.Drawing.Point(421, 311);
+            this.lblAddDinner.Location = new System.Drawing.Point(418, 308);
             this.lblAddDinner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddDinner.Name = "lblAddDinner";
             this.lblAddDinner.Size = new System.Drawing.Size(38, 16);
@@ -357,24 +362,26 @@ namespace WeightGain.UI.UserForms
             // 
             // lblLunch
             // 
-            this.lblLunch.BackColor = System.Drawing.Color.LightGreen;
+            this.lblLunch.BackColor = System.Drawing.Color.Teal;
             this.lblLunch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLunch.Location = new System.Drawing.Point(670, 13);
+            this.lblLunch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblLunch.Location = new System.Drawing.Point(678, 18);
             this.lblLunch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLunch.Name = "lblLunch";
-            this.lblLunch.Size = new System.Drawing.Size(173, 23);
+            this.lblLunch.Size = new System.Drawing.Size(159, 23);
             this.lblLunch.TabIndex = 9;
             this.lblLunch.Text = "Öğle Yemeği";
             this.lblLunch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDinner
             // 
-            this.lblDinner.BackColor = System.Drawing.Color.LightGreen;
+            this.lblDinner.BackColor = System.Drawing.Color.Teal;
             this.lblDinner.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDinner.Location = new System.Drawing.Point(350, 204);
+            this.lblDinner.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDinner.Location = new System.Drawing.Point(355, 210);
             this.lblDinner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDinner.Name = "lblDinner";
-            this.lblDinner.Size = new System.Drawing.Size(173, 23);
+            this.lblDinner.Size = new System.Drawing.Size(162, 23);
             this.lblDinner.TabIndex = 8;
             this.lblDinner.Text = "Akşam Yemeği";
             this.lblDinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -382,20 +389,6 @@ namespace WeightGain.UI.UserForms
             // formElipse
             // 
             this.formElipse.TargetControl = this;
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrev.Enabled = false;
-            this.btnPrev.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnPrev.IconColor = System.Drawing.Color.Black;
-            this.btnPrev.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrev.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrev.Location = new System.Drawing.Point(3, 3);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(485, 64);
-            this.btnPrev.TabIndex = 1;
-            this.btnPrev.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
@@ -693,6 +686,20 @@ namespace WeightGain.UI.UserForms
             this.tlpButtons.Size = new System.Drawing.Size(983, 70);
             this.tlpButtons.TabIndex = 4;
             // 
+            // btnPrev
+            // 
+            this.btnPrev.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrev.Enabled = false;
+            this.btnPrev.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnPrev.IconColor = System.Drawing.Color.Black;
+            this.btnPrev.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrev.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrev.Location = new System.Drawing.Point(3, 3);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(485, 64);
+            this.btnPrev.TabIndex = 1;
+            this.btnPrev.UseVisualStyleBackColor = true;
+            // 
             // MealTimeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -726,7 +733,6 @@ namespace WeightGain.UI.UserForms
 
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
         private FontAwesome.Sharp.IconButton btnNext;
-        private FontAwesome.Sharp.IconButton btnPrev;
         private Extensions.TabWizardControl twcMealTimes;
         private System.Windows.Forms.TabPage tpCategoryAndProduct;
         private System.Windows.Forms.Label lblThirdSnack;
@@ -762,5 +768,6 @@ namespace WeightGain.UI.UserForms
         private FontAwesome.Sharp.IconButton btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDescription;
+        private FontAwesome.Sharp.IconButton btnPrev;
     }
 }

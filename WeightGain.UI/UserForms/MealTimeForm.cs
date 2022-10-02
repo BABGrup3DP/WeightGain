@@ -335,5 +335,10 @@ namespace WeightGain.UI.UserForms
         {
 
         }
+
+        private void lblAddBreakfast_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
