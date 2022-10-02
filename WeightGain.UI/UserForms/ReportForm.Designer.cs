@@ -554,7 +554,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.lblEvening.BackColor = System.Drawing.Color.Transparent;
             this.lblEvening.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEvening.Location = new System.Drawing.Point(175, 280);
+            this.lblEvening.Location = new System.Drawing.Point(175, 278);
             this.lblEvening.Name = "lblEvening";
             this.lblEvening.Size = new System.Drawing.Size(139, 17);
             this.lblEvening.TabIndex = 2;
@@ -650,7 +650,7 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel8.TabIndex = 5;
             this.guna2HtmlLabel8.Text = "Veri Girilen Günler :";
             // 
-            // ArchiveForm
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -661,7 +661,7 @@ namespace WeightGain.UI.UserForms
             this.Controls.Add(this.gbReport);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ArchiveForm";
+            this.Name = "ReportForm";
             this.Text = "ArchiveForm";
             this.gbReport.ResumeLayout(false);
             this.gbReport.PerformLayout();

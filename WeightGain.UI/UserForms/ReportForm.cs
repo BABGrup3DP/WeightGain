@@ -27,16 +27,16 @@ namespace WeightGain.UI.UserForms
             List<MealTime> mealTimes;
             switch (selectedToDate)
             {
-                case 0:
+                case 0: // Günlük
                     mealTimes = _mealTimeRepository.GetByDate(selectedDate, _logginedUser.Id);
                     break;
-                case 1:
+                case 1: // Haftalık
                     mealTimes = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), _logginedUser.Id);
                     break;
-                case 2:
+                case 2: // Aylık
                     mealTimes = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), _logginedUser.Id);
                     break;
-                case 3:
+                case 3: // Yıllık
                     mealTimes = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddYears(1), _logginedUser.Id);
                     break;
                 default:

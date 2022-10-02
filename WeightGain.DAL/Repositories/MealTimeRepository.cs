@@ -125,7 +125,15 @@ namespace WeightGain.DAL.Repositories
 
         public List<MealTime> GetByDate(DateTime startDate, DateTime endDate, int userId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var mealTimeList = _mealTimes.Where(x => x.MealTimeDate >= startDate && x.MealTimeDate <= endDate && x.UserId == userId).ToList();
+                return mealTimeList.Any() ? mealTimeList : null;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public List<MealTimeEnum> GetMealTimes() => Enum.GetValues(typeof(MealTimeEnum)).Cast<MealTimeEnum>().ToList();
