@@ -82,6 +82,35 @@ namespace WeightGain.DAL.Repositories
             }
         }
 
+        public List<Exercise> GetByDate(DateTime startDate, int userId)
+        {
+            try
+            {
+                var findExercises = _exercises.Any(x => x.ExerciseDate == startDate && x.UserId == userId);
+                if (!findExercises)
+                    return new List<Exercise>();
+                return _exercises.Where(x => x.ExerciseDate == startDate && x.UserId == userId).ToList();
+            }
+            catch
+            {
+                return new List<Exercise>();
+            }
+        }
+        public List<Exercise> GetByDate(DateTime startDate, DateTime endDate, int userId)
+        {
+            try
+            {
+                var findExercises = _exercises.Any(x => x.ExerciseDate >= startDate && x.ExerciseDate <= endDate && x.UserId == userId);
+                if (!findExercises)
+                    return new List<Exercise>();
+                return _exercises.Where(x => x.ExerciseDate == startDate && x.ExerciseDate <= endDate && x.UserId == userId).ToList();
+            }
+            catch
+            {
+                return new List<Exercise>();
+            }
+        }
+
         public Exercise GetById(int exerciseId) => _exercises.Find(exerciseId);
 
         public List<ExerciseEnum> GetExercises() => Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();

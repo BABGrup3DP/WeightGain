@@ -188,7 +188,7 @@
             this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnUsers.Image = global::WeightGain.UI.Properties.Resources.exercise;
+            this.btnUsers.Image = global::WeightGain.UI.Properties.Resources.users;
             this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUsers.ImageSize = new System.Drawing.Size(48, 48);
             this.btnUsers.Location = new System.Drawing.Point(8, 258);
@@ -295,7 +295,7 @@
             this.lblTopTitle.AutoSize = true;
             this.lblTopTitle.Location = new System.Drawing.Point(6, 6);
             this.lblTopTitle.Name = "lblTopTitle";
-            this.lblTopTitle.Size = new System.Drawing.Size(219, 21);
+            this.lblTopTitle.Size = new System.Drawing.Size(156, 15);
             this.lblTopTitle.TabIndex = 7;
             this.lblTopTitle.Text = "WeightGain Yönetici Paneli";
             // 
@@ -314,14 +314,14 @@
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1146, 697);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftMenuPanel);
-            this.Font = new System.Drawing.Font("Segoe UI", 9f, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);

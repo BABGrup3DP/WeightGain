@@ -36,7 +36,7 @@
             this.lblAge = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblBmi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCalOfDay = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblCal = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblBmh = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAgeText = new System.Windows.Forms.TextBox();
             this.txtWeightText = new System.Windows.Forms.TextBox();
@@ -49,6 +49,9 @@
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.cpbCalory = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.lblPercent = new System.Windows.Forms.Label();
+            this.txtCaloryNow = new System.Windows.Forms.TextBox();
+            this.lblCal2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCalTotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
             this.cpbCalory.SuspendLayout();
@@ -126,15 +129,15 @@
             this.lblCalOfDay.TabIndex = 4;
             this.lblCalOfDay.Text = "Günlük Kalori İhtiyacınız :";
             // 
-            // lblCal
+            // lblCal1
             // 
-            this.lblCal.BackColor = System.Drawing.Color.Transparent;
-            this.lblCal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCal.Location = new System.Drawing.Point(518, 411);
-            this.lblCal.Name = "lblCal";
-            this.lblCal.Size = new System.Drawing.Size(35, 17);
-            this.lblCal.TabIndex = 5;
-            this.lblCal.Text = "Kalori";
+            this.lblCal1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCal1.Location = new System.Drawing.Point(518, 411);
+            this.lblCal1.Name = "lblCal1";
+            this.lblCal1.Size = new System.Drawing.Size(35, 17);
+            this.lblCal1.TabIndex = 5;
+            this.lblCal1.Text = "Kalori";
             // 
             // lblBmh
             // 
@@ -244,13 +247,43 @@
             // 
             // lblPercent
             // 
-            this.lblPercent.AutoSize = true;
+            this.lblPercent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPercent.ForeColor = System.Drawing.Color.Black;
-            this.lblPercent.Location = new System.Drawing.Point(52, 64);
+            this.lblPercent.Location = new System.Drawing.Point(25, 64);
             this.lblPercent.Name = "lblPercent";
-            this.lblPercent.Size = new System.Drawing.Size(52, 21);
+            this.lblPercent.Size = new System.Drawing.Size(103, 21);
             this.lblPercent.TabIndex = 0;
             this.lblPercent.Text = "label1";
+            this.lblPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCaloryNow
+            // 
+            this.txtCaloryNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtCaloryNow.Location = new System.Drawing.Point(391, 440);
+            this.txtCaloryNow.Name = "txtCaloryNow";
+            this.txtCaloryNow.ReadOnly = true;
+            this.txtCaloryNow.Size = new System.Drawing.Size(121, 23);
+            this.txtCaloryNow.TabIndex = 14;
+            // 
+            // lblCal2
+            // 
+            this.lblCal2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCal2.Location = new System.Drawing.Point(518, 445);
+            this.lblCal2.Name = "lblCal2";
+            this.lblCal2.Size = new System.Drawing.Size(35, 17);
+            this.lblCal2.TabIndex = 13;
+            this.lblCal2.Text = "Kalori";
+            // 
+            // lblCalTotal
+            // 
+            this.lblCalTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblCalTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCalTotal.Location = new System.Drawing.Point(255, 445);
+            this.lblCalTotal.Name = "lblCalTotal";
+            this.lblCalTotal.Size = new System.Drawing.Size(114, 17);
+            this.lblCalTotal.TabIndex = 12;
+            this.lblCalTotal.Text = "Şuana Kadar Alınan :";
             // 
             // MainForm
             // 
@@ -258,6 +291,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(983, 515);
+            this.Controls.Add(this.txtCaloryNow);
+            this.Controls.Add(this.lblCal2);
+            this.Controls.Add(this.lblCalTotal);
             this.Controls.Add(this.cpbCalory);
             this.Controls.Add(this.lblSlogan);
             this.Controls.Add(this.leftPanelMenuLogo);
@@ -267,7 +303,7 @@
             this.Controls.Add(this.txtWeightText);
             this.Controls.Add(this.txtAgeText);
             this.Controls.Add(this.lblBmh);
-            this.Controls.Add(this.lblCal);
+            this.Controls.Add(this.lblCal1);
             this.Controls.Add(this.lblCalOfDay);
             this.Controls.Add(this.lblBmi);
             this.Controls.Add(this.lblDateNow);
@@ -284,7 +320,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
             this.cpbCalory.ResumeLayout(false);
-            this.cpbCalory.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +334,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblAge;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblBmi;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCalOfDay;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblBmh;
         private System.Windows.Forms.TextBox txtAgeText;
         private System.Windows.Forms.TextBox txtWeightText;
@@ -312,5 +347,8 @@
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpbCalory;
         private System.Windows.Forms.Label lblPercent;
+        private System.Windows.Forms.TextBox txtCaloryNow;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCalTotal;
     }
 }

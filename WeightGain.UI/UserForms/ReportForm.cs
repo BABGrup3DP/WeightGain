@@ -19,6 +19,7 @@ namespace WeightGain.UI.UserForms
             _logginedUser = logginedUser;
             _mealTimeRepository = new MealTimeRepository();
             dtpArchiveStartDate.MaxDate = DateTime.Now;
+            dtpArchiveStartDate.Value = DateTime.Now;
         }
 
         private void btnGet_Click(object sender, EventArgs e)

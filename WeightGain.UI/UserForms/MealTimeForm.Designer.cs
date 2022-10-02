@@ -650,7 +650,6 @@ namespace WeightGain.UI.UserForms
             this.dtpMealTime.Name = "dtpMealTime";
             this.dtpMealTime.Size = new System.Drawing.Size(238, 36);
             this.dtpMealTime.TabIndex = 12;
-            this.dtpMealTime.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // lwImageList
             // 

@@ -35,6 +35,8 @@ namespace WeightGain.UI.UserForms
             _productWithPortions = new List<ProductWithPortion>();
             _logginedUser = logginedUser;
             dtpMealTime.MaxDate = DateTime.Today;
+            dtpMealTime.Value = DateTime.Today;
+            
         }
 
         private void MealTimeForm_Load(object sender, EventArgs e)
