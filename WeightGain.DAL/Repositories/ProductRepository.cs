@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
@@ -42,7 +41,8 @@ namespace WeightGain.DAL.Repositories
                 updateProduct.ProductName = product.ProductName;
                 updateProduct.Scale = product.Scale;
                 updateProduct.Calory = product.Calory;
-                updateProduct.Category = product.Category;
+                updateProduct.CategoryId = product.CategoryId;
+                updateProduct.Picture = product.Picture;
                 return weightGainContext.SaveChanges() > 0;
 
             }

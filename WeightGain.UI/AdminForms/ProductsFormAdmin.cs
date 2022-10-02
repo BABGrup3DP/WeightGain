@@ -1,47 +1,124 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.AdminForms
 {
     public partial class ProductsFormAdmin : Form
     {
-        public readonly ProductRepository _productRepository;
-        public readonly CategoryRepository _categoryRepository;
+        private readonly ProductRepository _productRepository;
+        private List<ProductWithCategory> _productWithCategories;
 
         public ProductsFormAdmin()
         {
             InitializeComponent();
             _productRepository = new ProductRepository();
-            _categoryRepository = new CategoryRepository();
-            cmbProductCategory.DataSource = _categoryRepository.GetAll();
+            var categoryRepository = new CategoryRepository();
+            cmbProductCategory.DataSource = categoryRepository.GetAll();
             cmbProductCategory.DisplayMember = "Name";
             cmbProductCategory.ValueMember = "CategoryId";
         }
 
         public void RefreshDataGridView()
         {
-            dgvProducts.DataSource = _productRepository.GetAll();
+            _productWithCategories = new List<ProductWithCategory>();
+            var products = _productRepository.GetAll();
+            foreach (var product in products)
+            {
+                var productWithCategory = new ProductWithCategory
+                {
+                    ProductId = product.ProductId,
+                    ProductName = product.ProductName,
+                    Scale = product.Scale,
+                    Calory = product.Calory,
+                    Picture = product.Picture,
+                    CategoryId = product.CategoryId,
+                    CategoryName = product.Category.Name
+                };
+                _productWithCategories.Add(productWithCategory);
+            }
+            dgvProducts.AutoGenerateColumns = false;
+            if (dgvProducts.DataSource != null)
+                dgvProducts.DataSource = null;
+            dgvProducts.DataSource = _productWithCategories;
+            if (dgvProducts.Columns.Count == 0)
+            {
+                dgvProducts.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "ProductID",
+                    HeaderText = "ID",
+                    Name = "ProductID",
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvProducts.Columns[0].Visible = false;
+                dgvProducts.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "ProductName",
+                    HeaderText = "Ürün Adı",
+                    Name = "ProductName",
+                    Width = 100,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+
+                });
+                dgvProducts.Columns.Add(new DataGridViewImageColumn
+                {
+                    DataPropertyName = "Picture",
+                    HeaderText = "Resim",
+                    Name = "Picture",
+                    Width = 200,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvProducts.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Scale",
+                    HeaderText = "Ölçü",
+                    Name = "Scale",
+                    Width = 50,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvProducts.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "Calory",
+                    HeaderText = "Kalori",
+                    Name = "Calory",
+                    Width = 50,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "F" }
+
+                });
+                dgvProducts.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "CategoryId",
+                    HeaderText = "Kategori Id",
+                    Name = "CategoryId",
+                    Visible = false
+                });
+                dgvProducts.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "CategoryName",
+                    HeaderText = "Kategori",
+                    Name = "CategoryName",
+                    Width = 100,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+            }
         }
 
         private void ProductsFormAdmin_Load(object sender, EventArgs e)
         {
-            dgvProducts.DataSource = _productRepository.GetAll();
-            dgvProducts.Columns[0].HeaderText = "ID";
-            dgvProducts.Columns[0].ReadOnly = true;
-            dgvProducts.Columns[1].HeaderText = "Ürün Adı";
-            dgvProducts.Columns[2].HeaderText = "Ölçüsü";
-            dgvProducts.Columns[3].HeaderText = "Kalori Değeri";
-            //dgvProducts.Columns[4].HeaderText = "Kategori ID";
-            //dgvProducts.Columns[4].ReadOnly= true;
-            //dgvProducts.Columns[5].HeaderText = "Kategori Adı";
 
             RefreshDataGridView();
-            // TODO : düzeltilecek
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -49,8 +126,9 @@ namespace WeightGain.UI.AdminForms
             var productName = txtProductName.Text.Trim();
             var productScale = txtProductScale.Text.Trim();
             var productCalory = txtProductCalory.Text.Trim();
+            var productImage = txtProductImage.Text.Trim();
             var productCategory = (Category)cmbProductCategory.SelectedItem;
-            if (string.IsNullOrEmpty(productName) || string.IsNullOrEmpty(productCalory) || string.IsNullOrEmpty(productScale) || productCategory == null)
+            if (string.IsNullOrEmpty(productName) || string.IsNullOrEmpty(productCalory) || string.IsNullOrEmpty(productScale) || productCategory == null || string.IsNullOrEmpty(productImage))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -65,7 +143,7 @@ namespace WeightGain.UI.AdminForms
                 ProductName = productName,
                 Scale = productScale,
                 Calory = Convert.ToDouble(productCalory),
-
+                Picture = File.ReadAllBytes(productImage),
                 Category = productCategory,
             };
             if (_productRepository.Insert(product))
@@ -76,7 +154,13 @@ namespace WeightGain.UI.AdminForms
                     Caption = Resources.ProgramTitle
                 };
                 messageDialogSuccess.Show();
-                RefreshDataGridView();
+                txtProductName.Text = string.Empty;
+                txtProductScale.Text = string.Empty;
+                txtProductCalory.Text = string.Empty;
+                txtProductImage.Text = string.Empty;
+                cmbProductCategory.SelectedItem = 0;
+                pbProduct.Image = null;
+
             }
             else
             {
@@ -87,27 +171,21 @@ namespace WeightGain.UI.AdminForms
                 };
                 messageDialogError.Show();
             }
+            RefreshDataGridView();
         }
 
         private void dgvProducts_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (dgvProducts.Rows[e.RowIndex].DataBoundItem is ProductWithCategory editedProduct)
             {
-                var newCategory = dgvProducts.Rows[e.RowIndex].Cells[5].Value;
-                var newCategoryId = dgvProducts.Rows[e.RowIndex].Cells[4].Value;
-                var newCalory = dgvProducts.Rows[e.RowIndex].Cells[3].Value;
-                var newScale = dgvProducts.Rows[e.RowIndex].Cells[2].Value;
-                var newProductName = dgvProducts.Rows[e.RowIndex].Cells[1].Value;
-                var productId = dgvProducts.Rows[e.RowIndex].Cells[0].Value;
                 var product = new Product
                 {
-                    ProductId = (int)productId,
-                    ProductName = (string)newProductName,
-                    Scale = (string)newScale,
-                    Calory = (double)newCalory,
-                    CategoryId = (int)newCategoryId,
-                    Category = (Category)newCategory,
-
+                    ProductId = editedProduct.ProductId,
+                    ProductName = editedProduct.ProductName,
+                    Scale = editedProduct.Scale,
+                    Calory = editedProduct.Calory,
+                    CategoryId = editedProduct.CategoryId,
+                    Picture = editedProduct.Picture,
                 };
                 if (_productRepository.Update(product))
                 {
@@ -117,7 +195,6 @@ namespace WeightGain.UI.AdminForms
                         Caption = Resources.ProgramTitle
                     };
                     messageDialogSuccess.Show();
-                    RefreshDataGridView();
                 }
                 else
                 {
@@ -128,6 +205,7 @@ namespace WeightGain.UI.AdminForms
                     };
                     messageDialogError.Show();
                 }
+                RefreshDataGridView();
             }
         }
 
@@ -166,6 +244,7 @@ namespace WeightGain.UI.AdminForms
                 };
                 messageDialogError.Show();
             }
+
         }
 
         private void btnSelectImage_Click(object sender, EventArgs e)
@@ -190,8 +269,7 @@ namespace WeightGain.UI.AdminForms
             if (result != DialogResult.OK) return;
             var filename = ofdProductImage.FileName;
             txtProductImage.Text = filename;
-            //pbProductImage.Image = Image.FromFile(filename);
-
+            pbProduct.Image = Image.FromFile(filename);
         }
     }
 }

@@ -35,7 +35,12 @@ namespace WeightGain.UI.AdminForms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cmsProduct = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.panelAddProduct = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSelectImage = new Guna.UI2.WinForms.Guna2Button();
+            this.txtProductImage = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblProductImage = new System.Windows.Forms.Label();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             this.cmbProductCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProductCalory = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,15 +50,12 @@ namespace WeightGain.UI.AdminForms
             this.lblProductCalory = new System.Windows.Forms.Label();
             this.lblProductScale = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
-            this.cmsProduct = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblProductImage = new System.Windows.Forms.Label();
             this.ofdProductImage = new System.Windows.Forms.OpenFileDialog();
-            this.txtProductImage = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSelectImage = new Guna.UI2.WinForms.Guna2Button();
+            this.pbProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            this.panelAddProduct.SuspendLayout();
             this.cmsProduct.SuspendLayout();
+            this.panelAddProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // formElipse
@@ -116,6 +118,20 @@ namespace WeightGain.UI.AdminForms
             this.dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProducts.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellEndEdit);
             // 
+            // cmsProduct
+            // 
+            this.cmsProduct.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnDelete});
+            this.cmsProduct.Name = "cmsProduct";
+            this.cmsProduct.Size = new System.Drawing.Size(87, 26);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(86, 22);
+            this.btnDelete.Text = "Sil";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // panelAddProduct
             // 
             this.panelAddProduct.Controls.Add(this.btnSelectImage);
@@ -134,6 +150,51 @@ namespace WeightGain.UI.AdminForms
             this.panelAddProduct.Name = "panelAddProduct";
             this.panelAddProduct.Size = new System.Drawing.Size(654, 258);
             this.panelAddProduct.TabIndex = 1;
+            // 
+            // btnSelectImage
+            // 
+            this.btnSelectImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
+            this.btnSelectImage.Location = new System.Drawing.Point(548, 146);
+            this.btnSelectImage.Name = "btnSelectImage";
+            this.btnSelectImage.Size = new System.Drawing.Size(90, 26);
+            this.btnSelectImage.TabIndex = 9;
+            this.btnSelectImage.Text = "Resim Seç";
+            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
+            // 
+            // txtProductImage
+            // 
+            this.txtProductImage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProductImage.DefaultText = "";
+            this.txtProductImage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtProductImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtProductImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductImage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtProductImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductImage.Location = new System.Drawing.Point(234, 146);
+            this.txtProductImage.Name = "txtProductImage";
+            this.txtProductImage.PasswordChar = '\0';
+            this.txtProductImage.PlaceholderText = "";
+            this.txtProductImage.ReadOnly = true;
+            this.txtProductImage.SelectedText = "";
+            this.txtProductImage.Size = new System.Drawing.Size(308, 26);
+            this.txtProductImage.TabIndex = 10;
+            // 
+            // lblProductImage
+            // 
+            this.lblProductImage.AutoSize = true;
+            this.lblProductImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblProductImage.Location = new System.Drawing.Point(19, 155);
+            this.lblProductImage.Name = "lblProductImage";
+            this.lblProductImage.Size = new System.Drawing.Size(92, 15);
+            this.lblProductImage.TabIndex = 9;
+            this.lblProductImage.Text = "Ürün Fotoğrafı:";
             // 
             // btnAddProduct
             // 
@@ -262,74 +323,28 @@ namespace WeightGain.UI.AdminForms
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Ürün Adı: ";
             // 
-            // cmsProduct
-            // 
-            this.cmsProduct.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnDelete});
-            this.cmsProduct.Name = "cmsProduct";
-            this.cmsProduct.Size = new System.Drawing.Size(87, 26);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 22);
-            this.btnDelete.Text = "Sil";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // lblProductImage
-            // 
-            this.lblProductImage.AutoSize = true;
-            this.lblProductImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblProductImage.Location = new System.Drawing.Point(19, 155);
-            this.lblProductImage.Name = "lblProductImage";
-            this.lblProductImage.Size = new System.Drawing.Size(92, 15);
-            this.lblProductImage.TabIndex = 9;
-            this.lblProductImage.Text = "Ürün Fotoğrafı:";
-            // 
             // ofdProductImage
             // 
             this.ofdProductImage.FileName = "openFileDialog1";
             // 
-            // txtProductImage
+            // pbProduct
             // 
-            this.txtProductImage.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductImage.DefaultText = "";
-            this.txtProductImage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProductImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProductImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductImage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.txtProductImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductImage.Location = new System.Drawing.Point(234, 146);
-            this.txtProductImage.Name = "txtProductImage";
-            this.txtProductImage.PasswordChar = '\0';
-            this.txtProductImage.PlaceholderText = "";
-            this.txtProductImage.ReadOnly = true;
-            this.txtProductImage.SelectedText = "";
-            this.txtProductImage.Size = new System.Drawing.Size(308, 26);
-            this.txtProductImage.TabIndex = 10;
-            // 
-            // btnSelectImage
-            // 
-            this.btnSelectImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSelectImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSelectImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSelectImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSelectImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
-            this.btnSelectImage.Location = new System.Drawing.Point(548, 146);
-            this.btnSelectImage.Name = "btnSelectImage";
-            this.btnSelectImage.Size = new System.Drawing.Size(90, 26);
-            this.btnSelectImage.TabIndex = 9;
-            this.btnSelectImage.Text = "Resim Seç";
-            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
+            this.pbProduct.BackColor = System.Drawing.Color.Transparent;
+            this.pbProduct.ImageRotate = 0F;
+            this.pbProduct.Location = new System.Drawing.Point(673, 395);
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.Size = new System.Drawing.Size(283, 258);
+            this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbProduct.TabIndex = 2;
+            this.pbProduct.TabStop = false;
+            this.pbProduct.UseTransparentBackground = true;
             // 
             // ProductsFormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 665);
+            this.Controls.Add(this.pbProduct);
             this.Controls.Add(this.panelAddProduct);
             this.Controls.Add(this.dgvProducts);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -339,10 +354,12 @@ namespace WeightGain.UI.AdminForms
             this.Text = "ProductsFormAdmin";
             this.Load += new System.EventHandler(this.ProductsFormAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            this.cmsProduct.ResumeLayout(false);
             this.panelAddProduct.ResumeLayout(false);
             this.panelAddProduct.PerformLayout();
-            this.cmsProduct.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -366,5 +383,6 @@ namespace WeightGain.UI.AdminForms
         private System.Windows.Forms.Label lblProductImage;
         private System.Windows.Forms.OpenFileDialog ofdProductImage;
         private Guna.UI2.WinForms.Guna2Button btnSelectImage;
+        private Guna.UI2.WinForms.Guna2PictureBox pbProduct;
     }
 }

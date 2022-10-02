@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.UI.Properties;
@@ -35,7 +35,7 @@ namespace WeightGain.UI.AdminForms
         {
             var categoryName = txtCategoryName.Text.Trim();
             var categoryDesc = txtDescription.Text.Trim();
-            if (string.IsNullOrEmpty(categoryName)||string.IsNullOrEmpty(categoryDesc))
+            if (string.IsNullOrEmpty(categoryName) || string.IsNullOrEmpty(categoryDesc))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -59,6 +59,8 @@ namespace WeightGain.UI.AdminForms
                 };
                 messageDialogSuccess.Show();
                 RefreshDataGridView();
+                txtCategoryName.Text = string.Empty;
+                txtDescription.Text = string.Empty;
             }
             else
             {
@@ -81,7 +83,7 @@ namespace WeightGain.UI.AdminForms
             var category = new Category
             {
                 CategoryId = (int)categoryId,
-                Name=(string)newcategoryName,
+                Name = (string)newcategoryName,
                 Description = newDescription == null ? "" : newDescription.ToString()
             };
             if (_categoryRepository.Update(category))

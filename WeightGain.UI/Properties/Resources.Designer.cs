@@ -73,6 +73,16 @@ namespace WeightGain.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap categories {
+            get {
+                object obj = ResourceManager.GetObject("categories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exercise {
             get {
                 object obj = ResourceManager.GetObject("exercise", resourceCulture);
@@ -93,9 +103,9 @@ namespace WeightGain.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Female_User_Account_PNG_Photo {
+        internal static System.Drawing.Bitmap femaleUser {
             get {
-                object obj = ResourceManager.GetObject("Female_User_Account_PNG_Photo", resourceCulture);
+                object obj = ResourceManager.GetObject("femaleUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +136,16 @@ namespace WeightGain.UI.Properties {
         internal static System.Drawing.Bitmap lunch {
             get {
                 object obj = ResourceManager.GetObject("lunch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap products {
+            get {
+                object obj = ResourceManager.GetObject("products", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

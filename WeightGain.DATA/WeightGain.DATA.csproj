@@ -61,6 +61,7 @@
     <Compile Include="Dietitian.cs" />
     <Compile Include="Exercise.cs" />
     <Compile Include="ExerciseEnum.cs" />
+    <Compile Include="Helpers\ProductWithCategory.cs" />
     <Compile Include="Helpers\ProductWithPortion.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="MealTime.cs" />

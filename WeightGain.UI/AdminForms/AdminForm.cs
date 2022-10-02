@@ -52,12 +52,6 @@ namespace WeightGain.UI.AdminForms
                 Owner.Close();
         }
 
-        private void btnMealTimes_Click(object sender, EventArgs e)
-        {
-            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimesAdminForm(_logginedUser));
-        }
-
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
@@ -84,13 +78,13 @@ namespace WeightGain.UI.AdminForms
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Owner?.Show();
+            Owner.Show();
             Hide();
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            btnMealTimes.PerformClick();
+            Helper.OpenChildForm(mainPanel, new AdminMainForm());
         }
 
         private void btnCategories_Click(object sender, EventArgs e)
@@ -103,6 +97,11 @@ namespace WeightGain.UI.AdminForms
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
             Helper.OpenChildForm(mainPanel, new ProductsFormAdmin());
+        }
+
+        private void leftPanelMenuLogo_Click(object sender, EventArgs e)
+        {
+            Helper.OpenChildForm(mainPanel, new AdminMainForm());
         }
     }
 }

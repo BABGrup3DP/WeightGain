@@ -56,7 +56,7 @@
             // 
             // pbUser
             // 
-            this.pbUser.Image = global::WeightGain.UI.Properties.Resources.Female_User_Account_PNG_Photo;
+            this.pbUser.Image = global::WeightGain.UI.Properties.Resources.femaleUser;
             this.pbUser.Location = new System.Drawing.Point(321, 12);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(191, 201);

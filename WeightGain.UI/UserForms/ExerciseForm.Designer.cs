@@ -31,9 +31,9 @@ namespace WeightGain.UI.UserForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblExersiceDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblExerciseType = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbExercies = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -81,7 +81,7 @@ namespace WeightGain.UI.UserForms
             this.lblExersiceDate.BackColor = System.Drawing.Color.Transparent;
             this.lblExersiceDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExersiceDate.Location = new System.Drawing.Point(300, 9);
-            this.lblExersiceDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExersiceDate.Margin = new System.Windows.Forms.Padding(2);
             this.lblExersiceDate.Name = "lblExersiceDate";
             this.lblExersiceDate.Size = new System.Drawing.Size(37, 17);
             this.lblExersiceDate.TabIndex = 0;
@@ -92,8 +92,8 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseType.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseType.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseType.Location = new System.Drawing.Point(11, 48);
-            this.lblExerciseType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseType.Location = new System.Drawing.Point(11, 52);
+            this.lblExerciseType.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseType.Name = "lblExerciseType";
             this.lblExerciseType.Size = new System.Drawing.Size(96, 17);
             this.lblExerciseType.TabIndex = 0;
@@ -108,10 +108,11 @@ namespace WeightGain.UI.UserForms
             this.cmbExercies.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbExercies.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbExercies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbExercies.ItemHeight = 30;
             this.cmbExercies.Location = new System.Drawing.Point(111, 42);
-            this.cmbExercies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbExercies.Margin = new System.Windows.Forms.Padding(2);
             this.cmbExercies.Name = "cmbExercies";
-            this.cmbExercies.Size = new System.Drawing.Size(187, 26);
+            this.cmbExercies.Size = new System.Drawing.Size(187, 36);
             this.cmbExercies.TabIndex = 2;
             // 
             // lblExerciseTime
@@ -119,8 +120,8 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseTime.BackColor = System.Drawing.Color.Transparent;
             this.lblExerciseTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseTime.ForeColor = System.Drawing.Color.Black;
-            this.lblExerciseTime.Location = new System.Drawing.Point(12, 78);
-            this.lblExerciseTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseTime.Location = new System.Drawing.Point(12, 86);
+            this.lblExerciseTime.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseTime.Name = "lblExerciseTime";
             this.lblExerciseTime.Size = new System.Drawing.Size(91, 17);
             this.lblExerciseTime.TabIndex = 0;
@@ -131,8 +132,8 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(302, 78);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(302, 86);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(39, 17);
             this.guna2HtmlLabel4.TabIndex = 0;
@@ -143,8 +144,8 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(12, 136);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(12, 144);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(83, 17);
             this.guna2HtmlLabel5.TabIndex = 0;
@@ -152,8 +153,8 @@ namespace WeightGain.UI.UserForms
             // 
             // txtExerciseCal
             // 
-            this.txtExerciseCal.Location = new System.Drawing.Point(111, 132);
-            this.txtExerciseCal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExerciseCal.Location = new System.Drawing.Point(111, 140);
+            this.txtExerciseCal.Margin = new System.Windows.Forms.Padding(2);
             this.txtExerciseCal.Multiline = true;
             this.txtExerciseCal.Name = "txtExerciseCal";
             this.txtExerciseCal.ReadOnly = true;
@@ -165,8 +166,8 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(302, 142);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(302, 150);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(34, 17);
             this.guna2HtmlLabel6.TabIndex = 0;
@@ -182,8 +183,8 @@ namespace WeightGain.UI.UserForms
             this.btnCalculateCal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCalculateCal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCalculateCal.ForeColor = System.Drawing.Color.White;
-            this.btnCalculateCal.Location = new System.Drawing.Point(112, 99);
-            this.btnCalculateCal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalculateCal.Location = new System.Drawing.Point(112, 107);
+            this.btnCalculateCal.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateCal.Name = "btnCalculateCal";
             this.btnCalculateCal.Size = new System.Drawing.Size(186, 31);
             this.btnCalculateCal.TabIndex = 4;
@@ -205,9 +206,9 @@ namespace WeightGain.UI.UserForms
             this.gbCalory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gbCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.gbCalory.Location = new System.Drawing.Point(72, 34);
-            this.gbCalory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbCalory.Margin = new System.Windows.Forms.Padding(2);
             this.gbCalory.Name = "gbCalory";
-            this.gbCalory.Size = new System.Drawing.Size(360, 198);
+            this.gbCalory.Size = new System.Drawing.Size(360, 207);
             this.gbCalory.TabIndex = 5;
             this.gbCalory.Text = "Egzersize Göre Kalori Hesaplama";
             // 
@@ -216,8 +217,8 @@ namespace WeightGain.UI.UserForms
             this.nudExerciseTime.BackColor = System.Drawing.Color.Transparent;
             this.nudExerciseTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudExerciseTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nudExerciseTime.Location = new System.Drawing.Point(111, 72);
-            this.nudExerciseTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudExerciseTime.Location = new System.Drawing.Point(111, 80);
+            this.nudExerciseTime.Margin = new System.Windows.Forms.Padding(2);
             this.nudExerciseTime.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -246,8 +247,8 @@ namespace WeightGain.UI.UserForms
             this.btnAddExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAddExercise.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAddExercise.ForeColor = System.Drawing.Color.White;
-            this.btnAddExercise.Location = new System.Drawing.Point(111, 163);
-            this.btnAddExercise.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddExercise.Location = new System.Drawing.Point(111, 171);
+            this.btnAddExercise.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddExercise.Name = "btnAddExercise";
             this.btnAddExercise.Size = new System.Drawing.Size(187, 31);
             this.btnAddExercise.TabIndex = 5;
@@ -260,8 +261,8 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(72, 411);
-            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(74, 411);
+            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(360, 32);
             this.guna2HtmlLabel22.TabIndex = 0;
@@ -290,9 +291,9 @@ namespace WeightGain.UI.UserForms
             this.gpExercise.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gpExercise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.gpExercise.Location = new System.Drawing.Point(436, 34);
-            this.gpExercise.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpExercise.Margin = new System.Windows.Forms.Padding(2);
             this.gpExercise.Name = "gpExercise";
-            this.gpExercise.Size = new System.Drawing.Size(380, 198);
+            this.gpExercise.Size = new System.Drawing.Size(380, 207);
             this.gpExercise.TabIndex = 6;
             this.gpExercise.Text = "Egzersiz Bilgileri";
             // 
@@ -315,7 +316,7 @@ namespace WeightGain.UI.UserForms
             this.lblCalBicycle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalBicycle.ForeColor = System.Drawing.Color.Black;
             this.lblCalBicycle.Location = new System.Drawing.Point(293, 96);
-            this.lblCalBicycle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalBicycle.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalBicycle.Name = "lblCalBicycle";
             this.lblCalBicycle.Size = new System.Drawing.Size(34, 17);
             this.lblCalBicycle.TabIndex = 1;
@@ -327,7 +328,7 @@ namespace WeightGain.UI.UserForms
             this.lblCalSwim.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalSwim.ForeColor = System.Drawing.Color.Black;
             this.lblCalSwim.Location = new System.Drawing.Point(293, 169);
-            this.lblCalSwim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalSwim.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalSwim.Name = "lblCalSwim";
             this.lblCalSwim.Size = new System.Drawing.Size(34, 17);
             this.lblCalSwim.TabIndex = 1;
@@ -339,9 +340,9 @@ namespace WeightGain.UI.UserForms
             this.lblCalBicycleV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalBicycleV.ForeColor = System.Drawing.Color.Black;
             this.lblCalBicycleV.Location = new System.Drawing.Point(228, 96);
-            this.lblCalBicycleV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalBicycleV.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalBicycleV.Name = "lblCalBicycleV";
-            this.lblCalBicycleV.Size = new System.Drawing.Size(19, 12);
+            this.lblCalBicycleV.Size = new System.Drawing.Size(27, 17);
             this.lblCalBicycleV.TabIndex = 1;
             this.lblCalBicycleV.Text = "........";
             // 
@@ -351,9 +352,9 @@ namespace WeightGain.UI.UserForms
             this.lblCalSwimV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalSwimV.ForeColor = System.Drawing.Color.Black;
             this.lblCalSwimV.Location = new System.Drawing.Point(228, 169);
-            this.lblCalSwimV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalSwimV.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalSwimV.Name = "lblCalSwimV";
-            this.lblCalSwimV.Size = new System.Drawing.Size(19, 12);
+            this.lblCalSwimV.Size = new System.Drawing.Size(27, 17);
             this.lblCalSwimV.TabIndex = 1;
             this.lblCalSwimV.Text = "........";
             // 
@@ -363,7 +364,7 @@ namespace WeightGain.UI.UserForms
             this.lblCalWalk.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalWalk.ForeColor = System.Drawing.Color.Black;
             this.lblCalWalk.Location = new System.Drawing.Point(293, 151);
-            this.lblCalWalk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalWalk.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalWalk.Name = "lblCalWalk";
             this.lblCalWalk.Size = new System.Drawing.Size(34, 17);
             this.lblCalWalk.TabIndex = 1;
@@ -375,7 +376,7 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseBic.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseBic.ForeColor = System.Drawing.Color.Black;
             this.lblExerciseBic.Location = new System.Drawing.Point(66, 96);
-            this.lblExerciseBic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseBic.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseBic.Name = "lblExerciseBic";
             this.lblExerciseBic.Size = new System.Drawing.Size(44, 17);
             this.lblExerciseBic.TabIndex = 1;
@@ -387,9 +388,9 @@ namespace WeightGain.UI.UserForms
             this.lblCalWalkV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalWalkV.ForeColor = System.Drawing.Color.Black;
             this.lblCalWalkV.Location = new System.Drawing.Point(228, 151);
-            this.lblCalWalkV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalWalkV.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalWalkV.Name = "lblCalWalkV";
-            this.lblCalWalkV.Size = new System.Drawing.Size(19, 12);
+            this.lblCalWalkV.Size = new System.Drawing.Size(27, 17);
             this.lblCalWalkV.TabIndex = 1;
             this.lblCalWalkV.Text = "........";
             // 
@@ -399,7 +400,7 @@ namespace WeightGain.UI.UserForms
             this.lblCalRun.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalRun.ForeColor = System.Drawing.Color.Black;
             this.lblCalRun.Location = new System.Drawing.Point(293, 133);
-            this.lblCalRun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalRun.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalRun.Name = "lblCalRun";
             this.lblCalRun.Size = new System.Drawing.Size(34, 17);
             this.lblCalRun.TabIndex = 1;
@@ -411,7 +412,7 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseSwim.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseSwim.ForeColor = System.Drawing.Color.Black;
             this.lblExerciseSwim.Location = new System.Drawing.Point(66, 169);
-            this.lblExerciseSwim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseSwim.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseSwim.Name = "lblExerciseSwim";
             this.lblExerciseSwim.Size = new System.Drawing.Size(41, 17);
             this.lblExerciseSwim.TabIndex = 1;
@@ -423,9 +424,9 @@ namespace WeightGain.UI.UserForms
             this.lblCalRunV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalRunV.ForeColor = System.Drawing.Color.Black;
             this.lblCalRunV.Location = new System.Drawing.Point(228, 133);
-            this.lblCalRunV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalRunV.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalRunV.Name = "lblCalRunV";
-            this.lblCalRunV.Size = new System.Drawing.Size(19, 12);
+            this.lblCalRunV.Size = new System.Drawing.Size(27, 17);
             this.lblCalRunV.TabIndex = 1;
             this.lblCalRunV.Text = "........";
             // 
@@ -435,7 +436,7 @@ namespace WeightGain.UI.UserForms
             this.lblCalJumpingRope.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalJumpingRope.ForeColor = System.Drawing.Color.Black;
             this.lblCalJumpingRope.Location = new System.Drawing.Point(293, 114);
-            this.lblCalJumpingRope.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalJumpingRope.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalJumpingRope.Name = "lblCalJumpingRope";
             this.lblCalJumpingRope.Size = new System.Drawing.Size(34, 17);
             this.lblCalJumpingRope.TabIndex = 1;
@@ -447,7 +448,7 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseWalk.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseWalk.ForeColor = System.Drawing.Color.Black;
             this.lblExerciseWalk.Location = new System.Drawing.Point(65, 151);
-            this.lblExerciseWalk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseWalk.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseWalk.Name = "lblExerciseWalk";
             this.lblExerciseWalk.Size = new System.Drawing.Size(47, 17);
             this.lblExerciseWalk.TabIndex = 1;
@@ -459,9 +460,9 @@ namespace WeightGain.UI.UserForms
             this.lblCalJumpingRopeV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCalJumpingRopeV.ForeColor = System.Drawing.Color.Black;
             this.lblCalJumpingRopeV.Location = new System.Drawing.Point(228, 114);
-            this.lblCalJumpingRopeV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblCalJumpingRopeV.Margin = new System.Windows.Forms.Padding(2);
             this.lblCalJumpingRopeV.Name = "lblCalJumpingRopeV";
-            this.lblCalJumpingRopeV.Size = new System.Drawing.Size(19, 12);
+            this.lblCalJumpingRopeV.Size = new System.Drawing.Size(27, 17);
             this.lblCalJumpingRopeV.TabIndex = 1;
             this.lblCalJumpingRopeV.Text = "........";
             // 
@@ -471,7 +472,7 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseRun.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseRun.ForeColor = System.Drawing.Color.Black;
             this.lblExerciseRun.Location = new System.Drawing.Point(66, 133);
-            this.lblExerciseRun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseRun.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseRun.Name = "lblExerciseRun";
             this.lblExerciseRun.Size = new System.Drawing.Size(40, 17);
             this.lblExerciseRun.TabIndex = 1;
@@ -483,7 +484,7 @@ namespace WeightGain.UI.UserForms
             this.lblExerciseJumpRope.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblExerciseJumpRope.ForeColor = System.Drawing.Color.Black;
             this.lblExerciseJumpRope.Location = new System.Drawing.Point(65, 114);
-            this.lblExerciseJumpRope.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblExerciseJumpRope.Margin = new System.Windows.Forms.Padding(2);
             this.lblExerciseJumpRope.Name = "lblExerciseJumpRope";
             this.lblExerciseJumpRope.Size = new System.Drawing.Size(56, 17);
             this.lblExerciseJumpRope.TabIndex = 1;
@@ -523,7 +524,7 @@ namespace WeightGain.UI.UserForms
             this.dtpExerciseDate.ForeColor = System.Drawing.Color.Black;
             this.dtpExerciseDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpExerciseDate.Location = new System.Drawing.Point(345, 4);
-            this.dtpExerciseDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpExerciseDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpExerciseDate.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpExerciseDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpExerciseDate.Name = "dtpExerciseDate";
@@ -533,28 +534,28 @@ namespace WeightGain.UI.UserForms
             // 
             // dgvShowExercise
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowExercise.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowExercise.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvShowExercise.ColumnHeadersHeight = 55;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvShowExercise.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShowExercise.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvShowExercise.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvShowExercise.Location = new System.Drawing.Point(72, 236);
-            this.dgvShowExercise.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvShowExercise.Location = new System.Drawing.Point(74, 245);
+            this.dgvShowExercise.Margin = new System.Windows.Forms.Padding(2);
             this.dgvShowExercise.Name = "dgvShowExercise";
             this.dgvShowExercise.RowHeadersVisible = false;
             this.dgvShowExercise.Size = new System.Drawing.Size(744, 161);
@@ -590,8 +591,8 @@ namespace WeightGain.UI.UserForms
             this.btnDeleteExercise.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDeleteExercise.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteExercise.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteExercise.Location = new System.Drawing.Point(438, 401);
-            this.btnDeleteExercise.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteExercise.Location = new System.Drawing.Point(438, 410);
+            this.btnDeleteExercise.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteExercise.Name = "btnDeleteExercise";
             this.btnDeleteExercise.Size = new System.Drawing.Size(378, 33);
             this.btnDeleteExercise.TabIndex = 8;
@@ -617,7 +618,7 @@ namespace WeightGain.UI.UserForms
             this.Controls.Add(this.guna2HtmlLabel22);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ExerciseForm";
             this.Text = "ExerciseForm";
             this.Load += new System.EventHandler(this.ExerciseForm_Load);
