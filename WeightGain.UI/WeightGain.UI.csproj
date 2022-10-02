@@ -113,11 +113,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\ArchiveForm.cs">
+    <Compile Include="UserForms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForms\ArchiveForm.Designer.cs">
-      <DependentUpon>ArchiveForm.cs</DependentUpon>
+    <Compile Include="UserForms\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\CategoriesAdminForm.cs">
       <SubType>Form</SubType>
@@ -175,12 +175,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserForms\ReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForms\ReportForm.Designer.cs">
-      <DependentUpon>ReportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminForms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,8 +205,8 @@
     <EmbeddedResource Include="AdminForms\UserAddFormAdmin.resx">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\ArchiveForm.resx">
-      <DependentUpon>ArchiveForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserForms\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\CategoriesAdminForm.resx">
       <DependentUpon>CategoriesAdminForm.cs</DependentUpon>
@@ -245,9 +239,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\ReportForm.resx">
-      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

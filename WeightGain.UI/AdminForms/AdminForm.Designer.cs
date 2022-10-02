@@ -35,7 +35,6 @@
             this.btnProducts = new Guna.UI2.WinForms.Guna2Button();
             this.btnCategories = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.btnMealTimes = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
@@ -61,7 +60,6 @@
             this.leftMenuPanel.Controls.Add(this.btnProducts);
             this.leftMenuPanel.Controls.Add(this.btnCategories);
             this.leftMenuPanel.Controls.Add(this.btnLogout);
-            this.leftMenuPanel.Controls.Add(this.btnHelp);
             this.leftMenuPanel.Controls.Add(this.btnMealTimes);
             this.leftMenuPanel.Controls.Add(this.btnProfile);
             this.leftMenuPanel.Controls.Add(this.btnUsers);
@@ -147,37 +145,13 @@
             this.btnLogout.Image = global::WeightGain.UI.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnLogout.Location = new System.Drawing.Point(6, 629);
+            this.btnLogout.Location = new System.Drawing.Point(6, 571);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(164, 52);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Çıkış";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.Animated = true;
-            this.btnHelp.AnimatedGIF = true;
-            this.btnHelp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnHelp.BorderRadius = 5;
-            this.btnHelp.BorderThickness = 1;
-            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnHelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnHelp.Image = global::WeightGain.UI.Properties.Resources.help;
-            this.btnHelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHelp.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnHelp.Location = new System.Drawing.Point(6, 571);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(164, 52);
-            this.btnHelp.TabIndex = 5;
-            this.btnHelp.Text = "Yardım";
-            this.btnHelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnMealTimes
             // 
@@ -409,7 +383,6 @@
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnMealTimes;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2Button btnHelp;
         private System.Windows.Forms.Label lblTopTitle;
         private Guna.UI2.WinForms.Guna2Button btnProducts;
         private Guna.UI2.WinForms.Guna2Button btnCategories;

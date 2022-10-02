@@ -37,7 +37,6 @@
             this.btnMealTimes = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnExercies = new Guna.UI2.WinForms.Guna2Button();
-            this.btnArchives = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -60,7 +59,6 @@
             this.leftMenuPanel.Controls.Add(this.btnMealTimes);
             this.leftMenuPanel.Controls.Add(this.btnProfile);
             this.leftMenuPanel.Controls.Add(this.btnExercies);
-            this.leftMenuPanel.Controls.Add(this.btnArchives);
             this.leftMenuPanel.Controls.Add(this.btnReports);
             this.leftMenuPanel.Controls.Add(this.leftPanelMenuLogo);
             this.leftMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -89,7 +87,7 @@
             this.btnLogout.Image = global::WeightGain.UI.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnLogout.Location = new System.Drawing.Point(5, 475);
+            this.btnLogout.Location = new System.Drawing.Point(5, 435);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(149, 57);
@@ -114,7 +112,7 @@
             this.btnHelp.Image = global::WeightGain.UI.Properties.Resources.help;
             this.btnHelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHelp.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnHelp.Location = new System.Drawing.Point(5, 418);
+            this.btnHelp.Location = new System.Drawing.Point(5, 374);
             this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(149, 57);
@@ -166,7 +164,7 @@
             this.btnProfile.Image = global::WeightGain.UI.Properties.Resources.profile;
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnProfile.Location = new System.Drawing.Point(5, 360);
+            this.btnProfile.Location = new System.Drawing.Point(5, 313);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(149, 57);
@@ -191,7 +189,7 @@
             this.btnExercies.Image = global::WeightGain.UI.Properties.Resources.exercise;
             this.btnExercies.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExercies.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnExercies.Location = new System.Drawing.Point(5, 188);
+            this.btnExercies.Location = new System.Drawing.Point(5, 191);
             this.btnExercies.Margin = new System.Windows.Forms.Padding(2);
             this.btnExercies.Name = "btnExercies";
             this.btnExercies.Size = new System.Drawing.Size(149, 57);
@@ -199,31 +197,6 @@
             this.btnExercies.Text = "Antremanlar";
             this.btnExercies.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExercies.Click += new System.EventHandler(this.btnExercies_Click);
-            // 
-            // btnArchives
-            // 
-            this.btnArchives.Animated = true;
-            this.btnArchives.AnimatedGIF = true;
-            this.btnArchives.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnArchives.BorderRadius = 5;
-            this.btnArchives.BorderThickness = 1;
-            this.btnArchives.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnArchives.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.btnArchives.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnArchives.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
-            this.btnArchives.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnArchives.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnArchives.Image = global::WeightGain.UI.Properties.Resources.archive;
-            this.btnArchives.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArchives.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnArchives.Location = new System.Drawing.Point(5, 303);
-            this.btnArchives.Margin = new System.Windows.Forms.Padding(2);
-            this.btnArchives.Name = "btnArchives";
-            this.btnArchives.Size = new System.Drawing.Size(149, 57);
-            this.btnArchives.TabIndex = 3;
-            this.btnArchives.Text = "Arşiv";
-            this.btnArchives.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArchives.Click += new System.EventHandler(this.btnArchives_Click);
             // 
             // btnReports
             // 
@@ -241,7 +214,7 @@
             this.btnReports.Image = global::WeightGain.UI.Properties.Resources.reports;
             this.btnReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReports.ImageSize = new System.Drawing.Size(48, 48);
-            this.btnReports.Location = new System.Drawing.Point(5, 245);
+            this.btnReports.Location = new System.Drawing.Point(5, 252);
             this.btnReports.Margin = new System.Windows.Forms.Padding(2);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(149, 57);
@@ -323,7 +296,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -348,7 +321,6 @@
         private Guna.UI2.WinForms.Guna2Panel topPanel;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
-        private Guna.UI2.WinForms.Guna2Button btnArchives;
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnExercies;
         private Guna.UI2.WinForms.Guna2Button btnMealTimes;

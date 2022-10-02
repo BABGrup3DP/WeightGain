@@ -30,9 +30,9 @@ namespace WeightGain.UI.AdminForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panelAddProduct = new Guna.UI2.WinForms.Guna2Panel();
@@ -47,6 +47,10 @@ namespace WeightGain.UI.AdminForms
             this.lblProductName = new System.Windows.Forms.Label();
             this.cmsProduct = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblProductImage = new System.Windows.Forms.Label();
+            this.ofdProductImage = new System.Windows.Forms.OpenFileDialog();
+            this.txtProductImage = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSelectImage = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panelAddProduct.SuspendLayout();
             this.cmsProduct.SuspendLayout();
@@ -60,26 +64,26 @@ namespace WeightGain.UI.AdminForms
             // 
             this.dgvProducts.AllowUserToAddRows = false;
             this.dgvProducts.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProducts.ColumnHeadersHeight = 20;
             this.dgvProducts.ContextMenuStrip = this.cmsProduct;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducts.Location = new System.Drawing.Point(0, 0);
@@ -114,6 +118,9 @@ namespace WeightGain.UI.AdminForms
             // 
             // panelAddProduct
             // 
+            this.panelAddProduct.Controls.Add(this.btnSelectImage);
+            this.panelAddProduct.Controls.Add(this.txtProductImage);
+            this.panelAddProduct.Controls.Add(this.lblProductImage);
             this.panelAddProduct.Controls.Add(this.btnAddProduct);
             this.panelAddProduct.Controls.Add(this.cmbProductCategory);
             this.panelAddProduct.Controls.Add(this.txtProductCalory);
@@ -125,7 +132,7 @@ namespace WeightGain.UI.AdminForms
             this.panelAddProduct.Controls.Add(this.lblProductName);
             this.panelAddProduct.Location = new System.Drawing.Point(12, 395);
             this.panelAddProduct.Name = "panelAddProduct";
-            this.panelAddProduct.Size = new System.Drawing.Size(654, 206);
+            this.panelAddProduct.Size = new System.Drawing.Size(654, 258);
             this.panelAddProduct.TabIndex = 1;
             // 
             // btnAddProduct
@@ -136,7 +143,7 @@ namespace WeightGain.UI.AdminForms
             this.btnAddProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(234, 146);
+            this.btnAddProduct.Location = new System.Drawing.Point(234, 178);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(404, 45);
             this.btnAddProduct.TabIndex = 8;
@@ -219,7 +226,7 @@ namespace WeightGain.UI.AdminForms
             // 
             this.lblProductCategory.AutoSize = true;
             this.lblProductCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblProductCategory.Location = new System.Drawing.Point(19, 120);
+            this.lblProductCategory.Location = new System.Drawing.Point(19, 116);
             this.lblProductCategory.Name = "lblProductCategory";
             this.lblProductCategory.Size = new System.Drawing.Size(100, 15);
             this.lblProductCategory.TabIndex = 3;
@@ -265,9 +272,58 @@ namespace WeightGain.UI.AdminForms
             // btnDelete
             // 
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(180, 22);
+            this.btnDelete.Size = new System.Drawing.Size(86, 22);
             this.btnDelete.Text = "Sil";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblProductImage
+            // 
+            this.lblProductImage.AutoSize = true;
+            this.lblProductImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblProductImage.Location = new System.Drawing.Point(19, 155);
+            this.lblProductImage.Name = "lblProductImage";
+            this.lblProductImage.Size = new System.Drawing.Size(92, 15);
+            this.lblProductImage.TabIndex = 9;
+            this.lblProductImage.Text = "Ürün Fotoğrafı:";
+            // 
+            // ofdProductImage
+            // 
+            this.ofdProductImage.FileName = "openFileDialog1";
+            // 
+            // txtProductImage
+            // 
+            this.txtProductImage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProductImage.DefaultText = "";
+            this.txtProductImage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtProductImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtProductImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductImage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtProductImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductImage.Location = new System.Drawing.Point(234, 146);
+            this.txtProductImage.Name = "txtProductImage";
+            this.txtProductImage.PasswordChar = '\0';
+            this.txtProductImage.PlaceholderText = "";
+            this.txtProductImage.ReadOnly = true;
+            this.txtProductImage.SelectedText = "";
+            this.txtProductImage.Size = new System.Drawing.Size(308, 26);
+            this.txtProductImage.TabIndex = 10;
+            // 
+            // btnSelectImage
+            // 
+            this.btnSelectImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectImage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
+            this.btnSelectImage.Location = new System.Drawing.Point(548, 146);
+            this.btnSelectImage.Name = "btnSelectImage";
+            this.btnSelectImage.Size = new System.Drawing.Size(90, 26);
+            this.btnSelectImage.TabIndex = 9;
+            this.btnSelectImage.Text = "Resim Seç";
+            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
             // ProductsFormAdmin
             // 
@@ -306,5 +362,9 @@ namespace WeightGain.UI.AdminForms
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private System.Windows.Forms.ContextMenuStrip cmsProduct;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
+        private Guna.UI2.WinForms.Guna2TextBox txtProductImage;
+        private System.Windows.Forms.Label lblProductImage;
+        private System.Windows.Forms.OpenFileDialog ofdProductImage;
+        private Guna.UI2.WinForms.Guna2Button btnSelectImage;
     }
 }

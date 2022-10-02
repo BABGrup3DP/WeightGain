@@ -47,8 +47,11 @@
             this.leftPanelMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblSlogan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.cpbCalory = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.lblPercent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).BeginInit();
+            this.cpbCalory.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbUser
@@ -225,12 +228,37 @@
             // 
             this.formElipse.TargetControl = this;
             // 
+            // cpbCalory
+            // 
+            this.cpbCalory.Controls.Add(this.lblPercent);
+            this.cpbCalory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cpbCalory.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cpbCalory.ForeColor = System.Drawing.Color.White;
+            this.cpbCalory.Location = new System.Drawing.Point(626, 274);
+            this.cpbCalory.Minimum = 0;
+            this.cpbCalory.Name = "cpbCalory";
+            this.cpbCalory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.cpbCalory.Size = new System.Drawing.Size(154, 154);
+            this.cpbCalory.TabIndex = 11;
+            this.cpbCalory.Text = "guna2CircleProgressBar1";
+            // 
+            // lblPercent
+            // 
+            this.lblPercent.AutoSize = true;
+            this.lblPercent.ForeColor = System.Drawing.Color.Black;
+            this.lblPercent.Location = new System.Drawing.Point(52, 64);
+            this.lblPercent.Name = "lblPercent";
+            this.lblPercent.Size = new System.Drawing.Size(52, 21);
+            this.lblPercent.TabIndex = 0;
+            this.lblPercent.Text = "label1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(983, 515);
+            this.Controls.Add(this.cpbCalory);
             this.Controls.Add(this.lblSlogan);
             this.Controls.Add(this.leftPanelMenuLogo);
             this.Controls.Add(this.txtGetCalory);
@@ -255,6 +283,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPanelMenuLogo)).EndInit();
+            this.cpbCalory.ResumeLayout(false);
+            this.cpbCalory.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +310,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox leftPanelMenuLogo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSlogan;
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbCalory;
+        private System.Windows.Forms.Label lblPercent;
     }
 }

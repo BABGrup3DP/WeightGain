@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -65,7 +66,7 @@ namespace WeightGain.UI.AdminForms
                 Scale = productScale,
                 Calory = Convert.ToDouble(productCalory),
 
-                Category = (Category)productCategory,
+                Category = productCategory,
             };
             if (_productRepository.Insert(product))
             {
@@ -165,6 +166,32 @@ namespace WeightGain.UI.AdminForms
                 };
                 messageDialogError.Show();
             }
+        }
+
+        private void btnSelectImage_Click(object sender, EventArgs e)
+        {
+            ofdProductImage.Filter = "";
+
+            var codecs = ImageCodecInfo.GetImageEncoders();
+            var sep = string.Empty;
+
+            foreach (var c in codecs)
+            {
+                var codecName = c.CodecName.Substring(8).Replace("Codec", "Files").Trim();
+                ofdProductImage.Filter =
+                    $"{ofdProductImage.Filter}{sep}{codecName} ({c.FilenameExtension})|{c.FilenameExtension}";
+                sep = "|";
+            }
+            ofdProductImage.Filter = $"{ofdProductImage.Filter}{sep}All Files (*.*)|*.*";
+            ofdProductImage.DefaultExt = ".png";
+
+            var result = ofdProductImage.ShowDialog();
+
+            if (result != DialogResult.OK) return;
+            var filename = ofdProductImage.FileName;
+            txtProductImage.Text = filename;
+            //pbProductImage.Image = Image.FromFile(filename);
+
         }
     }
 }
