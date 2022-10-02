@@ -98,7 +98,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "KVKK koşullarını okuyup kabul etmeniz gerekmektedir.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -118,7 +119,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -131,7 +133,8 @@ namespace WeightGain.UI
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Lütfen mail adresinizi kontrol edin.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogError.Show();
                     return;
@@ -143,7 +146,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Girdiğiniz şifre güvenlik açısından çok zayıf. Lütfen özel karakter, büyük harf girmeyi ve şifre uzunluğunu fazla tutmayı deneyin.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -153,7 +157,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Kilo ve boy değerlerini kontrol edin.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -163,7 +168,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Telefon numarası 11 haneli olmalıdır.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -174,7 +180,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Üzgünüm. Program 19-24 yaş arası için uygundur.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -198,7 +205,8 @@ namespace WeightGain.UI
                     var successDialog = new Guna2MessageDialog
                     {
                         Text = "Başarıyla kayıt oldunuz. Artık giriş yapabilirsiniz.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     successDialog.Show();
                     Owner?.Show();
@@ -210,7 +218,8 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Hata oluştu. Girilen değerleri lütfen kontrol edin.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
             }
@@ -225,6 +234,7 @@ namespace WeightGain.UI
                 {
                     Text = "İnternete bağlanılamıyor. Programı kullanmak için internete bağlı olmalısınız.",
                     Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light,
                     Buttons = MessageDialogButtons.OK,
                 };
                 if (messageDialogError.Show() == DialogResult.OK)

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
+using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.AdminForms
 {
@@ -121,7 +122,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -134,7 +136,8 @@ namespace WeightGain.UI.AdminForms
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Lütfen mail adresini kontrol edin.",
-                        Caption = Properties.Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogError.Show();
                     return;
@@ -146,7 +149,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Girdiğiniz şifre güvenlik açısından çok zayıf. Lütfen özel karakter, büyük harf girmeyi ve şifre uzunluğunu fazla tutmayı deneyin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -156,7 +160,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Kilo ve boy değerlerini kontrol edin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -180,7 +185,8 @@ namespace WeightGain.UI.AdminForms
                     var successDialog = new Guna2MessageDialog
                     {
                         Text = "Yeni üye başarıyla eklendi.",
-                        Caption = Properties.Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     successDialog.Show();
                 }
@@ -190,7 +196,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Hata oluştu. Girilen değerleri lütfen kontrol edin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
             }

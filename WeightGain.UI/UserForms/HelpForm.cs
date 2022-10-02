@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using Guna.UI2.WinForms;
+using System.Windows.Forms;
 
 namespace WeightGain.UI.UserForms
 {
@@ -9,61 +10,86 @@ namespace WeightGain.UI.UserForms
             InitializeComponent();
         }
 
+        private Guna2MessageDialog _messageDialog;
         private void HelpForm_Load(object sender, System.EventArgs e)
         {
-
+            _messageDialog = new Guna2MessageDialog
+            {
+                Icon = MessageDialogIcon.Information,
+                Caption = "Bilgilendirme",
+                Buttons = MessageDialogButtons.OK,
+                Style = MessageDialogStyle.Light
+            };
         }
 
-        private void btnnedir_Click(object sender, System.EventArgs e)
+        private void btnNedir_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Günlük kilo artış ve azalımını takip etmek için tasarlanmış masaüstü bir yazılım programıdır");
+            _messageDialog.Caption = "Nedir?";
+            _messageDialog.Text = "Günlük kilo artış ve azalımını takip etmek için tasarlanmış masaüstü bir yazılım programıdır.";
+            _messageDialog.Show();
         }
 
-        private void btnuyelik_Click(object sender, System.EventArgs e)
+        private void btnUyelik_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("weightgain.com üzerinden Üye ol seçeneğine tıklayarak üye olabilirsin");
+            _messageDialog.Caption = "Üyelik";
+            _messageDialog.Text = "Üyelik işlemleri için kayıt ol butonuna tıklayarak kayıt olabilirsiniz. Kayıt olurken kullanıcı adı, e-posta ve şifre bilgilerinizi girerek üyelik işlemini tamamlayabilirsiniz. Kayıt işlemini tamamladıktan sonra giriş yap butonuna tıklayarak giriş yapabilirsiniz.";
+            _messageDialog.Show();
         }
 
-        private void btnucret_Click(object sender, System.EventArgs e)
+        private void btnUcret_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Evet,WeightGain ücretsiz bir uygulamadır.Web sitesi üzerinden ücretsiz olarak yararlabilirsin");
-
+            _messageDialog.Caption = "Ücret";
+            _messageDialog.Text = "Evet, WeightGain ücretsiz bir uygulamadır. Web sitesi üzerinden ücretsiz olarak yararlabilirsin.";
+            _messageDialog.Show();
         }
 
-        private void btnyassiniri_Click(object sender, System.EventArgs e)
+        private void btnYasSiniri_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("WeightGain uygulamasını 19-24 yaş aralığında vücut kitle endeksi 18.5 altında olan herkes kullanabilir");
+            _messageDialog.Caption = "Yaş Sınırı";
+            _messageDialog.Text = "WeightGain uygulamasını 19-24 yaş aralığında vücut kitle endeksi 18.5 altında olan kadın kullanıcılar kullanabilir.";
+            _messageDialog.Show();
         }
 
-        private void btnhesaplama_Click(object sender, System.EventArgs e)
+        private void btnHesaplama_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Kalori hesaplama için kişinin vücut ölçüleri gereklidir.Vücut bilgilerinizi ilgili bölümden girebilirsiniz.WeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini ve hedeflerini göz önüne alır");
+            _messageDialog.Caption = "Hesaplama";
+            _messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir. Vücut bilgilerinizi ilgili bölümden girebilirsiniz. WeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini ve hedeflerini göz önüne alır.";
+            _messageDialog.Show();
         }
 
-        private void btnsecim_Click(object sender, System.EventArgs e)
+        private void btnSecim_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Kullanıcı ana sayfasından öğünlere girerek karşınıza çıkan öğünlerden uygun olanı seçtiğinizde karşınıza çıkan kategorilere göre ürün seçimi yapabilirsiniz");
+            _messageDialog.Caption = "Öğün ve Ürün Seçimi";
+            _messageDialog.Text = "Kullanıcı ana sayfasından öğünlere girerek karşınıza çıkan öğünlerden uygun olanı seçtiğinizde karşınıza çıkan kategorilere göre ürün seçimi yapabilirsiniz.";
+            _messageDialog.Show();
         }
 
-        private void btnbilgigoruntuleme_Click(object sender, System.EventArgs e)
+        private void btnBilgiGoruntuleme_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Günlük kalori bilgilerinizi kullanıcı ana sayfası üzerinden yada detaylı olarak 'Raporlar' bölümünden görüntüleyebilirsiniz.");
+            _messageDialog.Caption = "Bilgi Görüntüleme";
+            _messageDialog.Text = "Günlük kalori bilgilerinizi kullanıcı ana sayfası üzerinden yada detaylı olarak 'Raporlar' bölümünden görüntüleyebilirsiniz.";
+            _messageDialog.Show();
         }
 
-        private void btnantremangirisi_Click(object sender, System.EventArgs e)
+        private void btnAntremanGirisi_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Kullanıcı ana sayfası üzerinden 'Antremanlar' Bölümüne giriş yaparak, günlük egsersiz bilgi girişi ile kalori hesaplaması yapabilirsiniz.");
+            _messageDialog.Caption = "Antreman Girişi";
+            _messageDialog.Text = "Kullanıcı ana sayfası üzerinden 'Antremanlar' Bölümüne giriş yaparak, günlük egsersiz bilgi girişi ile kalori hesaplaması yapabilirsiniz.";
+            _messageDialog.Show();
         }
 
-        private void btnsonuculasim_Click(object sender, System.EventArgs e)
+        private void btnSonucUlasim_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show(" 'Raporlar' bölümünden geçmiş verilerinize ulaşabilirsiniz.");
-
+            _messageDialog.Caption = "Sonuç Ulaşım";
+            _messageDialog.Text = "'Raporlar' bölümünden geçmiş verilerinize ulaşabilirsiniz.";
+            _messageDialog.Show();
         }
 
-        private void btnuyelikiptali_Click(object sender, System.EventArgs e)
+        private void btnUyelikIptali_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show(" Dilediğiniz zaman Profil sayfasından üyelik iptalinizi gerçekleştirebilirsiniz.");
+            _messageDialog.Caption = "Üyelik İptali";
+            _messageDialog.Text = "Dilediğiniz zaman Profil sayfasından üyelik iptalinizi gerçekleştirebilirsiniz.";
+            _messageDialog.Show();
         }
     }
 }

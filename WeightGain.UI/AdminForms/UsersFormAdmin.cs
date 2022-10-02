@@ -164,7 +164,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = resultMessage,
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
                 RefreshDataGridView();
@@ -183,7 +184,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Lütfen sadece bir üye seçin.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
                 return;

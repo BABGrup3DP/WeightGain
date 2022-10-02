@@ -54,6 +54,7 @@ namespace WeightGain.UI.UserForms
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
             this.pbStr = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnDeleteAccount = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             this.pnlProfile.SuspendLayout();
@@ -363,6 +364,7 @@ namespace WeightGain.UI.UserForms
             // 
             // pnlProfile
             // 
+            this.pnlProfile.Controls.Add(this.btnDeleteAccount);
             this.pnlProfile.Controls.Add(this.pbStr);
             this.pnlProfile.Controls.Add(this.lblBirthDate);
             this.pnlProfile.Controls.Add(this.btnSave);
@@ -400,6 +402,22 @@ namespace WeightGain.UI.UserForms
             // formElipse
             // 
             this.formElipse.TargetControl = this;
+            // 
+            // btnDeleteAccount
+            // 
+            this.btnDeleteAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteAccount.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(269, 439);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(412, 53);
+            this.btnDeleteAccount.TabIndex = 19;
+            this.btnDeleteAccount.Text = "Üyeliği Sil";
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // ProfileForm
             // 
@@ -445,5 +463,6 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2Panel pnlProfile;
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
         private Guna.UI2.WinForms.Guna2ProgressBar pbStr;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteAccount;
     }
 }

@@ -63,7 +63,7 @@
             this.btnnedir.TabIndex = 2;
             this.btnnedir.Text = "WeightGain Nedir?";
             this.btnnedir.UseVisualStyleBackColor = false;
-            this.btnnedir.Click += new System.EventHandler(this.btnnedir_Click);
+            this.btnnedir.Click += new System.EventHandler(this.btnNedir_Click);
             // 
             // btnuyelik
             // 
@@ -75,7 +75,7 @@
             this.btnuyelik.TabIndex = 3;
             this.btnuyelik.Text = "WeightGain\'e nasıl üye olabilirim?";
             this.btnuyelik.UseVisualStyleBackColor = false;
-            this.btnuyelik.Click += new System.EventHandler(this.btnuyelik_Click);
+            this.btnuyelik.Click += new System.EventHandler(this.btnUyelik_Click);
             // 
             // btnyassiniri
             // 
@@ -87,7 +87,7 @@
             this.btnyassiniri.TabIndex = 4;
             this.btnyassiniri.Text = "Üyelikte yaş sınırı var mıdır?";
             this.btnyassiniri.UseVisualStyleBackColor = false;
-            this.btnyassiniri.Click += new System.EventHandler(this.btnyassiniri_Click);
+            this.btnyassiniri.Click += new System.EventHandler(this.btnYasSiniri_Click);
             // 
             // btnucret
             // 
@@ -99,7 +99,7 @@
             this.btnucret.TabIndex = 5;
             this.btnucret.Text = "WeightGain ücretsiz bir uygulamamıdır?";
             this.btnucret.UseVisualStyleBackColor = false;
-            this.btnucret.Click += new System.EventHandler(this.btnucret_Click);
+            this.btnucret.Click += new System.EventHandler(this.btnUcret_Click);
             // 
             // btnuyelikiptali
             // 
@@ -111,7 +111,7 @@
             this.btnuyelikiptali.TabIndex = 7;
             this.btnuyelikiptali.Text = "Üyelikten nasıl ayrılabilirim?";
             this.btnuyelikiptali.UseVisualStyleBackColor = false;
-            this.btnuyelikiptali.Click += new System.EventHandler(this.btnuyelikiptali_Click);
+            this.btnuyelikiptali.Click += new System.EventHandler(this.btnUyelikIptali_Click);
             // 
             // btnsonuculasim
             // 
@@ -123,7 +123,7 @@
             this.btnsonuculasim.TabIndex = 8;
             this.btnsonuculasim.Text = "Haftalık ve günlük sonuçlara nereden ulaşabilirim?";
             this.btnsonuculasim.UseVisualStyleBackColor = false;
-            this.btnsonuculasim.Click += new System.EventHandler(this.btnsonuculasim_Click);
+            this.btnsonuculasim.Click += new System.EventHandler(this.btnSonucUlasim_Click);
             // 
             // btnantremangirisi
             // 
@@ -135,7 +135,7 @@
             this.btnantremangirisi.TabIndex = 9;
             this.btnantremangirisi.Text = "Antreman girişi nasıl yapılır?";
             this.btnantremangirisi.UseVisualStyleBackColor = false;
-            this.btnantremangirisi.Click += new System.EventHandler(this.btnantremangirisi_Click);
+            this.btnantremangirisi.Click += new System.EventHandler(this.btnAntremanGirisi_Click);
             // 
             // btnbilgigoruntuleme
             // 
@@ -147,7 +147,7 @@
             this.btnbilgigoruntuleme.TabIndex = 10;
             this.btnbilgigoruntuleme.Text = "Günlük Alınan Kalori Bilgisini Görebilir miyim?";
             this.btnbilgigoruntuleme.UseVisualStyleBackColor = false;
-            this.btnbilgigoruntuleme.Click += new System.EventHandler(this.btnbilgigoruntuleme_Click);
+            this.btnbilgigoruntuleme.Click += new System.EventHandler(this.btnBilgiGoruntuleme_Click);
             // 
             // btnsecim
             // 
@@ -159,7 +159,7 @@
             this.btnsecim.TabIndex = 11;
             this.btnsecim.Text = "Öğün seçimi ve ürün seçimi nasıl yapılır?";
             this.btnsecim.UseVisualStyleBackColor = false;
-            this.btnsecim.Click += new System.EventHandler(this.btnsecim_Click);
+            this.btnsecim.Click += new System.EventHandler(this.btnSecim_Click);
             // 
             // btnhesaplama
             // 
@@ -171,7 +171,7 @@
             this.btnhesaplama.TabIndex = 12;
             this.btnhesaplama.Text = "Kalori Hesaplaması Nasıl Yapılır?";
             this.btnhesaplama.UseVisualStyleBackColor = false;
-            this.btnhesaplama.Click += new System.EventHandler(this.btnhesaplama_Click);
+            this.btnhesaplama.Click += new System.EventHandler(this.btnHesaplama_Click);
             // 
             // HelpForm
             // 

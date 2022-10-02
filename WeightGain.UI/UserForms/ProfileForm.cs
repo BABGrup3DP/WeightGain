@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
+using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.UserForms
 {
@@ -14,7 +15,7 @@ namespace WeightGain.UI.UserForms
         private readonly User _logginedUser;
         private bool _showPassword;
         private bool _showPassword2;
-        
+
 
         public ProfileForm(UserRepository userRepository, User logginedUser)
         {
@@ -31,7 +32,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -51,7 +53,8 @@ namespace WeightGain.UI.UserForms
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Şifreler uyuşmuyor.",
-                        Caption = Properties.Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogError.Show();
                     return;
@@ -61,7 +64,8 @@ namespace WeightGain.UI.UserForms
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Girdiğiniz şifre güvenlik açısından çok zayıf. Lütfen özel karakter, büyük harf girmeyi ve şifre uzunluğunu fazla tutmayı deneyin.",
-                        Caption = Properties.Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogError.Show();
                     return;
@@ -75,7 +79,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Email adresinizi kontrol edin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -86,7 +91,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Telefon numarası 11 haneli olmalıdır.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -98,7 +104,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Kilo ve boy değerlerini kontrol edin.",
-                    Caption = Properties.Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -112,7 +119,8 @@ namespace WeightGain.UI.UserForms
             var messageDialog = new Guna2MessageDialog
             {
                 Text = "Bilgileriniz başarıyla güncellendi.",
-                Caption = Properties.Resources.ProgramTitle
+                Caption = Resources.ProgramTitle,
+                Style = MessageDialogStyle.Light
             };
             messageDialog.Show();
 
@@ -121,13 +129,13 @@ namespace WeightGain.UI.UserForms
 
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'A' || e.KeyChar > 'D') && (e.KeyChar < 'a' || e.KeyChar > 'd') && e.KeyChar != 8)
+            if ((e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar < 'a' || e.KeyChar > 'z') && e.KeyChar != 8)
                 e.Handled = true;
         }
 
         private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'A' || e.KeyChar > 'D') && (e.KeyChar < 'a' || e.KeyChar > 'd') && e.KeyChar != 8)
+            if ((e.KeyChar < 'A' || e.KeyChar > 'Z') && (e.KeyChar < 'a' || e.KeyChar > 'z') && e.KeyChar != 8)
                 e.Handled = true;
         }
 
@@ -195,6 +203,55 @@ namespace WeightGain.UI.UserForms
         {
             _showPassword2 = !_showPassword2;
             txtPassword2.PasswordChar = _showPassword2 ? '\0' : '*';
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            var messageDialog = new Guna2MessageDialog
+            {
+                Icon = MessageDialogIcon.Warning,
+                Caption = "Dikkat",
+                Buttons = MessageDialogButtons.YesNo,
+                Text = "Hesabınızı silmek istediğinize emin misiniz? Bu işlem geri alınamaz.",
+                Style = MessageDialogStyle.Light
+            };
+            if (messageDialog.Show() == DialogResult.OK)
+            {
+                if (_userRepository.Delete(_logginedUser))
+                {
+                    var messageDialogSuccess = new Guna2MessageDialog
+                    {
+                        Text = "Hesabınız başarıyla silindi. Program şimdi kapatılacak.",
+                        Buttons = MessageDialogButtons.OK,
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
+                    };
+                    messageDialogSuccess.Style = MessageDialogStyle.Light;
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    var messageDialogError = new Guna2MessageDialog
+                    {
+                        Text = "Hesabınız silinirken hata oluştu.",
+                        Buttons = MessageDialogButtons.OK,
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
+                    };
+                    messageDialogError.Show();
+                }
+            }
+            else
+            {
+                var messageDialogSuccess = new Guna2MessageDialog
+                {
+                    Text = "Hesap silme işlemi iptal edildi.",
+                    Buttons = MessageDialogButtons.OK,
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
+                };
+                messageDialogSuccess.Show();
+            }
         }
     }
 }

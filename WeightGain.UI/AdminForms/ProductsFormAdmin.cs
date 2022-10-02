@@ -133,7 +133,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
                 return;
@@ -151,7 +152,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogSuccess = new Guna2MessageDialog
                 {
                     Text = "Ürün eklendi.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogSuccess.Show();
                 txtProductName.Text = string.Empty;
@@ -167,7 +169,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Ürün eklenirken hata oluştu.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
             }
@@ -192,7 +195,8 @@ namespace WeightGain.UI.AdminForms
                     var messageDialogSuccess = new Guna2MessageDialog
                     {
                         Text = "Ürün başarıyla düzenlendi.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogSuccess.Show();
                 }
@@ -201,7 +205,8 @@ namespace WeightGain.UI.AdminForms
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Ürün düzenlenirken hata oluştu.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogError.Show();
                 }
@@ -220,7 +225,8 @@ namespace WeightGain.UI.AdminForms
                     var messageDialogSuccess = new Guna2MessageDialog
                     {
                         Text = "Ürün başarıyla silindi.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogSuccess.Show();
                     RefreshDataGridView();
@@ -230,7 +236,8 @@ namespace WeightGain.UI.AdminForms
                     var messageDialogError = new Guna2MessageDialog
                     {
                         Text = "Ürün silinirken hata oluştu.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogError.Show();
                 }
@@ -240,7 +247,8 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Ürün seçilmemiş.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
             }
@@ -262,7 +270,6 @@ namespace WeightGain.UI.AdminForms
                 sep = "|";
             }
             ofdProductImage.Filter = $"{ofdProductImage.Filter}{sep}All Files (*.*)|*.*";
-            ofdProductImage.DefaultExt = ".png";
 
             var result = ofdProductImage.ShowDialog();
 

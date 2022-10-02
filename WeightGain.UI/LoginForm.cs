@@ -62,7 +62,8 @@ namespace WeightGain.UI
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Lütfen boş alan bırakmayın.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
                 return;
@@ -113,7 +114,8 @@ namespace WeightGain.UI
                         var messageDialogError = new Guna2MessageDialog
                         {
                             Text = "Bir hata oluştu. ",
-                            Caption = Resources.ProgramTitle
+                            Caption = Resources.ProgramTitle,
+                            Style = MessageDialogStyle.Light
                         };
                         messageDialogError.Show();
                         break;
@@ -125,6 +127,7 @@ namespace WeightGain.UI
                 {
                     Text = "Girilen bilgilere göre bir kullanıcı bulunamadı. Şimdi üye olmak ister misin?",
                     Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light,
                     Buttons = MessageDialogButtons.YesNo,
                 };
                 if (messageDialogError.Show() == DialogResult.No) return;
@@ -146,6 +149,7 @@ namespace WeightGain.UI
                 {
                     Text = "İnternete bağlanılamıyor. Programı kullanmak için internete bağlı olmalısınız.",
                     Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light,
                     Buttons = MessageDialogButtons.OK,
                 };
                 if (messageDialogError.Show() == DialogResult.OK)
