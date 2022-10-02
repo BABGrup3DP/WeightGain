@@ -126,6 +126,7 @@ namespace WeightGain.UI.AdminForms
             this.cbFemale.CheckedState.BorderThickness = 0;
             this.cbFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFemale.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbFemale.Enabled = false;
             this.cbFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
             this.cbFemale.Location = new System.Drawing.Point(215, 320);
             this.cbFemale.Name = "cbFemale";
@@ -146,6 +147,7 @@ namespace WeightGain.UI.AdminForms
             this.cbMale.CheckedState.BorderRadius = 0;
             this.cbMale.CheckedState.BorderThickness = 0;
             this.cbMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMale.Enabled = false;
             this.cbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
             this.cbMale.Location = new System.Drawing.Point(127, 320);
             this.cbMale.Name = "cbMale";
@@ -212,7 +214,7 @@ namespace WeightGain.UI.AdminForms
             this.lblHeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.lblHeight.Location = new System.Drawing.Point(22, 394);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(48, 13);
+            this.lblHeight.Size = new System.Drawing.Size(25, 13);
             this.lblHeight.TabIndex = 7;
             this.lblHeight.Text = "Boy";
             // 
@@ -223,7 +225,7 @@ namespace WeightGain.UI.AdminForms
             this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.lblWeight.Location = new System.Drawing.Point(22, 355);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(41, 13);
+            this.lblWeight.Size = new System.Drawing.Size(24, 13);
             this.lblWeight.TabIndex = 6;
             this.lblWeight.Text = "Kilo";
             // 
@@ -322,12 +324,12 @@ namespace WeightGain.UI.AdminForms
             this.dtpBirthDate.ForeColor = System.Drawing.Color.Black;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBirthDate.Location = new System.Drawing.Point(26, 276);
-            this.dtpBirthDate.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            this.dtpBirthDate.MaxDate = new System.DateTime(2022, 10, 2, 0, 0, 0, 0);
             this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(262, 36);
             this.dtpBirthDate.TabIndex = 5;
-            this.dtpBirthDate.Value = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            this.dtpBirthDate.Value = new System.DateTime(2022, 10, 2, 0, 0, 0, 0);
             // 
             // txtLastname
             // 
@@ -403,6 +405,7 @@ namespace WeightGain.UI.AdminForms
             this.Name = "UserAddFormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UserAddFormAdmin";
+            this.Load += new System.EventHandler(this.UserAddFormAdmin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserAddFormAdmin_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UserAddFormAdmin_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UserAddFormAdmin_MouseUp);

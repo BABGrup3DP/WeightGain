@@ -173,6 +173,7 @@ namespace WeightGain.UI
             this.cbFemale.CheckedState.BorderThickness = 0;
             this.cbFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFemale.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbFemale.Enabled = false;
             this.cbFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
             this.cbFemale.Location = new System.Drawing.Point(215, 307);
             this.cbFemale.Name = "cbFemale";
@@ -194,6 +195,7 @@ namespace WeightGain.UI
             this.cbMale.CheckedState.BorderRadius = 0;
             this.cbMale.CheckedState.BorderThickness = 0;
             this.cbMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMale.Enabled = false;
             this.cbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(237)))));
             this.cbMale.Location = new System.Drawing.Point(127, 307);
             this.cbMale.Name = "cbMale";
