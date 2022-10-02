@@ -110,7 +110,6 @@
             this.lblSlogan.Size = new System.Drawing.Size(161, 27);
             this.lblSlogan.TabIndex = 11;
             this.lblSlogan.Text = "Sağlıkla kilo alın";
-            this.lblSlogan.Click += new System.EventHandler(this.lblSlogan_Click);
             // 
             // formRightPanel
             // 

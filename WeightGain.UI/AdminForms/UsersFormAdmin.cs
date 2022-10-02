@@ -9,7 +9,7 @@ namespace WeightGain.UI.AdminForms
 {
     public partial class UsersFormAdmin : Form
     {
-        public readonly UserRepository _userRepository;
+        private readonly UserRepository _userRepository;
         public UsersFormAdmin(UserRepository userRepository)
         {
             InitializeComponent();
@@ -20,6 +20,9 @@ namespace WeightGain.UI.AdminForms
         {
             dgvUsers.DataSource = _userRepository.GetAll();
             dgvUsers.AutoGenerateColumns = true;
+            
+
+            
             dgvUsers.Columns["FullName"].DisplayIndex = dgvUsers.Columns.Count - 1;
             dgvUsers.Columns["FullName"].Visible = false;
 
@@ -85,6 +88,7 @@ namespace WeightGain.UI.AdminForms
                 foreach (var selectedUser in selectedUsers)
                 {
                     var user = ((DataGridViewRow)selectedUser).DataBoundItem as User;
+                    if (user == null) continue;
                     if (user.UserType == UserTypeEnum.Admin)
                     {
                         resultMessage += $"{user.FullName} kullanıcısı yönetici olduğu için silinemez !\n";

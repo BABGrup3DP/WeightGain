@@ -168,10 +168,5 @@ namespace WeightGain.UI
             _showPassword = !_showPassword;
             txtPassword.PasswordChar = _showPassword ? '\0' : '*';
         }
-
-        private void lblSlogan_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -24,7 +24,7 @@ namespace WeightGain.UI.UserForms
 
         private void btnGet_Click(object sender, EventArgs e)
         {
-            var selectedDate = dtpArchiveStartDate.Value;
+            var selectedDate = dtpArchiveStartDate.Value.Date;
             var selectedToDate = cmbDateTo.SelectedIndex;
             List<MealTime> mealTimes;
 
