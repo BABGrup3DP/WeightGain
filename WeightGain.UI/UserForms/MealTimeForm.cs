@@ -330,5 +330,10 @@ namespace WeightGain.UI.UserForms
             }
             _resizing = false;
         }
+
+        private void lwProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
