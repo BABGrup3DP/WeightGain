@@ -88,7 +88,49 @@ namespace WeightGain.UI.AdminForms
             }
         }
 
-        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        private void dgvProducts_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                var newCategory = dgvProducts.Rows[e.RowIndex].Cells[5].Value;
+                var newCategoryId = dgvProducts.Rows[e.RowIndex].Cells[4].Value;
+                var newCalory = dgvProducts.Rows[e.RowIndex].Cells[3].Value;
+                var newScale = dgvProducts.Rows[e.RowIndex].Cells[2].Value;
+                var newProductName = dgvProducts.Rows[e.RowIndex].Cells[1].Value;
+                var productId = dgvProducts.Rows[e.RowIndex].Cells[0].Value;
+                var product = new Product
+                {
+                    ProductId = (int)productId,
+                    ProductName = (string)newProductName,
+                    Scale = (string)newScale,
+                    Calory = (double)newCalory,
+                    CategoryId = (int)newCategoryId,
+                    Category = (Category)newCategory,
+
+                };
+                if (_productRepository.Update(product))
+                {
+                    var messageDialogSuccess = new Guna2MessageDialog
+                    {
+                        Text = "Ürün başarıyla düzenlendi.",
+                        Caption = Resources.ProgramTitle
+                    };
+                    messageDialogSuccess.Show();
+                    RefreshDataGridView();
+                }
+                else
+                {
+                    var messageDialogError = new Guna2MessageDialog
+                    {
+                        Text = "Ürün düzenlenirken hata oluştu.",
+                        Caption = Resources.ProgramTitle
+                    };
+                    messageDialogError.Show();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             var selectedCells = dgvProducts.SelectedCells;
             if (selectedCells.Count >= 0)
@@ -122,49 +164,6 @@ namespace WeightGain.UI.AdminForms
                     Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();
-            }
-
-        }
-
-        private void dgvProducts_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 2)
-            {
-                var newCategory = dgvProducts.Rows[e.RowIndex].Cells[5].Value;
-                var newCategoryID = dgvProducts.Rows[e.RowIndex].Cells[4].Value;
-                var newCalory = dgvProducts.Rows[e.RowIndex].Cells[3].Value;
-                var newScale = dgvProducts.Rows[e.RowIndex].Cells[2].Value;
-                var newProductName = dgvProducts.Rows[e.RowIndex].Cells[1].Value;
-                var productId = dgvProducts.Rows[e.RowIndex].Cells[0].Value;
-                var product = new Product
-                {
-                    ProductId = (int)productId,
-                    ProductName = (string)newProductName,
-                    Scale = (string)newScale,
-                    Calory = (double)newCalory,
-                    CategoryId = (int)newCategoryID,
-                    Category = (Category)newCategory,
-
-                };
-                if (_productRepository.Update(product))
-                {
-                    var messageDialogSuccess = new Guna2MessageDialog
-                    {
-                        Text = "Ürün başarıyla düzenlendi.",
-                        Caption = Resources.ProgramTitle
-                    };
-                    messageDialogSuccess.Show();
-                    RefreshDataGridView();
-                }
-                else
-                {
-                    var messageDialogError = new Guna2MessageDialog
-                    {
-                        Text = "Ürün düzenlenirken hata oluştu.",
-                        Caption = Resources.ProgramTitle
-                    };
-                    messageDialogError.Show();
-                }
             }
         }
     }

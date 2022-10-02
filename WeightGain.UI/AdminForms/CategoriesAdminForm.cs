@@ -72,7 +72,40 @@ namespace WeightGain.UI.AdminForms
 
         }
 
-        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        private void dgvCategories_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 2) return;
+            var newDescription = dgvCategories.Rows[e.RowIndex].Cells[2].Value;
+            var newcategoryName = dgvCategories.Rows[e.RowIndex].Cells[1].Value;
+            var categoryId = dgvCategories.Rows[e.RowIndex].Cells[0].Value;
+            var category = new Category
+            {
+                CategoryId = (int)categoryId,
+                Name=(string)newcategoryName,
+                Description = newDescription == null ? "" : newDescription.ToString()
+            };
+            if (_categoryRepository.Update(category))
+            {
+                var messageDialogSuccess = new Guna2MessageDialog
+                {
+                    Text = "Kategori başarıyla düzenlendi.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogSuccess.Show();
+                RefreshDataGridView();
+            }
+            else
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Kategori düzenlenirken hata oluştu.",
+                    Caption = Resources.ProgramTitle
+                };
+                messageDialogError.Show();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             var selectedCells = dgvCategories.SelectedCells;
             if (selectedCells.Count >= 0)
@@ -103,39 +136,6 @@ namespace WeightGain.UI.AdminForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Kategori seçilmemiş.",
-                    Caption = Resources.ProgramTitle
-                };
-                messageDialogError.Show();
-            }
-        }
-
-        private void dgvCategories_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != 2) return;
-            var newDescription = dgvCategories.Rows[e.RowIndex].Cells[2].Value;
-            var newcategoryName = dgvCategories.Rows[e.RowIndex].Cells[1].Value;
-            var categoryId = dgvCategories.Rows[e.RowIndex].Cells[0].Value;
-            var category = new Category
-            {
-                CategoryId = (int)categoryId,
-                Name=(string)newcategoryName,
-                Description = newDescription == null ? "" : newDescription.ToString()
-            };
-            if (_categoryRepository.Update(category))
-            {
-                var messageDialogSuccess = new Guna2MessageDialog
-                {
-                    Text = "Kategori başarıyla düzenlendi.",
-                    Caption = Resources.ProgramTitle
-                };
-                messageDialogSuccess.Show();
-                RefreshDataGridView();
-            }
-            else
-            {
-                var messageDialogError = new Guna2MessageDialog
-                {
-                    Text = "Kategori düzenlenirken hata oluştu.",
                     Caption = Resources.ProgramTitle
                 };
                 messageDialogError.Show();

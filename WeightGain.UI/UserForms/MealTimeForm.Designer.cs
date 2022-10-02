@@ -69,13 +69,13 @@ namespace WeightGain.UI.UserForms
             this.lblTotalCal = new System.Windows.Forms.Label();
             this.txtTotalCal = new Guna.UI2.WinForms.Guna2TextBox();
             this.pTop = new System.Windows.Forms.Panel();
+            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblDescription = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dtpMealTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lwImageList = new System.Windows.Forms.ImageList(this.components);
             this.tlpTabs = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDescription = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             btnBreakfast = new System.Windows.Forms.Button();
             btnThirdSnack = new System.Windows.Forms.Button();
             btnSecondSnack = new System.Windows.Forms.Button();
@@ -599,6 +599,35 @@ namespace WeightGain.UI.UserForms
             this.pTop.Size = new System.Drawing.Size(975, 46);
             this.pTop.TabIndex = 16;
             // 
+            // txtDescription
+            // 
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.DefaultText = "";
+            this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.Location = new System.Drawing.Point(409, 7);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PasswordChar = '\0';
+            this.txtDescription.PlaceholderText = "";
+            this.txtDescription.SelectedText = "";
+            this.txtDescription.Size = new System.Drawing.Size(555, 36);
+            this.txtDescription.TabIndex = 15;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDescription.Location = new System.Drawing.Point(329, 14);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(75, 22);
+            this.lblDescription.TabIndex = 14;
+            this.lblDescription.Text = "Açıklama :";
+            // 
             // lblSelectDate
             // 
             this.lblSelectDate.BackColor = System.Drawing.Color.Transparent;
@@ -663,39 +692,10 @@ namespace WeightGain.UI.UserForms
             this.tlpButtons.Size = new System.Drawing.Size(983, 70);
             this.tlpButtons.TabIndex = 4;
             // 
-            // lblDescription
-            // 
-            this.lblDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDescription.Location = new System.Drawing.Point(329, 14);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(74, 22);
-            this.lblDescription.TabIndex = 14;
-            this.lblDescription.Text = "Tarih Seç :";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescription.DefaultText = "";
-            this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Location = new System.Drawing.Point(409, 7);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.PasswordChar = '\0';
-            this.txtDescription.PlaceholderText = "";
-            this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(555, 36);
-            this.txtDescription.TabIndex = 15;
-            // 
             // MealTimeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 515);
             this.Controls.Add(this.tlpTabs);
             this.Controls.Add(this.tlpButtons);
