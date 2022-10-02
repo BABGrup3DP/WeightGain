@@ -525,12 +525,10 @@ namespace WeightGain.UI.UserForms
             this.dtpExerciseDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpExerciseDate.Location = new System.Drawing.Point(345, 4);
             this.dtpExerciseDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpExerciseDate.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpExerciseDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpExerciseDate.Name = "dtpExerciseDate";
             this.dtpExerciseDate.Size = new System.Drawing.Size(263, 26);
             this.dtpExerciseDate.TabIndex = 5;
-            this.dtpExerciseDate.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // dgvShowExercise
             // 

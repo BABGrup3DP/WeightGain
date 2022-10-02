@@ -17,8 +17,8 @@ namespace WeightGain.UI.UserForms
             InitializeComponent();
             _logginedUser = logginedUser;
             _exerciseRepository = new ExerciseRepository();
-            dtpExerciseDate.MaxDate = DateTime.Now;
             dtpExerciseDate.Value = DateTime.Now;
+            dtpExerciseDate.MaxDate = DateTime.Now;
         }
 
         private void ExerciseForm_Load(object sender, EventArgs e)

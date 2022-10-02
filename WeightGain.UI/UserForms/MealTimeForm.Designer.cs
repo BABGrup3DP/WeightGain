@@ -420,9 +420,7 @@ namespace WeightGain.UI.UserForms
             this.twcMealTimes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.twcMealTimes.Location = new System.Drawing.Point(3, 3);
             this.twcMealTimes.Name = "twcMealTimes";
-            this.twcMealTimes.NextButton = null;
             this.twcMealTimes.NextButtonLastText = "Kaydet";
-            this.twcMealTimes.PreviousButton = null;
             this.twcMealTimes.SelectedIndex = 0;
             this.twcMealTimes.Size = new System.Drawing.Size(983, 515);
             this.twcMealTimes.TabIndex = 0;
@@ -650,12 +648,10 @@ namespace WeightGain.UI.UserForms
             this.dtpMealTime.ForeColor = System.Drawing.Color.Black;
             this.dtpMealTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpMealTime.Location = new System.Drawing.Point(85, 7);
-            this.dtpMealTime.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpMealTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpMealTime.Name = "dtpMealTime";
             this.dtpMealTime.Size = new System.Drawing.Size(238, 36);
             this.dtpMealTime.TabIndex = 12;
-            this.dtpMealTime.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // lwImageList
             // 

@@ -20,8 +20,8 @@ namespace WeightGain.UI.UserForms
             _logginedUser = logginedUser;
             _mealTimeRepository = new MealTimeRepository();
             _exerciseRepository = new ExerciseRepository();
-            dtpArchiveStartDate.MaxDate = DateTime.Now;
             dtpArchiveStartDate.Value = DateTime.Now;
+            dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
 
         private void btnGet_Click(object sender, EventArgs e)

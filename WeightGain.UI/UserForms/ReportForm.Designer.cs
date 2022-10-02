@@ -88,12 +88,10 @@ namespace WeightGain.UI.UserForms
             this.dtpArchiveStartDate.ForeColor = System.Drawing.Color.Black;
             this.dtpArchiveStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpArchiveStartDate.Location = new System.Drawing.Point(114, 14);
-            this.dtpArchiveStartDate.MaxDate = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             this.dtpArchiveStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpArchiveStartDate.Name = "dtpArchiveStartDate";
             this.dtpArchiveStartDate.Size = new System.Drawing.Size(200, 36);
             this.dtpArchiveStartDate.TabIndex = 0;
-            this.dtpArchiveStartDate.Value = new System.DateTime(2022, 9, 26, 0, 0, 0, 0);
             // 
             // guna2HtmlLabel1
             // 
