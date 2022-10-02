@@ -45,7 +45,7 @@ namespace WeightGain.UI.UserForms
             this.cmbDateTo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnGet = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -74,6 +74,9 @@ namespace WeightGain.UI.UserForms
             this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvDataEntryDays = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtTotalNeedCalory = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblCal2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataEntryDays)).BeginInit();
             this.SuspendLayout();
@@ -155,11 +158,14 @@ namespace WeightGain.UI.UserForms
             // 
             // gbReport
             // 
+            this.gbReport.Controls.Add(this.lblCal2);
+            this.gbReport.Controls.Add(this.txtTotalNeedCalory);
+            this.gbReport.Controls.Add(this.guna2HtmlLabel7);
             this.gbReport.Controls.Add(this.lblToDate);
             this.gbReport.Controls.Add(this.cmbDateTo);
             this.gbReport.Controls.Add(this.btnGet);
             this.gbReport.Controls.Add(this.guna2HtmlLabel25);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel26);
+            this.gbReport.Controls.Add(this.lblCal1);
             this.gbReport.Controls.Add(this.guna2HtmlLabel24);
             this.gbReport.Controls.Add(this.guna2HtmlLabel23);
             this.gbReport.Controls.Add(this.guna2HtmlLabel22);
@@ -196,7 +202,7 @@ namespace WeightGain.UI.UserForms
             this.gbReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbReport.Location = new System.Drawing.Point(12, 12);
             this.gbReport.Name = "gbReport";
-            this.gbReport.Size = new System.Drawing.Size(462, 417);
+            this.gbReport.Size = new System.Drawing.Size(462, 447);
             this.gbReport.TabIndex = 3;
             this.gbReport.TabStop = false;
             // 
@@ -255,15 +261,15 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel25.TabIndex = 6;
             this.guna2HtmlLabel25.Text = "kalori";
             // 
-            // guna2HtmlLabel26
+            // lblCal1
             // 
-            this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(347, 374);
-            this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(34, 17);
-            this.guna2HtmlLabel26.TabIndex = 6;
-            this.guna2HtmlLabel26.Text = "kalori";
+            this.lblCal1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCal1.Location = new System.Drawing.Point(414, 372);
+            this.lblCal1.Name = "lblCal1";
+            this.lblCal1.Size = new System.Drawing.Size(34, 17);
+            this.lblCal1.TabIndex = 6;
+            this.lblCal1.Text = "kalori";
             // 
             // guna2HtmlLabel24
             // 
@@ -321,7 +327,7 @@ namespace WeightGain.UI.UserForms
             this.txtTotalCalory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalCalory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTotalCalory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalCalory.Location = new System.Drawing.Point(220, 368);
+            this.txtTotalCalory.Location = new System.Drawing.Point(287, 366);
             this.txtTotalCalory.Name = "txtTotalCalory";
             this.txtTotalCalory.PasswordChar = '\0';
             this.txtTotalCalory.PlaceholderText = "";
@@ -454,7 +460,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(15, 368);
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(15, 374);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
             this.guna2HtmlLabel19.Size = new System.Drawing.Size(199, 17);
             this.guna2HtmlLabel19.TabIndex = 4;
@@ -616,7 +622,7 @@ namespace WeightGain.UI.UserForms
             this.dgvDataEntryDays.Location = new System.Drawing.Point(480, 34);
             this.dgvDataEntryDays.Name = "dgvDataEntryDays";
             this.dgvDataEntryDays.RowHeadersVisible = false;
-            this.dgvDataEntryDays.Size = new System.Drawing.Size(491, 395);
+            this.dgvDataEntryDays.Size = new System.Drawing.Size(491, 425);
             this.dgvDataEntryDays.TabIndex = 4;
             this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -649,6 +655,46 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(113, 17);
             this.guna2HtmlLabel8.TabIndex = 5;
             this.guna2HtmlLabel8.Text = "Veri Girilen Günler :";
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(15, 403);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(263, 17);
+            this.guna2HtmlLabel7.TabIndex = 10;
+            this.guna2HtmlLabel7.Text = "Gün Sonunda Alınması Gereken Toplam Kalori :";
+            // 
+            // txtTotalNeedCalory
+            // 
+            this.txtTotalNeedCalory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalNeedCalory.DefaultText = "";
+            this.txtTotalNeedCalory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalNeedCalory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalNeedCalory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalNeedCalory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalNeedCalory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalNeedCalory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTotalNeedCalory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalNeedCalory.Location = new System.Drawing.Point(287, 395);
+            this.txtTotalNeedCalory.Name = "txtTotalNeedCalory";
+            this.txtTotalNeedCalory.PasswordChar = '\0';
+            this.txtTotalNeedCalory.PlaceholderText = "";
+            this.txtTotalNeedCalory.ReadOnly = true;
+            this.txtTotalNeedCalory.SelectedText = "";
+            this.txtTotalNeedCalory.Size = new System.Drawing.Size(121, 23);
+            this.txtTotalNeedCalory.TabIndex = 11;
+            // 
+            // lblCal2
+            // 
+            this.lblCal2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCal2.Location = new System.Drawing.Point(414, 400);
+            this.lblCal2.Name = "lblCal2";
+            this.lblCal2.Size = new System.Drawing.Size(34, 17);
+            this.lblCal2.TabIndex = 12;
+            this.lblCal2.Text = "kalori";
             // 
             // ReportForm
             // 
@@ -683,7 +729,7 @@ namespace WeightGain.UI.UserForms
         private System.Windows.Forms.GroupBox gbReport;
         private Guna.UI2.WinForms.Guna2Button btnGet;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
@@ -714,5 +760,8 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblToDate;
         private Guna.UI2.WinForms.Guna2ComboBox cmbDateTo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal2;
+        private Guna.UI2.WinForms.Guna2TextBox txtTotalNeedCalory;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
     }
 }
