@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI.UserForms
 {
@@ -31,8 +32,8 @@ namespace WeightGain.UI.UserForms
             txtHeightText.Text = Convert.ToString(decimal.Round(height, 2));
             txtWeightText.Text = Convert.ToString(decimal.Round(weight, 2));
 
-            txtBMH.Text = Convert.ToString(decimal.Round(weight / (height * height) * 10000, 2));
-            var neededCalory = decimal.Round((655.1m + (9.56m * weight) + (1.85m * height) - (4.68m * age)) * 1.1m, 2);
+            txtBMH.Text = Convert.ToString(Math.Round(_logginedUser.Bmi, 2));
+            var neededCalory = Helper.CalculateNeededCalory(weight, height, age);
             txtGetCalory.Text = neededCalory.ToString();
             var dailyMealTimes = _mealTimeRepository.GetByDate(DateTime.Now, _logginedUser.Id);
             var totalCalory = 0m;

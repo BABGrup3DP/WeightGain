@@ -67,6 +67,8 @@ namespace WeightGain.DAL.Repositories
 
         public List<Exercise> GetAll() => _exercises.ToList();
 
+        public double GetTotalCalorie() => _exercises.Sum(x => x.TotalCal);
+
         public List<Exercise> GetByUserId(int userId)
         {
             try

@@ -11,27 +11,35 @@ namespace WeightGain.DATA.Helpers
 {
     public class Helper
     {
+
+        /// <summary>
+        /// İnternet bağlantısını kontrol eder.
+        /// </summary>
+        /// <param name="description">-</param>
+        /// <param name="reservedValue">-</param>
+        /// <returns>İnternet bağlantısının durumuna göre true ya da false</returns>
         [DllImport("wininet.dll")]
-        private extern static bool InternetGetConnectedState(out int description, int reservedValue);
+        private static extern bool InternetGetConnectedState(out int description, int reservedValue);
         public static bool CheckInternetConnection()
         {
-            return InternetGetConnectedState(out int desc, 0);
+            return InternetGetConnectedState(out var desc, 0);
         }
 
+        /// <summary>
+        /// Programın ilk derlenme zamanında veritabanına ekleme yaparken kaynak dosyalarından byte okuması yapmak için kullanılır.
+        /// </summary>
+        /// <param name="nameOfFile">Dosyanın adı</param>
+        /// <returns>Okunan byte değeri</returns>
         public static byte[] GetImageBytes(string nameOfFile)
         {
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             using (var stream = assembly.GetManifestResourceStream($"WeightGain.DATA.Resources.{nameOfFile}.jpg"))
             {
-                if (stream != null)
-                {
-                    byte[] buffer = new byte[stream.Length];
-                    stream.Read(buffer, 0, buffer.Length);
-                    return buffer;
-                }
-
+                if (stream == null) return null;
+                var buffer = new byte[stream.Length];
+                _ = stream.Read(buffer, 0, buffer.Length);
+                return buffer;
             }
-            return null;
         }
 
         /// <summary>
@@ -179,5 +187,50 @@ namespace WeightGain.DATA.Helpers
             var hash = sha.ComputeHash(bytVa);
             return Convert.ToBase64String(hash);
         }
+
+        /// <summary>
+        /// Girilen değerlere göre egzersizde yakılan kaloriyi hesaplar
+        /// </summary>
+        /// <param name="userWeight">Kullanıcının kilosu</param>
+        /// <param name="selectedExerciseIndex">Seçilen egzersiz türü</param>
+        /// <param name="totalExerciseTime">Egzersizde geçirilen toplam süre (saniye)</param>
+        /// <returns>Toplam yakılan kalori</returns>
+        public static decimal CalculateExercise(decimal userWeight, int selectedExerciseIndex, decimal totalExerciseTime)
+        {
+            var parCoefficient = 1.1m;
+            switch (selectedExerciseIndex)
+            {
+                case 0:
+                    parCoefficient = 5.6m;
+                    break;
+                case 1:
+                    parCoefficient = 5.8m;
+                    break;
+                case 2:
+                    parCoefficient = 6.34m;
+                    break;
+                case 3:
+                    parCoefficient = 2.1m;
+                    break;
+                case 4:
+                    parCoefficient = 9.0m;
+                    break;
+            }
+            return userWeight * parCoefficient * totalExerciseTime / 60;
+        }
+
+        /// <summary>
+        /// Girilen değerlere göre kullanıcının günlük alması gereken kaloriyi hesaplar
+        /// </summary>
+        /// <param name="userWeight">Kullanıcının kilosu</param>
+        /// <param name="userHeight">Kullanıcının boyu</param>
+        /// <param name="userAge">Kullanıcının yaşı</param>
+        /// <returns>Günlük alınması gereken kalori miktarı</returns>
+        public static decimal CalculateNeededCalory(decimal userWeight, decimal userHeight, int userAge)
+        {
+            return decimal.Round((655.1m + 9.56m * userWeight + 1.85m * userHeight - 4.68m * userAge) * 1.1m, 2);
+        }
+
+
     }
 }

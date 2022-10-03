@@ -12,7 +12,7 @@ namespace WeightGain.DATA
         public byte Age => (byte)(DateTime.Now.Year - BirthDate.Year);
         public decimal Weight { get; set; }
         public decimal Height { get; set; }
-        public double Bmi => (double)Math.Round(Weight / ((Height / 100) * (Height / 100)), 2);
+        public double Bmi => (double)Math.Round(Weight / (Height / 100 * (Height / 100)), 2);
 
         //public virtual List<Product> Products { get; set; }
         public virtual List<Exercise> Exercises { get; set; }

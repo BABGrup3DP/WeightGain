@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 using WeightGain.UI.Extensions;
 using WeightGain.UI.Properties;
 
@@ -50,27 +51,7 @@ namespace WeightGain.UI.UserForms
 
         private void btnCalculateCal_Click(object sender, EventArgs e)
         {
-            var weight = _logginedUser.Weight;
-            var parCoefficient = 1.1m;
-            switch (cmbExercies.SelectedIndex)
-            {
-                case 0:
-                    parCoefficient = 5.6m;
-                    break;
-                case 1:
-                    parCoefficient = 5.8m;
-                    break;
-                case 2:
-                    parCoefficient = 6.34m;
-                    break;
-                case 3:
-                    parCoefficient = 2.1m;
-                    break;
-                case 4:
-                    parCoefficient = 9.0m;
-                    break;
-            }
-            txtExerciseCal.Text = (weight * parCoefficient * nudExerciseTime.Value / 60).ToString("F");
+            txtExerciseCal.Text = Helper.CalculateExercise(_logginedUser.Weight, cmbExercies.SelectedIndex, nudExerciseTime.Value).ToString("F");
         }
 
         private void btnAddExercise_Click(object sender, EventArgs e)
@@ -81,7 +62,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogSuccess = new Guna2MessageDialog
                 {
                     Text = "Egzersiz tipi yanlış seçilmiş.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogSuccess.Show();
                 return;
@@ -100,7 +82,8 @@ namespace WeightGain.UI.UserForms
                     var messageDialogSuccess = new Guna2MessageDialog
                     {
                         Text = "Egzersiz başarıyla eklendi.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogSuccess.Show();
                     RefreshDataGridView();
@@ -113,7 +96,8 @@ namespace WeightGain.UI.UserForms
                     var messageDialogSuccess = new Guna2MessageDialog
                     {
                         Text = "Egzersiz eklenirken hata oluştu.",
-                        Caption = Resources.ProgramTitle
+                        Caption = Resources.ProgramTitle,
+                        Style = MessageDialogStyle.Light
                     };
                     messageDialogSuccess.Show();
                 }
@@ -198,7 +182,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogSuccess = new Guna2MessageDialog
                 {
                     Text = dialogMessage,
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogSuccess.Show();
                 RefreshDataGridView();
@@ -208,7 +193,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Egzersiz seçilmemiş.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
             }
@@ -236,7 +222,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogSuccess = new Guna2MessageDialog
                 {
                     Text = "Egzersiz başarıyla düzenlendi.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogSuccess.Show();
                 RefreshDataGridView();
@@ -246,7 +233,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Egzersiz düzenlenirken hata oluştu.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialogError.Show();
             }

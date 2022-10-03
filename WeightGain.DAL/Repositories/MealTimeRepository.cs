@@ -23,6 +23,12 @@ namespace WeightGain.DAL.Repositories
 
         public List<MealTime> GetAll() => _mealTimes.ToList();
 
+        public double GetTotalCalories()
+        {
+            var result = _portions.Sum(x => x.Product.Calory * x.Size);
+            return result;
+        }
+
         public MealTime GetById(int mealTimeId) => _mealTimes.Find(mealTimeId);
 
         public List<MealTime> GetByUserId(int userId) => _mealTimes.Where(x => x.UserId == userId).ToList();
