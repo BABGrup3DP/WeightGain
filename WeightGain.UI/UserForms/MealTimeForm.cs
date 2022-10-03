@@ -26,8 +26,6 @@ namespace WeightGain.UI.UserForms
         public MealTimeForm(User logginedUser)
         {
             InitializeComponent();
-            twcMealTimes.NextButton = btnNext;
-            twcMealTimes.PreviousButton = btnPrev;
             _mealTimeRepository = new MealTimeRepository();
             _categoryRepository = new CategoryRepository();
             _productRepository = new ProductRepository();
@@ -44,7 +42,6 @@ namespace WeightGain.UI.UserForms
             clbCategories.DataSource = _categoryRepository.GetAll();
             clbCategories.DisplayMember = "Name";
             clbCategories.ValueMember = "CategoryId";
-            twcMealTimes.LastButtonClicked += TwcMealTimes_LastButtonClicked;
         }
 
 
@@ -55,7 +52,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Lütfen en az bir ürün seçin.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
                 return;
@@ -71,21 +69,35 @@ namespace WeightGain.UI.UserForms
             };
 
 
-            if (_mealTimeRepository.Insert(newMealTime) && _mealTimeRepository.AddProductsToMealTime(newMealTime, _productWithPortions))
+            if (_mealTimeRepository.Insert(newMealTime) &&
+                _mealTimeRepository.AddProductsToMealTime(newMealTime, _productWithPortions))
             {
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Öğün başarıyla eklendi.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
+
+                _selectedMealTime = MealTimeEnum.Breakfast;
+                txtDescription.Text = string.Empty;
+                dtpMealTime.Value = DateTime.Now.Date;
+                _selectedCategories.Clear();
+                _productWithPortions.Clear();
+                RefreshSelectedProductList();
+                RefreshProductList();
+                for (var i = 0; i < clbCategories.Items.Count; i++)
+                    clbCategories.SetItemChecked(i, false);
+                btnPrev.PerformClick();
             }
             else
             {
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Öğün eklenirken hata oluştu.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
             }
@@ -114,10 +126,22 @@ namespace WeightGain.UI.UserForms
                     _selectedMealTime = MealTimeEnum.LastSnack;
                     break;
             }
+            foreach (var ctrl in tpMealTimes.Controls)
+            {
+                if (ctrl is Button button)
+                {
+                    button.BackColor = button.Tag.ToString() == ((Button)sender).Tag.ToString() ? Color.DeepSkyBlue : Color.SkyBlue;
+                }
+            }
         }
 
         private void RefreshProductList()
         {
+            if (_selectedCategories.Count == 0)
+            {
+                lwImageList.Images.Clear();
+                lwProducts.Items.Clear();
+            }
             foreach (var selectedCategory in _selectedCategories)
             {
                 var selectedCategoryId = selectedCategory.CategoryId;
@@ -277,7 +301,8 @@ namespace WeightGain.UI.UserForms
                 var messageDialog = new Guna2MessageDialog
                 {
                     Text = "Hiçbir ürün seçilmemiş.",
-                    Caption = Resources.ProgramTitle
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
                 };
                 messageDialog.Show();
             }
@@ -329,16 +354,6 @@ namespace WeightGain.UI.UserForms
                 }
             }
             _resizing = false;
-        }
-
-        private void lwProducts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblAddBreakfast_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

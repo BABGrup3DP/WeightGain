@@ -22,6 +22,7 @@ namespace WeightGain.UI.Extensions
         public string NextButtonLastText { get; set; }
 
         public event EventHandler PageChanged;
+
         private void OnPageChanged() => PageChanged?.Invoke(this, EventArgs.Empty);
 
         public event EventHandler LastButtonClicked;
@@ -107,8 +108,8 @@ namespace WeightGain.UI.Extensions
             }
         }
 
-        readonly Dictionary<TabPage, Func<TabPage>> _nextPage = new Dictionary<TabPage, Func<TabPage>>();
-        readonly Dictionary<TabPage, Func<TabPage>> _prevPage = new Dictionary<TabPage, Func<TabPage>>();
+        private readonly Dictionary<TabPage, Func<TabPage>> _nextPage = new Dictionary<TabPage, Func<TabPage>>();
+        private readonly Dictionary<TabPage, Func<TabPage>> _prevPage = new Dictionary<TabPage, Func<TabPage>>();
 
         public void NextFunction(TabPage page, Func<TabPage> func)
         {

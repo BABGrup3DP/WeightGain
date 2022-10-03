@@ -37,7 +37,7 @@ namespace WeightGain.UI.UserForms
             System.Windows.Forms.Button btnFirstSnack;
             System.Windows.Forms.Button btnLunch;
             System.Windows.Forms.Button btnDinner;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tpMealTimes = new System.Windows.Forms.TabPage();
             this.lblAddBreakfast = new System.Windows.Forms.Label();
             this.lblBreakfast = new System.Windows.Forms.Label();
@@ -72,10 +72,10 @@ namespace WeightGain.UI.UserForms
             this.lblDescription = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dtpMealTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnPrev = new FontAwesome.Sharp.IconButton();
             this.lwImageList = new System.Windows.Forms.ImageList(this.components);
             this.tlpTabs = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnPrev = new FontAwesome.Sharp.IconButton();
             btnBreakfast = new System.Windows.Forms.Button();
             btnThirdSnack = new System.Windows.Forms.Button();
             btnSecondSnack = new System.Windows.Forms.Button();
@@ -96,9 +96,7 @@ namespace WeightGain.UI.UserForms
             // btnBreakfast
             // 
             btnBreakfast.BackColor = System.Drawing.Color.SkyBlue;
-            btnBreakfast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             btnBreakfast.CausesValidation = false;
-            btnBreakfast.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             btnBreakfast.Location = new System.Drawing.Point(30, 15);
             btnBreakfast.Margin = new System.Windows.Forms.Padding(2);
             btnBreakfast.Name = "btnBreakfast";
@@ -217,10 +215,10 @@ namespace WeightGain.UI.UserForms
             this.tpMealTimes.Controls.Add(this.lblDinner);
             this.tpMealTimes.Controls.Add(btnLunch);
             this.tpMealTimes.Controls.Add(btnDinner);
-            this.tpMealTimes.Location = new System.Drawing.Point(4, 29);
+            this.tpMealTimes.Location = new System.Drawing.Point(4, 24);
             this.tpMealTimes.Name = "tpMealTimes";
             this.tpMealTimes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMealTimes.Size = new System.Drawing.Size(975, 482);
+            this.tpMealTimes.Size = new System.Drawing.Size(975, 487);
             this.tpMealTimes.TabIndex = 0;
             this.tpMealTimes.Text = "Öğün Seç";
             // 
@@ -232,10 +230,9 @@ namespace WeightGain.UI.UserForms
             this.lblAddBreakfast.Location = new System.Drawing.Point(99, 119);
             this.lblAddBreakfast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddBreakfast.Name = "lblAddBreakfast";
-            this.lblAddBreakfast.Size = new System.Drawing.Size(38, 16);
+            this.lblAddBreakfast.Size = new System.Drawing.Size(32, 13);
             this.lblAddBreakfast.TabIndex = 24;
             this.lblAddBreakfast.Text = "Ekle";
-            this.lblAddBreakfast.Click += new System.EventHandler(this.lblAddBreakfast_Click);
             // 
             // lblBreakfast
             // 
@@ -257,7 +254,7 @@ namespace WeightGain.UI.UserForms
             this.lblStart.Location = new System.Drawing.Point(124, 376);
             this.lblStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(584, 24);
+            this.lblStart.Size = new System.Drawing.Size(464, 19);
             this.lblStart.TabIndex = 21;
             this.lblStart.Text = "Senin Sağlığın, Senin Kuralların. İlk Öğün Planıyla güne başlayabilirsin..";
             // 
@@ -269,7 +266,7 @@ namespace WeightGain.UI.UserForms
             this.lblAddFirstSnack.Location = new System.Drawing.Point(421, 119);
             this.lblAddFirstSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddFirstSnack.Name = "lblAddFirstSnack";
-            this.lblAddFirstSnack.Size = new System.Drawing.Size(38, 16);
+            this.lblAddFirstSnack.Size = new System.Drawing.Size(32, 13);
             this.lblAddFirstSnack.TabIndex = 20;
             this.lblAddFirstSnack.Text = "Ekle";
             // 
@@ -281,7 +278,7 @@ namespace WeightGain.UI.UserForms
             this.lblAddThirdSnack.Location = new System.Drawing.Point(739, 309);
             this.lblAddThirdSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddThirdSnack.Name = "lblAddThirdSnack";
-            this.lblAddThirdSnack.Size = new System.Drawing.Size(38, 16);
+            this.lblAddThirdSnack.Size = new System.Drawing.Size(32, 13);
             this.lblAddThirdSnack.TabIndex = 19;
             this.lblAddThirdSnack.Text = "Ekle";
             // 
@@ -293,7 +290,7 @@ namespace WeightGain.UI.UserForms
             this.lblAddSecondSnack.Location = new System.Drawing.Point(102, 311);
             this.lblAddSecondSnack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddSecondSnack.Name = "lblAddSecondSnack";
-            this.lblAddSecondSnack.Size = new System.Drawing.Size(38, 16);
+            this.lblAddSecondSnack.Size = new System.Drawing.Size(32, 13);
             this.lblAddSecondSnack.TabIndex = 18;
             this.lblAddSecondSnack.Text = "Ekle";
             // 
@@ -344,7 +341,7 @@ namespace WeightGain.UI.UserForms
             this.lblAddLunch.Location = new System.Drawing.Point(739, 112);
             this.lblAddLunch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddLunch.Name = "lblAddLunch";
-            this.lblAddLunch.Size = new System.Drawing.Size(38, 16);
+            this.lblAddLunch.Size = new System.Drawing.Size(32, 13);
             this.lblAddLunch.TabIndex = 11;
             this.lblAddLunch.Text = "Ekle";
             // 
@@ -356,7 +353,7 @@ namespace WeightGain.UI.UserForms
             this.lblAddDinner.Location = new System.Drawing.Point(418, 308);
             this.lblAddDinner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddDinner.Name = "lblAddDinner";
-            this.lblAddDinner.Size = new System.Drawing.Size(38, 16);
+            this.lblAddDinner.Size = new System.Drawing.Size(32, 13);
             this.lblAddDinner.TabIndex = 10;
             this.lblAddDinner.Text = "Ekle";
             // 
@@ -413,11 +410,14 @@ namespace WeightGain.UI.UserForms
             this.twcMealTimes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.twcMealTimes.Location = new System.Drawing.Point(3, 3);
             this.twcMealTimes.Name = "twcMealTimes";
+            this.twcMealTimes.NextButton = this.btnNext;
             this.twcMealTimes.NextButtonLastText = "Kaydet";
+            this.twcMealTimes.PreviousButton = this.btnPrev;
             this.twcMealTimes.SelectedIndex = 0;
             this.twcMealTimes.Size = new System.Drawing.Size(983, 515);
             this.twcMealTimes.TabIndex = 0;
             this.twcMealTimes.Text = null;
+            this.twcMealTimes.LastButtonClicked += this.TwcMealTimes_LastButtonClicked;
             // 
             // tpCategoryAndProduct
             // 
@@ -428,9 +428,9 @@ namespace WeightGain.UI.UserForms
             this.tpCategoryAndProduct.Controls.Add(this.lblTotalCal);
             this.tpCategoryAndProduct.Controls.Add(this.txtTotalCal);
             this.tpCategoryAndProduct.Controls.Add(this.pTop);
-            this.tpCategoryAndProduct.Location = new System.Drawing.Point(4, 29);
+            this.tpCategoryAndProduct.Location = new System.Drawing.Point(4, 24);
             this.tpCategoryAndProduct.Name = "tpCategoryAndProduct";
-            this.tpCategoryAndProduct.Size = new System.Drawing.Size(975, 482);
+            this.tpCategoryAndProduct.Size = new System.Drawing.Size(975, 487);
             this.tpCategoryAndProduct.TabIndex = 2;
             this.tpCategoryAndProduct.Text = "Kategori ve Ürün Seç";
             // 
@@ -440,14 +440,14 @@ namespace WeightGain.UI.UserForms
             this.dgvSelectedProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvSelectedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSelectedProducts.ContextMenuStrip = this.cmsProducts;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedProducts.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedProducts.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSelectedProducts.Location = new System.Drawing.Point(5, 227);
             this.dgvSelectedProducts.Name = "dgvSelectedProducts";
             this.dgvSelectedProducts.RowHeadersWidth = 51;
@@ -472,12 +472,12 @@ namespace WeightGain.UI.UserForms
             this.cmsProducts.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsProducts.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsProducts.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsProducts.Size = new System.Drawing.Size(95, 28);
+            this.cmsProducts.Size = new System.Drawing.Size(87, 26);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
@@ -523,7 +523,6 @@ namespace WeightGain.UI.UserForms
             this.lwProducts.TabIndex = 2;
             this.lwProducts.UseCompatibleStateImageBehavior = false;
             this.lwProducts.View = System.Windows.Forms.View.Details;
-            this.lwProducts.SelectedIndexChanged += new System.EventHandler(this.lwProducts_SelectedIndexChanged);
             this.lwProducts.SizeChanged += new System.EventHandler(this.lwProducts_SizeChanged);
             // 
             // productName
@@ -546,7 +545,7 @@ namespace WeightGain.UI.UserForms
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(802, 227);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(162, 36);
+            this.btnAdd.Size = new System.Drawing.Size(162, 45);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "SEÇİLENLERİ EKLE";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -558,7 +557,7 @@ namespace WeightGain.UI.UserForms
             this.lblTotalCal.AutoSize = true;
             this.lblTotalCal.Location = new System.Drawing.Point(820, 275);
             this.lblTotalCal.Name = "lblTotalCal";
-            this.lblTotalCal.Size = new System.Drawing.Size(164, 20);
+            this.lblTotalCal.Size = new System.Drawing.Size(128, 15);
             this.lblTotalCal.TabIndex = 11;
             this.lblTotalCal.Text = "Toplam Kalori Miktarı:";
             // 
@@ -620,7 +619,7 @@ namespace WeightGain.UI.UserForms
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDescription.Location = new System.Drawing.Point(329, 14);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(93, 27);
+            this.lblDescription.Size = new System.Drawing.Size(75, 22);
             this.lblDescription.TabIndex = 14;
             this.lblDescription.Text = "Açıklama :";
             // 
@@ -630,7 +629,7 @@ namespace WeightGain.UI.UserForms
             this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSelectDate.Location = new System.Drawing.Point(5, 14);
             this.lblSelectDate.Name = "lblSelectDate";
-            this.lblSelectDate.Size = new System.Drawing.Size(93, 27);
+            this.lblSelectDate.Size = new System.Drawing.Size(74, 22);
             this.lblSelectDate.TabIndex = 13;
             this.lblSelectDate.Text = "Tarih Seç :";
             // 
@@ -641,10 +640,26 @@ namespace WeightGain.UI.UserForms
             this.dtpMealTime.ForeColor = System.Drawing.Color.Black;
             this.dtpMealTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpMealTime.Location = new System.Drawing.Point(85, 7);
+            this.dtpMealTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpMealTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpMealTime.Name = "dtpMealTime";
             this.dtpMealTime.Size = new System.Drawing.Size(238, 36);
             this.dtpMealTime.TabIndex = 12;
+            this.dtpMealTime.Value = new System.DateTime(2022, 10, 3, 19, 44, 48, 470);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrev.Enabled = false;
+            this.btnPrev.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnPrev.IconColor = System.Drawing.Color.Black;
+            this.btnPrev.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrev.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrev.Location = new System.Drawing.Point(3, 3);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(485, 64);
+            this.btnPrev.TabIndex = 1;
+            this.btnPrev.UseVisualStyleBackColor = true;
             // 
             // lwImageList
             // 
@@ -686,23 +701,9 @@ namespace WeightGain.UI.UserForms
             this.tlpButtons.Size = new System.Drawing.Size(983, 70);
             this.tlpButtons.TabIndex = 4;
             // 
-            // btnPrev
-            // 
-            this.btnPrev.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrev.Enabled = false;
-            this.btnPrev.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnPrev.IconColor = System.Drawing.Color.Black;
-            this.btnPrev.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrev.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrev.Location = new System.Drawing.Point(3, 3);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(485, 64);
-            this.btnPrev.TabIndex = 1;
-            this.btnPrev.UseVisualStyleBackColor = true;
-            // 
             // MealTimeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 515);
             this.Controls.Add(this.tlpTabs);
