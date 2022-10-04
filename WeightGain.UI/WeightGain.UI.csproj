@@ -98,6 +98,12 @@
     <Compile Include="AdminForms\AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\ReportsFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ReportsFormAdmin.Designer.cs">
+      <DependentUpon>ReportsFormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\UserAddFormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForms\AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ReportsFormAdmin.resx">
+      <DependentUpon>ReportsFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UserAddFormAdmin.resx">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>

@@ -32,14 +32,14 @@ namespace WeightGain.UI.UserForms
         private void btnUyelik_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Üyelik";
-            _messageDialog.Text = "Üyelik işlemleri için kayıt ol butonuna tıklayarak kayıt olabilirsiniz. Kayıt olurken kullanıcı adı, e-posta ve şifre bilgilerinizi girerek üyelik işlemini tamamlayabilirsiniz. Kayıt işlemini tamamladıktan sonra giriş yap butonuna tıklayarak giriş yapabilirsiniz.";
+            _messageDialog.Text = "Üyelik işlemleri için kayıt ol butonuna tıklayarak kayıt olabilirsiniz.\nKayıt olurken kullanıcı adı, e-posta ve şifre bilgilerinizi girerek üyelik işlemini tamamlayabilirsiniz.\nKayıt işlemini tamamladıktan sonra giriş yap butonuna tıklayarak giriş yapabilirsiniz.";
             _messageDialog.Show();
         }
 
         private void btnUcret_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Ücret";
-            _messageDialog.Text = "Evet, WeightGain ücretsiz bir uygulamadır. Web sitesi üzerinden ücretsiz olarak yararlabilirsin.";
+            _messageDialog.Text = "Evet, WeightGain ücretsiz bir uygulamadır.\nWeb sitesi üzerinden ücretsiz olarak yararlabilirsin.";
             _messageDialog.Show();
         }
 
@@ -53,7 +53,7 @@ namespace WeightGain.UI.UserForms
         private void btnHesaplama_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Hesaplama";
-            _messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir. Vücut bilgilerinizi ilgili bölümden girebilirsiniz. WeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini ve hedeflerini göz önüne alır.";
+            _messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir. Vücut bilgilerinizi ilgili bölümden girebilirsiniz.\nWeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini ve hedeflerini göz önüne alır.";
             _messageDialog.Show();
         }
 

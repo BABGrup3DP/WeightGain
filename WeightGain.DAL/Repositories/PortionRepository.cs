@@ -71,5 +71,7 @@ namespace WeightGain.DAL.Repositories
                 return false;
             }
         }
+
+        public List<Portion> GetAll() => _portions.ToList();
     }
 }
