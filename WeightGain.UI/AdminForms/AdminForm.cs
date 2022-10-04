@@ -13,7 +13,7 @@ namespace WeightGain.UI.AdminForms
 {
     public partial class AdminForm : Form
     {
-        public readonly UserRepository _userRepository;
+        private readonly UserRepository _userRepository;
         private readonly List<BaseRepository> _baseRepositories;
         private readonly User _logginedUser;
         public AdminForm(List<BaseRepository> baseRepository, User logginedUser)
@@ -59,7 +59,7 @@ namespace WeightGain.UI.AdminForms
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new UsersFormAdmin(_userRepository));
+            Helper.OpenChildForm(mainPanel, new UsersFormAdmin(_baseRepositories));
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace WeightGain.UI.AdminForms
         private void btnProfile_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ProfileForm(_userRepository, _logginedUser));
+            Helper.OpenChildForm(mainPanel, new ProfileForm(_baseRepositories, _logginedUser));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -94,13 +94,13 @@ namespace WeightGain.UI.AdminForms
         private void btnCategories_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new CategoriesAdminForm());
+            Helper.OpenChildForm(mainPanel, new CategoriesAdminForm(_baseRepositories));
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ProductsFormAdmin());
+            Helper.OpenChildForm(mainPanel, new ProductsFormAdmin(_baseRepositories));
         }
 
         private void leftPanelMenuLogo_Click(object sender, EventArgs e)

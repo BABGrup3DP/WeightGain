@@ -15,12 +15,12 @@ namespace WeightGain.UI.UserForms
         private readonly ExerciseRepository _exerciseRepository;
         private readonly User _logginedUser;
 
-        public ReportForm(User logginedUser)
+        public ReportForm(List<BaseRepository> baseRepositories, User logginedUser)
         {
             InitializeComponent();
             _logginedUser = logginedUser;
-            _mealTimeRepository = new MealTimeRepository();
-            _exerciseRepository = new ExerciseRepository();
+            _mealTimeRepository = (MealTimeRepository)baseRepositories.Single(x => x.GetType() == typeof(MealTimeRepository));
+            _exerciseRepository = (ExerciseRepository)baseRepositories.Single(x => x.GetType() == typeof(ExerciseRepository));
             dtpArchiveStartDate.Value = DateTime.Now;
             dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
@@ -118,8 +118,6 @@ namespace WeightGain.UI.UserForms
                     var height = _logginedUser.Height;
                     var age = _logginedUser.Age;
                     var neededCalory = Helper.CalculateNeededCalory(weight, height, age);
-
-                    // egzersizleri görmüyor bu sebeple neededCalory'e ekleyemiyorum. 
 
                     var dailyExercises = _exerciseRepository.GetByDate(selectedDate, _logginedUser.Id);
                     if (dailyExercises != null)

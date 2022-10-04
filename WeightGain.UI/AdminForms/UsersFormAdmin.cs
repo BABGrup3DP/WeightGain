@@ -1,5 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -11,10 +13,10 @@ namespace WeightGain.UI.AdminForms
     public partial class UsersFormAdmin : Form
     {
         private readonly UserRepository _userRepository;
-        public UsersFormAdmin(UserRepository userRepository)
+        public UsersFormAdmin(List<BaseRepository> baseRepository)
         {
             InitializeComponent();
-            _userRepository = userRepository;
+            _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
         }
 
         private void RefreshDataGridView()

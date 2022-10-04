@@ -14,45 +14,24 @@ namespace WeightGain.UI
 {
     public partial class LoginForm : Form
     {
-        private SplashForm splashForm = new SplashForm();
-        private UserRepository _userRepository;
-        private CategoryRepository _categoryRepository;
-        private ProductRepository _productRepository;
-        private PortionRepository _portionRepository;
-        private ExerciseRepository _exerciseRepository;
-        private MealTimeRepository _mealTimeRepository;
+        private readonly UserRepository _userRepository;
         private bool _showPassword;
-        private List<BaseRepository> _repositoryList = new List<BaseRepository>();
+        private readonly List<BaseRepository> _repositoryList = new List<BaseRepository>();
         public LoginForm()
         {
-            Thread splashThread = new Thread(new ThreadStart(StartForm));
-            splashThread.Start();
-            splashForm.lblProgress.Invoke(new Action(() => splashForm.lblProgress.Text = "Program açılıyor."));
             _userRepository = new UserRepository();
-            splashForm.pBar.Invoke(new Action(() => splashForm.pBar.Value += 17));
-            _categoryRepository = new CategoryRepository();
-            splashForm.pBar.Invoke(new Action(() => splashForm.pBar.Value += 17));
-            _productRepository = new ProductRepository();
-            splashForm.pBar.Invoke(new Action(() => splashForm.pBar.Value += 17));
-            _portionRepository = new PortionRepository();
-            splashForm.pBar.Invoke(new Action(() => splashForm.pBar.Value += 17));
-            _exerciseRepository = new ExerciseRepository();
-            splashForm.pBar.Invoke(new Action(() => splashForm.pBar.Value += 17));
-            _mealTimeRepository = new MealTimeRepository();
-            splashForm.pBar.Invoke(new Action(() => splashForm.pBar.Value = 100));
+            var categoryRepository = new CategoryRepository();
+            var productRepository = new ProductRepository();
+            var portionRepository = new PortionRepository();
+            var exerciseRepository = new ExerciseRepository();
+            var mealTimeRepository = new MealTimeRepository();
             InitializeComponent();
-            splashThread.Abort();
             _repositoryList.Add(_userRepository);
-            _repositoryList.Add(_categoryRepository);
-            _repositoryList.Add(_productRepository);
-            _repositoryList.Add(_portionRepository);
-            _repositoryList.Add(_exerciseRepository);
-            _repositoryList.Add(_mealTimeRepository);
-        }
-
-        public void StartForm()
-        {
-            Application.Run(splashForm);
+            _repositoryList.Add(categoryRepository);
+            _repositoryList.Add(productRepository);
+            _repositoryList.Add(portionRepository);
+            _repositoryList.Add(exerciseRepository);
+            _repositoryList.Add(mealTimeRepository);
         }
 
         #region Helper Functions

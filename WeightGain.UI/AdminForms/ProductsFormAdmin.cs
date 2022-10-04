@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -17,11 +18,11 @@ namespace WeightGain.UI.AdminForms
         private readonly ProductRepository _productRepository;
         private List<ProductWithCategory> _productWithCategories;
 
-        public ProductsFormAdmin()
+        public ProductsFormAdmin(List<BaseRepository> baseRepositories)
         {
             InitializeComponent();
-            _productRepository = new ProductRepository();
-            var categoryRepository = new CategoryRepository();
+            _productRepository = (ProductRepository)baseRepositories.Single(x => x.GetType() == typeof(ProductRepository));
+            var categoryRepository = (CategoryRepository)baseRepositories.Single(x => x.GetType() == typeof(CategoryRepository));
             cmbProductCategory.DataSource = categoryRepository.GetAll();
             cmbProductCategory.DisplayMember = "Name";
             cmbProductCategory.ValueMember = "CategoryId";

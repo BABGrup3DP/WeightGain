@@ -9,15 +9,17 @@ namespace WeightGain.UI.AdminForms
 {
     public partial class AdminMainForm : Form
     {
-        private UserRepository _userRepository;
-        private CategoryRepository _categoryRepository;
-        private ProductRepository _productRepository;
-        private PortionRepository _portionRepository;
-        private MealTimeRepository _mealTimeRepository;
-        private ExerciseRepository _exerciseRepository;
+        private readonly List<BaseRepository> _baseRepository;
+        private readonly UserRepository _userRepository;
+        private readonly CategoryRepository _categoryRepository;
+        private readonly ProductRepository _productRepository;
+        private readonly PortionRepository _portionRepository;
+        private readonly MealTimeRepository _mealTimeRepository;
+        private readonly ExerciseRepository _exerciseRepository;
 
         public AdminMainForm(List<BaseRepository> baseRepository)
         {
+            _baseRepository = baseRepository;
             _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
             _categoryRepository = (CategoryRepository)baseRepository.Single(x => x.GetType() == typeof(CategoryRepository));
             _productRepository = (ProductRepository)baseRepository.Single(x => x.GetType() == typeof(ProductRepository));
