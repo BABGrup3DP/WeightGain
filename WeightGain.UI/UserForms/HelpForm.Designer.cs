@@ -61,7 +61,7 @@
             this.btnnedir.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnnedir.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnnedir.Location = new System.Drawing.Point(156, 97);
-            this.btnnedir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnnedir.Margin = new System.Windows.Forms.Padding(2);
             this.btnnedir.Name = "btnnedir";
             this.btnnedir.Size = new System.Drawing.Size(267, 32);
             this.btnnedir.TabIndex = 2;
@@ -72,9 +72,10 @@
             // btnuyelik
             // 
             this.btnuyelik.BackColor = System.Drawing.Color.LightBlue;
+            this.btnuyelik.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnuyelik.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnuyelik.Location = new System.Drawing.Point(156, 149);
-            this.btnuyelik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnuyelik.Margin = new System.Windows.Forms.Padding(2);
             this.btnuyelik.Name = "btnuyelik";
             this.btnuyelik.Size = new System.Drawing.Size(267, 32);
             this.btnuyelik.TabIndex = 3;
@@ -85,9 +86,10 @@
             // btnyassiniri
             // 
             this.btnyassiniri.BackColor = System.Drawing.Color.LightBlue;
+            this.btnyassiniri.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnyassiniri.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnyassiniri.Location = new System.Drawing.Point(156, 259);
-            this.btnyassiniri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnyassiniri.Margin = new System.Windows.Forms.Padding(2);
             this.btnyassiniri.Name = "btnyassiniri";
             this.btnyassiniri.Size = new System.Drawing.Size(267, 32);
             this.btnyassiniri.TabIndex = 4;
@@ -98,9 +100,10 @@
             // btnucret
             // 
             this.btnucret.BackColor = System.Drawing.Color.LightBlue;
+            this.btnucret.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnucret.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnucret.Location = new System.Drawing.Point(156, 203);
-            this.btnucret.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnucret.Margin = new System.Windows.Forms.Padding(2);
             this.btnucret.Name = "btnucret";
             this.btnucret.Size = new System.Drawing.Size(267, 32);
             this.btnucret.TabIndex = 5;
@@ -111,9 +114,10 @@
             // btnuyelikiptali
             // 
             this.btnuyelikiptali.BackColor = System.Drawing.Color.LightBlue;
+            this.btnuyelikiptali.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnuyelikiptali.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnuyelikiptali.Location = new System.Drawing.Point(490, 318);
-            this.btnuyelikiptali.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnuyelikiptali.Margin = new System.Windows.Forms.Padding(2);
             this.btnuyelikiptali.Name = "btnuyelikiptali";
             this.btnuyelikiptali.Size = new System.Drawing.Size(267, 32);
             this.btnuyelikiptali.TabIndex = 7;
@@ -124,9 +128,10 @@
             // btnsonuculasim
             // 
             this.btnsonuculasim.BackColor = System.Drawing.Color.LightBlue;
+            this.btnsonuculasim.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnsonuculasim.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnsonuculasim.Location = new System.Drawing.Point(490, 259);
-            this.btnsonuculasim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsonuculasim.Margin = new System.Windows.Forms.Padding(2);
             this.btnsonuculasim.Name = "btnsonuculasim";
             this.btnsonuculasim.Size = new System.Drawing.Size(267, 32);
             this.btnsonuculasim.TabIndex = 8;
@@ -137,9 +142,10 @@
             // btnantremangirisi
             // 
             this.btnantremangirisi.BackColor = System.Drawing.Color.LightBlue;
+            this.btnantremangirisi.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnantremangirisi.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnantremangirisi.Location = new System.Drawing.Point(490, 203);
-            this.btnantremangirisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnantremangirisi.Margin = new System.Windows.Forms.Padding(2);
             this.btnantremangirisi.Name = "btnantremangirisi";
             this.btnantremangirisi.Size = new System.Drawing.Size(267, 32);
             this.btnantremangirisi.TabIndex = 9;
@@ -150,9 +156,10 @@
             // btnbilgigoruntuleme
             // 
             this.btnbilgigoruntuleme.BackColor = System.Drawing.Color.LightBlue;
+            this.btnbilgigoruntuleme.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnbilgigoruntuleme.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnbilgigoruntuleme.Location = new System.Drawing.Point(490, 149);
-            this.btnbilgigoruntuleme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnbilgigoruntuleme.Margin = new System.Windows.Forms.Padding(2);
             this.btnbilgigoruntuleme.Name = "btnbilgigoruntuleme";
             this.btnbilgigoruntuleme.Size = new System.Drawing.Size(267, 32);
             this.btnbilgigoruntuleme.TabIndex = 10;
@@ -163,9 +170,10 @@
             // btnsecim
             // 
             this.btnsecim.BackColor = System.Drawing.Color.LightBlue;
+            this.btnsecim.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnsecim.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnsecim.Location = new System.Drawing.Point(490, 97);
-            this.btnsecim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsecim.Margin = new System.Windows.Forms.Padding(2);
             this.btnsecim.Name = "btnsecim";
             this.btnsecim.Size = new System.Drawing.Size(267, 32);
             this.btnsecim.TabIndex = 11;
@@ -176,9 +184,10 @@
             // btnhesaplama
             // 
             this.btnhesaplama.BackColor = System.Drawing.Color.LightBlue;
+            this.btnhesaplama.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.btnhesaplama.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnhesaplama.Location = new System.Drawing.Point(156, 318);
-            this.btnhesaplama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnhesaplama.Margin = new System.Windows.Forms.Padding(2);
             this.btnhesaplama.Name = "btnhesaplama";
             this.btnhesaplama.Size = new System.Drawing.Size(267, 32);
             this.btnhesaplama.TabIndex = 12;
