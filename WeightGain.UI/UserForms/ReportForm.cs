@@ -20,7 +20,7 @@ namespace WeightGain.UI.UserForms
             InitializeComponent();
             _logginedUser = logginedUser;
             _mealTimeRepository = (MealTimeRepository)baseRepositories.Single(x => x.GetType() == typeof(MealTimeRepository));
-            _exerciseRepository = (ExerciseRepository)baseRepositories.Single(x => x.GetType() == typeof(MealTimeRepository));
+            _exerciseRepository = (ExerciseRepository)baseRepositories.Single(x => x.GetType() == typeof(ExerciseRepository));
             dtpArchiveStartDate.Value = DateTime.Now;
             dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
