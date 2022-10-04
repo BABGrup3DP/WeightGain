@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
@@ -12,11 +13,11 @@ namespace WeightGain.UI.UserForms
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly ExerciseRepository _exerciseRepository;
         private readonly User _logginedUser;
-        public MainForm(User logginedUser)
+        public MainForm(List<BaseRepository> baseRepository, User logginedUser)
         {
             _logginedUser = logginedUser;
-            _mealTimeRepository = new MealTimeRepository();
-            _exerciseRepository = new ExerciseRepository();
+            _mealTimeRepository = (MealTimeRepository)baseRepository.Single(x => x.GetType() == typeof(MealTimeRepository));
+            _exerciseRepository = (ExerciseRepository)baseRepository.Single(x => x.GetType() == typeof(ExerciseRepository));
             InitializeComponent();
 
         }

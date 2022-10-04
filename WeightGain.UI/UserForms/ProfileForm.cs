@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -17,10 +19,10 @@ namespace WeightGain.UI.UserForms
         private bool _showPassword2;
 
 
-        public ProfileForm(UserRepository userRepository, User logginedUser)
+        public ProfileForm(List<BaseRepository> baseRepositories, User logginedUser)
         {
             InitializeComponent();
-            _userRepository = userRepository;
+            _userRepository = (UserRepository)baseRepositories.Single(x => x.GetType() == typeof(UserRepository));
             _logginedUser = logginedUser;
         }
 

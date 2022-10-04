@@ -23,18 +23,17 @@ namespace WeightGain.UI.UserForms
         private readonly List<ProductWithPortion> _productWithPortions;
         private bool _resizing;
 
-        public MealTimeForm(User logginedUser)
+        public MealTimeForm(List<BaseRepository> baseRepositories, User logginedUser)
         {
             InitializeComponent();
-            _mealTimeRepository = new MealTimeRepository();
-            _categoryRepository = new CategoryRepository();
-            _productRepository = new ProductRepository();
+            _mealTimeRepository = (MealTimeRepository)baseRepositories.Single(x => x.GetType() == typeof(MealTimeRepository));
+            _categoryRepository = (CategoryRepository)baseRepositories.Single(x => x.GetType() == typeof(CategoryRepository));
+            _productRepository = (ProductRepository)baseRepositories.Single(x => x.GetType() == typeof(ProductRepository));
             _selectedCategories = new List<Category>();
             _productWithPortions = new List<ProductWithPortion>();
             _logginedUser = logginedUser;
             dtpMealTime.Value = DateTime.Now;
             dtpMealTime.MaxDate = DateTime.Now;
-
         }
 
         private void MealTimeForm_Load(object sender, EventArgs e)
@@ -59,7 +58,7 @@ namespace WeightGain.UI.UserForms
                 return;
             }
 
-            var mealTimeDate = dtpMealTime.Value;
+            var mealTimeDate = dtpMealTime.Value.Date;
             var newMealTime = new MealTime
             {
                 MealTimeType = _selectedMealTime,

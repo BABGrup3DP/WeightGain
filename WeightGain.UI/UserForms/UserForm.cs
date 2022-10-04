@@ -13,10 +13,12 @@ namespace WeightGain.UI.UserForms
     public partial class UserForm : Form
     {
         private readonly UserRepository _userRepository;
+        private readonly List<BaseRepository> _baseRepositories;
         private readonly User _logginedUser;
         public UserForm(List<BaseRepository> baseRepository, User logginedUser)
         {
             InitializeComponent();
+            _baseRepositories = baseRepository;
             _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
             _logginedUser = logginedUser;
         }
@@ -56,25 +58,25 @@ namespace WeightGain.UI.UserForms
         private void btnMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimeForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new MealTimeForm(_baseRepositories, _logginedUser));
         }
 
         private void btnExercies_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ExerciseForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new ExerciseForm(_baseRepositories, _logginedUser));
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ReportForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new ReportForm(_baseRepositories, _logginedUser));
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new ProfileForm(_userRepository, _logginedUser));
+            Helper.OpenChildForm(mainPanel, new ProfileForm(_baseRepositories, _logginedUser));
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -91,13 +93,13 @@ namespace WeightGain.UI.UserForms
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            Helper.OpenChildForm(mainPanel, new MainForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new MainForm(_baseRepositories, _logginedUser));
         }
 
 
         private void leftPanelMenuLogo_Click(object sender, EventArgs e)
         {
-            Helper.OpenChildForm(mainPanel, new MainForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new MainForm(_baseRepositories, _logginedUser));
         }
 
     }
