@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel.Configuration;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA.Helpers;
@@ -52,21 +51,6 @@ namespace WeightGain.UI.AdminForms
             }
             txtTotalGood.Text = goodUser.ToString();
             txtTotalBad.Text = (totalUsers - goodUser).ToString();
-        }
-
-        private void bgwContextLoad_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-            _userRepository = new UserRepository();
-            _categoryRepository = new CategoryRepository();
-            _productRepository = new ProductRepository();
-            _portionRepository = new PortionRepository();
-            _mealTimeRepository = new MealTimeRepository();
-            _exerciseRepository = new ExerciseRepository();
-        }
-
-        private void bgwContextLoad_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
-        {
-
         }
     }
 }
