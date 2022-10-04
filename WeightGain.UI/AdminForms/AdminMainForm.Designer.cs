@@ -46,7 +46,6 @@
             this.lblTotalBad = new System.Windows.Forms.Label();
             this.gbStats = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblNote = new System.Windows.Forms.Label();
-            this.bgwContextLoad = new System.ComponentModel.BackgroundWorker();
             this.gbStats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -301,11 +300,6 @@
             this.lblNote.Text = "Kullanıcılar ile alakalı hesaplar yapılırken sadece düz kullanıcılar dikkate alın" +
     "mıştır.";
             // 
-            // bgwContextLoad
-            // 
-            this.bgwContextLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwContextLoad_DoWork);
-            this.bgwContextLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwContextLoad_RunWorkerCompleted);
-            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -343,6 +337,5 @@
         private System.Windows.Forms.Label lblTotalUser;
         private Guna.UI2.WinForms.Guna2GroupBox gbStats;
         private System.Windows.Forms.Label lblNote;
-        private System.ComponentModel.BackgroundWorker bgwContextLoad;
     }
 }
