@@ -90,12 +90,12 @@ namespace WeightGain.UI.UserForms
                         var totalDailyCalory = breakfastCalory + firstSnackCalory + lunchCalory + secondSnackCalory + dinnerCalory + lastSnackCalory;
                         txtTotalCalory.Text = totalDailyCalory.ToString();
 
-                        lblMorning.Text = string.Join(", ", breakfastMeals);
-                        lblFirstSnack.Text = string.Join(", ", firstSnackMeals);
-                        lblAfternoon.Text = string.Join(", ", lunchMeals);
-                        lblSecondSnack.Text = string.Join(", ", secondSnackMeals);
-                        lblEvening.Text = string.Join(", ", dinnerMeals);
-                        lblThirdSnack.Text = string.Join(", ", lastSnackMeals);
+                        dgvBreakfast.Text = string.Join(", ", breakfastMeals);
+                        dgvFirstSnack.Text = string.Join(", ", firstSnackMeals);
+                        dgvLunch.Text = string.Join(", ", lunchMeals);
+                        dgvSecondSnack.Text = string.Join(", ", secondSnackMeals);
+                        dgvDinner.Text = string.Join(", ", dinnerMeals);
+                        dgvThirdSnack.Text = string.Join(", ", lastSnackMeals);
                     }
                     else
                     {
@@ -107,12 +107,12 @@ namespace WeightGain.UI.UserForms
                         txtThirdSnack.Text = "";
                         txtTotalCalory.Text = "";
 
-                        lblMorning.Text = "Öğünde Yenilen Besinler";
-                        lblFirstSnack.Text = "Öğünde Yenilen Besinler";
-                        lblAfternoon.Text = "Öğünde Yenilen Besinler";
-                        lblSecondSnack.Text = "Öğünde Yenilen Besinler";
-                        lblEvening.Text = "Öğünde Yenilen Besinler";
-                        lblThirdSnack.Text = "Öğünde Yenilen Besinler";
+                        dgvBreakfast.Text = "Öğünde Yenilen Besinler";
+                        dgvFirstSnack.Text = "Öğünde Yenilen Besinler";
+                        dgvLunch.Text = "Öğünde Yenilen Besinler";
+                        dgvSecondSnack.Text = "Öğünde Yenilen Besinler";
+                        dgvDinner.Text = "Öğünde Yenilen Besinler";
+                        dgvThirdSnack.Text = "Öğünde Yenilen Besinler";
                     }
                     var weight = _logginedUser.Weight;
                     var height = _logginedUser.Height;
