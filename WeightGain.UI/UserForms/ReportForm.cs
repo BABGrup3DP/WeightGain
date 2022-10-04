@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
+using WeightGain.UI.Extensions;
 
 namespace WeightGain.UI.UserForms
 {
@@ -14,6 +15,7 @@ namespace WeightGain.UI.UserForms
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly ExerciseRepository _exerciseRepository;
         private readonly User _logginedUser;
+        private List<MealTime> _mealTimeList;
 
         public ReportForm(List<BaseRepository> baseRepositories, User logginedUser)
         {
@@ -25,11 +27,60 @@ namespace WeightGain.UI.UserForms
             dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
 
+        private void RefreshDataGrids()
+        {
+            #region Veri Girilen Günler
+            dgvDataEntryDays.AutoGenerateColumns = false;
+            dgvDataEntryDays.DataSource = null;
+            dgvDataEntryDays.DataSource = _mealTimeList;
+            if (dgvDataEntryDays.Columns.Count == 0)
+            {
+                dgvDataEntryDays.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "MealTimeId",
+                    HeaderText = "ID",
+                    Name = "MealTimeId",
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvDataEntryDays.Columns[0].Visible = false;
+                dgvDataEntryDays.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "MealTimeType",
+                    HeaderText = "Öğün Adı",
+                    Name = "MealTimeType",
+                    Width = 200,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    CellTemplate = new MealTimeEnumTextBoxCell()
+                });
+                dgvDataEntryDays.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "MealTimeDescription",
+                    HeaderText = "Açıklama",
+                    Name = "MealTimeDescription",
+                    Width = 100,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                });
+                dgvDataEntryDays.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    DataPropertyName = "MealTimeDate",
+                    HeaderText = "Tarih",
+                    Name = "MealTimeDate",
+                    Width = 100,
+                    ReadOnly = true,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                    DefaultCellStyle = new DataGridViewCellStyle { Format = "dd.MM.yyyy" }
+                });
+            }
+            #endregion
+        }
+
         private void btnGet_Click(object sender, EventArgs e)
         {
             var selectedDate = dtpArchiveStartDate.Value.Date;
             var selectedToDate = cmbDateTo.SelectedIndex;
-            List<MealTime> mealTimes;
 
             var breakfastMeals = new List<string>();
             var firstSnackMeals = new List<string>();
@@ -47,10 +98,10 @@ namespace WeightGain.UI.UserForms
             switch (selectedToDate)
             {
                 case 0: // Günlük
-                    mealTimes = _mealTimeRepository.GetByDate(selectedDate, _logginedUser.Id);
-                    if (mealTimes != null)
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, _logginedUser.Id);
+                    if (_mealTimeList != null)
                     {
-                        foreach (var mealTime in mealTimes)
+                        foreach (var mealTime in _mealTimeList)
                         {
                             var products = mealTime.Products;
                             switch (mealTime.MealTimeType)
@@ -96,6 +147,7 @@ namespace WeightGain.UI.UserForms
                         dgvSecondSnack.Text = string.Join(", ", secondSnackMeals);
                         dgvDinner.Text = string.Join(", ", dinnerMeals);
                         dgvThirdSnack.Text = string.Join(", ", lastSnackMeals);
+                        RefreshDataGrids();
                     }
                     else
                     {
@@ -130,13 +182,13 @@ namespace WeightGain.UI.UserForms
                     txtTotalNeedCalory.Text = neededCalory.ToString();
                     break;
                 case 1: // Haftalık
-                    mealTimes = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), _logginedUser.Id);
                     break;
                 case 2: // Aylık
-                    mealTimes = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), _logginedUser.Id);
                     break;
                 case 3: // Yıllık
-                    mealTimes = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddYears(1), _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddYears(1), _logginedUser.Id);
                     break;
                 default:
                     var messageDialogError = new Guna2MessageDialog
@@ -147,8 +199,6 @@ namespace WeightGain.UI.UserForms
                     messageDialogError.Show();
                     return;
             }
-            dgvDataEntryDays.DataSource = mealTimes;
-
         }
     }
 }
