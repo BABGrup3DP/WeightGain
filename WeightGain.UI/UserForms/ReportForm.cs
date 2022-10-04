@@ -27,7 +27,7 @@ namespace WeightGain.UI.UserForms
             dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
 
-        private void RefreshDataGrids()
+        private void RefreshDataViewGrid()
         {
             #region Veri Girilen Günler
             dgvDataEntryDays.AutoGenerateColumns = false;
@@ -141,13 +141,13 @@ namespace WeightGain.UI.UserForms
                         var totalDailyCalory = breakfastCalory + firstSnackCalory + lunchCalory + secondSnackCalory + dinnerCalory + lastSnackCalory;
                         txtTotalCalory.Text = totalDailyCalory.ToString();
 
-                        dgvBreakfast.Text = string.Join(", ", breakfastMeals);
-                        dgvFirstSnack.Text = string.Join(", ", firstSnackMeals);
-                        dgvLunch.Text = string.Join(", ", lunchMeals);
-                        dgvSecondSnack.Text = string.Join(", ", secondSnackMeals);
-                        dgvDinner.Text = string.Join(", ", dinnerMeals);
-                        dgvThirdSnack.Text = string.Join(", ", lastSnackMeals);
-                        RefreshDataGrids();
+                        txtAllBreakfast.Text = string.Join(", ", breakfastMeals);
+                        txtAllFirstSnack.Text = string.Join(", ", firstSnackMeals);
+                        txtAllLunch.Text = string.Join(", ", lunchMeals);
+                        txtAllSecondSnack.Text = string.Join(", ", secondSnackMeals);
+                        txtAllDinner.Text = string.Join(", ", dinnerMeals);
+                        txtAllLastSnack.Text = string.Join(", ", lastSnackMeals);
+                        RefreshDataViewGrid();
                     }
                     else
                     {
@@ -159,12 +159,12 @@ namespace WeightGain.UI.UserForms
                         txtThirdSnack.Text = "";
                         txtTotalCalory.Text = "";
 
-                        dgvBreakfast.DataSource = "";
-                        dgvFirstSnack.DataSource = "";
-                        dgvLunch.DataSource = "";
-                        dgvSecondSnack.DataSource = "";
-                        dgvDinner.DataSource = "";
-                        dgvThirdSnack.DataSource = "";
+                        txtAllBreakfast.Text = "";
+                        txtAllFirstSnack.Text = "";
+                        txtAllLunch.Text = "";
+                        txtAllSecondSnack.Text = "";
+                        txtAllDinner.Text = "";
+                        txtAllLastSnack.Text = "";
                     }
                     var weight = _logginedUser.Weight;
                     var height = _logginedUser.Height;
