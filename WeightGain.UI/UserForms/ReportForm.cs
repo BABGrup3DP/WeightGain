@@ -90,12 +90,12 @@ namespace WeightGain.UI.UserForms
                         var totalDailyCalory = breakfastCalory + firstSnackCalory + lunchCalory + secondSnackCalory + dinnerCalory + lastSnackCalory;
                         txtTotalCalory.Text = totalDailyCalory.ToString();
 
-                        dgvBreakfast.Text = string.Join(", ", breakfastMeals);
-                        dgvFirstSnack.Text = string.Join(", ", firstSnackMeals);
-                        dgvLunch.Text = string.Join(", ", lunchMeals);
-                        dgvSecondSnack.Text = string.Join(", ", secondSnackMeals);
-                        dgvDinner.Text = string.Join(", ", dinnerMeals);
-                        dgvThirdSnack.Text = string.Join(", ", lastSnackMeals);
+                        dgvBreakfast.DataSource = breakfastMeals.ToList();
+                        dgvFirstSnack.DataSource= firstSnackMeals.ToList();
+                        dgvLunch.DataSource = lunchMeals.ToList();
+                        dgvSecondSnack.DataSource = secondSnackMeals.ToList();
+                        dgvDinner.DataSource = dinnerMeals.ToList();
+                        dgvThirdSnack.DataSource =lastSnackMeals.ToList();
                     }
                     else
                     {
