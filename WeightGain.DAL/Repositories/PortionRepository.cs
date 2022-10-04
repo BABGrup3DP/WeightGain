@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
@@ -23,6 +25,19 @@ namespace WeightGain.DAL.Repositories
             {
                 return false;
             }
+        }
+
+        public List<Portion> GetByUserId(int userId)
+        {
+            try
+            {
+                return _portions.Where(x => x.MealTime.UserId == userId).ToList();
+            }
+            catch
+            {
+                return null;
+            }
+
         }
 
         public bool Update(Portion portion)

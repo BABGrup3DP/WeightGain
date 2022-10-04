@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
@@ -12,10 +14,10 @@ namespace WeightGain.UI.UserForms
     {
         private readonly UserRepository _userRepository;
         private readonly User _logginedUser;
-        public UserForm(UserRepository userRepository, User logginedUser)
+        public UserForm(List<BaseRepository> baseRepository, User logginedUser)
         {
             InitializeComponent();
-            _userRepository = userRepository;
+            _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
             _logginedUser = logginedUser;
         }
 
@@ -97,6 +99,6 @@ namespace WeightGain.UI.UserForms
         {
             Helper.OpenChildForm(mainPanel, new MainForm(_logginedUser));
         }
-     
+
     }
 }

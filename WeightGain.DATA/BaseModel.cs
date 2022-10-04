@@ -9,6 +9,6 @@ namespace WeightGain.DATA
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
         public UserTypeEnum UserType { get; set; }
-
+        public DateTime RegisterDate { get; set; } = DateTime.Now;
     }
 }

@@ -104,6 +104,7 @@
     <Compile Include="AdminForms\UserAddFormAdmin.Designer.cs">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\ControlEx.cs" />
     <Compile Include="Extensions\UserTypeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\ExerciseTypeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\TabControlEx.cs">
@@ -113,6 +114,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\ReportForm.cs">
       <SubType>Form</SubType>
@@ -199,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UserAddFormAdmin.resx">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>

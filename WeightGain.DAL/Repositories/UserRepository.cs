@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using WeightGain.DAL.Context;
 using WeightGain.DATA;
 
 namespace WeightGain.DAL.Repositories
@@ -36,7 +35,14 @@ namespace WeightGain.DAL.Repositories
         //Kullanıcı ıd sine göre üyeleri getirme
         public User GetUserById(User id) => _users.Find(id);
 
-        public List<User> GetAll() => _users.ToList();
+        public List<User> GetAll(bool onlyMembers = false)
+        {
+            if (onlyMembers)
+                return _users.Where(x => x.UserType == UserTypeEnum.User).ToList();
+            else
+                return _users.ToList();
+        }
+
 
         //kullanıcı giriş kontrol
         public User CheckLogin(string emailOrPhone, string password)

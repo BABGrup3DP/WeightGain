@@ -17,6 +17,7 @@ namespace WeightGain.DAL.Mappings
             Property(x => x.BirthDate).IsRequired();
             Property(x => x.Password).IsRequired().HasMaxLength(88);
             Property(x => x.PhoneNumber).HasMaxLength(11);
+            Property(x => x.RegisterDate).IsRequired();
             Ignore(x => x.FullName);
             Ignore(x => x.Age);
 

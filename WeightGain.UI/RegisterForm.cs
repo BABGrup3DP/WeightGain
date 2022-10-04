@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -13,10 +15,10 @@ namespace WeightGain.UI
     {
         private readonly UserRepository _userRepository;
         private bool showPassword = false;
-        public RegisterForm()
+        public RegisterForm(List<BaseRepository> repositories)
         {
             InitializeComponent();
-            _userRepository = new UserRepository();
+            _userRepository = (UserRepository)repositories.Single(x => x.GetType() == typeof(UserRepository));
         }
 
         #region Helper Functions

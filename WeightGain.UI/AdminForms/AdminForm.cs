@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
@@ -12,11 +14,13 @@ namespace WeightGain.UI.AdminForms
     public partial class AdminForm : Form
     {
         public readonly UserRepository _userRepository;
+        private readonly List<BaseRepository> _baseRepositories;
         private readonly User _logginedUser;
-        public AdminForm(UserRepository userRepository, User logginedUser)
+        public AdminForm(List<BaseRepository> baseRepository, User logginedUser)
         {
             InitializeComponent();
-            _userRepository = userRepository;
+            _baseRepositories = baseRepository;
+            _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
             _logginedUser = logginedUser;
         }
 
@@ -84,7 +88,7 @@ namespace WeightGain.UI.AdminForms
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            Helper.OpenChildForm(mainPanel, new AdminMainForm());
+            Helper.OpenChildForm(mainPanel, new AdminMainForm(_baseRepositories));
         }
 
         private void btnCategories_Click(object sender, EventArgs e)
@@ -101,7 +105,7 @@ namespace WeightGain.UI.AdminForms
 
         private void leftPanelMenuLogo_Click(object sender, EventArgs e)
         {
-            Helper.OpenChildForm(mainPanel, new AdminMainForm());
+            Helper.OpenChildForm(mainPanel, new AdminMainForm(_baseRepositories));
         }
     }
 }
