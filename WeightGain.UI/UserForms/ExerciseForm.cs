@@ -74,7 +74,7 @@ namespace WeightGain.UI.UserForms
                 {
                     Duration = (int)nudExerciseTime.Value,
                     ExerciseType = (ExerciseEnum)exerciseType,
-                    ExerciseDate = dtpExerciseDate.Value,
+                    ExerciseDate = dtpExerciseDate.Value.Date,
                     UserId = _logginedUser.Id,
                     TotalCal = Convert.ToDouble(txtExerciseCal.Text)
                 }))

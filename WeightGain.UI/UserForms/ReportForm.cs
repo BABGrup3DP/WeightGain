@@ -119,8 +119,6 @@ namespace WeightGain.UI.UserForms
                     var age = _logginedUser.Age;
                     var neededCalory = Helper.CalculateNeededCalory(weight, height, age);
 
-                    // egzersizleri görmüyor bu sebeple neededCalory'e ekleyemiyorum. 
-
                     var dailyExercises = _exerciseRepository.GetByDate(selectedDate, _logginedUser.Id);
                     if (dailyExercises != null)
                     {
