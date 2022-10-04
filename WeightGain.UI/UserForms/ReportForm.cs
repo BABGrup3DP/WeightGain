@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI.UserForms
 {
@@ -96,10 +97,29 @@ namespace WeightGain.UI.UserForms
                         lblEvening.Text = string.Join(", ", dinnerMeals);
                         lblThirdSnack.Text = string.Join(", ", lastSnackMeals);
                     }
+                    else
+                    {
+                        txtBreakFast.Text = "";
+                        txtFirstSnack.Text = "";
+                        txtLunch.Text = "";
+                        txtSecondSnack.Text = "";
+                        txtDinner.Text = "";
+                        txtThirdSnack.Text = "";
+                        txtTotalCalory.Text = "";
+
+                        lblMorning.Text = "Öğünde Yenilen Besinler";
+                        lblFirstSnack.Text = "Öğünde Yenilen Besinler";
+                        lblAfternoon.Text = "Öğünde Yenilen Besinler";
+                        lblSecondSnack.Text = "Öğünde Yenilen Besinler";
+                        lblEvening.Text = "Öğünde Yenilen Besinler";
+                        lblThirdSnack.Text = "Öğünde Yenilen Besinler";
+                    }
                     var weight = _logginedUser.Weight;
                     var height = _logginedUser.Height;
                     var age = _logginedUser.Age;
-                    var neededCalory = decimal.Round((655.1m + (9.56m * weight) + (1.85m * height) - (4.68m * age)) * 1.1m, 2);
+                    var neededCalory = Helper.CalculateNeededCalory(weight, height, age);
+
+                    // egzersizleri görmüyor bu sebeple neededCalory'e ekleyemiyorum. 
 
                     var dailyExercises = _exerciseRepository.GetByDate(selectedDate, _logginedUser.Id);
                     if (dailyExercises != null)
