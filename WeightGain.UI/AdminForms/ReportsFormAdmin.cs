@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
-using WeightGain.DATA;
+using WeightGain.DATA.Helpers;
 
 namespace WeightGain.UI.AdminForms
 {
@@ -22,67 +23,51 @@ namespace WeightGain.UI.AdminForms
 
         private void ReportsFormAdmin_Load(object sender, EventArgs e)
         {
+            var productGroups = _portionRepository.GetAll()
+                .GroupBy(x => new
+                {
+                    x.MealTime.MealTimeType,
+                    x.Product
+                }).Select(x => new
+                {
+                    x.Key.MealTimeType,
+                    x.Key.Product,
+                    Count = x.Count()
+                })
+                .OrderByDescending(x => x.Count);
 
-            var a = _portionRepository.GetAll().GroupBy(x => x.MealTime.MealTimeType, x => x.Product).Select(x => new
+            foreach (var product in productGroups)
             {
-                MealTimeType = x.Key,
-                Products = x.GroupBy(y => y.ProductId),
-            }).ToList();
-            //foreach (var b in a)
-            //{
-            //    ListViewGroup categoryGroup;
-            //    if (lwProducts.Groups.Cast<ListViewGroup>().Any(x => x.Header == b.MealTimeType.ToString()))
-            //    {
-            //        categoryGroup = lwProducts.Groups.Cast<ListViewGroup>()
-            //            .Single(x => x.Header == b.MealTimeType.ToString());
-            //    }
-            //    else
-            //    {
-            //        categoryGroup = new ListViewGroup(b.MealTimeType.ToString());
-            //        lwProducts.Groups.Add(categoryGroup);
-            //    }
-            //    var item = new ListViewItem(new[]
-            //    {
-            //        b.Products.,
-            //        b.Count.ToString()
-            //    })
-            //    {
-            //        Tag = b.Products.ProductId,
-            //        Group = categoryGroup
-            //    };
-            //    lwProducts.Items.Add(item);
-            //}
-
-            //var productGroups = _portionRepository.GetAll().GroupBy(x => x.Product).Select(x => new
-            //{
-            //    Product = x.Key,
-            //    Count = x.Count()
-            //}).OrderByDescending(x => x.Count);
-
-            //foreach (var b in productGroups)
-            //{
-            //    ListViewGroup categoryGroup;
-            //    if (lwProducts.Groups.Cast<ListViewGroup>().Any(x => x.Header == b.Product.Category.Name))
-            //    {
-            //        categoryGroup = lwProducts.Groups.Cast<ListViewGroup>()
-            //            .Single(x => x.Header == b.Product.Category.Name);
-            //    }
-            //    else
-            //    {
-            //        categoryGroup = new ListViewGroup(b.Product.Category.Name);
-            //        lwProducts.Groups.Add(categoryGroup);
-            //    }
-            //    var item = new ListViewItem(new[]
-            //    {
-            //        b.Product.ProductName,
-            //        b.Count.ToString()
-            //    })
-            //    {
-            //        Tag = b.Product.ProductId,
-            //        Group = categoryGroup
-            //    };
-            //    lwProducts.Items.Add(item);
-            //}
+                string mealTimeType = Helper.GetTurkishMealTime(product.MealTimeType);
+                ListViewGroup categoryGroup;
+                if (lwProducts.Groups.Cast<ListViewGroup>().Any(x => x.Header == mealTimeType))
+                {
+                    categoryGroup = lwProducts.Groups.Cast<ListViewGroup>()
+                        .Single(x => x.Header == mealTimeType);
+                }
+                else
+                {
+                    categoryGroup = new ListViewGroup(mealTimeType);
+                    lwProducts.Groups.Add(categoryGroup);
+                }
+                var memStream = new MemoryStream(product.Product.Picture);
+                ilProducts.Images.Add(Image.FromStream(memStream));
+                var lastId = ilProducts.Images.Count - 1;
+                var item = new ListViewItem(new[]
+                {
+                    product.Product.ProductName,
+                    product.Count.ToString(),
+                    product.Product.Category.Name
+                }, lastId)
+                {
+                    Tag = product.Product.ProductId,
+                    Group = categoryGroup
+                };
+                lwProducts.Items.Add(item);
+            }
+            lwProducts.SmallImageList = ilProducts;
+            lwProducts.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            lwProducts.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
     }
 }

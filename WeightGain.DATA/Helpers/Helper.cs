@@ -231,6 +231,30 @@ namespace WeightGain.DATA.Helpers
             return decimal.Round((655.1m + 9.56m * userWeight + 1.85m * userHeight - 4.68m * userAge) * 1.1m, 2);
         }
 
-
+        /// <summary>
+        /// Gelen değere göre İngilizce olan öğünleri Türkçe'ye çevirir.
+        /// </summary>
+        /// <param name="mealTimeEnum">Öğünün enum değeri</param>
+        /// <returns>Öğünün Türkçe karşılığ</returns>
+        public static string GetTurkishMealTime(MealTimeEnum mealTimeEnum)
+        {
+            switch (mealTimeEnum)
+            {
+                case MealTimeEnum.Breakfast:
+                    return "Kahvaltı";
+                case MealTimeEnum.Lunch:
+                    return "Öğle Yemeği";
+                case MealTimeEnum.Dinner:
+                    return "Akşam Yemeği";
+                case MealTimeEnum.FirstSnack:
+                    return "1. Ara Öğün";
+                case MealTimeEnum.SecondSnack:
+                    return "2. Ara Öğün";
+                case MealTimeEnum.LastSnack:
+                    return "3. Ara Öğün";
+                default:
+                    return string.Empty;
+            }
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace WeightGain.UI.UserForms
             System.Windows.Forms.Button btnFirstSnack;
             System.Windows.Forms.Button btnLunch;
             System.Windows.Forms.Button btnDinner;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tpMealTimes = new System.Windows.Forms.TabPage();
             this.lblAddBreakfast = new System.Windows.Forms.Label();
             this.lblBreakfast = new System.Windows.Forms.Label();
@@ -417,7 +417,6 @@ namespace WeightGain.UI.UserForms
             this.twcMealTimes.Size = new System.Drawing.Size(983, 515);
             this.twcMealTimes.TabIndex = 0;
             this.twcMealTimes.Text = null;
-            this.twcMealTimes.LastButtonClicked += this.TwcMealTimes_LastButtonClicked;
             // 
             // tpCategoryAndProduct
             // 
@@ -440,14 +439,14 @@ namespace WeightGain.UI.UserForms
             this.dgvSelectedProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvSelectedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSelectedProducts.ContextMenuStrip = this.cmsProducts;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedProducts.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedProducts.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSelectedProducts.Location = new System.Drawing.Point(5, 227);
             this.dgvSelectedProducts.Name = "dgvSelectedProducts";
             this.dgvSelectedProducts.RowHeadersWidth = 51;
