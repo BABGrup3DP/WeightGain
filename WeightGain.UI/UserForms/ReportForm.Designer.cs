@@ -30,43 +30,43 @@ namespace WeightGain.UI.UserForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpArchiveStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblBreakfast = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFirstSnack = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblLunch = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSecondSnack = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDinner = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblLastSnack = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbReport = new System.Windows.Forms.GroupBox();
-            this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCal2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtThirdSnack = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalNeedCalory = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblNeedCal = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDinner = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblToDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbDateTo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSecondSnack = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnGet = new Guna.UI2.WinForms.Guna2Button();
             this.lblCal1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtLunch = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalCalory = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBreakFast = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCal4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTotalCal = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTakeCal6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTakeCal2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTakeCal5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTakeCal4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTakeCal3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTakeCal1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtFirstSnack = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvDataEntryDays = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -95,66 +95,66 @@ namespace WeightGain.UI.UserForms
             this.dtpArchiveStartDate.TabIndex = 0;
             this.dtpArchiveStartDate.Value = new System.DateTime(2022, 10, 4, 19, 32, 20, 547);
             // 
-            // guna2HtmlLabel1
+            // lblBreakfast
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 79);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(54, 17);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "Kahvaltı :";
+            this.lblBreakfast.BackColor = System.Drawing.Color.Transparent;
+            this.lblBreakfast.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBreakfast.Location = new System.Drawing.Point(15, 83);
+            this.lblBreakfast.Name = "lblBreakfast";
+            this.lblBreakfast.Size = new System.Drawing.Size(54, 17);
+            this.lblBreakfast.TabIndex = 1;
+            this.lblBreakfast.Text = "Kahvaltı :";
             // 
-            // guna2HtmlLabel2
+            // lblFirstSnack
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(238, 79);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(74, 17);
-            this.guna2HtmlLabel2.TabIndex = 1;
-            this.guna2HtmlLabel2.Text = "1. Ara Öğün :";
+            this.lblFirstSnack.BackColor = System.Drawing.Color.Transparent;
+            this.lblFirstSnack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFirstSnack.ForeColor = System.Drawing.Color.Black;
+            this.lblFirstSnack.Location = new System.Drawing.Point(236, 83);
+            this.lblFirstSnack.Name = "lblFirstSnack";
+            this.lblFirstSnack.Size = new System.Drawing.Size(74, 17);
+            this.lblFirstSnack.TabIndex = 1;
+            this.lblFirstSnack.Text = "1. Ara Öğün :";
             // 
-            // guna2HtmlLabel3
+            // lblLunch
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(15, 200);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(35, 17);
-            this.guna2HtmlLabel3.TabIndex = 1;
-            this.guna2HtmlLabel3.Text = "Öğle :";
+            this.lblLunch.BackColor = System.Drawing.Color.Transparent;
+            this.lblLunch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblLunch.Location = new System.Drawing.Point(15, 202);
+            this.lblLunch.Name = "lblLunch";
+            this.lblLunch.Size = new System.Drawing.Size(35, 17);
+            this.lblLunch.TabIndex = 1;
+            this.lblLunch.Text = "Öğle :";
             // 
-            // guna2HtmlLabel4
+            // lblSecondSnack
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(236, 200);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(74, 17);
-            this.guna2HtmlLabel4.TabIndex = 1;
-            this.guna2HtmlLabel4.Text = "2. Ara Öğün :";
+            this.lblSecondSnack.BackColor = System.Drawing.Color.Transparent;
+            this.lblSecondSnack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSecondSnack.Location = new System.Drawing.Point(236, 202);
+            this.lblSecondSnack.Name = "lblSecondSnack";
+            this.lblSecondSnack.Size = new System.Drawing.Size(74, 17);
+            this.lblSecondSnack.TabIndex = 1;
+            this.lblSecondSnack.Text = "2. Ara Öğün :";
             // 
-            // guna2HtmlLabel5
+            // lblDinner
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(15, 322);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(46, 17);
-            this.guna2HtmlLabel5.TabIndex = 1;
-            this.guna2HtmlLabel5.Text = "Akşam :";
+            this.lblDinner.BackColor = System.Drawing.Color.Transparent;
+            this.lblDinner.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDinner.Location = new System.Drawing.Point(15, 322);
+            this.lblDinner.Name = "lblDinner";
+            this.lblDinner.Size = new System.Drawing.Size(46, 17);
+            this.lblDinner.TabIndex = 1;
+            this.lblDinner.Text = "Akşam :";
             // 
-            // guna2HtmlLabel6
+            // lblLastSnack
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(232, 320);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(74, 17);
-            this.guna2HtmlLabel6.TabIndex = 1;
-            this.guna2HtmlLabel6.Text = "3. Ara Öğün :";
+            this.lblLastSnack.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastSnack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblLastSnack.Location = new System.Drawing.Point(238, 322);
+            this.lblLastSnack.Name = "lblLastSnack";
+            this.lblLastSnack.Size = new System.Drawing.Size(74, 17);
+            this.lblLastSnack.TabIndex = 1;
+            this.lblLastSnack.Text = "3. Ara Öğün :";
             // 
             // gbReport
             // 
@@ -164,39 +164,39 @@ namespace WeightGain.UI.UserForms
             this.gbReport.Controls.Add(this.txtAllSecondSnack);
             this.gbReport.Controls.Add(this.txtAllFirstSnack);
             this.gbReport.Controls.Add(this.txtAllBreakfast);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel24);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel25);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel23);
+            this.gbReport.Controls.Add(this.lblCal8);
+            this.gbReport.Controls.Add(this.lblCal7);
+            this.gbReport.Controls.Add(this.lblCal6);
             this.gbReport.Controls.Add(this.lblCal2);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel22);
+            this.gbReport.Controls.Add(this.lblCal5);
             this.gbReport.Controls.Add(this.txtThirdSnack);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel6);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel5);
+            this.gbReport.Controls.Add(this.lblLastSnack);
+            this.gbReport.Controls.Add(this.lblDinner);
             this.gbReport.Controls.Add(this.txtTotalNeedCalory);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel7);
+            this.gbReport.Controls.Add(this.lblNeedCal);
             this.gbReport.Controls.Add(this.txtDinner);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel4);
+            this.gbReport.Controls.Add(this.lblSecondSnack);
             this.gbReport.Controls.Add(this.lblToDate);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel3);
+            this.gbReport.Controls.Add(this.lblLunch);
             this.gbReport.Controls.Add(this.cmbDateTo);
             this.gbReport.Controls.Add(this.txtSecondSnack);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel2);
+            this.gbReport.Controls.Add(this.lblFirstSnack);
             this.gbReport.Controls.Add(this.btnGet);
             this.gbReport.Controls.Add(this.lblCal1);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel20);
+            this.gbReport.Controls.Add(this.lblCal3);
             this.gbReport.Controls.Add(this.txtLunch);
             this.gbReport.Controls.Add(this.txtTotalCalory);
             this.gbReport.Controls.Add(this.txtBreakFast);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel21);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel19);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel11);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel9);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel12);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel26);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel10);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel13);
+            this.gbReport.Controls.Add(this.lblCal4);
+            this.gbReport.Controls.Add(this.lblTotalCal);
+            this.gbReport.Controls.Add(this.lblTakeCal6);
+            this.gbReport.Controls.Add(this.lblTakeCal2);
+            this.gbReport.Controls.Add(this.lblTakeCal5);
+            this.gbReport.Controls.Add(this.lblTakeCal4);
+            this.gbReport.Controls.Add(this.lblTakeCal3);
+            this.gbReport.Controls.Add(this.lblTakeCal1);
             this.gbReport.Controls.Add(this.lblSelectDate);
-            this.gbReport.Controls.Add(this.guna2HtmlLabel1);
+            this.gbReport.Controls.Add(this.lblBreakfast);
             this.gbReport.Controls.Add(this.dtpArchiveStartDate);
             this.gbReport.Controls.Add(this.txtFirstSnack);
             this.gbReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -206,32 +206,32 @@ namespace WeightGain.UI.UserForms
             this.gbReport.TabIndex = 3;
             this.gbReport.TabStop = false;
             // 
-            // guna2HtmlLabel24
+            // lblCal8
             // 
-            this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(409, 416);
-            this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(28, 15);
-            this.guna2HtmlLabel24.TabIndex = 6;
-            this.guna2HtmlLabel24.Text = "kalori";
+            this.lblCal8.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal8.Location = new System.Drawing.Point(409, 416);
+            this.lblCal8.Name = "lblCal8";
+            this.lblCal8.Size = new System.Drawing.Size(28, 15);
+            this.lblCal8.TabIndex = 6;
+            this.lblCal8.Text = "kalori";
             // 
-            // guna2HtmlLabel25
+            // lblCal7
             // 
-            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(186, 416);
-            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(28, 15);
-            this.guna2HtmlLabel25.TabIndex = 6;
-            this.guna2HtmlLabel25.Text = "kalori";
+            this.lblCal7.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal7.Location = new System.Drawing.Point(186, 418);
+            this.lblCal7.Name = "lblCal7";
+            this.lblCal7.Size = new System.Drawing.Size(28, 15);
+            this.lblCal7.TabIndex = 6;
+            this.lblCal7.Text = "kalori";
             // 
-            // guna2HtmlLabel23
+            // lblCal6
             // 
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(409, 301);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(28, 15);
-            this.guna2HtmlLabel23.TabIndex = 6;
-            this.guna2HtmlLabel23.Text = "kalori";
+            this.lblCal6.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal6.Location = new System.Drawing.Point(409, 301);
+            this.lblCal6.Name = "lblCal6";
+            this.lblCal6.Size = new System.Drawing.Size(28, 15);
+            this.lblCal6.TabIndex = 6;
+            this.lblCal6.Text = "kalori";
             // 
             // lblCal2
             // 
@@ -243,14 +243,14 @@ namespace WeightGain.UI.UserForms
             this.lblCal2.TabIndex = 12;
             this.lblCal2.Text = "kalori";
             // 
-            // guna2HtmlLabel22
+            // lblCal5
             // 
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(186, 299);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(28, 15);
-            this.guna2HtmlLabel22.TabIndex = 6;
-            this.guna2HtmlLabel22.Text = "kalori";
+            this.lblCal5.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal5.Location = new System.Drawing.Point(186, 301);
+            this.lblCal5.Name = "lblCal5";
+            this.lblCal5.Size = new System.Drawing.Size(28, 15);
+            this.lblCal5.TabIndex = 6;
+            this.lblCal5.Text = "kalori";
             // 
             // txtThirdSnack
             // 
@@ -292,15 +292,15 @@ namespace WeightGain.UI.UserForms
             this.txtTotalNeedCalory.Size = new System.Drawing.Size(121, 23);
             this.txtTotalNeedCalory.TabIndex = 11;
             // 
-            // guna2HtmlLabel7
+            // lblNeedCal
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(10, 468);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(263, 17);
-            this.guna2HtmlLabel7.TabIndex = 10;
-            this.guna2HtmlLabel7.Text = "Gün Sonunda Alınması Gereken Toplam Kalori :";
+            this.lblNeedCal.BackColor = System.Drawing.Color.Transparent;
+            this.lblNeedCal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNeedCal.Location = new System.Drawing.Point(10, 468);
+            this.lblNeedCal.Name = "lblNeedCal";
+            this.lblNeedCal.Size = new System.Drawing.Size(263, 17);
+            this.lblNeedCal.TabIndex = 10;
+            this.lblNeedCal.Text = "Gün Sonunda Alınması Gereken Toplam Kalori :";
             // 
             // txtDinner
             // 
@@ -399,14 +399,14 @@ namespace WeightGain.UI.UserForms
             this.lblCal1.TabIndex = 6;
             this.lblCal1.Text = "kalori";
             // 
-            // guna2HtmlLabel20
+            // lblCal3
             // 
-            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(186, 179);
-            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(28, 15);
-            this.guna2HtmlLabel20.TabIndex = 6;
-            this.guna2HtmlLabel20.Text = "kalori";
+            this.lblCal3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal3.Location = new System.Drawing.Point(186, 179);
+            this.lblCal3.Name = "lblCal3";
+            this.lblCal3.Size = new System.Drawing.Size(28, 15);
+            this.lblCal3.TabIndex = 6;
+            this.lblCal3.Text = "kalori";
             // 
             // txtLunch
             // 
@@ -468,84 +468,84 @@ namespace WeightGain.UI.UserForms
             this.txtBreakFast.Size = new System.Drawing.Size(81, 23);
             this.txtBreakFast.TabIndex = 5;
             // 
-            // guna2HtmlLabel21
+            // lblCal4
             // 
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(409, 181);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(28, 15);
-            this.guna2HtmlLabel21.TabIndex = 6;
-            this.guna2HtmlLabel21.Text = "kalori";
+            this.lblCal4.BackColor = System.Drawing.Color.Transparent;
+            this.lblCal4.Location = new System.Drawing.Point(409, 179);
+            this.lblCal4.Name = "lblCal4";
+            this.lblCal4.Size = new System.Drawing.Size(28, 15);
+            this.lblCal4.TabIndex = 6;
+            this.lblCal4.Text = "kalori";
             // 
-            // guna2HtmlLabel19
+            // lblTotalCal
             // 
-            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(10, 445);
-            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(199, 17);
-            this.guna2HtmlLabel19.TabIndex = 4;
-            this.guna2HtmlLabel19.Text = "Gün Sonunda Alınan Toplam Kalori :";
+            this.lblTotalCal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalCal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalCal.Location = new System.Drawing.Point(10, 445);
+            this.lblTotalCal.Name = "lblTotalCal";
+            this.lblTotalCal.Size = new System.Drawing.Size(199, 17);
+            this.lblTotalCal.TabIndex = 4;
+            this.lblTotalCal.Text = "Gün Sonunda Alınan Toplam Kalori :";
             // 
-            // guna2HtmlLabel11
+            // lblTakeCal6
             // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(232, 414);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel11.TabIndex = 3;
-            this.guna2HtmlLabel11.Text = "Alınan Kalori :";
+            this.lblTakeCal6.BackColor = System.Drawing.Color.Transparent;
+            this.lblTakeCal6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakeCal6.Location = new System.Drawing.Point(237, 416);
+            this.lblTakeCal6.Name = "lblTakeCal6";
+            this.lblTakeCal6.Size = new System.Drawing.Size(78, 17);
+            this.lblTakeCal6.TabIndex = 3;
+            this.lblTakeCal6.Text = "Alınan Kalori :";
             // 
-            // guna2HtmlLabel9
+            // lblTakeCal2
             // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(238, 179);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel9.TabIndex = 3;
-            this.guna2HtmlLabel9.Text = "Alınan Kalori :";
+            this.lblTakeCal2.BackColor = System.Drawing.Color.Transparent;
+            this.lblTakeCal2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakeCal2.Location = new System.Drawing.Point(238, 179);
+            this.lblTakeCal2.Name = "lblTakeCal2";
+            this.lblTakeCal2.Size = new System.Drawing.Size(78, 17);
+            this.lblTakeCal2.TabIndex = 3;
+            this.lblTakeCal2.Text = "Alınan Kalori :";
             // 
-            // guna2HtmlLabel12
+            // lblTakeCal5
             // 
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(10, 414);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel12.TabIndex = 3;
-            this.guna2HtmlLabel12.Text = "Alınan Kalori :";
+            this.lblTakeCal5.BackColor = System.Drawing.Color.Transparent;
+            this.lblTakeCal5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakeCal5.Location = new System.Drawing.Point(15, 416);
+            this.lblTakeCal5.Name = "lblTakeCal5";
+            this.lblTakeCal5.Size = new System.Drawing.Size(78, 17);
+            this.lblTakeCal5.TabIndex = 3;
+            this.lblTakeCal5.Text = "Alınan Kalori :";
             // 
-            // guna2HtmlLabel26
+            // lblTakeCal4
             // 
-            this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel26.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(238, 297);
-            this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel26.TabIndex = 3;
-            this.guna2HtmlLabel26.Text = "Alınan Kalori :";
+            this.lblTakeCal4.BackColor = System.Drawing.Color.Transparent;
+            this.lblTakeCal4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakeCal4.Location = new System.Drawing.Point(236, 301);
+            this.lblTakeCal4.Name = "lblTakeCal4";
+            this.lblTakeCal4.Size = new System.Drawing.Size(78, 17);
+            this.lblTakeCal4.TabIndex = 3;
+            this.lblTakeCal4.Text = "Alınan Kalori :";
             // 
-            // guna2HtmlLabel10
+            // lblTakeCal3
             // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(15, 299);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel10.TabIndex = 3;
-            this.guna2HtmlLabel10.Text = "Alınan Kalori :";
+            this.lblTakeCal3.BackColor = System.Drawing.Color.Transparent;
+            this.lblTakeCal3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakeCal3.Location = new System.Drawing.Point(15, 299);
+            this.lblTakeCal3.Name = "lblTakeCal3";
+            this.lblTakeCal3.Size = new System.Drawing.Size(78, 17);
+            this.lblTakeCal3.TabIndex = 3;
+            this.lblTakeCal3.Text = "Alınan Kalori :";
             // 
-            // guna2HtmlLabel13
+            // lblTakeCal1
             // 
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(15, 177);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(78, 17);
-            this.guna2HtmlLabel13.TabIndex = 3;
-            this.guna2HtmlLabel13.Text = "Alınan Kalori :";
+            this.lblTakeCal1.BackColor = System.Drawing.Color.Transparent;
+            this.lblTakeCal1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTakeCal1.Location = new System.Drawing.Point(15, 179);
+            this.lblTakeCal1.Name = "lblTakeCal1";
+            this.lblTakeCal1.Size = new System.Drawing.Size(78, 17);
+            this.lblTakeCal1.TabIndex = 3;
+            this.lblTakeCal1.Text = "Alınan Kalori :";
             // 
             // lblSelectDate
             // 
@@ -579,25 +579,25 @@ namespace WeightGain.UI.UserForms
             // 
             // dgvDataEntryDays
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataEntryDays.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvDataEntryDays.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataEntryDays.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDataEntryDays.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataEntryDays.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataEntryDays.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDataEntryDays.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDataEntryDays.Location = new System.Drawing.Point(480, 37);
             this.dgvDataEntryDays.Name = "dgvDataEntryDays";
@@ -792,21 +792,21 @@ namespace WeightGain.UI.UserForms
         #endregion
 
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpArchiveStartDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBreakfast;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFirstSnack;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLunch;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSecondSnack;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDinner;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLastSnack;
         private System.Windows.Forms.GroupBox gbReport;
         private Guna.UI2.WinForms.Guna2Button btnGet;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal7;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCal1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCal3;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalCalory;
         private Guna.UI2.WinForms.Guna2TextBox txtThirdSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtDinner;
@@ -814,8 +814,8 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2TextBox txtLunch;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtBreakFast;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalCal;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSelectDate;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDataEntryDays;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
@@ -823,12 +823,12 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2ComboBox cmbDateTo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCal2;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalNeedCalory;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNeedCal;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal3;
         private Guna.UI2.WinForms.Guna2TextBox txtAllLastSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtAllDinner;
         private Guna.UI2.WinForms.Guna2TextBox txtAllLunch;
