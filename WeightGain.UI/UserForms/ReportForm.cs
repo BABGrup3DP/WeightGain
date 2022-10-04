@@ -107,12 +107,12 @@ namespace WeightGain.UI.UserForms
                         txtThirdSnack.Text = "";
                         txtTotalCalory.Text = "";
 
-                        dgvBreakfast.Text = "Öğünde Yenilen Besinler";
-                        dgvFirstSnack.Text = "Öğünde Yenilen Besinler";
-                        dgvLunch.Text = "Öğünde Yenilen Besinler";
-                        dgvSecondSnack.Text = "Öğünde Yenilen Besinler";
-                        dgvDinner.Text = "Öğünde Yenilen Besinler";
-                        dgvThirdSnack.Text = "Öğünde Yenilen Besinler";
+                        dgvBreakfast.DataSource = "";
+                        dgvFirstSnack.DataSource = "";
+                        dgvLunch.DataSource = "";
+                        dgvSecondSnack.DataSource = "";
+                        dgvDinner.DataSource = "";
+                        dgvThirdSnack.DataSource = "";
                     }
                     var weight = _logginedUser.Weight;
                     var height = _logginedUser.Height;
