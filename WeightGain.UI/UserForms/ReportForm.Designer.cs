@@ -30,9 +30,6 @@ namespace WeightGain.UI.UserForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpArchiveStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblBreakfast = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblFirstSnack = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -41,6 +38,12 @@ namespace WeightGain.UI.UserForms
             this.lblDinner = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLastSnack = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbReport = new System.Windows.Forms.GroupBox();
+            this.txtAllLastSnack = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAllDinner = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAllLunch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAllSecondSnack = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAllFirstSnack = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAllBreakfast = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCal8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCal7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCal6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -69,16 +72,9 @@ namespace WeightGain.UI.UserForms
             this.lblTakeCal1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtFirstSnack = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgvDataEntryDays = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtAllBreakfast = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAllFirstSnack = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAllSecondSnack = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAllLunch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAllDinner = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAllLastSnack = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lvDataEntryDays = new System.Windows.Forms.ListView();
             this.gbReport.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDataEntryDays)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpArchiveStartDate
@@ -205,6 +201,138 @@ namespace WeightGain.UI.UserForms
             this.gbReport.Size = new System.Drawing.Size(462, 501);
             this.gbReport.TabIndex = 3;
             this.gbReport.TabStop = false;
+            // 
+            // txtAllLastSnack
+            // 
+            this.txtAllLastSnack.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAllLastSnack.DefaultText = "";
+            this.txtAllLastSnack.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAllLastSnack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAllLastSnack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllLastSnack.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllLastSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllLastSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAllLastSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllLastSnack.Location = new System.Drawing.Point(236, 340);
+            this.txtAllLastSnack.Multiline = true;
+            this.txtAllLastSnack.Name = "txtAllLastSnack";
+            this.txtAllLastSnack.PasswordChar = '\0';
+            this.txtAllLastSnack.PlaceholderText = "";
+            this.txtAllLastSnack.ReadOnly = true;
+            this.txtAllLastSnack.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAllLastSnack.SelectedText = "";
+            this.txtAllLastSnack.Size = new System.Drawing.Size(199, 68);
+            this.txtAllLastSnack.TabIndex = 17;
+            // 
+            // txtAllDinner
+            // 
+            this.txtAllDinner.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAllDinner.DefaultText = "";
+            this.txtAllDinner.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAllDinner.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAllDinner.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllDinner.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllDinner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllDinner.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAllDinner.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllDinner.Location = new System.Drawing.Point(15, 340);
+            this.txtAllDinner.Multiline = true;
+            this.txtAllDinner.Name = "txtAllDinner";
+            this.txtAllDinner.PasswordChar = '\0';
+            this.txtAllDinner.PlaceholderText = "";
+            this.txtAllDinner.ReadOnly = true;
+            this.txtAllDinner.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAllDinner.SelectedText = "";
+            this.txtAllDinner.Size = new System.Drawing.Size(199, 68);
+            this.txtAllDinner.TabIndex = 16;
+            // 
+            // txtAllLunch
+            // 
+            this.txtAllLunch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAllLunch.DefaultText = "";
+            this.txtAllLunch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAllLunch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAllLunch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllLunch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllLunch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllLunch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAllLunch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllLunch.Location = new System.Drawing.Point(15, 223);
+            this.txtAllLunch.Multiline = true;
+            this.txtAllLunch.Name = "txtAllLunch";
+            this.txtAllLunch.PasswordChar = '\0';
+            this.txtAllLunch.PlaceholderText = "";
+            this.txtAllLunch.ReadOnly = true;
+            this.txtAllLunch.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAllLunch.SelectedText = "";
+            this.txtAllLunch.Size = new System.Drawing.Size(199, 68);
+            this.txtAllLunch.TabIndex = 15;
+            // 
+            // txtAllSecondSnack
+            // 
+            this.txtAllSecondSnack.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAllSecondSnack.DefaultText = "";
+            this.txtAllSecondSnack.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAllSecondSnack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAllSecondSnack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllSecondSnack.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllSecondSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllSecondSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAllSecondSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllSecondSnack.Location = new System.Drawing.Point(236, 223);
+            this.txtAllSecondSnack.Multiline = true;
+            this.txtAllSecondSnack.Name = "txtAllSecondSnack";
+            this.txtAllSecondSnack.PasswordChar = '\0';
+            this.txtAllSecondSnack.PlaceholderText = "";
+            this.txtAllSecondSnack.ReadOnly = true;
+            this.txtAllSecondSnack.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAllSecondSnack.SelectedText = "";
+            this.txtAllSecondSnack.Size = new System.Drawing.Size(199, 68);
+            this.txtAllSecondSnack.TabIndex = 15;
+            // 
+            // txtAllFirstSnack
+            // 
+            this.txtAllFirstSnack.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAllFirstSnack.DefaultText = "";
+            this.txtAllFirstSnack.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAllFirstSnack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAllFirstSnack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllFirstSnack.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllFirstSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllFirstSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAllFirstSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllFirstSnack.Location = new System.Drawing.Point(236, 102);
+            this.txtAllFirstSnack.Multiline = true;
+            this.txtAllFirstSnack.Name = "txtAllFirstSnack";
+            this.txtAllFirstSnack.PasswordChar = '\0';
+            this.txtAllFirstSnack.PlaceholderText = "";
+            this.txtAllFirstSnack.ReadOnly = true;
+            this.txtAllFirstSnack.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAllFirstSnack.SelectedText = "";
+            this.txtAllFirstSnack.Size = new System.Drawing.Size(199, 68);
+            this.txtAllFirstSnack.TabIndex = 14;
+            // 
+            // txtAllBreakfast
+            // 
+            this.txtAllBreakfast.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAllBreakfast.DefaultText = "";
+            this.txtAllBreakfast.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAllBreakfast.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAllBreakfast.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllBreakfast.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAllBreakfast.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllBreakfast.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAllBreakfast.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAllBreakfast.Location = new System.Drawing.Point(15, 102);
+            this.txtAllBreakfast.Multiline = true;
+            this.txtAllBreakfast.Name = "txtAllBreakfast";
+            this.txtAllBreakfast.PasswordChar = '\0';
+            this.txtAllBreakfast.PlaceholderText = "";
+            this.txtAllBreakfast.ReadOnly = true;
+            this.txtAllBreakfast.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAllBreakfast.SelectedText = "";
+            this.txtAllBreakfast.Size = new System.Drawing.Size(199, 68);
+            this.txtAllBreakfast.TabIndex = 13;
             // 
             // lblCal8
             // 
@@ -577,55 +705,6 @@ namespace WeightGain.UI.UserForms
             this.txtFirstSnack.Size = new System.Drawing.Size(82, 23);
             this.txtFirstSnack.TabIndex = 5;
             // 
-            // dgvDataEntryDays
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataEntryDays.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvDataEntryDays.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataEntryDays.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvDataEntryDays.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDataEntryDays.Location = new System.Drawing.Point(480, 37);
-            this.dgvDataEntryDays.Name = "dgvDataEntryDays";
-            this.dgvDataEntryDays.RowHeadersVisible = false;
-            this.dgvDataEntryDays.Size = new System.Drawing.Size(491, 476);
-            this.dgvDataEntryDays.TabIndex = 4;
-            this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvDataEntryDays.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvDataEntryDays.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDataEntryDays.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvDataEntryDays.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDataEntryDays.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dgvDataEntryDays.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvDataEntryDays.ThemeStyle.HeaderStyle.Height = 25;
-            this.dgvDataEntryDays.ThemeStyle.ReadOnly = false;
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDataEntryDays.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
@@ -636,137 +715,14 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel8.TabIndex = 5;
             this.guna2HtmlLabel8.Text = "Veri Girilen Günler :";
             // 
-            // txtAllBreakfast
+            // lvDataEntryDays
             // 
-            this.txtAllBreakfast.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAllBreakfast.DefaultText = "";
-            this.txtAllBreakfast.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAllBreakfast.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAllBreakfast.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllBreakfast.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllBreakfast.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllBreakfast.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAllBreakfast.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllBreakfast.Location = new System.Drawing.Point(15, 102);
-            this.txtAllBreakfast.Multiline = true;
-            this.txtAllBreakfast.Name = "txtAllBreakfast";
-            this.txtAllBreakfast.PasswordChar = '\0';
-            this.txtAllBreakfast.PlaceholderText = "";
-            this.txtAllBreakfast.ReadOnly = true;
-            this.txtAllBreakfast.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAllBreakfast.SelectedText = "";
-            this.txtAllBreakfast.Size = new System.Drawing.Size(199, 68);
-            this.txtAllBreakfast.TabIndex = 13;
-            // 
-            // txtAllFirstSnack
-            // 
-            this.txtAllFirstSnack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAllFirstSnack.DefaultText = "";
-            this.txtAllFirstSnack.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAllFirstSnack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAllFirstSnack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllFirstSnack.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllFirstSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllFirstSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAllFirstSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllFirstSnack.Location = new System.Drawing.Point(236, 102);
-            this.txtAllFirstSnack.Multiline = true;
-            this.txtAllFirstSnack.Name = "txtAllFirstSnack";
-            this.txtAllFirstSnack.PasswordChar = '\0';
-            this.txtAllFirstSnack.PlaceholderText = "";
-            this.txtAllFirstSnack.ReadOnly = true;
-            this.txtAllFirstSnack.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAllFirstSnack.SelectedText = "";
-            this.txtAllFirstSnack.Size = new System.Drawing.Size(199, 68);
-            this.txtAllFirstSnack.TabIndex = 14;
-            // 
-            // txtAllSecondSnack
-            // 
-            this.txtAllSecondSnack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAllSecondSnack.DefaultText = "";
-            this.txtAllSecondSnack.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAllSecondSnack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAllSecondSnack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllSecondSnack.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllSecondSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllSecondSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAllSecondSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllSecondSnack.Location = new System.Drawing.Point(236, 223);
-            this.txtAllSecondSnack.Multiline = true;
-            this.txtAllSecondSnack.Name = "txtAllSecondSnack";
-            this.txtAllSecondSnack.PasswordChar = '\0';
-            this.txtAllSecondSnack.PlaceholderText = "";
-            this.txtAllSecondSnack.ReadOnly = true;
-            this.txtAllSecondSnack.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAllSecondSnack.SelectedText = "";
-            this.txtAllSecondSnack.Size = new System.Drawing.Size(199, 68);
-            this.txtAllSecondSnack.TabIndex = 15;
-            // 
-            // txtAllLunch
-            // 
-            this.txtAllLunch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAllLunch.DefaultText = "";
-            this.txtAllLunch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAllLunch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAllLunch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllLunch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllLunch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllLunch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAllLunch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllLunch.Location = new System.Drawing.Point(15, 223);
-            this.txtAllLunch.Multiline = true;
-            this.txtAllLunch.Name = "txtAllLunch";
-            this.txtAllLunch.PasswordChar = '\0';
-            this.txtAllLunch.PlaceholderText = "";
-            this.txtAllLunch.ReadOnly = true;
-            this.txtAllLunch.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAllLunch.SelectedText = "";
-            this.txtAllLunch.Size = new System.Drawing.Size(199, 68);
-            this.txtAllLunch.TabIndex = 15;
-            // 
-            // txtAllDinner
-            // 
-            this.txtAllDinner.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAllDinner.DefaultText = "";
-            this.txtAllDinner.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAllDinner.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAllDinner.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllDinner.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllDinner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllDinner.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAllDinner.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllDinner.Location = new System.Drawing.Point(15, 340);
-            this.txtAllDinner.Multiline = true;
-            this.txtAllDinner.Name = "txtAllDinner";
-            this.txtAllDinner.PasswordChar = '\0';
-            this.txtAllDinner.PlaceholderText = "";
-            this.txtAllDinner.ReadOnly = true;
-            this.txtAllDinner.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAllDinner.SelectedText = "";
-            this.txtAllDinner.Size = new System.Drawing.Size(199, 68);
-            this.txtAllDinner.TabIndex = 16;
-            // 
-            // txtAllLastSnack
-            // 
-            this.txtAllLastSnack.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAllLastSnack.DefaultText = "";
-            this.txtAllLastSnack.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAllLastSnack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAllLastSnack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllLastSnack.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAllLastSnack.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllLastSnack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAllLastSnack.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAllLastSnack.Location = new System.Drawing.Point(236, 340);
-            this.txtAllLastSnack.Multiline = true;
-            this.txtAllLastSnack.Name = "txtAllLastSnack";
-            this.txtAllLastSnack.PasswordChar = '\0';
-            this.txtAllLastSnack.PlaceholderText = "";
-            this.txtAllLastSnack.ReadOnly = true;
-            this.txtAllLastSnack.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAllLastSnack.SelectedText = "";
-            this.txtAllLastSnack.Size = new System.Drawing.Size(199, 68);
-            this.txtAllLastSnack.TabIndex = 17;
+            this.lvDataEntryDays.HideSelection = false;
+            this.lvDataEntryDays.Location = new System.Drawing.Point(479, 43);
+            this.lvDataEntryDays.Name = "lvDataEntryDays";
+            this.lvDataEntryDays.Size = new System.Drawing.Size(500, 469);
+            this.lvDataEntryDays.TabIndex = 6;
+            this.lvDataEntryDays.UseCompatibleStateImageBehavior = false;
             // 
             // ReportForm
             // 
@@ -774,8 +730,8 @@ namespace WeightGain.UI.UserForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(983, 515);
+            this.Controls.Add(this.lvDataEntryDays);
             this.Controls.Add(this.guna2HtmlLabel8);
-            this.Controls.Add(this.dgvDataEntryDays);
             this.Controls.Add(this.gbReport);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -783,7 +739,6 @@ namespace WeightGain.UI.UserForms
             this.Text = "ArchiveForm";
             this.gbReport.ResumeLayout(false);
             this.gbReport.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDataEntryDays)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -817,7 +772,6 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalCal;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTakeCal1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSelectDate;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvDataEntryDays;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblToDate;
         private Guna.UI2.WinForms.Guna2ComboBox cmbDateTo;
@@ -835,5 +789,6 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2TextBox txtAllSecondSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtAllFirstSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtAllBreakfast;
+        private System.Windows.Forms.ListView lvDataEntryDays;
     }
 }

@@ -30,7 +30,7 @@ namespace WeightGain.UI.UserForms
         private void RefreshDataViewGrid()
         {
             #region Veri Girilen Günler
-            dgvDataEntryDays.AutoGenerateColumns = false;
+           /* dgvDataEntryDays.AutoGenerateColumns = false;
             dgvDataEntryDays.DataSource = null;
             dgvDataEntryDays.DataSource = _mealTimeList;
             if (dgvDataEntryDays.Columns.Count == 0)
@@ -73,7 +73,7 @@ namespace WeightGain.UI.UserForms
                     AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                     DefaultCellStyle = new DataGridViewCellStyle { Format = "dd.MM.yyyy" }
                 });
-            }
+            } */
             #endregion
         }
 
@@ -183,6 +183,13 @@ namespace WeightGain.UI.UserForms
                     break;
                 case 1: // Haftalık
                     _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), _logginedUser.Id);
+                    foreach (var item in _mealTimeList)
+                    {
+                        if (!lvDataEntryDays.Items.Contains(item.MealTimeDate.ToString()))
+                        {
+                            lvDataEntryDays.Items.Add(item.MealTimeDate.ToString());
+                        }
+                    }
                     break;
                 case 2: // Aylık
                     _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), _logginedUser.Id);
