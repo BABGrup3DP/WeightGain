@@ -25,6 +25,7 @@ namespace WeightGain.UI.UserForms
             _exerciseRepository = (ExerciseRepository)baseRepositories.Single(x => x.GetType() == typeof(ExerciseRepository));
             dtpArchiveStartDate.Value = DateTime.Now;
             dtpArchiveStartDate.MaxDate = DateTime.Now;
+
         }
 
         private void RefreshDataViewGrid()
@@ -97,6 +98,7 @@ namespace WeightGain.UI.UserForms
         {
             var selectedDate = dtpArchiveStartDate.Value.Date;
             var selectedToDate = cmbDateTo.SelectedIndex;
+
 
             var breakfastMeals = new List<string>();
             var firstSnackMeals = new List<string>();
@@ -218,6 +220,18 @@ namespace WeightGain.UI.UserForms
                     messageDialogError.Show();
                     return;
             }
+
+            if (lbDataEntryDays!=null)
+            {
+                bool selectedDay = lbDataEntryDays.SelectedItem!=null;
+                if (selectedDay)
+                {
+                    
+                }
+            }
+
+
         }
+
     }
 }
