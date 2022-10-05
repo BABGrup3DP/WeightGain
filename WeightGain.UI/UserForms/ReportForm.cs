@@ -81,9 +81,10 @@ namespace WeightGain.UI.UserForms
 
         private void LbDataEnrtyDays()
         {
+
+            lbDataEntryDays.Items.Clear();
             foreach (var item in _mealTimeList.Select(x => x.MealTimeDate))
             {
-                lbDataEntryDays.Items.Clear();
                 if (!lbDataEntryDays.Items.Contains(item))
                 {
                     lbDataEntryDays.Items.Add(item);
