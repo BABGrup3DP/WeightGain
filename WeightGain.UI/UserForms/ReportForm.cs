@@ -221,16 +221,6 @@ namespace WeightGain.UI.UserForms
                     return;
             }
 
-            if (lbDataEntryDays!=null)
-            {
-                bool selectedDay = lbDataEntryDays.SelectedItem!=null;
-                if (selectedDay)
-                {
-                    
-                }
-            }
-
-
         }
 
     }
