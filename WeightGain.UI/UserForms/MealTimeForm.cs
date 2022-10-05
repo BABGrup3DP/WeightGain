@@ -34,6 +34,7 @@ namespace WeightGain.UI.UserForms
             _logginedUser = logginedUser;
             dtpMealTime.Value = DateTime.Now;
             dtpMealTime.MaxDate = DateTime.Now;
+            twcMealTimes.LastButtonClicked += TwcMealTimes_LastButtonClicked;
         }
 
         private void MealTimeForm_Load(object sender, EventArgs e)
