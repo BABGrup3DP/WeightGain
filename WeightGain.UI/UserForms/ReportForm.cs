@@ -30,6 +30,8 @@ namespace WeightGain.UI.UserForms
         private void RefreshDataViewGrid()
         {
             #region Veri Girilen Günler
+
+
            /* dgvDataEntryDays.AutoGenerateColumns = false;
             dgvDataEntryDays.DataSource = null;
             dgvDataEntryDays.DataSource = _mealTimeList;
@@ -76,6 +78,19 @@ namespace WeightGain.UI.UserForms
             } */
             #endregion
         }
+
+        private void LbDataEnrtyDays()
+        {
+            foreach (var item in _mealTimeList.Select(x => x.MealTimeDate))
+            {
+                lbDataEntryDays.Items.Clear();
+                if (!lbDataEntryDays.Items.Contains(item))
+                {
+                    lbDataEntryDays.Items.Add(item);
+                }
+            }
+        }
+
 
         private void btnGet_Click(object sender, EventArgs e)
         {
@@ -183,19 +198,15 @@ namespace WeightGain.UI.UserForms
                     break;
                 case 1: // Haftalık
                     _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), _logginedUser.Id);
-                    foreach (var item in _mealTimeList)
-                    {
-                        if (!lvDataEntryDays.Items.Contains(item.MealTimeDate.ToString()))
-                        {
-                            lvDataEntryDays.Items.Add(item.MealTimeDate.ToString());
-                        }
-                    }
+                    LbDataEnrtyDays();
                     break;
                 case 2: // Aylık
                     _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), _logginedUser.Id);
+                    LbDataEnrtyDays();
                     break;
                 case 3: // Yıllık
                     _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddYears(1), _logginedUser.Id);
+                    LbDataEnrtyDays();
                     break;
                 default:
                     var messageDialogError = new Guna2MessageDialog

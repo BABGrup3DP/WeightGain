@@ -73,7 +73,7 @@ namespace WeightGain.UI.UserForms
             this.lblSelectDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtFirstSnack = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lvDataEntryDays = new System.Windows.Forms.ListView();
+            this.lbDataEntryDays = new System.Windows.Forms.ListBox();
             this.gbReport.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -715,14 +715,14 @@ namespace WeightGain.UI.UserForms
             this.guna2HtmlLabel8.TabIndex = 5;
             this.guna2HtmlLabel8.Text = "Veri Girilen Günler :";
             // 
-            // lvDataEntryDays
+            // lbDataEntryDays
             // 
-            this.lvDataEntryDays.HideSelection = false;
-            this.lvDataEntryDays.Location = new System.Drawing.Point(479, 43);
-            this.lvDataEntryDays.Name = "lvDataEntryDays";
-            this.lvDataEntryDays.Size = new System.Drawing.Size(500, 469);
-            this.lvDataEntryDays.TabIndex = 6;
-            this.lvDataEntryDays.UseCompatibleStateImageBehavior = false;
+            this.lbDataEntryDays.FormattingEnabled = true;
+            this.lbDataEntryDays.ItemHeight = 15;
+            this.lbDataEntryDays.Location = new System.Drawing.Point(480, 40);
+            this.lbDataEntryDays.Name = "lbDataEntryDays";
+            this.lbDataEntryDays.Size = new System.Drawing.Size(501, 469);
+            this.lbDataEntryDays.TabIndex = 6;
             // 
             // ReportForm
             // 
@@ -730,7 +730,7 @@ namespace WeightGain.UI.UserForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(983, 515);
-            this.Controls.Add(this.lvDataEntryDays);
+            this.Controls.Add(this.lbDataEntryDays);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.gbReport);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -789,6 +789,6 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2TextBox txtAllSecondSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtAllFirstSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtAllBreakfast;
-        private System.Windows.Forms.ListView lvDataEntryDays;
+        private System.Windows.Forms.ListBox lbDataEntryDays;
     }
 }
