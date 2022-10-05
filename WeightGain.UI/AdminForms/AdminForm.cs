@@ -71,7 +71,7 @@ namespace WeightGain.UI.AdminForms
         private void btnArchives_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            //Helper.OpenChildForm(mainPanel, new ReportForm(_logginedUser));
+            Helper.OpenChildForm(mainPanel, new ArchiveFormAdmin(_baseRepositories));
         }
 
         private void btnProfile_Click(object sender, EventArgs e)

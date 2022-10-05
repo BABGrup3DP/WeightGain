@@ -194,7 +194,7 @@
             this.btnExercies.Name = "btnExercies";
             this.btnExercies.Size = new System.Drawing.Size(149, 57);
             this.btnExercies.TabIndex = 1;
-            this.btnExercies.Text = "Antremanlar";
+            this.btnExercies.Text = "Antrenmanlar";
             this.btnExercies.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExercies.Click += new System.EventHandler(this.btnExercies_Click);
             // 

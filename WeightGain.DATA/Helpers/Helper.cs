@@ -104,6 +104,16 @@ namespace WeightGain.DATA.Helpers
             return true;
         }
 
+        public static void EmptyGroupBox(GroupBox groupBox)
+        {
+            foreach (var ctrl in groupBox.Controls)
+            {
+                var ctrlName = ctrl.GetType().Name;
+                if (ctrlName.Contains("TextBox"))
+                    ((Guna2TextBox)ctrl).Text = string.Empty;
+            }
+        }
+
         /// <summary>
         /// Panel içerisindeki butonların bulunduğu menüye göre akif ve pasif durumunu ayarlar
         /// </summary>

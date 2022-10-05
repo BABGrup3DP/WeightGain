@@ -7,25 +7,27 @@ using WeightGain.DAL.Repositories;
 using WeightGain.DATA;
 using WeightGain.DATA.Helpers;
 
-namespace WeightGain.UI.UserForms
+namespace WeightGain.UI.AdminForms
 {
-    public partial class ReportForm : Form
+    public partial class ArchiveFormAdmin : Form
     {
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly ExerciseRepository _exerciseRepository;
-        private readonly User _logginedUser;
+        private readonly UserRepository _userRepository;
+        
         private List<MealTime> _mealTimeList;
+        private User selectedUser;
 
-        public ReportForm(List<BaseRepository> baseRepositories, User logginedUser)
+        public ArchiveFormAdmin(List<BaseRepository> baseRepositories)
         {
             InitializeComponent();
-            _logginedUser = logginedUser;
             _mealTimeRepository = (MealTimeRepository)baseRepositories.Single(x => x.GetType() == typeof(MealTimeRepository));
             _exerciseRepository = (ExerciseRepository)baseRepositories.Single(x => x.GetType() == typeof(ExerciseRepository));
+            _userRepository = (UserRepository)baseRepositories.Single(x => x.GetType() == typeof(UserRepository));
             dtpArchiveStartDate.Value = DateTime.Now;
             dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
-        
+
         private void LbDataEnrtyDays()
         {
             if (_mealTimeList != null)
@@ -39,28 +41,45 @@ namespace WeightGain.UI.UserForms
                     }
                 }
             }
+            else
+            {
+                Helper.EmptyGroupBox(gbReport);
+                lbDataEntryDays.Items.Clear();
+            }
         }
 
 
         private void btnGet_Click(object sender, EventArgs e)
         {
+            selectedUser = (User)cmbUsers.SelectedItem;
+            if (selectedUser == null)
+            {
+                var errorMessage = new Guna2MessageDialog
+                {
+                    Text = "Lütfen bir kullanıcı seçin.",
+                    Caption = Properties.Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
+                };
+                errorMessage.Show();
+                return;
+            }
             var selectedDate = dtpArchiveStartDate.Value.Date;
             var selectedToDate = cmbDateTo.SelectedIndex;
 
             switch (selectedToDate)
             {
                 case 0: // Günlük
-                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedUser.Id);
                     FillTheBlanks(selectedDate);
                     break;
                 case 1: // Haftalık
-                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddDays(7), selectedUser.Id);
                     break;
                 case 2: // Aylık
-                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddMonths(1), selectedUser.Id);
                     break;
                 case 3: // Yıllık
-                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddYears(1), _logginedUser.Id);
+                    _mealTimeList = _mealTimeRepository.GetByDate(selectedDate, selectedDate.AddYears(1), selectedUser.Id);
                     break;
                 default:
                     var messageDialogError = new Guna2MessageDialog
@@ -100,7 +119,7 @@ namespace WeightGain.UI.UserForms
                     switch (mealTime.MealTimeType)
                     {
                         case MealTimeEnum.Breakfast:
-                           breakfastMeals.AddRange(products.Select(x => x.ProductName));
+                            breakfastMeals.AddRange(products.Select(x => x.ProductName));
                             breakfastCalory += (decimal)mealTime.Products.Sum(x => x.ProductPortions.Sum(y => y.Product.Calory * y.Size));
                             break;
                         case MealTimeEnum.FirstSnack:
@@ -150,13 +169,14 @@ namespace WeightGain.UI.UserForms
                     Style = MessageDialogStyle.Light
                 };
                 errorMessage.Show();
+                lbDataEntryDays.Items.Clear();
             }
-            var weight = _logginedUser.Weight;
-            var height = _logginedUser.Height;
-            var age = _logginedUser.Age;
+            var weight = selectedUser.Weight;
+            var height = selectedUser.Height;
+            var age = selectedUser.Age;
             var neededCalory = Helper.CalculateNeededCalory(weight, height, age);
 
-            var dailyExercises = _exerciseRepository.GetByDate(selectedDate, _logginedUser.Id);
+            var dailyExercises = _exerciseRepository.GetByDate(selectedDate, selectedUser.Id);
             if (dailyExercises != null)
             {
                 foreach (var dailyExercise in dailyExercises)
@@ -175,6 +195,13 @@ namespace WeightGain.UI.UserForms
                 var selectedDate = (DateTime)selectedItem;
                 FillTheBlanks(selectedDate.Date);
             }
+        }
+
+        private void ArchiveFormAdmin_Load(object sender, EventArgs e)
+        {
+            cmbUsers.Items.AddRange(_userRepository.GetAll(true).ToArray());
+            cmbUsers.DisplayMember = "FullName";
+            cmbUsers.ValueMember = "Id";
         }
     }
 }

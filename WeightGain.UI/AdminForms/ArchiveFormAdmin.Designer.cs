@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace WeightGain.UI.UserForms
+namespace WeightGain.UI.AdminForms
 {
-    partial class ReportForm
+    partial class ArchiveFormAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -74,6 +74,8 @@ namespace WeightGain.UI.UserForms
             this.txtFirstSnack = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbDataEntryDays = new System.Windows.Forms.ListBox();
+            this.cmbUsers = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblUsers = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbReport.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +156,8 @@ namespace WeightGain.UI.UserForms
             // 
             // gbReport
             // 
+            this.gbReport.Controls.Add(this.lblUsers);
+            this.gbReport.Controls.Add(this.cmbUsers);
             this.gbReport.Controls.Add(this.txtAllLastSnack);
             this.gbReport.Controls.Add(this.txtAllDinner);
             this.gbReport.Controls.Add(this.txtAllLunch);
@@ -198,7 +202,7 @@ namespace WeightGain.UI.UserForms
             this.gbReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbReport.Location = new System.Drawing.Point(12, 12);
             this.gbReport.Name = "gbReport";
-            this.gbReport.Size = new System.Drawing.Size(462, 501);
+            this.gbReport.Size = new System.Drawing.Size(603, 501);
             this.gbReport.TabIndex = 3;
             this.gbReport.TabStop = false;
             // 
@@ -510,7 +514,7 @@ namespace WeightGain.UI.UserForms
             this.btnGet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGet.ForeColor = System.Drawing.Color.White;
-            this.btnGet.Location = new System.Drawing.Point(329, 14);
+            this.btnGet.Location = new System.Drawing.Point(480, 14);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(117, 67);
             this.btnGet.TabIndex = 7;
@@ -709,7 +713,7 @@ namespace WeightGain.UI.UserForms
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(480, 14);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(621, 12);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(113, 17);
             this.guna2HtmlLabel8.TabIndex = 5;
@@ -719,13 +723,40 @@ namespace WeightGain.UI.UserForms
             // 
             this.lbDataEntryDays.FormattingEnabled = true;
             this.lbDataEntryDays.ItemHeight = 15;
-            this.lbDataEntryDays.Location = new System.Drawing.Point(480, 40);
+            this.lbDataEntryDays.Location = new System.Drawing.Point(621, 40);
             this.lbDataEntryDays.Name = "lbDataEntryDays";
-            this.lbDataEntryDays.Size = new System.Drawing.Size(501, 469);
+            this.lbDataEntryDays.Size = new System.Drawing.Size(360, 469);
             this.lbDataEntryDays.TabIndex = 6;
             this.lbDataEntryDays.SelectedIndexChanged += new System.EventHandler(this.lbDataEntryDays_SelectedIndexChanged);
             // 
-            // ReportForm
+            // cmbUsers
+            // 
+            this.cmbUsers.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUsers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsers.DropDownWidth = 201;
+            this.cmbUsers.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbUsers.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbUsers.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbUsers.ItemHeight = 30;
+            this.cmbUsers.Location = new System.Drawing.Point(321, 45);
+            this.cmbUsers.Name = "cmbUsers";
+            this.cmbUsers.Size = new System.Drawing.Size(153, 36);
+            this.cmbUsers.StartIndex = 0;
+            this.cmbUsers.TabIndex = 18;
+            // 
+            // lblUsers
+            // 
+            this.lblUsers.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUsers.Location = new System.Drawing.Point(363, 22);
+            this.lblUsers.Name = "lblUsers";
+            this.lblUsers.Size = new System.Drawing.Size(63, 17);
+            this.lblUsers.TabIndex = 19;
+            this.lblUsers.Text = "Kullanıcılar";
+            // 
+            // ArchiveFormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -736,8 +767,9 @@ namespace WeightGain.UI.UserForms
             this.Controls.Add(this.gbReport);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ReportForm";
+            this.Name = "ArchiveFormAdmin";
             this.Text = "ArchiveForm";
+            this.Load += new System.EventHandler(this.ArchiveFormAdmin_Load);
             this.gbReport.ResumeLayout(false);
             this.gbReport.PerformLayout();
             this.ResumeLayout(false);
@@ -791,5 +823,7 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2TextBox txtAllFirstSnack;
         private Guna.UI2.WinForms.Guna2TextBox txtAllBreakfast;
         private System.Windows.Forms.ListBox lbDataEntryDays;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUsers;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbUsers;
     }
 }
