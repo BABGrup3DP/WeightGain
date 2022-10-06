@@ -116,7 +116,6 @@
     <Compile Include="AdminForms\UserAddFormAdmin.Designer.cs">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\ControlEx.cs" />
     <Compile Include="Extensions\MealTimeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\UserTypeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\ExerciseTypeEnumTextBoxCell.cs" />

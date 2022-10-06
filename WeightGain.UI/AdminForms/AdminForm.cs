@@ -13,14 +13,12 @@ namespace WeightGain.UI.AdminForms
 {
     public partial class AdminForm : Form
     {
-        private readonly UserRepository _userRepository;
         private readonly List<BaseRepository> _baseRepositories;
         private readonly User _logginedUser;
         public AdminForm(List<BaseRepository> baseRepository, User logginedUser)
         {
             InitializeComponent();
             _baseRepositories = baseRepository;
-            _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
             _logginedUser = logginedUser;
         }
 
@@ -48,6 +46,7 @@ namespace WeightGain.UI.AdminForms
             _dragging = false;
         }
         #endregion
+
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Owner == null) return;

@@ -18,14 +18,14 @@ namespace WeightGain.UI.UserForms
                 Icon = MessageDialogIcon.Information,
                 Caption = "Bilgilendirme",
                 Buttons = MessageDialogButtons.OK,
-                Style = MessageDialogStyle.Light
+                Style = MessageDialogStyle.Light,
             };
         }
 
         private void btnNedir_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Nedir?";
-            _messageDialog.Text = "Günlük kilo artış ve azalımını takip etmek için tasarlanmış \n masaüstü bir yazılım programıdır.";
+            _messageDialog.Text = "Günlük kilo artış ve azalımını takip etmek için tasarlanmış \nmasaüstü bir yazılım programıdır.";
             _messageDialog.Show();
         }
 
@@ -53,28 +53,28 @@ namespace WeightGain.UI.UserForms
         private void btnHesaplama_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Hesaplama";
-            _messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir.\n Vücut bilgilerinizi ilgili bölümden girebilirsiniz.\nWeightGain kişiye en uygun diyet listesini sunarken \nkişisel bilgilerini ve hedeflerini göz önüne alır.";
+            _messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir.\n Vücut bilgilerinizi ilgili bölümden girebilirsiniz.\nWeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini \n ve hedeflerini göz önüne alır.";
             _messageDialog.Show();
         }
 
         private void btnSecim_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Öğün ve Ürün Seçimi";
-            _messageDialog.Text = "Kullanıcı ana sayfasından öğünlere girerek karşınıza çıkan\nöğünlerden uygun olanı seçtiğinizde karşınıza çıkan \nkategorilere göre ürün seçimi yapabilirsiniz.";
+            _messageDialog.Text = "Kullanıcı ana sayfasından öğünlere girerek karşınıza çıkan öğünlerden uygun olanı \n seçtiğinizde karşınıza çıkan kategorilere göre ürün seçimi yapabilirsiniz.";
             _messageDialog.Show();
         }
 
         private void btnBilgiGoruntuleme_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Bilgi Görüntüleme";
-            _messageDialog.Text = "Günlük kalori bilgilerinizi kullanıcı ana sayfası üzerinden yada\ndetaylı olarak 'Raporlar' bölümünden görüntüleyebilirsiniz.";
+            _messageDialog.Text = "Günlük kalori bilgilerinizi kullanıcı ana sayfası üzerinden yada detaylı olarak  \n 'Raporlar' bölümünden görüntüleyebilirsiniz.";
             _messageDialog.Show();
         }
 
         private void btnAntremanGirisi_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Antreman Girişi";
-            _messageDialog.Text = "Kullanıcı ana sayfası üzerinden 'Antremanlar' bölümüne \ngiriş yaparak, günlük egsersiz bilgi girişi \nile kalori hesaplaması yapabilirsiniz.";
+            _messageDialog.Text = "Kullanıcı ana sayfası üzerinden 'Antremanlar' Bölümüne giriş yaparak, \n günlük egsersiz bilgi girişi ile kalori hesaplaması yapabilirsiniz.";
             _messageDialog.Show();
         }
 
@@ -84,11 +84,11 @@ namespace WeightGain.UI.UserForms
             _messageDialog.Text = "'Raporlar' bölümünden geçmiş verilerinize ulaşabilirsiniz.";
             _messageDialog.Show();
         }
-
+        
         private void btnUyelikIptali_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Üyelik İptali";
-            _messageDialog.Text = "Dilediğiniz zaman Profil sayfasından üyelik iptalinizi \n gerçekleştirebilirsiniz.";
+            _messageDialog.Text = "Dilediğiniz zaman Profil sayfasından üyelik iptalinizi \ngerçekleştirebilirsiniz.";
             _messageDialog.Show();
         }
     }
