@@ -116,7 +116,12 @@
     <Compile Include="AdminForms\UserAddFormAdmin.Designer.cs">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\ControlEx.cs" />
+    <Compile Include="CustomForms\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomForms\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\MealTimeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\UserTypeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\ExerciseTypeEnumTextBoxCell.cs" />
@@ -219,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UserAddFormAdmin.resx">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForms\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>

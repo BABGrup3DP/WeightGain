@@ -1,5 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System.Windows.Forms;
+using WeightGain.UI.CustomForms;
+using WeightGain.UI.Extensions;
 
 namespace WeightGain.UI.UserForms
 {
@@ -18,15 +20,17 @@ namespace WeightGain.UI.UserForms
                 Icon = MessageDialogIcon.Information,
                 Caption = "Bilgilendirme",
                 Buttons = MessageDialogButtons.OK,
-                Style = MessageDialogStyle.Light
+                Style = MessageDialogStyle.Light,
             };
         }
 
         private void btnNedir_Click(object sender, System.EventArgs e)
         {
-            _messageDialog.Caption = "Nedir?";
-            _messageDialog.Text = "Günlük kilo artış ve azalımını takip etmek için tasarlanmış \n masaüstü bir yazılım programıdır.";
-            _messageDialog.Show();
+            CustomMessageBox customMessageBox = new CustomMessageBox("Günlük kilo artış ve azalımını takip etmek için tasarlanmış \n masaüstü bir yazılım programıdır.", "Nedir?");
+            customMessageBox.Show();
+            //_messageDialog.Caption = "Nedir?";
+            //_messageDialog.Text = "Günlük kilo artış ve azalımını takip etmek için tasarlanmış \n masaüstü bir yazılım programıdır.";
+            //_messageDialog.Show();
         }
 
         private void btnUyelik_Click(object sender, System.EventArgs e)
@@ -52,9 +56,11 @@ namespace WeightGain.UI.UserForms
 
         private void btnHesaplama_Click(object sender, System.EventArgs e)
         {
-            _messageDialog.Caption = "Hesaplama";
-            _messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir.\n Vücut bilgilerinizi ilgili bölümden girebilirsiniz.\nWeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini \n ve hedeflerini göz önüne alır.";
-            _messageDialog.Show();
+            CustomMessageBox customMessageBox = new CustomMessageBox("Kalori hesaplama için kişinin vücut ölçüleri gereklidir. Vücut bilgilerinizi ilgili bölümden girebilirsiniz. WeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini ve hedeflerini göz önüne alır.", "Hesaplama");
+            customMessageBox.Show();
+            //_messageDialog.Caption = "Hesaplama";
+            //_messageDialog.Text = "Kalori hesaplama için kişinin vücut ölçüleri gereklidir.\n Vücut bilgilerinizi ilgili bölümden girebilirsiniz.\nWeightGain kişiye en uygun diyet listesini sunarken kişisel bilgilerini \n ve hedeflerini göz önüne alır.";
+            //_messageDialog.Show();
         }
 
         private void btnSecim_Click(object sender, System.EventArgs e)

@@ -31,9 +31,9 @@ namespace WeightGain.UI.UserForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblExersiceDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblExerciseType = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbExercies = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -46,7 +46,6 @@ namespace WeightGain.UI.UserForms
             this.gbCalory = new Guna.UI2.WinForms.Guna2GroupBox();
             this.nudExerciseTime = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnAddExercise = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gpExercise = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblTable = new System.Windows.Forms.Label();
             this.lblCalBicycle = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -254,19 +253,6 @@ namespace WeightGain.UI.UserForms
             this.btnAddExercise.TabIndex = 5;
             this.btnAddExercise.Text = "Ekle";
             this.btnAddExercise.Click += new System.EventHandler(this.btnAddExercise_Click);
-            // 
-            // guna2HtmlLabel22
-            // 
-            this.guna2HtmlLabel22.AutoSize = false;
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(74, 411);
-            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(360, 32);
-            this.guna2HtmlLabel22.TabIndex = 0;
-            this.guna2HtmlLabel22.Text = "Kaybedilen Kaloriyi Günlük Alınması\r\n Gereken Değere Ekle\r\n";
             // 
             // gpExercise
             // 
@@ -525,32 +511,34 @@ namespace WeightGain.UI.UserForms
             this.dtpExerciseDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpExerciseDate.Location = new System.Drawing.Point(345, 4);
             this.dtpExerciseDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpExerciseDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpExerciseDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpExerciseDate.Name = "dtpExerciseDate";
             this.dtpExerciseDate.Size = new System.Drawing.Size(263, 26);
             this.dtpExerciseDate.TabIndex = 5;
+            this.dtpExerciseDate.Value = new System.DateTime(2022, 10, 6, 13, 46, 27, 729);
             // 
             // dgvShowExercise
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvShowExercise.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvShowExercise.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvShowExercise.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvShowExercise.ColumnHeadersHeight = 55;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvShowExercise.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvShowExercise.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvShowExercise.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvShowExercise.Location = new System.Drawing.Point(74, 245);
             this.dgvShowExercise.Margin = new System.Windows.Forms.Padding(2);
@@ -613,7 +601,6 @@ namespace WeightGain.UI.UserForms
             this.Controls.Add(this.gpExercise);
             this.Controls.Add(this.gbCalory);
             this.Controls.Add(this.lblExersiceDate);
-            this.Controls.Add(this.guna2HtmlLabel22);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -649,7 +636,6 @@ namespace WeightGain.UI.UserForms
         private Guna.UI2.WinForms.Guna2HtmlLabel lblExerciseJumpRope;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblExerciseBic;
         private Guna.UI2.WinForms.Guna2Button btnAddExercise;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCalBicycle;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCalSwim;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCalBicycleV;
