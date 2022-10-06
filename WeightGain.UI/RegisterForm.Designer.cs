@@ -44,6 +44,7 @@ namespace WeightGain.UI
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblHeight = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
             this.nudHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.nudWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -58,7 +59,6 @@ namespace WeightGain.UI
             this.lblAlready = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.formRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -269,6 +269,17 @@ namespace WeightGain.UI
             this.lblHeight.TabIndex = 7;
             this.lblHeight.Text = "Boy";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
+            this.label1.Location = new System.Drawing.Point(31, 322);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Cinsiyet";
+            // 
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
@@ -460,10 +471,11 @@ namespace WeightGain.UI
             // lblSlogan
             // 
             this.lblSlogan.AutoSize = true;
+            this.lblSlogan.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblSlogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lblSlogan.Location = new System.Drawing.Point(170, 33);
+            this.lblSlogan.Location = new System.Drawing.Point(164, 33);
             this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(186, 21);
+            this.lblSlogan.Size = new System.Drawing.Size(210, 27);
             this.lblSlogan.TabIndex = 2;
             this.lblSlogan.Text = "Buraya slogan gelebilir";
             // 
@@ -500,17 +512,6 @@ namespace WeightGain.UI
             this.btnClose.Size = new System.Drawing.Size(45, 29);
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(138)))), ((int)(((byte)(205)))));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(31, 322);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Cinsiyet";
             // 
             // RegisterForm
             // 
