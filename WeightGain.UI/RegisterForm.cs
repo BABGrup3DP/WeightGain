@@ -115,6 +115,9 @@ namespace WeightGain.UI
             var age = DateTime.Now.Year - birthDate.Year;
             var weight = nudWeight.Value;
             var height = nudHeight.Value;
+            var bMI = Math.Round(weight / (height / 100 * (height / 100)), 2);
+
+
 
             if (!Helper.CheckEmptyValues(formRightPanel, new object[] { txtPhoneNumber, txtEmail }))
             {
@@ -170,6 +173,17 @@ namespace WeightGain.UI
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Telefon numarası 11 haneli olmalıdır.",
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
+                };
+                messageDialogError.Show();
+                return;
+            }
+            if (bMI > 18.5m)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Vücut kitle indeksiniz:" + bMI + " olarak hesaplanmıştır.\n 18.5'ten büyük olduğu için bu program size uygun değildir.",
                     Caption = Resources.ProgramTitle,
                     Style = MessageDialogStyle.Light
                 };
