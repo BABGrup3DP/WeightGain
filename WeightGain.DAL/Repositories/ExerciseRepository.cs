@@ -12,7 +12,7 @@ namespace WeightGain.DAL.Repositories
 
         public ExerciseRepository()
         {
-            _exercises = weightGainContext.Set<Exercise>();
+            _exercises = WeightGainContext.Set<Exercise>();
         }
 
         //egzersiz ekleme
@@ -21,7 +21,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 _exercises.Add(exercise);
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -35,13 +35,12 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 var updateExercise = _exercises.Find(exercise.ExerciseId);
-                if (updateExercise == null) return weightGainContext.SaveChanges() > 0;
+                if (updateExercise == null) return WeightGainContext.SaveChanges() > 0;
                 updateExercise.ExerciseType = exercise.ExerciseType;
                 updateExercise.Duration = exercise.Duration;
                 updateExercise.User = exercise.User;
                 updateExercise.UserId = exercise.UserId;
-
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -57,7 +56,7 @@ namespace WeightGain.DAL.Repositories
                 var deleteExercise = _exercises.Find(execiseId);
                 if (deleteExercise != null)
                     _exercises.Remove(deleteExercise);
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -66,8 +65,6 @@ namespace WeightGain.DAL.Repositories
         }
 
         public List<Exercise> GetAll() => _exercises.ToList();
-
-        public double GetTotalCalorie() => _exercises.Sum(x => x.TotalCal);
 
         public List<Exercise> GetByUserId(int userId)
         {
@@ -98,22 +95,6 @@ namespace WeightGain.DAL.Repositories
                 return new List<Exercise>();
             }
         }
-        public List<Exercise> GetByDate(DateTime startDate, DateTime endDate, int userId)
-        {
-            try
-            {
-                var findExercises = _exercises.Any(x => x.ExerciseDate >= startDate && x.ExerciseDate <= endDate && x.UserId == userId);
-                if (!findExercises)
-                    return new List<Exercise>();
-                return _exercises.Where(x => x.ExerciseDate == startDate && x.ExerciseDate <= endDate && x.UserId == userId).ToList();
-            }
-            catch
-            {
-                return new List<Exercise>();
-            }
-        }
-
-        public Exercise GetById(int exerciseId) => _exercises.Find(exerciseId);
 
         public List<ExerciseEnum> GetExercises() => Enum.GetValues(typeof(ExerciseEnum)).Cast<ExerciseEnum>().ToList();
 

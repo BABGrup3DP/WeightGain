@@ -66,7 +66,7 @@ namespace WeightGain.DATA.Helpers
                 }
                 else if (ctrlName.Contains("NumericUpDown"))
                 {
-                    if (ctrl is Guna2NumericUpDown numericUpDown && numericUpDown.Value < 0)
+                    if (ctrl is Guna2NumericUpDown numericUpDown && numericUpDown.Value <= 0)
                         return false;
                 }
             }
@@ -74,36 +74,9 @@ namespace WeightGain.DATA.Helpers
         }
 
         /// <summary>
-        /// Groupbox içerisindeki kontrollerin uygun olup olmadığını kontrol ederi.
+        /// Groupbox içerisindeki textboxların içerisindeki değerleri temizler.
         /// </summary>
-        /// <param name="groupBox">Kontrol edilecek olan groupbox</param>
-        /// <param name="dissmissObj">Kontrol edilmeyecek olan kontroller</param>
-        /// <returns>Herhangi bir boş alan var ise false döner.</returns>
-        public static bool CheckEmptyValues(Guna2GroupBox groupBox, object[] dissmissObj = null)
-        {
-            foreach (var ctrl in groupBox.Controls)
-            {
-                if (dissmissObj != null && dissmissObj.Contains(ctrl)) continue;
-                var ctrlName = ctrl.GetType().Name;
-                if (ctrlName.Contains("TextBox"))
-                {
-                    if (ctrl is Guna2TextBox textBox && string.IsNullOrEmpty(textBox.Text.Trim()))
-                        return false;
-                }
-                else if (ctrlName.Contains("DateTimePicker"))
-                {
-                    if (ctrl is Guna2DateTimePicker dateTimePicker && dateTimePicker.Value >= DateTime.Today)
-                        return false;
-                }
-                else if (ctrlName.Contains("NumericUpDown"))
-                {
-                    if (ctrl is Guna2NumericUpDown numericUpDown && numericUpDown.Value < 0)
-                        return false;
-                }
-            }
-            return true;
-        }
-
+        /// <param name="groupBox">Temizlenmesi istenen groupbox nesnesi</param>
         public static void EmptyGroupBox(GroupBox groupBox)
         {
             foreach (var ctrl in groupBox.Controls)
@@ -175,11 +148,11 @@ namespace WeightGain.DATA.Helpers
                 score++;
             if (password.Length >= 12)
                 score++;
-            if (Regex.IsMatch(password, @"[0-9]+(\.[0-9][0-9]?)?", RegexOptions.ECMAScript)) //number only //"^\d+$" if you need to match more than one digit.
+            if (Regex.IsMatch(password, @"[0-9]+(\.[0-9][0-9]?)?", RegexOptions.ECMAScript)) // birden fazla rakam içeriyor mu
                 score++;
-            if (Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z]).+$", RegexOptions.ECMAScript)) //both, lower and upper case
+            if (Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z]).+$", RegexOptions.ECMAScript)) // hem küçük harf hem büyük harf içeriyor mu
                 score++;
-            if (Regex.IsMatch(password, @"[!,@,#,$,%,^,&,*,?,_,~,-,£,(,)]", RegexOptions.ECMAScript)) //^[A-Z]+$
+            if (Regex.IsMatch(password, @"[!,@,#,$,%,^,&,*,?,_,~,-,£,(,)]", RegexOptions.ECMAScript)) // özel karakter içeriyor mu
                 score++;
             return score;
         }
@@ -203,7 +176,7 @@ namespace WeightGain.DATA.Helpers
         /// </summary>
         /// <param name="userWeight">Kullanıcının kilosu</param>
         /// <param name="selectedExerciseIndex">Seçilen egzersiz türü</param>
-        /// <param name="totalExerciseTime">Egzersizde geçirilen toplam süre (saniye)</param>
+        /// <param name="totalExerciseTime">Egzersizde geçirilen toplam süre (dakika)</param>
         /// <returns>Toplam yakılan kalori</returns>
         public static decimal CalculateExercise(decimal userWeight, int selectedExerciseIndex, decimal totalExerciseTime)
         {
@@ -211,19 +184,19 @@ namespace WeightGain.DATA.Helpers
             switch (selectedExerciseIndex)
             {
                 case 0:
-                    parCoefficient = 5.6m;
+                    parCoefficient = 5.6m; // Bisiklet
                     break;
                 case 1:
-                    parCoefficient = 5.8m;
+                    parCoefficient = 5.8m; // İp Atlama
                     break;
                 case 2:
-                    parCoefficient = 6.34m;
+                    parCoefficient = 6.34m; // Koşu
                     break;
                 case 3:
-                    parCoefficient = 2.1m;
+                    parCoefficient = 2.1m; // Yürüyüş
                     break;
                 case 4:
-                    parCoefficient = 9.0m;
+                    parCoefficient = 9.0m; // Yüzme
                     break;
             }
             return userWeight * parCoefficient * totalExerciseTime / 60;

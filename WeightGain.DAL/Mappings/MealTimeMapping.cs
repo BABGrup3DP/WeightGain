@@ -8,13 +8,13 @@ namespace WeightGain.DAL.Mappings
     {
         public MealTimeMapping()
         {
-            this.HasKey(x => x.MealTimeId);
-            this.Property(x => x.MealTimeId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(x => x.MealTimeType).IsRequired();
-            this.Property(x => x.MealTimeDescription).IsRequired().HasMaxLength(100);
+            HasKey(x => x.MealTimeId);
+            Property(x => x.MealTimeId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(x => x.MealTimeType).IsRequired();
+            Property(x => x.MealTimeDescription).IsRequired().HasMaxLength(100);
 
-            this.HasMany(x => x.Products).WithMany(x => x.MealTimes);
-            this.HasRequired(x => x.User).WithMany(x => x.MealTimes).HasForeignKey(x => x.UserId).WillCascadeOnDelete(false);
+            HasMany(x => x.Products).WithMany(x => x.MealTimes); // çoka çok ilişki 
+            HasRequired(x => x.User).WithMany(x => x.MealTimes).HasForeignKey(x => x.UserId).WillCascadeOnDelete(false); // bire çok ilişki
         }
     }
 }

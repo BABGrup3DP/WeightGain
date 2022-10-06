@@ -9,9 +9,9 @@ namespace WeightGain.UI.Extensions
     {
         protected override object GetFormattedValue(object value, int rowIndex, ref DataGridViewCellStyle cellStyle, TypeConverter valueTypeConverter, TypeConverter formattedValueTypeConverter, DataGridViewDataErrorContexts context)
         {
+            var enumName = (ExerciseEnum)(int)value;
             try
             {
-                ExerciseEnum enumName = (ExerciseEnum)(int)value;
                 switch (enumName)
                 {
                     case ExerciseEnum.Bicycle: return "Bisiklet";

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 using WeightGain.DAL.Repositories;
 using WeightGain.DATA.Helpers;
@@ -34,7 +33,7 @@ namespace WeightGain.UI
             _repositoryList.Add(mealTimeRepository);
         }
 
-        #region Helper Functions
+        #region Helper Functions (Formun üstünden sürüklenmesi)
         private bool _dragging;
         private Point _dragCursorPoint;
         private Point _dragFormPoint;

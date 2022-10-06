@@ -7,10 +7,5 @@
         Run,
         Walk,
         Swim
-        //Bisiklet_Sürme = 1,
-        //İp_Atlama,
-        //Koşu,
-        //Yürüyüş,
-        //Yüzme,
     }
 }

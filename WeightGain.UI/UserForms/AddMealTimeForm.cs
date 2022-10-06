@@ -12,7 +12,7 @@ using WeightGain.UI.Properties;
 
 namespace WeightGain.UI.UserForms
 {
-    public partial class MealTimeForm : Form
+    public partial class AddMealTimeForm : Form
     {
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly CategoryRepository _categoryRepository;
@@ -23,7 +23,7 @@ namespace WeightGain.UI.UserForms
         private readonly List<ProductWithPortion> _productWithPortions;
         private bool _resizing;
 
-        public MealTimeForm(List<BaseRepository> baseRepositories, User logginedUser)
+        public AddMealTimeForm(List<BaseRepository> baseRepositories, User logginedUser)
         {
             InitializeComponent();
             _mealTimeRepository = (MealTimeRepository)baseRepositories.Single(x => x.GetType() == typeof(MealTimeRepository));
@@ -69,8 +69,7 @@ namespace WeightGain.UI.UserForms
             };
 
 
-            if (_mealTimeRepository.Insert(newMealTime) &&
-                _mealTimeRepository.AddProductsToMealTime(newMealTime, _productWithPortions))
+            if (_mealTimeRepository.AddProductsToMealTime(newMealTime, _productWithPortions))
             {
                 var messageDialog = new Guna2MessageDialog
                 {

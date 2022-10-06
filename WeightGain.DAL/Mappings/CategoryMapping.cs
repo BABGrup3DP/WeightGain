@@ -8,12 +8,11 @@ namespace WeightGain.DAL.Mappings
     {
         public CategoryMapping()
         {
-            //this.ToTable("Kategori");
-            this.HasKey(x => x.CategoryId);
-            this.Property(x => x.CategoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(x => x.Name).HasMaxLength(30).IsRequired();
-            this.Property(x => x.Description).HasMaxLength(100);
-            this.HasMany(x => x.Products).WithRequired(x => x.Category).HasForeignKey(x => x.CategoryId).WillCascadeOnDelete(false);
+            HasKey(x => x.CategoryId);
+            Property(x => x.CategoryId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(x => x.Name).HasMaxLength(30).IsRequired();
+            Property(x => x.Description).HasMaxLength(100);
+            HasMany(x => x.Products).WithRequired(x => x.Category).HasForeignKey(x => x.CategoryId).WillCascadeOnDelete(false);
         }
     }
 }

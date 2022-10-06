@@ -2,7 +2,7 @@
 
 namespace WeightGain.UI.UserForms
 {
-    partial class MealTimeForm
+    partial class AddMealTimeForm
     {
         /// <summary>
         /// Required designer variable.

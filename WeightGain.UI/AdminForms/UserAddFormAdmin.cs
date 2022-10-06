@@ -117,7 +117,7 @@ namespace WeightGain.UI.AdminForms
             var weight = nudWeight.Value;
             var height = nudHeight.Value;
 
-            if (!Helper.CheckEmptyValues(formRightPanel, new object[] { txtPhoneNumber, txtEmail }))
+            if (!Helper.CheckEmptyValues(formRightPanel, new object[] { txtPhoneNumber }))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {

@@ -12,14 +12,12 @@ namespace WeightGain.UI.UserForms
 {
     public partial class UserForm : Form
     {
-        private readonly UserRepository _userRepository;
         private readonly List<BaseRepository> _baseRepositories;
         private readonly User _logginedUser;
         public UserForm(List<BaseRepository> baseRepository, User logginedUser)
         {
             InitializeComponent();
             _baseRepositories = baseRepository;
-            _userRepository = (UserRepository)baseRepository.Single(x => x.GetType() == typeof(UserRepository));
             _logginedUser = logginedUser;
         }
 
@@ -55,10 +53,10 @@ namespace WeightGain.UI.UserForms
                 Owner.Close();
         }
 
-        private void btnMealTimes_Click(object sender, EventArgs e)
+        private void btnAddMealTimes_Click(object sender, EventArgs e)
         {
             Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
-            Helper.OpenChildForm(mainPanel, new MealTimeForm(_baseRepositories, _logginedUser));
+            Helper.OpenChildForm(mainPanel, new AddMealTimeForm(_baseRepositories, _logginedUser));
         }
 
         private void btnExercies_Click(object sender, EventArgs e)
@@ -102,5 +100,10 @@ namespace WeightGain.UI.UserForms
             Helper.OpenChildForm(mainPanel, new MainForm(_baseRepositories, _logginedUser));
         }
 
+        private void btnMealTimes_Click(object sender, EventArgs e)
+        {
+            Helper.ChangeButtonEnableMenu(leftMenuPanel, sender as Guna2Button);
+            Helper.OpenChildForm(mainPanel, new MealTimes(_baseRepositories, _logginedUser));
+        }
     }
 }

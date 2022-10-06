@@ -116,6 +116,9 @@
     <Compile Include="AdminForms\UserAddFormAdmin.Designer.cs">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\DataGridViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Extensions\MealTimeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\UserTypeEnumTextBoxCell.cs" />
     <Compile Include="Extensions\ExerciseTypeEnumTextBoxCell.cs" />
@@ -126,6 +129,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\MealTimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\MealTimes.Designer.cs">
+      <DependentUpon>MealTimes.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\ReportForm.cs">
       <SubType>Form</SubType>
@@ -163,11 +172,11 @@
     <Compile Include="UserForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\MealTimeForm.cs">
+    <Compile Include="UserForms\AddMealTimeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForms\MealTimeForm.Designer.cs">
-      <DependentUpon>MealTimeForm.cs</DependentUpon>
+    <Compile Include="UserForms\AddMealTimeForm.Designer.cs">
+      <DependentUpon>AddMealTimeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\ProfileForm.cs">
       <SubType>Form</SubType>
@@ -219,6 +228,9 @@
     <EmbeddedResource Include="AdminForms\UserAddFormAdmin.resx">
       <DependentUpon>UserAddFormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\MealTimes.resx">
+      <DependentUpon>MealTimes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,8 +249,8 @@
     <EmbeddedResource Include="UserForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\MealTimeForm.resx">
-      <DependentUpon>MealTimeForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserForms\AddMealTimeForm.resx">
+      <DependentUpon>AddMealTimeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
@@ -318,7 +330,7 @@
     <None Include="Resources\showpass.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Female-User-Account-PNG-Photo.png" />
+    <None Include="Resources\userfemale.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\products.png" />
@@ -328,6 +340,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meals.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

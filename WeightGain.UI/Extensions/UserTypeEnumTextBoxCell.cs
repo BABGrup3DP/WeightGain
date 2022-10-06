@@ -8,9 +8,9 @@ namespace WeightGain.UI.Extensions
     {
         protected override object GetFormattedValue(object value, int rowIndex, ref DataGridViewCellStyle cellStyle, TypeConverter valueTypeConverter, TypeConverter formattedValueTypeConverter, DataGridViewDataErrorContexts context)
         {
+            var enumName = (UserTypeEnum)(int)value;
             try
             {
-                UserTypeEnum enumName = (UserTypeEnum)(int)value;
                 switch (enumName)
                 {
                     case UserTypeEnum.Admin: return "Admin";

@@ -36,7 +36,7 @@ namespace WeightGain.UI.UserForms
             txtBMH.Text = Convert.ToString(Math.Round(_logginedUser.Bmi, 2));
             var neededCalory = Helper.CalculateNeededCalory(weight, height, age);
             txtGetCalory.Text = neededCalory.ToString();
-            var dailyMealTimes = _mealTimeRepository.GetByDate(DateTime.Now, _logginedUser.Id);
+            var dailyMealTimes = _mealTimeRepository.GetByDate(DateTime.Now.Date, _logginedUser.Id);
             var totalCalory = 0m;
             if (dailyMealTimes != null)
             {
@@ -48,7 +48,7 @@ namespace WeightGain.UI.UserForms
                 }
             }
 
-            var dailyExercises = _exerciseRepository.GetByDate(DateTime.Now, _logginedUser.Id);
+            var dailyExercises = _exerciseRepository.GetByDate(DateTime.Now.Date, _logginedUser.Id);
             if (dailyExercises != null)
             {
                 foreach (var dailyExercise in dailyExercises)

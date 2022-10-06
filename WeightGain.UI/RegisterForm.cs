@@ -14,14 +14,14 @@ namespace WeightGain.UI
     public partial class RegisterForm : Form
     {
         private readonly UserRepository _userRepository;
-        private bool showPassword = false;
+        private bool _showPassword;
         public RegisterForm(List<BaseRepository> repositories)
         {
             InitializeComponent();
             _userRepository = (UserRepository)repositories.Single(x => x.GetType() == typeof(UserRepository));
         }
 
-        #region Helper Functions
+        #region Helper Functions (Formun üstünden sürüklenmesi)
         private bool _dragging;
         private Point _dragCursorPoint;
         private Point _dragFormPoint;
@@ -115,11 +115,10 @@ namespace WeightGain.UI
             var age = DateTime.Now.Year - birthDate.Year;
             var weight = nudWeight.Value;
             var height = nudHeight.Value;
-            var bMI = Math.Round(weight / (height / 100 * (height / 100)), 2);
 
 
 
-            if (!Helper.CheckEmptyValues(formRightPanel, new object[] { txtPhoneNumber, txtEmail }))
+            if (!Helper.CheckEmptyValues(formRightPanel, new object[] { txtPhoneNumber }))
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -168,7 +167,7 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
-            if (telephone.Length != 11)
+            if (!string.IsNullOrEmpty(telephone) && telephone.Length != 11)
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -179,11 +178,13 @@ namespace WeightGain.UI
                 messageDialogError.Show();
                 return;
             }
-            if (bMI > 18.5m)
+            var bMi = Math.Round(weight / (height / 100 * (height / 100)), 2);
+
+            if (bMi > 18.5m)
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
-                    Text = "Vücut kitle indeksiniz:" + bMI + " olarak hesaplanmıştır.\n 18.5'ten büyük olduğu için bu program size uygun değildir.",
+                    Text = "Vücut kitle indeksiniz:" + bMi + " olarak hesaplanmıştır.\n 18.5'ten büyük olduğu için bu program size uygun değildir.",
                     Caption = Resources.ProgramTitle,
                     Style = MessageDialogStyle.Light
                 };
@@ -298,13 +299,13 @@ namespace WeightGain.UI
 
         private void txtPassword_IconRightClick(object sender, EventArgs e)
         {
-            showPassword = !showPassword;
-            txtPassword.PasswordChar = showPassword ? '\0' : '*';
+            _showPassword = !_showPassword;
+            txtPassword.PasswordChar = _showPassword ? '\0' : '*';
         }
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            cbAgree.Checked = MessageBox.Show("Kişisel verileriniz üyelik başvurunuz sırasında ve / veya sonrasında yazılı ve / veya sözlü olarak ve / veya elektronik ortamda tarafımıza iletmiş olduğunuz, sağlık bilgileri de dahil olmak üzere (ad, soyad, kimlik bilgileri, doğum tarihi, cep telefonu numarası, e - posta,  vb.) özel nitelikli kişisel verilerinizi de içeren her türlü bilgi ve belgeyi ifade etmekte olup, bu veriler üyelerimizin rızaları ve mevzuat hükümleri uyarınca WeightGain tarafından fiziki ve dijital ortamda işlenmekte ve saklanmaktadır. Kabul ediyor musunuz?", Properties.Resources.ProgramTitle, MessageBoxButtons.YesNo) == DialogResult.Yes;
+            cbAgree.Checked = MessageBox.Show("Kişisel verileriniz üyelik başvurunuz sırasında ve / veya sonrasında yazılı ve / veya sözlü olarak ve / veya elektronik ortamda tarafımıza iletmiş olduğunuz, sağlık bilgileri de dahil olmak üzere (ad, soyad, kimlik bilgileri, doğum tarihi, cep telefonu numarası, e-posta,  vb.) özel nitelikli kişisel verilerinizi de içeren her türlü bilgi ve belgeyi ifade etmekte olup, bu veriler üyelerimizin rızaları ve mevzuat hükümleri uyarınca WeightGain tarafından fiziki ve dijital ortamda işlenmekte ve saklanmaktadır. Kabul ediyor musunuz?", Resources.ProgramTitle, MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
     }
 }

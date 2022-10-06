@@ -88,7 +88,7 @@ namespace WeightGain.UI.UserForms
                 return;
             }
             var telephone = txtPhone.Text.Trim();
-            if (telephone.Length != 11)
+            if (!string.IsNullOrEmpty(telephone) && telephone.Length != 11)
             {
                 var messageDialogError = new Guna2MessageDialog
                 {
@@ -106,6 +106,32 @@ namespace WeightGain.UI.UserForms
                 var messageDialogError = new Guna2MessageDialog
                 {
                     Text = "Kilo ve boy değerlerini kontrol edin.",
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
+                };
+                messageDialogError.Show();
+                return;
+            }
+            var bMi = Math.Round(weight / (height / 100 * (height / 100)), 2);
+
+            if (bMi > 18.5m)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Vücut kitle indeksiniz:" + bMi + " olarak hesaplanmıştır.\n 18.5'ten büyük olduğu için bu program size uygun değildir.",
+                    Caption = Resources.ProgramTitle,
+                    Style = MessageDialogStyle.Light
+                };
+                messageDialogError.Show();
+                return;
+            }
+            var age = DateTime.Now.Year - dtpBirthDate.Value.Year;
+
+            if (age < 19 || age > 24)
+            {
+                var messageDialogError = new Guna2MessageDialog
+                {
+                    Text = "Üzgünüm. Program 19-24 yaş arası için uygundur.",
                     Caption = Resources.ProgramTitle,
                     Style = MessageDialogStyle.Light
                 };

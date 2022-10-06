@@ -10,7 +10,7 @@ namespace WeightGain.DAL.Repositories
         private readonly DbSet<User> _users;
         public UserRepository()
         {
-            _users = weightGainContext.Set<User>();
+            _users = WeightGainContext.Set<User>();
         }
 
         //benzer üyelik var mı ve sonrasında ekleme
@@ -21,7 +21,7 @@ namespace WeightGain.DAL.Repositories
                 var findUser = _users.Any(x => x.Email == newUser.Email || x.PhoneNumber == newUser.PhoneNumber);
                 if (findUser) return false;
                 _users.Add(newUser);
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -29,14 +29,7 @@ namespace WeightGain.DAL.Repositories
             }
         }
 
-        //18-24 yas arasında olanların listesi
-        public List<User> GetAllAge() => _users.Where(x => x.Age > 18 && x.Age < 25).ToList();
-
-        //Kullanıcı ıd sine göre üyeleri getirme
-        public User GetUserById(User id) => _users.Find(id);
-
         public List<User> GetAll(bool onlyMembers = false) => onlyMembers ? _users.Where(x => x.UserType == UserTypeEnum.User).ToList() : _users.ToList();
-
 
         //kullanıcı giriş kontrol
         public User CheckLogin(string emailOrPhone, string password)
@@ -63,7 +56,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 _users.Remove(user);
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -84,7 +77,7 @@ namespace WeightGain.DAL.Repositories
                 findUser.Password = user.Password;
                 findUser.BirthDate = user.BirthDate;
                 findUser.PhoneNumber = user.PhoneNumber;
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {

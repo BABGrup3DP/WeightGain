@@ -7,23 +7,20 @@ namespace WeightGain.DAL.Repositories
 {
     public class ProductRepository : BaseRepository
     {
-        private readonly DbSet<Product> Products;
-        private readonly DbSet<Category> Categories;
+        private readonly DbSet<Product> _products;
 
         public ProductRepository()
         {
-            Products = weightGainContext.Set<Product>();
-            Categories = weightGainContext.Set<Category>();
+            _products = WeightGainContext.Set<Product>();
         }
 
         //ürün ekleme
-
         public bool Insert(Product product)
         {
             try
             {
-                Products.Add(product);
-                return weightGainContext.SaveChanges() > 0;
+                _products.Add(product);
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -36,14 +33,14 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var updateProduct = Products.Find(product.ProductId);
+                var updateProduct = _products.Find(product.ProductId);
                 if (updateProduct == null) return false;
                 updateProduct.ProductName = product.ProductName;
                 updateProduct.Scale = product.Scale;
                 updateProduct.Calory = product.Calory;
                 updateProduct.CategoryId = product.CategoryId;
                 updateProduct.Picture = product.Picture;
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
 
             }
             catch
@@ -56,7 +53,7 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                return Products.Find(id);
+                return _products.Find(id);
             }
             catch
             {
@@ -69,10 +66,10 @@ namespace WeightGain.DAL.Repositories
         {
             try
             {
-                var deleteProduct = Products.Find(productId);
+                var deleteProduct = _products.Find(productId);
                 if (deleteProduct != null)
-                    Products.Remove(deleteProduct);
-                return weightGainContext.SaveChanges() > 0;
+                    _products.Remove(deleteProduct);
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -80,9 +77,8 @@ namespace WeightGain.DAL.Repositories
             }
         }
 
-        public List<Product> GetByCategoryId(int categoryId) =>
-            Products.Where(x => x.CategoryId == categoryId).ToList();
+        public List<Product> GetByCategoryId(int categoryId) => _products.Where(x => x.CategoryId == categoryId).ToList();
 
-        public List<Product> GetAll() => Products.ToList();
+        public List<Product> GetAll() => _products.ToList();
     }
 }

@@ -8,7 +8,6 @@ namespace WeightGain.DAL.Mappings
     {
         public UserMapping()
         {
-            //this.ToTable("Kullanici");
             HasKey(x => x.Id);
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(x => x.FirstName).IsRequired().HasMaxLength(20);
@@ -22,8 +21,6 @@ namespace WeightGain.DAL.Mappings
             Ignore(x => x.Age);
 
             HasMany(x => x.Exercises).WithRequired(x => x.User).HasForeignKey(x => x.UserId);
-            //HasMany(x => x.Exercises).WithMany(x => x.Users);
-            //HasMany(x => x.Products).WithMany(x => x.Users);
         }
     }
 }

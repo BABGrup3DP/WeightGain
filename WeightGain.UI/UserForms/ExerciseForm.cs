@@ -107,7 +107,6 @@ namespace WeightGain.UI.UserForms
                 }
             }
         }
-
         public void RefreshDataGridView()
         {
             dgvShowExercise.AutoGenerateColumns = false;
@@ -203,46 +202,5 @@ namespace WeightGain.UI.UserForms
                 messageDialogError.Show();
             }
         }
-
-        private void dgvShowExercise_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != 2) return;
-            var userId = dgvShowExercise.Rows[e.RowIndex].Cells[4].Value;
-            var newExerciseDate = dgvShowExercise.Rows[e.RowIndex].Cells[3].Value;
-            var newExerciseDuration = dgvShowExercise.Rows[e.RowIndex].Cells[2].Value;
-            var newExerciseType = dgvShowExercise.Rows[e.RowIndex].Cells[1].Value;
-            var exerciseId = dgvShowExercise.Rows[e.RowIndex].Cells[0].Value;
-            var exercise = new Exercise
-            {
-                ExerciseId = (int)exerciseId,
-                ExerciseType = (ExerciseEnum)newExerciseType,
-                Duration = (byte)newExerciseDuration,
-                ExerciseDate = (DateTime)newExerciseDate,
-                UserId = (int)userId
-            };
-
-            if (_exerciseRepository.Update(exercise))
-            {
-                var messageDialogSuccess = new Guna2MessageDialog
-                {
-                    Text = "Egzersiz başarıyla düzenlendi.",
-                    Caption = Resources.ProgramTitle,
-                    Style = MessageDialogStyle.Light
-                };
-                messageDialogSuccess.Show();
-                RefreshDataGridView();
-            }
-            else
-            {
-                var messageDialogError = new Guna2MessageDialog
-                {
-                    Text = "Egzersiz düzenlenirken hata oluştu.",
-                    Caption = Resources.ProgramTitle,
-                    Style = MessageDialogStyle.Light
-                };
-                messageDialogError.Show();
-            }
-        }
-
     }
 }

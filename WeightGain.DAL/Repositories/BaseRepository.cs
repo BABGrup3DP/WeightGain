@@ -4,11 +4,11 @@ namespace WeightGain.DAL.Repositories
 {
     public class BaseRepository
     {
-        public WeightGainContext weightGainContext{ get; set; }
+        public WeightGainContext WeightGainContext { get; set; }
 
         public BaseRepository()
         {
-            weightGainContext = new WeightGainContext();
+            WeightGainContext = new WeightGainContext();
         }
     }
 }

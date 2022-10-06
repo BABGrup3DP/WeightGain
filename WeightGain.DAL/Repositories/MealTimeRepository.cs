@@ -13,25 +13,14 @@ namespace WeightGain.DAL.Repositories
         private readonly DbSet<Product> _products;
         private readonly DbSet<Portion> _portions;
 
-
         public MealTimeRepository()
         {
-            _mealTimes = weightGainContext.Set<MealTime>();
-            _products = weightGainContext.Set<Product>();
-            _portions = weightGainContext.Set<Portion>();
+            _mealTimes = WeightGainContext.Set<MealTime>();
+            _products = WeightGainContext.Set<Product>();
+            _portions = WeightGainContext.Set<Portion>();
         }
 
         public List<MealTime> GetAll() => _mealTimes.ToList();
-
-        public double GetTotalCalories()
-        {
-            var result = _portions.Sum(x => x.Product.Calory * x.Size);
-            return result;
-        }
-
-        public MealTime GetById(int mealTimeId) => _mealTimes.Find(mealTimeId);
-
-        public List<MealTime> GetByUserId(int userId) => _mealTimes.Where(x => x.UserId == userId).ToList();
 
         //ekleme
         public bool Insert(MealTime mealTime)
@@ -39,7 +28,7 @@ namespace WeightGain.DAL.Repositories
             try
             {
                 _mealTimes.Add(mealTime);
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -59,7 +48,7 @@ namespace WeightGain.DAL.Repositories
                     updateMealTime.MealTimeDescription = mealTime.MealTimeDescription;
                     updateMealTime.Products = mealTime.Products;
                 }
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
@@ -68,53 +57,68 @@ namespace WeightGain.DAL.Repositories
         }
 
         //silme
+        // TODO: Silme işlemi yapılacak
         public bool Delete(int mealTimeId)
-        {
-            var deleteMealTime = _mealTimes.Find(mealTimeId);
-            if (deleteMealTime != null)
-                _mealTimes.Remove(deleteMealTime);
-            return weightGainContext.SaveChanges() > 0;
-        }
-
-        public bool AddProductsToMealTime(MealTime mealTime, List<ProductWithPortion> productWithPortions)
         {
             try
             {
-                if (mealTime.Products == null) mealTime.Products = new List<Product>();
-                #region Öğüne Ürün Ekleme
-                foreach (var productPortions in productWithPortions)
+                var deleteMealTime = _mealTimes.Find(mealTimeId);
+                if (deleteMealTime != null)
                 {
-
-                    var p = _products.Find(productPortions.ProductId);
-                    if (p != null)
-                    {
-                        mealTime.Products.Add(p);
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    _mealTimes.Remove(deleteMealTime);
                 }
-                #endregion
-                if (weightGainContext.SaveChanges() > 0)
-                {
-                    foreach (var productPortions in productWithPortions)
-                    {
-                        _portions.Add(new Portion
-                        {
-                            ProductId = productPortions.ProductId,
-                            MealTimeId = mealTime.MealTimeId,
-                            Size = productPortions.Size
-                        });
-                    }
-                }
-                return weightGainContext.SaveChanges() > 0;
+                return WeightGainContext.SaveChanges() > 0;
             }
             catch
             {
                 return false;
             }
         }
+
+        public bool AddProductsToMealTime(MealTime mealTime, List<ProductWithPortion> productWithPortions)
+        {
+            try
+            {
+                _mealTimes.Add(mealTime);
+                if (WeightGainContext.SaveChanges() > 0)
+                {
+                    if (mealTime.Products == null) mealTime.Products = new List<Product>();
+                    #region Öğüne Ürün Ekleme
+                    foreach (var productPortions in productWithPortions)
+                    {
+                        var p = _products.Find(productPortions.ProductId);
+                        if (p != null)
+                        {
+                            mealTime.Products.Add(p);
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    #endregion
+                    if (WeightGainContext.SaveChanges() > 0)
+                    {
+                        foreach (var productPortions in productWithPortions)
+                        {
+                            _portions.Add(new Portion
+                            {
+                                ProductId = productPortions.ProductId,
+                                MealTimeId = mealTime.MealTimeId,
+                                Size = productPortions.Size
+                            });
+                        }
+                    }
+                }
+                return WeightGainContext.SaveChanges() > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<MealTime> GetAllByUserId(int userId) => _mealTimes.Where(x => x.UserId == userId).ToList();
 
         public List<MealTime> GetByDate(DateTime startDate, int userId)
         {
@@ -141,8 +145,5 @@ namespace WeightGain.DAL.Repositories
                 return null;
             }
         }
-
-        public List<MealTimeEnum> GetMealTimes() => Enum.GetValues(typeof(MealTimeEnum)).Cast<MealTimeEnum>().ToList();
-
     }
 }
