@@ -32,6 +32,7 @@
             this.formElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvMealTimes = new WeightGain.UI.Extensions.DataGridViewEx();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExportExcel = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMealTimes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +66,28 @@
             this.btnDelete.Text = "Seçilenleri Sil";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExportExcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExportExcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExportExcel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Location = new System.Drawing.Point(249, 468);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(358, 35);
+            this.btnExportExcel.TabIndex = 2;
+            this.btnExportExcel.Text = "Excel\'e Aktar";
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
             // MealTimes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(983, 515);
+            this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvMealTimes);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -89,5 +106,6 @@
         private Guna.UI2.WinForms.Guna2Elipse formElipse;
         private Extensions.DataGridViewEx dgvMealTimes;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnExportExcel;
     }
 }
