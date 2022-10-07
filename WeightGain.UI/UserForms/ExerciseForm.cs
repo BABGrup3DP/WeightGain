@@ -38,7 +38,7 @@ namespace WeightGain.UI.UserForms
                     cmbExercies.Items.Add("Koşu");
                 else if (exercise == ExerciseEnum.Walk)
                     cmbExercies.Items.Add("Yürüyüş");
-                else if (exercise == ExerciseEnum.Swim) 
+                else if (exercise == ExerciseEnum.Swim)
                     cmbExercies.Items.Add("Yüzme");
             }
 

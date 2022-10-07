@@ -14,7 +14,7 @@ namespace WeightGain.UI.AdminForms
         private readonly MealTimeRepository _mealTimeRepository;
         private readonly ExerciseRepository _exerciseRepository;
         private readonly UserRepository _userRepository;
-        
+
         private List<MealTime> _mealTimeList;
         private User selectedUser;
 

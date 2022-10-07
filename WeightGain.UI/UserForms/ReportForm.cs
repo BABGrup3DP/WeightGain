@@ -25,7 +25,7 @@ namespace WeightGain.UI.UserForms
             dtpArchiveStartDate.Value = DateTime.Now;
             dtpArchiveStartDate.MaxDate = DateTime.Now;
         }
-        
+
         private void LbDataEnrtyDays()
         {
             if (_mealTimeList != null)
@@ -100,7 +100,7 @@ namespace WeightGain.UI.UserForms
                     switch (mealTime.MealTimeType)
                     {
                         case MealTimeEnum.Breakfast:
-                           breakfastMeals.AddRange(products.Select(x => x.ProductName));
+                            breakfastMeals.AddRange(products.Select(x => x.ProductName));
                             breakfastCalory += (decimal)mealTime.Products.Sum(x => x.ProductPortions.Sum(y => y.Product.Calory * y.Size));
                             break;
                         case MealTimeEnum.FirstSnack:

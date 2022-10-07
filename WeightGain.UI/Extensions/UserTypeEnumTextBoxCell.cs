@@ -15,7 +15,6 @@ namespace WeightGain.UI.Extensions
                 {
                     case UserTypeEnum.Admin: return "Admin";
                     case UserTypeEnum.Dietitian: return "Diyetisyen";
-                    case UserTypeEnum.ProjectManager: return "Proje Yöneticisi";
                     case UserTypeEnum.User: return "Kullanıcı";
                     default:
                         return "";

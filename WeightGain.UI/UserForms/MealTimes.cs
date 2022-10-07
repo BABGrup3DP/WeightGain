@@ -177,8 +177,6 @@ namespace WeightGain.UI.UserForms
             {
                 using (var workBook = new XLWorkbook())
                 {
-
-
                     var workSheet = workBook.Worksheets.Add("Öğünler");
                     workSheet.Cell(1, 1).Value = "Ürün Adı";
                     workSheet.Cell(1, 2).Value = "Porsiyon Birimi";

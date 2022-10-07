@@ -109,11 +109,8 @@ namespace WeightGain.UI
                         Hide();
                         adminForm.Show();
                         return;
-                    case DATA.UserTypeEnum.ProjectManager:
-                        MessageBox.Show("Proje yöneticisi girişi yapıldı.");
-                        return;
                     case DATA.UserTypeEnum.Dietitian:
-                        MessageBox.Show("Diyetisyen girişi yapıldı.");
+                        MessageBox.Show("Diyetisyen girişi henüz geliştirilmedi.");
                         return;
                     case DATA.UserTypeEnum.User:
                         var userForm = new UserForm(_repositoryList, findUser)

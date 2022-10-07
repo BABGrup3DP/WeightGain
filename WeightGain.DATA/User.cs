@@ -14,9 +14,8 @@ namespace WeightGain.DATA
         public decimal Height { get; set; }
         public double Bmi => (double)Math.Round(Weight / (Height / 100 * (Height / 100)), 2);
 
-        //public virtual List<Product> Products { get; set; }
-        public virtual List<Exercise> Exercises { get; set; }
-        public virtual List<MealTime> MealTimes { get; set; }
+        public List<Exercise> Exercises { get; set; }
+        public List<MealTime> MealTimes { get; set; }
 
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data.Entity.Migrations;
-using WeightGain.DATA;
-using WeightGain.DATA.Helpers;
+﻿using System.Data.Entity.Migrations;
 
 namespace WeightGain.DAL.Migrations
 {

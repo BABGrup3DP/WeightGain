@@ -84,7 +84,7 @@ namespace WeightGain.UI.UserForms
             _messageDialog.Text = "'Raporlar' bölümünden geçmiş verilerinize ulaşabilirsiniz.";
             _messageDialog.Show();
         }
-        
+
         private void btnUyelikIptali_Click(object sender, System.EventArgs e)
         {
             _messageDialog.Caption = "Üyelik İptali";

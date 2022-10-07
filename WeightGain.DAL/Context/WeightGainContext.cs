@@ -20,10 +20,6 @@ namespace WeightGain.DAL.Context
         public DbSet<MealTime> MealTimes { get; set; }
         public DbSet<Portion> Portions { get; set; }
 
-        //public DbSet<Admin> Admins { get; set; }
-        //public DbSet<Dietitian> Dietitians { get; set; }
-        //public DbSet<ProjectManager> ProjectManagers { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserMapping());
@@ -60,7 +56,7 @@ namespace WeightGain.DAL.Context
                 throw new DbEntityValidationException(
                     "Entity Validation Failed - errors follow:\n" +
                     sb, ex
-                ); // Add the original exception as the innerException
+                );
             }
         }
     }
