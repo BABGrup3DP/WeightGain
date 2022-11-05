@@ -8,7 +8,7 @@ namespace WeightGain.DAL.Context
 {
     public class WeightGainContext : DbContext
     {
-        public WeightGainContext() : base("Server=159.253.36.157;Database=WeightGainDB;User Id=sa;Password=h#N#YLde")
+        public WeightGainContext() : base("Server=xxx;Database=WeightGainDB;User Id=sa;Password=xxx")
         {
 
         }
